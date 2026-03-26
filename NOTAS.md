@@ -26,3 +26,7 @@ Listado de comandos de poetry que puedan ser útiles.
 2. cmd > poetry env install
 
    En un principio, no es estrictamente necesario, pero si hay algún problema o error, es posible que sea necesario ejecutar.
+
+
+#### Ejecución en producción
+cmd > poetry run python [ruta_programa]

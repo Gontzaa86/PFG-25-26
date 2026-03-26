@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Generación de Horarios - Deusto{% endblock %}</title>
+
+    <!-- Bootstrap CSS (Si se usa) -->
+    <!-- CSS propio (Si se usa) -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('inicio') }}"><span>Inicio</span></a>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; Deusto - Aplicación de Generación de Horarios</p>
+    </footer>
+
+    <!-- Bootstrap JS (Si se usa) -->
+    <!-- JS propio (Si se usa) -->
+</body>
+</html>
