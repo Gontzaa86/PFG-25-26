@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% block title %}Vista Previa del Dataset{% endblock %}
+
+{% block content %}
+
+<h2>Panel de Control del Dataset</h2>
+<p>Datos crudos extraídos de data/dataset_prueba.json</p>
+
+<hr>
+
+<h3>🏫 Distribución de Aulas por Edificio</h3>
+<table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr bgcolor="#f2f2f2">
+            {% for edificio in edificios %}
+                <th>{{ edificio }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr valign="top">
+            {% for edificio in edificios %}
+            <td>
+                <ul>
+                    {% for aula in aulas %}
+                        {% if aula.building == edificio %}
+                            <li>
+                                <strong>{{ aula.id }}</strong> - Capacidad: {{ aula.capacity }}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </td>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
+<hr>
+
+<h3>👨‍🏫 Profesores por Departamento</h3>
+
+<div style="margin-bottom: 15px;">
+    <button onclick="mostrarRama('anterior')">◀ Anterior</button>
+    <strong id="titulo-rama" style="margin: 0 20px; font-size: 1.2em;">Cargando...</strong>
+    <button onclick="mostrarRama('siguiente')">Siguiente ▶</button>
+</div>
+
+{% for rama in ramas %}
+<div id="contenedor-{{ loop.index0 }}" class="tabla-profesores" style="display: none;">
+    <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr bgcolor="#e3f2fd">
+                <th>Rama: {{ rama }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        {% for prof in profesores %}
+                            {% if prof.branch == rama %}
+                                <li>
+                                    <strong>{{ prof.id }}</strong>: {{ prof.name }}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endfor %}
+
+<script>
+    // Lista de nombres de las ramas generada por Jinja
+    const listaRamas = {{ ramas | tojson }};
+    let indiceActual = 0;
+
+    function actualizarVista() {
+        // Ocultar todas las tablas
+        const tablas = document.querySelectorAll('.tabla-profesores');
+        tablas.forEach(t => t.style.display = 'none');
+
+        // Mostrar solo la actual
+        document.getElementById('contenedor-' + indiceActual).style.display = 'block';
+        
+        // Actualizar el texto del título
+        document.getElementById('titulo-rama').innerText = "Rama: " + listaRamas[indiceActual];
+    }
+
+    function mostrarRama(direccion) {
+        if (direccion === 'siguiente') {
+            indiceActual = (indiceActual + 1) % listaRamas.length;
+        } else {
+            indiceActual = (indiceActual - 1 + listaRamas.length) % listaRamas.length;
+        }
+        actualizarVista();
+    }
+
+    // Inicializar la vista al cargar la página
+    window.onload = actualizarVista;
+</script>
+
+<hr>
+
+<h3>🎓 Asignaturas por Grado y Cuatrimestre</h3>
+
+{% for grado in grados %}
+    <div style="margin-bottom: 30px; border: 1px solid #ccc; padding: 15px;">
+        <h4 style="background-color: #eee; padding: 5px;">{{ grado.name }} ({{ grado.id }})</h4>
+        
+        <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr bgcolor="#f9f9f9">
+                    <th width="50%">Primer Cuatrimestre (Q1)</th>
+                    <th width="50%">Segundo Cuatrimestre (Q2)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr valign="top">
+                    <td>
+                        <ul>
+                            {% set count_q1 = [] %}
+                            {% for asig in asignaturas %}
+                                {% if grado.id in asig.grades and asig.term == "Q1" %}
+                                    <li>
+                                        <strong>{{ asig.name }}</strong> - <small>Prof: {{ asig.teacher }} | Sesiones: {{ asig.sessions_per_week }}</small>
+                                    </li>
+                                    {% set _ = count_q1.append(1) %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if count_q1|length == 0 %}
+                                <li style="color: gray;">No hay asignaturas en Q1</li>
+                            {% endif %}
+                        </ul>
+                    </td>
+
+                    <td>
+                        <ul>
+                            {% set count_q2 = [] %}
+                            {% for asig in asignaturas %}
+                                {% if grado.id in asig.grades and asig.term == "Q2" %}
+                                    <li>
+                                        <strong>{{ asig.name }}</strong> - <small>Prof: {{ asig.teacher }} | Sesiones: {{ asig.sessions_per_week }}</small>
+                                    </li>
+                                    {% set _ = count_q2.append(1) %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if count_q2|length == 0 %}
+                                <li style="color: gray;">No hay asignaturas en Q2</li>
+                            {% endif %}
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endfor %}
+
+{% endblock %}
