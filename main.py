@@ -1,6 +1,9 @@
 import json
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
+import random
+
+from utils.algoritmos import generar_horario
 
 # ==================================
 # Configuración Aplicación
@@ -46,6 +49,24 @@ def preview_pruebas():
                            edificios=edificios, aulas=aulas,
                            profesores=profesores, ramas=ramas,
                            grados=grados, asignaturas=asignaturas)
+
+# Ruta de Ejecución de Algoritmo
+@app.route('/solver/execute')
+def ejecutar_solver():
+    ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
+    with open(ruta_json, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    # Generamos para Q1 como ejemplo
+    resultado = generar_horario(data, term="Q1")
+
+    if resultado:
+        # Ordenar por día y hora para la vista
+        dias_orden = {"Monday": 0, "Tuesday": 1, "Wednesday": 2, "Thursday": 3, "Friday": 4}
+        resultado.sort(key=lambda x: (dias_orden[x['dia']], x['slot']))
+        return render_template('resultado.html', horario=resultado)
+    else:
+        return "No se enonctró ninguna solución que respete las restricciones duras. Por favor, revise los datos introducidos."
 
 # ==================================
 # Ejecución APP

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado del Horario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>Horario Generado (Restricciones Duras OK)</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Día</th>
+                <th>Hora Inicio</th>
+                <th>Curso</th>
+                <th>Aula (Edificio)</th>
+                <th>Grados Afectados</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in horario %}
+            <tr>
+                <td>{{ s.dia }}</td>
+                <td>{{ 8 + (s.slot // 2) }}:{{ "00" if s.slot % 2 == 0 else "30" }}</td>
+                <td>{{ s.curso }}</td>
+                <td>{{ s.aula }} ({{ s.edificio }})</td>
+                <td><small>{{ s.grades | join(', ') }}</small></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Volver</a>
+</body>
+</html>
