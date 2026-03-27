@@ -24,7 +24,7 @@ def inicio():
 @app.route('/preview/pruebas')
 def preview_pruebas():
     # Construir la ruta al archivo JSON
-    ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba.json')
+    ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
 
     with open(ruta_json, 'r', encoding='utf-8') as f:
         data = json.load(f)
