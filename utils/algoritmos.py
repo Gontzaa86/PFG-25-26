@@ -41,6 +41,13 @@ def evaluar_horario(asignaciones):
             por_grado_dia.setdefault(key, []).append(asig)
             
     for (grado, dia), sesiones in por_grado_dia.items():
+        cantidad_clases = len(sesiones)
+        # Si hay días con una única clase, se penaliza
+        if cantidad_clases == 1:
+            penalizacion += 1000
+        elif cantidad_clases == 3:
+            penalizacion += 200
+        
         # Ordenamos las sesiones del día por hora
         sesiones.sort(key=lambda x: x['slot'])
         
@@ -52,7 +59,7 @@ def evaluar_horario(asignaciones):
             fin_actual = actual['slot'] + actual['duracion']
             hueco = siguiente['slot'] - fin_actual
             if hueco > 0:
-                penalizacion += hueco * 100 # Penalizamos cada slot vacío
+                penalizacion += hueco * 500 # Penalizamos cada slot vacío
             
             # 2. Minimizar desplazamientos entre edificios
             if actual['edificio'] != siguiente['edificio']:
