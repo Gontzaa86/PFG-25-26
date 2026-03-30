@@ -1,89 +1,123 @@
 import random
+import time
 
 def verificar_solapamiento(inicio1, duracion1, inicio2, duracion2):
-    """Implementa la fórmula: (inicio1 < fin2) AND (inicio2 < fin1) """
-    fin1 = inicio1 + duracion1
-    fin2 = inicio2 + duracion2
-    return inicio1 < fin2 and inicio2 < fin1
+    return inicio1 < (inicio2 + duracion2) and inicio2 < (inicio1 + duracion1)
 
-def es_valida(sesion_actual, asignaciones, data):
-    """Verifica restricciones duras: Aula, Profesor y Grado [cite: 134, 135, 136]"""
+def es_valida(sesion_actual, asignaciones):
+    """
+    RESTRICCIONES DURAS
+    """
     for sig in asignaciones:
-        # Si coinciden en día y hay solapamiento de slots
-        if sig['dia'] == sesion_actual['dia'] and \
-           verificar_solapamiento(sesion_actual['slot'], sesion_actual['duracion'], 
-                                  sig['slot'], sig['duracion']):
-            
-            # 1. Restricción de Aula [cite: 134]
-            if sig['aula'] == sesion_actual['aula']:
+        if sig['dia'] == sesion_actual['dia']:
+            # 4. Solo una sesión del mismo curso al día
+            if sig['curso'] == sesion_actual['curso']:
                 return False
             
-            # 2. Restricción de Profesor [cite: 135]
-            if sig['teacher_id'] == sesion_actual['teacher_id']:
-                return False
-            
-            # 3. Restricción de Grado (Cohortes) 
-            # Comprobar si comparten algún grado en la lista de 'grades'
-            if any(grado in sig['grades'] for grado in sesion_actual['grades']):
-                return False
+            # Chequeo de solapamiento horario
+            if verificar_solapamiento(sesion_actual['slot'], sesion_actual['duracion'], 
+                                      sig['slot'], sig['duracion']):
+                
+                # 1. No dos clases en misma aula
+                if sig['aula'] == sesion_actual['aula']: return False
+                # 2. No profesor dando dos clases
+                if sig['teacher_id'] == sesion_actual['teacher_id']: return False
+                # 3. No grupo (grados) dando dos clases
+                if any(g in sig['grades'] for g in sesion_actual['grades']): return False
+                
     return True
 
-def generar_horario(data, term="Q1"):
+def evaluar_horario(asignaciones):
+    """
+    RESTRICCIONES BLANDAS (Sistema de penalización)
+    Menor puntuación = Mejor horario
+    """
+    penalizacion = 0
+    por_grado_dia = {}
+    
+    for asig in asignaciones:
+        for grado in asig['grades']:
+            key = (grado, asig['dia'])
+            por_grado_dia.setdefault(key, []).append(asig)
+            
+    for (grado, dia), sesiones in por_grado_dia.items():
+        # Ordenamos las sesiones del día por hora
+        sesiones.sort(key=lambda x: x['slot'])
+        
+        for i in range(len(sesiones) - 1):
+            actual = sesiones[i]
+            siguiente = sesiones[i+1]
+            
+            # 1. Evitar huecos (Ventanas)
+            fin_actual = actual['slot'] + actual['duracion']
+            hueco = siguiente['slot'] - fin_actual
+            if hueco > 0:
+                penalizacion += hueco * 100 # Penalizamos cada slot vacío
+            
+            # 2. Minimizar desplazamientos entre edificios
+            if actual['edificio'] != siguiente['edificio']:
+                penalizacion += 500 # Penalización por cambio de edificio
+                
+    return penalizacion
+
+def generar_horario_iterativo(data, term="Q1"):
     cursos = [c for c in data['courses'] if c['term'] == term]
     aulas = data['rooms']
-    dias = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    # Slots disponibles (de 0 a 47 según tu config de 30min) [cite: 99, 100]
-    slots_posibles = list(range(0, 20)) # Limitamos a mañana para la prueba
+    slots_posibles = list(range(0, 12)) # 08:00 - 14:00
+    
+    mejor_horario = None
+    mejor_puntuacion = float('inf')
 
-    asignaciones_finales = []
-
-    def resolver(index_curso, num_sesion):
-        if index_curso >= len(cursos):
-            return True
+    for i in range(1, 21):
+        asignaciones_actuales = []
+        random.shuffle(cursos)
+        start_time = time.time()
         
-        curso = cursos[index_curso]
+        # Intentamos resolver (con un límite de 3 segundos para no bloquear)
+        if resolver_recursivo(0, 0, cursos, aulas, slots_posibles, asignaciones_actuales, start_time, 3):
+            # Si es válido, evaluamos las restricciones blandas
+            puntuacion = evaluar_horario(asignaciones_actuales)
+            
+            if puntuacion < mejor_puntuacion:
+                mejor_puntuacion = puntuacion
+                mejor_horario = list(asignaciones_actuales)
         
-        # Intentar asignar la sesión actual
-        posibles_dias = curso['possible_days']
-        random.shuffle(posibles_dias) # Mezclar para no dar siempre el mismo resultado
+        yield i, mejor_horario
 
-        for dia in posibles_dias:
-            for slot in slots_posibles:
-                for aula_id in curso['possible_rooms']:
-                    aula = next(r for r in aulas if r['id'] == aula_id)
+def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, asignaciones, start_time, limit):
+    if time.time() - start_time > limit: return False
+    if index_curso >= len(cursos): return True
+    
+    curso = cursos[index_curso]
+    dias = list(curso['possible_days'])
+    random.shuffle(dias)
+    
+    # Para favorecer la falta de huecos, intentamos los slots en orden (0, 1, 2...)
+    # en lugar de aleatorios, así las clases tienden a "pegarse" al inicio.
+    for dia in dias:
+        for slot in slots_posibles:
+            if slot + curso['duration_slots'] > max(slots_posibles) + 1: continue
+            
+            aulas_c = [r for r in aulas if r['id'] in curso['possible_rooms']]
+            # Para minimizar desplazamientos, podrías priorizar aquí el último edificio usado
+            random.shuffle(aulas_c) 
+
+            for aula in aulas_c:
+                if aula['capacity'] < curso['students']: continue
+                
+                sesion = {
+                    "curso": curso['name'], "teacher_id": curso['teacher'],
+                    "grades": curso['grades'], "aula": aula['id'],
+                    "edificio": aula['building'], "dia": dia, "slot": slot,
+                    "duracion": curso['duration_slots']
+                }
+
+                if es_valida(sesion, asignaciones):
+                    asignaciones.append(sesion)
                     
-                    # Restricción de capacidad [cite: 137]
-                    if aula['capacity'] < curso['students']:
-                        continue
-
-                    sesion_propuesta = {
-                        "curso": curso['name'],
-                        "id": curso['id'],
-                        "teacher_id": curso['teacher'],
-                        "grades": curso['grades'],
-                        "aula": aula['id'],
-                        "edificio": aula['building'],
-                        "dia": dia,
-                        "slot": slot,
-                        "duracion": curso['duration_slots']
-                    }
-
-                    if es_valida(sesion_propuesta, asignaciones_finales, data):
-                        asignaciones_finales.append(sesion_propuesta)
-                        
-                        # Pasar a la siguiente sesión o siguiente curso
-                        sig_curso = index_curso
-                        sig_sesion = num_sesion + 1
-                        if sig_sesion >= curso['sessions_per_week']:
-                            sig_curso += 1
-                            sig_sesion = 0
-                        
-                        if resolver(sig_curso, sig_sesion):
-                            return True
-                        
-                        asignaciones_finales.pop() # Backtrack
-        return False
-
-    if resolver(0, 0):
-        return asignaciones_finales
-    return None
+                    sig_c, sig_s = (index_curso + 1, 0) if num_sesion + 1 >= curso['sessions_per_week'] else (index_curso, num_sesion + 1)
+                    
+                    if resolver_recursivo(sig_c, sig_s, cursos, aulas, slots_posibles, asignaciones, start_time, limit):
+                        return True
+                    asignaciones.pop()
+    return False
