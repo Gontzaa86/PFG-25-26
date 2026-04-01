@@ -43,6 +43,15 @@
         }
         .session-title { font-weight: bold; color: #0d47a1; margin-bottom: 2px; }
         .session-info { color: #1565c0; font-size: 0.7rem; }
+
+        .session-prof { 
+            font-style: italic; 
+            color: #455a64; 
+            font-size: 0.65rem; 
+            margin-top: 2px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 2px;
+        }
         
         /* Colores aleatorios para asignaturas */
         .bg-cat-1 { background-color: #e3f2fd; border-color: #90caf9; }
@@ -204,6 +213,7 @@
                                 <div class="session-cell ${colorClass}">
                                     <div class="session-title">${sesion.curso}</div>
                                     <div class="session-info">${sesion.aula} (${sesion.edificio})</div>
+                                    <div class="session-prof">${sesion.profesor || 'Sin Profesor'}</div>
                                 </div>
                             </td>
                         `;

@@ -71,6 +71,7 @@ def generar_horario_iterativo(data, term="Q1"):
     cursos = [c for c in data['courses'] if c['term'] == term]
     aulas = data['rooms']
     slots_posibles = list(range(0, 12)) # 08:00 - 14:00
+    profesores_map = {p['id']: p['name'] for p in data.get('teachers', [])}
     
     mejor_horario = None
     mejor_puntuacion = float('inf')
@@ -81,7 +82,7 @@ def generar_horario_iterativo(data, term="Q1"):
         start_time = time.time()
         
         # Intentamos resolver (con un límite de 3 segundos para no bloquear)
-        if resolver_recursivo(0, 0, cursos, aulas, slots_posibles, asignaciones_actuales, start_time, 3):
+        if resolver_recursivo(0, 0, cursos, aulas, slots_posibles, asignaciones_actuales, start_time, 3, profesores_map):
             # Si es válido, evaluamos las restricciones blandas
             puntuacion = evaluar_horario(asignaciones_actuales)
             
@@ -91,7 +92,7 @@ def generar_horario_iterativo(data, term="Q1"):
         
         yield i, mejor_horario
 
-def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, asignaciones, start_time, limit):
+def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, asignaciones, start_time, limit, profesores_map):
     if time.time() - start_time > limit: return False
     if index_curso >= len(cursos): return True
     
@@ -114,6 +115,7 @@ def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, a
                 
                 sesion = {
                     "curso": curso['name'], "teacher_id": curso['teacher'],
+                    "profesor": profesores_map.get(curso['teacher'], "Desconocido"),
                     "grades": curso['grades'], "aula": aula['id'],
                     "edificio": aula['building'], "dia": dia, "slot": slot,
                     "duracion": curso['duration_slots']
@@ -124,7 +126,7 @@ def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, a
                     
                     sig_c, sig_s = (index_curso + 1, 0) if num_sesion + 1 >= curso['sessions_per_week'] else (index_curso, num_sesion + 1)
                     
-                    if resolver_recursivo(sig_c, sig_s, cursos, aulas, slots_posibles, asignaciones, start_time, limit):
+                    if resolver_recursivo(sig_c, sig_s, cursos, aulas, slots_posibles, asignaciones, start_time, limit, profesores_map):
                         return True
                     asignaciones.pop()
     return False
