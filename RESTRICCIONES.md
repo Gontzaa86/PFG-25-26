@@ -5,6 +5,7 @@ Listado de restricciones tanto duras como blandas de la aplicación.
 - No dos clases en misma aula
 - No profesor dando dos clases
 - No *grupo* de estudiantes dando dos clases
+- Solo una clase de la misma asignatura al día
 
 ### Restricciones Blandas (Soft Constrains)
 - Evitar huecos --> **500 x Hueco**

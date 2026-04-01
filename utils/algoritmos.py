@@ -45,6 +45,7 @@ def evaluar_horario(asignaciones):
         # Si hay días con una única clase, se penaliza
         if cantidad_clases == 1:
             penalizacion += 1000
+        # Si hay días con tres clases, se penaliza ligeramente
         elif cantidad_clases == 3:
             penalizacion += 200
         
