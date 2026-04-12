@@ -88,3 +88,37 @@ function verificarNuevaRama(select)
         inputDiv.classList.add('d-none');
     }
 }
+
+function filtrarProfesores() 
+{
+    const texto = document.getElementById('buscadorNombre').value.toLowerCase();
+    const seccionesRama = document.querySelectorAll('.seccion-rama');
+
+    seccionesRama.forEach(seccion => {
+        const tarjetas = seccion.querySelectorAll('.tarjeta-profesor');
+        let tieneResultadosEnRama = false;
+
+        tarjetas.forEach(tarjeta => {
+            const nombreProfesor = tarjeta.getAttribute('data-nombre');
+            
+            if (nombreProfesor.includes(texto)) 
+            {
+                tarjeta.style.display = ""; // Mostrar
+                tieneResultadosEnRama = true;
+            } else 
+            {
+                tarjeta.style.display = "none"; // Ocultar
+            }
+        });
+
+        // Si no hay profesores que coincidan en esta rama, ocultamos la rama entera
+        if (tieneResultadosEnRama) 
+        {
+            seccion.style.display = "";
+        } 
+        else 
+        {
+            seccion.style.display = "none";
+        }
+    });
+}
