@@ -142,6 +142,12 @@
       "id": "T_EMP_04",
       "name": "Profesor ADE 4",
       "branch": "EMPRESA"
+    },
+    {
+      "name": "Profesor Derecho 1",
+      "branch": "DERECHO",
+      "availability": [],
+      "id": "T_DER_01"
     }
   ],
   "grades": [
