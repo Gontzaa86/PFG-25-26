@@ -27,17 +27,17 @@
   ],
   "teachers": 
   [
-    {"id": "T_ING_01", "name": "Fernando Boto", "branch": "Ingeniería"},
-    {"id": "T_ING_02", "name": "Alain Andres", "branch": "Ingeniería"},
-    {"id": "T_ING_03", "name": "David Buján", "branch": "Ingeniería"},
-    {"id": "T_ING_04", "name": "Alex Barco", "branch": "Ingeniería"},
-    {"id": "T_ING_05", "name": "Luis Enrique Díez", "branch": "Ingeniería"},
-    {"id": "T_ING_06", "name": "Jose Luis Gonzalez", "branch": "Ingeniería"},
-    {"id": "T_ING_07", "name": "Ignacio Lekuona", "branch": "Ingeniería"},
-    {"id": "T_EMP_01", "name": "Profesor ADE 1", "branch": "Empresa"},
-    {"id": "T_EMP_02", "name": "Profesor ADE 2", "branch": "Empresa"},
-    {"id": "T_EMP_03", "name": "Profesor ADE 3", "branch": "Empresa"},
-    {"id": "T_EMP_04", "name": "Profesor ADE 4", "branch": "Empresa"}
+    {"id": "T_ING_01", "name": "Fernando Boto", "branch": "INGENIERÍA"},
+    {"id": "T_ING_02", "name": "Alain Andres", "branch": "INGENIERÍA"},
+    {"id": "T_ING_03", "name": "David Buján", "branch": "INGENIERÍA"},
+    {"id": "T_ING_04", "name": "Alex Barco", "branch": "INGENIERÍA"},
+    {"id": "T_ING_05", "name": "Luis Enrique Díez", "branch": "INGENIERÍA"},
+    {"id": "T_ING_06", "name": "Jose Luis Gonzalez", "branch": "INGENIERÍA"},
+    {"id": "T_ING_07", "name": "Ignacio Lekuona", "branch": "INGENIERÍA"},
+    {"id": "T_EMP_01", "name": "Profesor ADE 1", "branch": "EMPRESA"},
+    {"id": "T_EMP_02", "name": "Profesor ADE 2", "branch": "EMPRESA"},
+    {"id": "T_EMP_03", "name": "Profesor ADE 3", "branch": "EMPRESA"},
+    {"id": "T_EMP_04", "name": "Profesor ADE 4", "branch": "EMPRESA"}
   ],
   "grades": 
   [
