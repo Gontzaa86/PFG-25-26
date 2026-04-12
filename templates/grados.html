@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Asignaturas por Grado</h2>
+    {% for grado in grados %}
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">{{ grado.name }}</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Cuatrimestre 1 (Q1)</h5>
+                    <ul class="list-group">
+                        {% for curso in asignaturas if grado.id in curso.grades and curso.term == 'Q1' %}
+                        <li class="list-group-item d-flex justify-content-between">
+                            {{ curso.name }}
+                            <small class="text-muted">{{ curso.hours_per_week }}h/semana</small>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Cuatrimestre 2 (Q2)</h5>
+                    <ul class="list-group">
+                        {% for curso in asignaturas if grado.id in curso.grades and curso.term == 'Q2' %}
+                        <li class="list-group-item d-flex justify-content-between">
+                            {{ curso.name }}
+                            <small class="text-muted">{{ curso.hours_per_week }}h/semana</small>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

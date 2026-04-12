@@ -42,6 +42,29 @@ def preview_pruebas():
                            profesores=profesores, ramas=ramas,
                            grados=grados, asignaturas=asignaturas)
 
+# Ruta de datos de profesores
+@app.route('/profesores')
+def lista_profesores():
+    data = cargar_datos()
+    profesores = data.get('teachers', [])
+    return render_template('profesores.html', profesores=profesores)
+
+# Ruta de datos de aulas
+@app.route('/aulas')
+def lista_aulas():
+    data = cargar_datos()
+    edificios = data.get('buildings', [])
+    aulas = data.get('rooms', [])
+    return render_template('aulas.html', edificios=edificios, aulas=aulas)
+
+# Ruta de datos de grados y asignaturas por cuatrimestre
+@app.route('/grados')
+def lista_grados():
+    data = cargar_datos()
+    grados = data.get('grades', [])
+    asignaturas = data.get('courses', [])
+    return render_template('grados.html', grados=grados, asignaturas=asignaturas)
+
 # Esta ruta solo carga la página HTML con el contador y el botón
 @app.route('/solver/stream')
 def vista_stream():
@@ -65,6 +88,15 @@ def solver_progress():
             yield f"data: {json.dumps({'progreso': progreso, 'horario': horario})}\n\n"
     
     return Response(generate(), mimetype='text/event-stream')
+
+# ---------------------------------------------------------
+# FUNCIONES
+# ---------------------------------------------------------
+
+def cargar_datos(): # Función general de carga de datos para evitar repetición en cada caso individual
+    ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
+    with open(ruta_json, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 # ---------------------------------------------------------
 # EJECUCIÓN

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Profesores - Deusto{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Listado de Profesores</h2>
+    <table class="table table-striped mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Rama</th>
+                <th>Disponibilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in profesores %}
+            <tr>
+                <td>{{ p.name }}</td>
+                <td><span class="badge bg-info text-dark">{{ p.branch }}</span></td>
+                <td>{{ p.availability | join(', ') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
