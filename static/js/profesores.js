@@ -43,7 +43,13 @@ async function guardarProfesor()
 {
     const id = document.getElementById('profId').value;
     const nombre = document.getElementById('profNombre').value;
-    const rama = document.getElementById('profRama').value;
+    let rama = document.getElementById('profRama').value;
+
+    // Si el usuario decide crear una nueva rama
+    if (rama === "NUEVA")
+    {
+        rama = document.getElementById('nuevaRamaNombre').value.toUpperCase();
+    }
 
     if (!nombre || !rama) return alert("Por favor, rellena todos los campos");
 
@@ -58,12 +64,27 @@ async function guardarProfesor()
     {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id, name: nombre, branch: rama, availability: [] })
+        body: JSON.stringify(payload)
     });
     
     if (res.ok)
     {
-        bootstrap.Modal.getInstance(document.getElementById('modalProfesor')).hide();
+        const modalElement = document.getElementById('modalProfesor');
+        const modalInstance = bootstrap.Modal.getInstance(modalElement);
+        if (modalInstance) modalInstance.hide();
         location.reload();
+    }
+}
+
+function verificarNuevaRama(select) 
+{
+    const inputDiv = document.getElementById('inputNuevaRama');
+    if (select.value === "NUEVA") 
+    {
+        inputDiv.classList.remove('d-none');
+    } 
+    else 
+    {
+        inputDiv.classList.add('d-none');
     }
 }

@@ -91,57 +91,57 @@
     {
       "id": "T_ING_01",
       "name": "Fernando Boto",
-      "branch": "Ingeniería"
+      "branch": "INGENIERÍA"
     },
     {
       "id": "T_ING_02",
       "name": "Alain Andres",
-      "branch": "Ingeniería"
+      "branch": "INGENIERÍA"
     },
     {
       "id": "T_ING_03",
       "name": "David Buján",
-      "branch": "Ingeniería"
+      "branch": "INGENIERÍA"
     },
     {
       "id": "T_ING_04",
       "name": "Alex Barco",
-      "branch": "Ingeniería"
+      "branch": "INGENIERÍA"
     },
     {
       "id": "T_ING_05",
       "name": "Luis Enrique Díez",
-      "branch": "Ingeniería"
+      "branch": "INGENIERÍA"
     },
     {
       "id": "T_ING_06",
       "name": "Jose Luis Gonzalez",
-      "branch": "Ingeniería"
+      "branch": "INGENIERÍA"
     },
     {
       "id": "T_ING_07",
       "name": "Ignacio Lekuona",
-      "branch": "Ingeniería"
+      "branch": "INGENIERÍA"
     },
     {
       "id": "T_EMP_01",
       "name": "Profesor ADE 1",
-      "branch": "Empresa"
+      "branch": "EMPRESA"
     },
     {
       "id": "T_EMP_02",
       "name": "Profesor ADE 2",
-      "branch": "Empresa"
+      "branch": "EMPRESA"
     },
     {
       "id": "T_EMP_03",
       "name": "Profesor ADE 3",
-      "branch": "Empresa"
+      "branch": "EMPRESA"
     },
     {
       "id": "T_EMP_04",
       "name": "Profesor ADE 4",
-      "branch": "Empresa"
+      "branch": "EMPRESA"
     }
   ],
   "grades": [

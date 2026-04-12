@@ -77,12 +77,8 @@ def gestionar_profesor():
 
     # Si tiene ID es una edición, si no una agregación/creación
     if not nuevo.get('id'):
-        rama = nuevo['branch']
-        prefijos = {
-            'Ingeniería': 'ING',
-            'Empresa': 'EMP'
-        }
-        prefijo = prefijos.get(rama, rama[:3].upper())
+        rama = nuevo['branch'].upper()
+        prefijo = rama[:3] # 3 primeras letras como prefijo
 
         profesores_rama = [p for p in data['teachers'] if p['id'].startswith(f"T_{prefijo}_")]
 

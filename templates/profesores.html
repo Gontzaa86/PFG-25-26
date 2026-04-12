@@ -74,10 +74,19 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bold">Rama</label>
-                        <select class="form-select" id="profRama" required>
-                            <option value="Ingeniería">INGENIERIA</option>
-                            <option value="Empresa">EMPRESA</option>
+                        <select class="form-select" id="profRama" onchange="verificarNuevaRama(this)" required>
+                            <option value="" selected disabled>Selecciona una rama...</option>
+                            {% for r in ramas %}
+                                <option value="{{ r }}">{{ r }}</option>
+                            {% endfor %}
+                            <option value="NUEVA" style="background-color: #e9ecef; font-weight: bold; color: #0d6efd;">
+                                Añadir Nueva Rama...
+                            </button>
                         </select>
+                    </div>
+                    <div class="mb-3 d-none" id="inputNuevaRama">
+                        <label class="form-label fw-bold">Nombre de la nueva rama</label>
+                        <input type="text" class="form-control" id="nuevaRamaNombre" placeholder="Derecho, Salud, Sociales...">
                     </div>
                 </form>
             </div>
