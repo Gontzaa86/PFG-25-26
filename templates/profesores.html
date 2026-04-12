@@ -1,26 +1,103 @@
 {% extends "layout.html" %}
-{% block title %}Profesores - Deusto{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2>Listado de Profesores</h2>
-    <table class="table table-striped mt-3">
-        <thead class="table-dark">
-            <tr>
-                <th>Nombre</th>
-                <th>Rama</th>
-                <th>Disponibilidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for p in profesores %}
-            <tr>
-                <td>{{ p.name }}</td>
-                <td><span class="badge bg-info text-dark">{{ p.branch }}</span></td>
-                <td>{{ p.availability | join(', ') }}</td>
-            </tr>
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h2 class="fw-bold">Gestión de Docentes</h2>
+        <button class="btn btn-primary shadow-sm" onclick="abrirModalCrear()">+ Nuevo Profesor</button>
+    </div>
+
+    {% for rama in ramas %}
+    <div class="mb-5">
+        <h4 class="text-uppercase text-muted fw-bold border-bottom pb-2 mb-4" style="letter-spacing: 1px;">
+            {{ rama }}
+        </h4>
+        <div class="row g-4">
+            {% for p in profesores if p.branch == rama %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold mb-1">{{ p.name }}</h5>
+                        <small class="text-muted d-block mb-3">{{ p.id }}</small>
+                        
+                        <div class="d-flex flex-wrap gap-2 mt-auto">
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-light border dropdown-toggle" data-bs-toggle="dropdown">
+                                    Asignaturas
+                                </button>
+                                <ul class="dropdown-menu shadow border-0">
+                                    {% set ns = namespace(tiene=false) %}
+                                    {% for curso in asignaturas %}
+                                        {# Forzamos la comparación como strings para evitar fallos de tipo #}
+                                        {% if curso.teacher|string == p.id|string %}
+                                            <li><span class="dropdown-item-text small">● {{ curso.name }}</span></li>
+                                            {% set ns.tiene = true %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                    {% if not ns.tiene %}
+                                        <li><span class="dropdown-item-text text-muted small px-3">Sin carga lectiva</span></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-sm btn-outline-warning" onclick="prepararEdicion('{{p.id}}', '{{p.name}}', '{{p.branch}}')">
+                                Editar
+                            </button>
+                            
+                            <button class="btn btn-sm btn-outline-danger" onclick="intentarEliminar('{{p.id}}', {{ 'true' if ns.tiene else 'false' }})">
+                                Eliminar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
-        </tbody>
-    </table>
+        </div>
+    </div>
+    {% endfor %}
 </div>
+
+<div class="modal fade" id="modalProfesor" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="modalTitulo">Profesor</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formProfesor">
+                    <input type="hidden" id="profId">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Nombre Completo</label>
+                        <input type="text" class="form-control" id="profNombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Rama</label>
+                        <select class="form-select" id="profRama" required>
+                            <option value="Ingeniería">INGENIERIA</option>
+                            <option value="Empresa">EMPRESA</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-primary w-100" onclick="guardarProfesor()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast align-items-center text-white bg-danger border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body" id="toastMsg"></div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/profesores.js') }}"></script>
 {% endblock %}

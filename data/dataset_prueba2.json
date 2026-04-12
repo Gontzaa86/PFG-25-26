@@ -1,88 +1,750 @@
 {
   "university": "Universidad de Deusto",
-  "config": 
-  {
+  "config": {
     "timeslots_per_day": 48,
     "minutes_per_slot": 30,
     "start_hour": "08:00"
   },
-  "buildings": ["Ed-Altuna", "Ed-Arrupe", "Ed-Larramendi"],
-  "rooms": 
-  [
-    {"id": "41", "building": "Ed-Altuna", "capacity": 80},
-    {"id": "42", "building": "Ed-Altuna", "capacity": 80},
-    {"id": "43", "building": "Ed-Altuna", "capacity": 60},
-    {"id": "44", "building": "Ed-Altuna", "capacity": 60},
-    {"id": "45", "building": "Ed-Altuna", "capacity": 60},
-    {"id": "46", "building": "Ed-Altuna", "capacity": 70},
-    {"id": "47", "building": "Ed-Altuna", "capacity": 70},
-    {"id": "101", "building": "Ed-Arrupe", "capacity": 50},
-    {"id": "102", "building": "Ed-Arrupe", "capacity": 50},
-    {"id": "103", "building": "Ed-Arrupe", "capacity": 50},
-    {"id": "104", "building": "Ed-Arrupe", "capacity": 70},
-    {"id": "105", "building": "Ed-Arrupe", "capacity": 70},
-    {"id": "50", "building": "Ed-Larramendi", "capacity": 80},
-    {"id": "51", "building": "Ed-Larramendi", "capacity": 80},
-    {"id": "52", "building": "Ed-Larramendi", "capacity": 80}
+  "buildings": [
+    "Ed-Altuna",
+    "Ed-Arrupe",
+    "Ed-Larramendi"
   ],
-  "teachers": 
-  [
-    {"id": "T_ING_01", "name": "Fernando Boto", "branch": "Ingeniería"},
-    {"id": "T_ING_02", "name": "Alain Andres", "branch": "Ingeniería"},
-    {"id": "T_ING_03", "name": "David Buján", "branch": "Ingeniería"},
-    {"id": "T_ING_04", "name": "Alex Barco", "branch": "Ingeniería"},
-    {"id": "T_ING_05", "name": "Luis Enrique Díez", "branch": "Ingeniería"},
-    {"id": "T_ING_06", "name": "Jose Luis Gonzalez", "branch": "Ingeniería"},
-    {"id": "T_ING_07", "name": "Ignacio Lekuona", "branch": "Ingeniería"},
-    {"id": "T_EMP_01", "name": "Profesor ADE 1", "branch": "Empresa"},
-    {"id": "T_EMP_02", "name": "Profesor ADE 2", "branch": "Empresa"},
-    {"id": "T_EMP_03", "name": "Profesor ADE 3", "branch": "Empresa"},
-    {"id": "T_EMP_04", "name": "Profesor ADE 4", "branch": "Empresa"}
+  "rooms": [
+    {
+      "id": "41",
+      "building": "Ed-Altuna",
+      "capacity": 80
+    },
+    {
+      "id": "42",
+      "building": "Ed-Altuna",
+      "capacity": 80
+    },
+    {
+      "id": "43",
+      "building": "Ed-Altuna",
+      "capacity": 60
+    },
+    {
+      "id": "44",
+      "building": "Ed-Altuna",
+      "capacity": 60
+    },
+    {
+      "id": "45",
+      "building": "Ed-Altuna",
+      "capacity": 60
+    },
+    {
+      "id": "46",
+      "building": "Ed-Altuna",
+      "capacity": 70
+    },
+    {
+      "id": "47",
+      "building": "Ed-Altuna",
+      "capacity": 70
+    },
+    {
+      "id": "101",
+      "building": "Ed-Arrupe",
+      "capacity": 50
+    },
+    {
+      "id": "102",
+      "building": "Ed-Arrupe",
+      "capacity": 50
+    },
+    {
+      "id": "103",
+      "building": "Ed-Arrupe",
+      "capacity": 50
+    },
+    {
+      "id": "104",
+      "building": "Ed-Arrupe",
+      "capacity": 70
+    },
+    {
+      "id": "105",
+      "building": "Ed-Arrupe",
+      "capacity": 70
+    },
+    {
+      "id": "50",
+      "building": "Ed-Larramendi",
+      "capacity": 80
+    },
+    {
+      "id": "51",
+      "building": "Ed-Larramendi",
+      "capacity": 80
+    },
+    {
+      "id": "52",
+      "building": "Ed-Larramendi",
+      "capacity": 80
+    }
   ],
-  "grades": 
-  [
-    {"id": "INGINF1", "name": "Grado en Ingeniería Informática - 1º"},
-    {"id": "CDIA1", "name": "Grado en Ciencia de Datos e IA - 1º"},
-    {"id": "INFCDIA1", "name": "Doble Grado en Ingeniería Informática + Ciencia de Datos e Inteligencia Artificial - 1º"},
-    {"id": "ADE1", "name": "Grado en Administración de Empresas - 1º"},
-    {"id": "INFADE1", "name": "Doble Grado Informática + ADE - 1º"}
+  "teachers": [
+    {
+      "id": "T_ING_01",
+      "name": "Fernando Boto",
+      "branch": "Ingeniería"
+    },
+    {
+      "id": "T_ING_02",
+      "name": "Alain Andres",
+      "branch": "Ingeniería"
+    },
+    {
+      "id": "T_ING_03",
+      "name": "David Buján",
+      "branch": "Ingeniería"
+    },
+    {
+      "id": "T_ING_04",
+      "name": "Alex Barco",
+      "branch": "Ingeniería"
+    },
+    {
+      "id": "T_ING_05",
+      "name": "Luis Enrique Díez",
+      "branch": "Ingeniería"
+    },
+    {
+      "id": "T_ING_06",
+      "name": "Jose Luis Gonzalez",
+      "branch": "Ingeniería"
+    },
+    {
+      "id": "T_ING_07",
+      "name": "Ignacio Lekuona",
+      "branch": "Ingeniería"
+    },
+    {
+      "id": "T_EMP_01",
+      "name": "Profesor ADE 1",
+      "branch": "Empresa"
+    },
+    {
+      "id": "T_EMP_02",
+      "name": "Profesor ADE 2",
+      "branch": "Empresa"
+    },
+    {
+      "id": "T_EMP_03",
+      "name": "Profesor ADE 3",
+      "branch": "Empresa"
+    },
+    {
+      "id": "T_EMP_04",
+      "name": "Profesor ADE 4",
+      "branch": "Empresa"
+    }
   ],
-  "courses": 
-  [
-    { "id": "DIR_EMPR_Q1", "name": "Administración de Empresa", "term": "Q1", "teacher": "T_ING_06", "grades": ["INGINF1", "CDIA1", "INFCDIA1"], "students": 52, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "43", "44", "45"], "possible_days": ["Monday", "Tuesday", "Wednesday", "Friday"] },
-    { "id": "ALGEBRA_Q1", "name": "Álgebra", "term": "Q1", "teacher": "T_ING_05", "grades": ["INGINF1", "CDIA1", "INFCDIA1", "INFADE1"], "students": 77, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "50", "51"], "possible_days": ["Tuesday", "Thursday"] },
-    { "id": "PROG1_Q1", "name": "Programación I", "term": "Q1", "teacher": "T_ING_01", "grades": ["INGINF1", "INFCDIA1", "INFADE1"], "students": 57, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "43", "50", "51"], "possible_days": ["Monday", "Wednesday", "Friday"] },
-    { "id": "ELEC_DIG_Q1", "name": "Electrónica Digital", "term": "Q1", "teacher": "T_ING_04", "grades": ["INGINF1", "CDIA1", "INFCDIA1"], "students": 52, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "43", "44", "45"], "possible_days": ["Tuesday", "Thursday"] },
-    { "id": "INTRO_COMP_Q1", "name": "Introducción a los Computadores", "term": "Q1", "teacher": "T_ING_07", "grades": ["INGINF1", "CDIA1", "INFCDIA1", "INFADE1"], "students": 77, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "50", "51"], "possible_days": ["Monday","Tuesday", "Friday"] },
-    { "id": "FUND_PROG_Q1", "name": "Fundamentos de la Programación", "term": "Q1", "teacher": "T_ING_01", "grades": ["CDIA1"], "students": 20, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["46", "47"], "possible_days": ["Tuesday", "Wednesday", "Thursday"] },
-
-    { "id": "CALCULO_Q2", "name": "Cálculo", "term": "Q2", "teacher": "T_ING_05", "grades": ["INGINF1", "CDIA1", "INFCDIA1", "INFADE1"], "students": 77, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "51", "52"], "possible_days": ["Monday", "Wednesday"] },
-    { "id": "PROG2_Q2", "name": "Programación II", "term": "Q2", "teacher": "T_ING_01", "grades": ["INGINF1", "INFCDIA1", "INFADE1"], "students": 57, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "43", "44", "45"], "possible_days": ["Monday", "Wednesday", "Friday"] },
-    { "id": "DISCRETA_Q2", "name": "Matemática Discreta", "term": "Q2", "teacher": "T_ING_05", "grades": ["INGINF1", "CDIA1", "INFCDIA1", "INFADE1"], "students": 77, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["41", "42", "52"], "possible_days": ["Tuesday", "Thursday"] },
-    { "id": "FISICA_Q2", "name": "Física", "term": "Q2", "teacher": "T_ING_03", "grades": ["INGINF1", "INFCDIA1"], "students": 32, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["45", "46", "47"], "possible_days": ["Tuesday", "Thursday"] },
-    { "id": "ESTR_COMP_Q2", "name": "Estructura de Computadores", "term": "Q2", "teacher": "T_ING_03", "grades": ["INGINF1", "INFCDIA1"], "students": 32, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["45", "47"], "possible_days": ["Wednesday","Thursday", "Friday"] },
-    { "id": "ALGORITMICA_Q2", "name": "Algorítmica", "term": "Q2", "teacher": "T_ING_02", "grades": ["CDIA1", "INFCDIA1"], "students": 32, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["45", "46", "47"], "possible_days": ["Monday", "Wednesday", "Friday"] },
-    { "id": "ING_COMP_Q2", "name": "Ingeniería de Computadores", "term": "Q2", "teacher": "T_ING_02", "grades": ["CDIA1"], "students": 20, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["45", "46"], "possible_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] },
-    { "id": "PROG_ORIEN_OBJ_Q2", "name": "Programación Orientada a Objetos", "term": "Q2", "teacher": "T_ING_01", "grades": ["CDIA1"], "students": 20, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["44", "46", "47"], "possible_days": ["Monday", "Wednesday", "Thursday", "Friday"] },
-
-
-    { "id": "EMPRESA_SOSTEN_Q1", "name": "Empresa y Sostenibilidad", "term": "Q1", "teacher": "T_EMP_02", "grades": ["ADE1", "INFADE1"], "students": 65, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["104", "105", "50", "52"], "possible_days": ["Monday", "Wednesday"] },
-    { "id": "ENT_EMPR_Q1", "name": "Entorno Empresarial", "term": "Q1", "teacher": "T_EMP_04", "grades": ["ADE1", "INFADE1"], "students": 65, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["104", "50", "51"], "possible_days": ["Tuesday", "Thursday"] },
-    { "id": "SIST_INF_Q1", "name": "Sistemas de Información I", "term": "Q1", "teacher": "T_EMP_03", "grades": ["ADE1"], "students": 40, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["101", "103", "104"], "possible_days": ["Tuesday", "Wednesday", "Thursday"] },
-    { "id": "INTRO_CONT_Q1", "name": "Introducción a la Contabilidad", "term": "Q1", "teacher": "T_EMP_01", "grades": ["ADE1", "INFADE1"], "students": 65, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["104", "105", "50", "51", "52"], "possible_days": ["Monday", "Wednesday"] },
-    { "id": "MATE_ADE_Q1", "name": "Métodos Matemáticos", "term": "Q1", "teacher": "T_EMP_04", "grades": ["ADE1"], "students": 40, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["101", "102", "103"], "possible_days": ["Tuesday", "Wednesday", "Friday"] },
-
-    { "id": "CONTAB_CALC_Y_GEST_COST_Q2", "name": "Contabilidad Financiera y Cálculo y Gestión de Costes", "term": "Q2", "teacher": "T_EMP_01", "grades": ["ADE1", "INFADE1"], "students": 65, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["104", "105"], "possible_days": ["Monday", "Wednesday"] },
-    { "id": "MICRO_Q2", "name": "Microeconomía", "term": "Q2", "teacher": "T_EMP_03", "grades": ["ADE1"], "students": 40, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["101", "103", "105"], "possible_days": ["Tuesday", "Wednesday", "Thursday"] },
-    { "id": "INTRO_ANALISIS_DATOS_Q2", "name": "Introducción al Análisis de Datos-Business Statistics", "term": "Q2", "teacher": "T_EMP_01", "grades": ["ADE1", "INFADE1"], "students": 65, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["104", "105", "51"], "possible_days": ["Tuesday", "Thursday"] },
-    { "id": "FUND_COMPOR_ORG_Q2", "name": "Fundamentos del Comportamiento Organizacional", "term": "Q2", "teacher": "T_EMP_04", "grades": ["ADE1", "INFADE1"], "students": 65, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["105", "50", "51"], "possible_days": ["Monday", "Thursday", "Friday"] },
-    { "id": "ENT_LEGAL_Q2", "name": "Entorno Legal", "term": "Q2", "teacher": "T_EMP_02", "grades": ["ADE1"], "students": 40, "sessions_per_week": 2, "duration_slots": 4, "possible_rooms": ["101", "103"], "possible_days": ["Monday", "Wednesday", "Thursday"] }
+  "grades": [
+    {
+      "id": "INGINF1",
+      "name": "Grado en Ingeniería Informática - 1º"
+    },
+    {
+      "id": "CDIA1",
+      "name": "Grado en Ciencia de Datos e IA - 1º"
+    },
+    {
+      "id": "INFCDIA1",
+      "name": "Doble Grado en Ingeniería Informática + Ciencia de Datos e Inteligencia Artificial - 1º"
+    },
+    {
+      "id": "ADE1",
+      "name": "Grado en Administración de Empresas - 1º"
+    },
+    {
+      "id": "INFADE1",
+      "name": "Doble Grado Informática + ADE - 1º"
+    }
   ],
-  "constraints": 
-  [
-    {"type": "HARD", "description": "No overlap for same grade"},
-    {"type": "HARD", "description": "No overlap for same teacher"},
-    {"type": "HARD", "description": "No overlap for same room"},
-    {"type": "SOFT", "description": "Minimize travel between buildings", "penalty": 10}
+  "courses": [
+    {
+      "id": "DIR_EMPR_Q1",
+      "name": "Administración de Empresa",
+      "term": "Q1",
+      "teacher": "T_ING_06",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1"
+      ],
+      "students": 52,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "possible_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "ALGEBRA_Q1",
+      "name": "Álgebra",
+      "term": "Q1",
+      "teacher": "T_ING_05",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "50",
+        "51"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "PROG1_Q1",
+      "name": "Programación I",
+      "term": "Q1",
+      "teacher": "T_ING_01",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 57,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "50",
+        "51"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "ELEC_DIG_Q1",
+      "name": "Electrónica Digital",
+      "term": "Q1",
+      "teacher": "T_ING_04",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1"
+      ],
+      "students": 52,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "INTRO_COMP_Q1",
+      "name": "Introducción a los Computadores",
+      "term": "Q1",
+      "teacher": "T_ING_07",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "50",
+        "51"
+      ],
+      "possible_days": [
+        "Monday",
+        "Tuesday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "FUND_PROG_Q1",
+      "name": "Fundamentos de la Programación",
+      "term": "Q1",
+      "teacher": "T_ING_01",
+      "grades": [
+        "CDIA1"
+      ],
+      "students": 20,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "46",
+        "47"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "CALCULO_Q2",
+      "name": "Cálculo",
+      "term": "Q2",
+      "teacher": "T_ING_05",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "51",
+        "52"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday"
+      ]
+    },
+    {
+      "id": "PROG2_Q2",
+      "name": "Programación II",
+      "term": "Q2",
+      "teacher": "T_ING_01",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 57,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "DISCRETA_Q2",
+      "name": "Matemática Discreta",
+      "term": "Q2",
+      "teacher": "T_ING_05",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "52"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "FISICA_Q2",
+      "name": "Física",
+      "term": "Q2",
+      "teacher": "T_ING_03",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1"
+      ],
+      "students": 32,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "46",
+        "47"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "ESTR_COMP_Q2",
+      "name": "Estructura de Computadores",
+      "term": "Q2",
+      "teacher": "T_ING_03",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1"
+      ],
+      "students": 32,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "47"
+      ],
+      "possible_days": [
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "ALGORITMICA_Q2",
+      "name": "Algorítmica",
+      "term": "Q2",
+      "teacher": "T_ING_02",
+      "grades": [
+        "CDIA1",
+        "INFCDIA1"
+      ],
+      "students": 32,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "46",
+        "47"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "ING_COMP_Q2",
+      "name": "Ingeniería de Computadores",
+      "term": "Q2",
+      "teacher": "T_ING_02",
+      "grades": [
+        "CDIA1"
+      ],
+      "students": 20,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "46"
+      ],
+      "possible_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "PROG_ORIEN_OBJ_Q2",
+      "name": "Programación Orientada a Objetos",
+      "term": "Q2",
+      "teacher": "T_ING_01",
+      "grades": [
+        "CDIA1"
+      ],
+      "students": 20,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "44",
+        "46",
+        "47"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "EMPRESA_SOSTEN_Q1",
+      "name": "Empresa y Sostenibilidad",
+      "term": "Q1",
+      "teacher": "T_EMP_02",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "105",
+        "50",
+        "52"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday"
+      ]
+    },
+    {
+      "id": "ENT_EMPR_Q1",
+      "name": "Entorno Empresarial",
+      "term": "Q1",
+      "teacher": "T_EMP_04",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "50",
+        "51"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "SIST_INF_Q1",
+      "name": "Sistemas de Información I",
+      "term": "Q1",
+      "teacher": "T_EMP_03",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "103",
+        "104"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "INTRO_CONT_Q1",
+      "name": "Introducción a la Contabilidad",
+      "term": "Q1",
+      "teacher": "T_EMP_01",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "105",
+        "50",
+        "51",
+        "52"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday"
+      ]
+    },
+    {
+      "id": "MATE_ADE_Q1",
+      "name": "Métodos Matemáticos",
+      "term": "Q1",
+      "teacher": "T_EMP_04",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "102",
+        "103"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Wednesday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "CONTAB_CALC_Y_GEST_COST_Q2",
+      "name": "Contabilidad Financiera y Cálculo y Gestión de Costes",
+      "term": "Q2",
+      "teacher": "T_EMP_01",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "105"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday"
+      ]
+    },
+    {
+      "id": "MICRO_Q2",
+      "name": "Microeconomía",
+      "term": "Q2",
+      "teacher": "T_EMP_03",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "103",
+        "105"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "INTRO_ANALISIS_DATOS_Q2",
+      "name": "Introducción al Análisis de Datos-Business Statistics",
+      "term": "Q2",
+      "teacher": "T_EMP_01",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "105",
+        "51"
+      ],
+      "possible_days": [
+        "Tuesday",
+        "Thursday"
+      ]
+    },
+    {
+      "id": "FUND_COMPOR_ORG_Q2",
+      "name": "Fundamentos del Comportamiento Organizacional",
+      "term": "Q2",
+      "teacher": "T_EMP_04",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "105",
+        "50",
+        "51"
+      ],
+      "possible_days": [
+        "Monday",
+        "Thursday",
+        "Friday"
+      ]
+    },
+    {
+      "id": "ENT_LEGAL_Q2",
+      "name": "Entorno Legal",
+      "term": "Q2",
+      "teacher": "T_EMP_02",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "103"
+      ],
+      "possible_days": [
+        "Monday",
+        "Wednesday",
+        "Thursday"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "HARD",
+      "description": "No overlap for same grade"
+    },
+    {
+      "type": "HARD",
+      "description": "No overlap for same teacher"
+    },
+    {
+      "type": "HARD",
+      "description": "No overlap for same room"
+    },
+    {
+      "type": "SOFT",
+      "description": "Minimize travel between buildings",
+      "penalty": 10
+    }
   ]
 }
