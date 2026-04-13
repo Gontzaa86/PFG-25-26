@@ -51,6 +51,9 @@ def vista_stream():
 # Esta es la ruta que REALMENTE ejecuta el algoritmo y envía datos
 @app.route('/solver/progress')
 def solver_progress():
+    # Obtener el term de la URL, por defecto Q1 si no viene nada
+    term_usuario = request.args.get('term', 'Q1')
+
     ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
     
     if not os.path.exists(ruta_json):
@@ -61,7 +64,7 @@ def solver_progress():
             data = json.load(f)
         
         # Ejecutamos el generador del algoritmo
-        for progreso, horario in generar_horario_iterativo(data, term="Q1"):
+        for progreso, horario in generar_horario_iterativo(data, term=term_usuario):
             # Enviamos cada paso del 1 al 20 al navegador
             yield f"data: {json.dumps({'progreso': progreso, 'horario': horario})}\n\n"
     

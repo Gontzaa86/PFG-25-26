@@ -3,15 +3,27 @@
 {% block title %}Generador de Horarios - Vista Calendario{% endblock %}
 
 {% block content %}
-
 <div class="container-fluid px-4">
     <div class="card p-4 shadow">
         <h2>Panel de Control del Algoritmo</h2>
         <p class="text-muted">Se ejecutarán 20 intentos. La vista final se organizará por Carrera/Grado.</p>
         
-        <button id="btnEjecutar" class="btn btn-primary w-25">Iniciar Generación</button>
+        <div class="row g-3 align-items-center mb-3">
+            <div class="col-auto">
+                <label for="selectorTerm" class="col-form-label">Seleccionar Cuatrimestre:</label>
+            </div>
+            <div class="col-auto">
+                <select id="selectorTerm" class="form-select">
+                    <option value="Q1" selected>Primer Cuatrimestre (Q1)</option>
+                    <option value="Q2">Segundo Cuatrimestre (Q2)</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <button id="btnEjecutar" class="btn btn-primary">Iniciar Generación</button>
+            </div>
+        </div>
 
-        <div id="loading-area">
+        <div id="loading-area" style="display: none;">
             <div class="loader mt-3"></div>
             <p class="mt-2">Generando Horarios: <strong id="contador">0</strong> / 20</p>
         </div>

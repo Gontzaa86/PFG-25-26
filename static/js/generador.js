@@ -9,6 +9,7 @@ const diasNombresES = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
 
 // UI Elements
 const btn = document.getElementById('btnEjecutar');
+const selectorTerm = document.getElementById('selectorTerm');
 const loadingArea = document.getElementById('loading-area');
 const contadorText = document.getElementById('contador');
 const contenedorCalendarios = document.getElementById('calendarios-grados');
@@ -18,36 +19,46 @@ const asignaturaColores = {};
 let colorCounter = 1;
 
 btn.onclick = function() {
+    const termSeleccionado = selectorTerm.value; // Capturamos Q1 o Q2
+    
     btn.disabled = true;
+    selectorTerm.disabled = true; // Bloqueamos el selector durante la generación
     loadingArea.style.display = 'block';
     contenedorCalendarios.innerHTML = "";
     contadorText.innerText = "0";
-    Object.keys(asignaturaColores).forEach(key => delete asignaturaColores[key]);
-    colorCounter = 1;
+    
+    // Pasamos el cuatrimestre en la URL
+    const eventSource = new EventSource(`/solver/progress?term=${termSeleccionado}`);
 
-    const eventSource = new EventSource('/solver/progress');
-
-    eventSource.onmessage = function(e) {
+eventSource.onmessage = function(e) {
+        // Parsear los datos recibidos del servidor
         const data = JSON.parse(e.data);
+        
+        // Actualizar el contador en la interfaz
         contadorText.innerText = data.progreso;
 
+        // Si hay un error reportado por el algoritmo
         if (data.error) {
             contenedorCalendarios.innerHTML = `<div class='alert alert-danger'>Error: ${data.error}</div>`;
             eventSource.close();
             btn.disabled = false;
+            selectorTerm.disabled = false;
             loadingArea.style.display = 'none';
             return;
         }
 
+        // Cuando llegamos al intento 20, finalizamos y dibujamos
         if (data.progreso === 20) {
             eventSource.close();
             btn.disabled = false;
+            selectorTerm.disabled = false;
             loadingArea.style.display = 'none';
             
+            // Verificamos si el último objeto 'horario' contiene datos
             if (data.horario && data.horario.length > 0) {
                 procesarYDibujarCalendarios(data.horario);
             } else {
-                contenedorCalendarios.innerHTML = "<div class='alert alert-warning text-center'>No se encontró solución válida en 20 intentos.</div>";
+                contenedorCalendarios.innerHTML = "<div class='alert alert-warning text-center'>No se encontró una solución válida en los 20 intentos.</div>";
             }
         }
     };
@@ -55,6 +66,7 @@ btn.onclick = function() {
     eventSource.onerror = function() {
         eventSource.close();
         btn.disabled = false;
+        selectorTerm.disabled = false;
         loadingArea.style.display = 'none';
         console.error("Error de conexión SSE.");
     };
