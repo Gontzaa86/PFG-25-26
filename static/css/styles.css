@@ -1,4 +1,8 @@
-/* Animación de desvanecimiento para filtro de búsqueda */
+/* 
+====================================================================
+Animación de desvanecimiento para filtro de búsqueda (grados.html)
+====================================================================
+*/
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -7,3 +11,64 @@
 .animar-entrada {
     animation: fadeIn 0.4s ease-out forwards;
 }
+
+/* 
+====================================================================
+Estilos del calendario (resultados.html)
+====================================================================
+*/
+
+/* Estilos para el Loader */
+.loader {
+    width: 48px; height: 48px; border: 5px solid #EEE;
+    border-bottom-color: #0d6efd; border-radius: 50%;
+    display: inline-block; animation: rotation 1s linear infinite;
+}
+@keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+#loading-area { display: none; text-align: center; margin: 20px 0; }
+
+/* Estilos del Calendario Tipo Google Calendar */
+.calendar-container { margin-top: 30px; margin-bottom: 50px; }
+.grade-title { background-color: #343a40; color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; }
+
+.calendar-table { table-layout: fixed; width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #ddd; }
+.calendar-table th, .calendar-table td { border: 1px solid #eee; text-align: center; vertical-align: middle; padding: 0; overflow: hidden;}
+.calendar-table td { height: 40px; }
+
+/* Columna de horas fija */
+.time-col { width: 60px; background-color: #f8f9fa; font-size: 0.8rem; color: #6c757d; font-weight: bold; border-right: 2px solid #ddd !important; }
+.calendar-table thead th { background-color: #f8f9fa; padding: 10px; border-bottom: 2px solid #ddd; }
+
+/* Estilos de las celdas de clase (Eventos) */
+.session-cell { 
+    background-color: #e3f2fd; 
+    border: 1px solid #90caf9;
+    border-radius: 4px;
+    margin: 2px;
+    padding: 5px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    height: calc(100% - 4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.session-title { font-weight: bold; color: #0d47a1; margin-bottom: 2px; }
+.session-info { color: #1565c0; font-size: 0.7rem; }
+
+.session-prof { 
+    font-style: italic; 
+    color: #455a64; 
+    font-size: 0.65rem; 
+    margin-top: 2px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 2px;
+}
+
+/* Colores aleatorios para asignaturas */
+.bg-cat-1 { background-color: #e3f2fd; border-color: #90caf9; }
+.bg-cat-2 { background-color: #e8f5e9; border-color: #a5d6a7; }
+.bg-cat-3 { background-color: #fff3e0; border-color: #ffcc80; }
+.bg-cat-4 { background-color: #f3e5f5; border-color: #ce93d8; }
+.bg-cat-5 { background-color: #efebe9; border-color: #bcaaa4; }
