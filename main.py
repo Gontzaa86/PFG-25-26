@@ -39,7 +39,9 @@ def lista_grados():
     data = cargar_datos()
     grados = data.get('grades', [])
     asignaturas = data.get('courses', [])
-    return render_template('grados.html', grados=grados, asignaturas=asignaturas)
+    profesores = {p['id']: p['name'] for p in data.get('teachers', [])}
+
+    return render_template('grados.html', grados=grados, asignaturas=asignaturas, profesores=profesores)
 
 # Esta ruta solo carga la página HTML con el contador y el botón
 @app.route('/solver/stream')
