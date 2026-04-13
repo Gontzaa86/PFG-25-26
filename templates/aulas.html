@@ -1,21 +1,33 @@
 {% extends "layout.html" %}
+
 {% block content %}
-<div class="container mt-4">
-    <h2>Infraestructura: Aulas</h2>
-    <div class="row">
-        {% for aula in aulas %}
-        <div class="col-md-4 mb-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ aula.name }}</h5>
-                    <p class="card-text">
-                        <strong>Capacidad:</strong> {{ aula.capacity }} personas<br>
-                        <strong>Edificio:</strong> {{ aula.building }}
-                    </p>
+<div class="container">
+    <div class="mb-5">
+        <h2 class="fw-bold">Infraestructura y Aulas</h2>
+    </div>
+
+    {% for edificio in edificios %}
+    <div class="mb-5 seccion-edificio">
+        <h4 class="text-uppercase text-muted fw-bold border-bottom pb-2 mb-4">
+            {{ edificio }}
+        </h4>
+        
+        <div class="row g-3">
+            {% for aula in aulas if aula.building == edificio %}
+            <div class="col-6 col-md-4 col-lg-2 tarjeta-aula" data-id="{{ aula.id }}">
+                <div class="card h-100 shadow-sm border-0 {% if aula.capacity > 60 %}border-top border-primary border-3{% else %}border-top border-info border-3{% endif %}">
+                    <div class="card-body text-center p-3">
+                        <div class="h4 fw-bold mb-1">{{ aula.id }}</div>
+                        <div class="small text-muted mb-2">Capacidad</div>
+                        <span class="badge {% if aula.capacity > 60 %}bg-primary{% else %}bg-info text-dark{% endif %} rounded-pill">
+                            {{ aula.capacity }} pers.
+                        </span>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
