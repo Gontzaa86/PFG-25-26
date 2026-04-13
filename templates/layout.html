@@ -15,11 +15,28 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
             <a class="navbar-brand" href="{{ url_for('inicio') }}">Deusto Horarios</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="{{ url_for('lista_profesores') }}">Profesores</a>
-                <a class="nav-link" href="{{ url_for('lista_aulas') }}">Aulas</a>
-                <a class="nav-link" href="{{ url_for('lista_grados') }}">Grados y Asignaturas</a>
-                <a class="nav-link btn btn-primary text-white ms-lg-3" href="{{ url_for('vista_stream') }}">Generar Horario</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Visualización Datos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('lista_profesores') }}">Profesores</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lista_aulas') }}">Aulas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('lista_grados') }}">Grados y Asignaturas</a></li>
+                        </ul>
+                    </div>
+
+                    <a class="nav-link btn btn-primary text-white ms-lg-3" href="{{ url_for('vista_stream') }}">Generar Horario</a>
+                </div>
             </div>
         </nav>
     </header>
