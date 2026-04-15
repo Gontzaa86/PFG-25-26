@@ -95,24 +95,32 @@ function filtrarProfesores()
     const seccionesRama = document.querySelectorAll('.seccion-rama');
 
     seccionesRama.forEach(seccion => {
+        // Obtener el nombre de la rama de esta sección (usando el h4)
+        const nombreRamaSeccion = seccion.querySelector('h4').innerText.trim().toUpperCase();
         const tarjetas = seccion.querySelectorAll('.tarjeta-profesor');
+        
         let tieneResultadosEnRama = false;
+
+        // Lógica de visibilidad de la sección por Rama
+        const ramaCoincide = (ramaSeleccionada === "TODAS" || nombreRamaSeccion === ramaSeleccionada.toUpperCase());
 
         tarjetas.forEach(tarjeta => {
             const nombreProfesor = tarjeta.getAttribute('data-nombre');
-            
-            if (nombreProfesor.includes(texto)) 
+            const coincideNombre = nombreProfesor.includes(texto);
+
+            if (ramaCoincide && coincideNombre) 
             {
-                tarjeta.style.display = ""; // Mostrar
+                tarjeta.style.display = ""; 
                 tieneResultadosEnRama = true;
-            } else 
+            } 
+            else 
             {
-                tarjeta.style.display = "none"; // Ocultar
+                tarjeta.style.display = "none";
             }
         });
 
-        // Si no hay profesores que coincidan en esta rama, ocultamos la rama entera
-        if (tieneResultadosEnRama) 
+        // Mostrar la sección solo si la rama coincide y hay profesores visibles
+        if (ramaCoincide && tieneResultadosEnRama) 
         {
             seccion.style.display = "";
         } 
@@ -121,4 +129,17 @@ function filtrarProfesores()
             seccion.style.display = "none";
         }
     });
+}
+
+let ramaSeleccionada = "TODAS";
+function seleccionarRama(rama) 
+{
+    ramaSeleccionada = rama;
+    
+    // Actualizar el texto del botón
+    const btn = document.getElementById('btnFiltroRama');
+    btn.innerText = rama === "TODAS" ? "Todas las Ramas" : rama;
+    
+    // Ejecutar el filtrado
+    filtrarProfesores();
 }

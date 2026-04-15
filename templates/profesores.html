@@ -8,16 +8,28 @@
     </div>
 
     <div class="row mb-4">
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-8 mx-auto">
             <div class="input-group shadow-sm">
                 <span class="input-group-text bg-white border-end-0">
                     <i class="bi bi-search">🔍</i>
                 </span>
+                
                 <input type="text" 
                     id="buscadorNombre" 
                     class="form-control border-start-0 ps-0" 
                     placeholder="Buscar profesor por nombre..."
                     onkeyup="filtrarProfesores()">
+
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btnFiltroRama">
+                    Todas las Ramas
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#" onclick="seleccionarRama('TODAS')">Todas las Ramas</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    {% for rama in ramas %}
+                    <li><a class="dropdown-item" href="#" onclick="seleccionarRama('{{ rama }}')">{{ rama }}</a></li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
