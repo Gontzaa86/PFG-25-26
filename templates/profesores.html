@@ -40,18 +40,31 @@
                                 <button class="btn btn-sm btn-light border dropdown-toggle" data-bs-toggle="dropdown">
                                     Asignaturas
                                 </button>
-                                <ul class="dropdown-menu shadow border-0">
-                                    {% set ns = namespace(tiene=false) %}
+                                <ul class="dropdown-menu shadow border-0 custom-dropdown-width">
+                                    {% set ns = namespace(tieneQ1=false, tieneQ2=false) %}
+                                    
+                                    <li><h6 class="dropdown-header text-primary fw-bold">Q1</h6></li>
                                     {% for curso in asignaturas %}
-                                        {# Forzamos la comparación como strings para evitar fallos de tipo #}
-                                        {% if curso.teacher|string == p.id|string %}
-                                            <li><span class="dropdown-item-text small">● {{ curso.name }}</span></li>
-                                            {% set ns.tiene = true %}
+                                        {% if curso.teacher|string == p.id|string and curso.term == 'Q1' %}
+                                            <li><span class="dropdown-item-text text-truncate">● {{ curso.name }}</span></li>
+                                            {% set ns.tieneQ1 = true %}
                                         {% endif %}
                                     {% endfor %}
-                                    
-                                    {% if not ns.tiene %}
-                                        <li><span class="dropdown-item-text text-muted small px-3">Sin carga lectiva</span></li>
+                                    {% if not ns.tieneQ1 %}
+                                        <li><span class="dropdown-item-text text-muted small italic">Sin asignaturas</span></li>
+                                    {% endif %}
+
+                                    <li><hr class="dropdown-divider"></li>
+
+                                    <li><h6 class="dropdown-header text-primary fw-bold">Q2</h6></li>
+                                    {% for curso in asignaturas %}
+                                        {% if curso.teacher|string == p.id|string and curso.term == 'Q2' %}
+                                            <li><span class="dropdown-item-text text-truncate">● {{ curso.name }}</span></li>
+                                            {% set ns.tieneQ2 = true %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if not ns.tieneQ2 %}
+                                        <li><span class="dropdown-item-text text-muted small italic">Sin asignaturas</span></li>
                                     {% endif %}
                                 </ul>
                             </div>

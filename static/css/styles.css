@@ -72,3 +72,32 @@ Estilos del calendario (resultados.html)
 .bg-cat-3 { background-color: #fff3e0; border-color: #ffcc80; }
 .bg-cat-4 { background-color: #f3e5f5; border-color: #ce93d8; }
 .bg-cat-5 { background-color: #efebe9; border-color: #bcaaa4; }
+
+/* 
+====================================================================
+Estilos del dropdown asignaturas (profesores.html)
+====================================================================
+*/
+
+/* Clase para unificar el ancho de los desplegables */
+.custom-dropdown-width {
+    min-width: 400px; /* Ancho fijo para todos */
+    max-width: 400px;
+    padding: 10px 0;
+}
+
+/* Evitar que el texto salte de línea y poner puntos suspensivos si es muy largo */
+.dropdown-item-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 0.85rem;
+}
+
+/* Estilo para los títulos Q1 y Q2 */
+.dropdown-header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    letter-spacing: 1px;
+}
