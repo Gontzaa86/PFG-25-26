@@ -2,6 +2,7 @@ import json
 import os
 from flask import Flask, render_template, Response, request, jsonify
 from utils.algoritmos import generar_horario_iterativo
+from utils.restricciones import RESTRICCIONES_DISPONIBLES
 
 app = Flask(__name__)
 
@@ -54,6 +55,9 @@ def solver_progress():
     # Obtener el term de la URL, por defecto Q1 si no viene nada
     term_usuario = request.args.get('term', 'Q1')
 
+    # Obtener lista de restricciones (ej: ?res=minimizar_ventanas&res=evitar_clase_unica)
+    restricciones_usuario = request.args.getlist('res')
+
     ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
     
     if not os.path.exists(ruta_json):
@@ -64,9 +68,14 @@ def solver_progress():
             data = json.load(f)
         
         # Ejecutamos el generador del algoritmo
-        for progreso, horario in generar_horario_iterativo(data, term=term_usuario):
+        for progreso, resultado in generar_horario_iterativo(data, term=term_usuario, restricciones=restricciones_usuario):
             # Enviamos cada paso del 1 al 20 al navegador
-            yield f"data: {json.dumps({'progreso': progreso, 'horario': horario})}\n\n"
+            payload = {
+                'progreso': progreso,
+                'horario': resultado['horario'],
+                'logs': resultado['logs']
+            }
+            yield f"data: {json.dumps(payload)}\n\n"
     
     return Response(generate(), mimetype='text/event-stream')
 
@@ -115,6 +124,12 @@ def eliminar_profesor(id):
     data['teachers'] = [p for p in data['teachers'] if p ['id'] != id]
     guardar_datos(data)
     return jsonify({"success": True})
+
+# ==== Rutas de restricciones ====
+@app.route('/api/config/restricciones')
+def obtener_restricciones():
+    # Enviamos solo los ID y los nombres legibles al frontend
+    return jsonify({k: v['label'] for k, v in RESTRICCIONES_DISPONIBLES.items()})
 
 # ---------------------------------------------------------
 # FUNCIONES

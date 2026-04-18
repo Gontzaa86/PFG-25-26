@@ -1,5 +1,6 @@
 import random
 import time
+from utils.restricciones import RESTRICCIONES_DISPONIBLES
 
 def verificar_solapamiento(inicio1, duracion1, inicio2, duracion2):
     return inicio1 < (inicio2 + duracion2) and inicio2 < (inicio1 + duracion1)
@@ -27,48 +28,38 @@ def es_valida(sesion_actual, asignaciones):
                 
     return True
 
-def evaluar_horario(asignaciones):
+def evaluar_horario(asignaciones, restricciones_activas=None):
     """
     RESTRICCIONES BLANDAS (Sistema de penalización)
     Menor puntuación = Mejor horario
     """
+    
+    # Diccionario para guardar el desglose de restricciones (mas que nada para saber si funciona correctamente)
+    log_penalizaciones = {clave: 0 for clave in (restricciones_activas or [])}
+    total = 0
+
+    if not restricciones_activas:
+        return 0
+    
     penalizacion = 0
     por_grado_dia = {}
-    
+
+    # Agrupar uan sola vez para todas las funciones
     for asig in asignaciones:
         for grado in asig['grades']:
             key = (grado, asig['dia'])
             por_grado_dia.setdefault(key, []).append(asig)
-            
-    for (grado, dia), sesiones in por_grado_dia.items():
-        cantidad_clases = len(sesiones)
-        # Si hay días con una única clase, se penaliza
-        if cantidad_clases == 1:
-            penalizacion += 1000
-        # Si hay días con tres clases, se penaliza ligeramente
-        elif cantidad_clases == 3:
-            penalizacion += 200
         
-        # Ordenamos las sesiones del día por hora
-        sesiones.sort(key=lambda x: x['slot'])
-        
-        for i in range(len(sesiones) - 1):
-            actual = sesiones[i]
-            siguiente = sesiones[i+1]
-            
-            # 1. Evitar huecos (Ventanas)
-            fin_actual = actual['slot'] + actual['duracion']
-            hueco = siguiente['slot'] - fin_actual
-            if hueco > 0:
-                penalizacion += hueco * 500 # Penalizamos cada slot vacío
-            
-            # 2. Minimizar desplazamientos entre edificios
-            if actual['edificio'] != siguiente['edificio']:
-                penalizacion += 500 # Penalización por cambio de edificio
+    # Ejecutamos solo las funciones seleccionadas
+    for clave in (restricciones_activas or []):
+        if clave in RESTRICCIONES_DISPONIBLES:
+            valor = RESTRICCIONES_DISPONIBLES[clave]["func"](por_grado_dia)
+            log_penalizaciones[clave] = valor
+            total += valor
                 
-    return penalizacion
+    return total, log_penalizaciones
 
-def generar_horario_iterativo(data, term="Q1"):
+def generar_horario_iterativo(data, term="Q1", restricciones=None):
     cursos = [c for c in data['courses'] if c['term'] == term]
     aulas = data['rooms']
     slots_posibles = list(range(0, 12)) # 08:00 - 14:00
@@ -76,6 +67,7 @@ def generar_horario_iterativo(data, term="Q1"):
     
     mejor_horario = None
     mejor_puntuacion = float('inf')
+    mejores_logs = {} # Guardar logs del mejor horario
 
     for i in range(1, 21):
         asignaciones_actuales = []
@@ -85,13 +77,14 @@ def generar_horario_iterativo(data, term="Q1"):
         # Intentamos resolver (con un límite de 3 segundos para no bloquear)
         if resolver_recursivo(0, 0, cursos, aulas, slots_posibles, asignaciones_actuales, start_time, 3, profesores_map):
             # Si es válido, evaluamos las restricciones blandas
-            puntuacion = evaluar_horario(asignaciones_actuales)
+            puntuacion, logs_actuales = evaluar_horario(asignaciones_actuales, restricciones)
             
             if puntuacion < mejor_puntuacion:
                 mejor_puntuacion = puntuacion
                 mejor_horario = list(asignaciones_actuales)
+                mejores_logs = logs_actuales # Guardamos los logs ganadores
         
-        yield i, mejor_horario
+        yield i, {"horario": mejor_horario, "logs": mejores_logs}
 
 def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, asignaciones, start_time, limit, profesores_map):
     if time.time() - start_time > limit: return False

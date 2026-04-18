@@ -8,6 +8,6 @@ Listado de restricciones tanto duras como blandas de la aplicación.
 - Solo una clase de la misma asignatura al día
 
 ### Restricciones Blandas (Soft Constrains)
-- Evitar huecos --> **500 x Hueco**
-- Minimizar desplazamiento entre edificios --> **500 x Cambio**
-- Clases al día --> **1000 (1 clase)** & **200 (3 clases)**
+- Evitar huecos --> **1000 x Hueco**
+- Minimizar desplazamiento entre edificios --> **200 x Cambio**
+- Clases al día --> **500 (1 clase)** & **200 (3 clases)**

@@ -26,9 +26,13 @@ btn.onclick = function() {
     loadingArea.style.display = 'block';
     contenedorCalendarios.innerHTML = "";
     contadorText.innerText = "0";
+
+    const checks = document.querySelectorAll('.res-check:checked');
+    let paramsRes = "";
+    checks.forEach(c => paramsRes += `&res=${c.value}`);
     
     // Pasamos el cuatrimestre en la URL
-    const eventSource = new EventSource(`/solver/progress?term=${termSeleccionado}`);
+    const eventSource = new EventSource(`/solver/progress?term=${termSeleccionado}${paramsRes}`);
 
 eventSource.onmessage = function(e) {
         // Parsear los datos recibidos del servidor
@@ -59,6 +63,20 @@ eventSource.onmessage = function(e) {
                 procesarYDibujarCalendarios(data.horario);
             } else {
                 contenedorCalendarios.innerHTML = "<div class='alert alert-warning text-center'>No se encontró una solución válida en los 20 intentos.</div>";
+            }
+
+            // Mostrar autidotría
+            if (data.horario && data.logs)
+            {
+                const logArea = document.getElementById('log-restricciones');
+                const lista = document.getElementById('lista-logs');
+                logArea.style.display = 'block';
+                lista.innerHTML = "";
+
+                for (const [res, puntos] of Object.entries(data.logs))
+                {
+                    lista.innerHTML += `<li>${res}: <strong>${puntos} pts</strong> de penalización aplicados.</li>`
+                }
             }
         }
     };
@@ -153,3 +171,19 @@ function obtenerColorAsignatura(curso) {
     }
     return asignaturaColores[curso];
 }
+
+// Cargar checks al iniciar (restricciones)
+document.addEventListener('DOMContentLoaded', () => {
+fetch('/api/config/restricciones')
+    .then(res => res.json())
+    .then(data => {
+        const container = document.getElementById('contenedor-checks');
+        for (const [id, label] of Object.entries(data)) {
+            container.innerHTML += `
+                <div class="form-check">
+                    <input class="form-check-input res-check" type="checkbox" value="${id}" id="check-${id}">
+                    <label class="form-check-label" for="check-${id}">${label}</label>
+                </div>`;
+        }
+    });
+});
