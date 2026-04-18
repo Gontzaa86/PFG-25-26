@@ -21,6 +21,14 @@ def lista_profesores():
     profesores = data.get('teachers', [])
     asignaturas = data.get('courses', []) # Recopilación de asignaturas para visualización de asignaturas impartidas por cada profesor.
 
+    # Añadir un indicador de si el profesor tiene asignaturas asignadas
+    for profesor in profesores:
+        profesor_id = str(profesor.get('id', ''))
+        profesor['has_courses'] = any(
+            str(curso.get('teacher', '')) == profesor_id
+            for curso in asignaturas
+        )
+
     # Agrupación por rama a los profesores
     ramas = sorted(list(set(p['branch'] for p in profesores)))
 

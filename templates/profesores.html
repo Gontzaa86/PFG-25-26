@@ -86,7 +86,7 @@
                                     Editar
                                 </button>
                                 
-                                <button class="btn btn-sm btn-outline-danger" onclick="intentarEliminar('{{p.id}}', {{ 'true' if ns.tiene else 'false' }})">
+                                <button class="btn btn-sm btn-outline-danger" onclick="intentarEliminar('{{p.id}}', {{ 'true' if p.has_courses else 'false' }})">
                                     Eliminar
                                 </button>
                             </div>
