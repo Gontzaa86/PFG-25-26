@@ -11,10 +11,10 @@ En lugar de desechar los horarios y empezar de cero cada vez, debes aplicar oper
 
 El Ciclo de Optimización:
 
-1. Generar una solución inicial: Usa tu resolver_recursivo una sola vez para obtener un horario válido (aunque sea "malo").
-2. Fase de Reparación/Mejora: Selecciona una variable (una clase) que esté causando penalizaciones (p. ej., una clase en un edificio distinto a la anterior).
-3. Movimiento: Cambia esa clase a otro slot o aula.
-4. Aceptar o Rechazar: Si la nueva puntuación es mejor, quédatela. Si es peor, acéptala solo con una probabilidad pequeña (Simulated Annealing) para evitar atascarte.
+1. **Generar una solución inicial**: Usa tu resolver_recursivo una sola vez para obtener un horario válido (aunque sea "malo").
+2. **Fase de Reparación/Mejora**: Selecciona una variable (una clase) que esté causando penalizaciones (p. ej., una clase en un edificio distinto a la anterior).
+3. **Movimiento**: Cambia esa clase a otro slot o aula.
+4. **Aceptar o Rechazar**: Si la nueva puntuación es mejor, quédatela. Si es peor, acéptala solo con una probabilidad pequeña (Simulated Annealing) para evitar atascarte.
 
 ## 2. Implementar un "Conflict-Based Statistics"
 El CPSolver destaca por aprender de sus errores. En tu código, podrías añadir un contador de conflictos:
@@ -40,7 +40,8 @@ def optimizar_lns(mejor_horario, iteraciones=100):
 ```
 ## 4. Mejoras Técnicas en tu Código
 1. Pre-cálculo de Dominios
-Tu función es_valida se ejecuta miles de veces. En lugar de iterar sobre todas las asignaciones existentes cada vez, utiliza una matriz de ocupación:
+
+    Tu función es_valida se ejecuta miles de veces. En lugar de iterar sobre todas las asignaciones existentes cada vez, utiliza una matriz de ocupación:
 - ```ocupacion_aulas[aula_id][dia][slot]```
 - ```ocupacion_profesores[profe_id][dia][slot]```
 
@@ -83,3 +84,6 @@ def busqueda_local(horario_inicial, max_intentos=1000):
 **¿Por qué esto es mejor?**
 
 Porque en lugar de disparar a ciegas (20 veces), el algoritmo camina hacia la solución óptima, refinando constantemente los bordes del horario. Si quieres ir al nivel de UniTime, deberías investigar librerías como Google OR-Tools (CP-SAT), que implementa estas heurísticas de forma nativa en Python y es extremadamente eficiente para este tipo de problemas.
+
+# Enlace a la conversación (Gemini)
+https://gemini.google.com/share/b80ee6f106f0
