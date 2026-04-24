@@ -20,6 +20,8 @@ __15/04/2026__
     - ¿Hora máxima a la que puede terminar una clase por la tarde? ¿21:00?
 - Para las clases que tienen, por ejemplo, cinco horas semanales, se puede distribuir en dos sesiones de 02:30 o en una de 02:00 y una de 03:00.
     - ¿En qué caso se hace cada una? ¿Hay alguna razón o simplemente para encajar el horario?
+- Clases que están divididas en varios grupos
+    - Varias carreras pueden dar la misma asignatura simultaneamente, o en el mismo cuatrimestre, pero en grupos distintos, es decir, no coinciden en clase. ¿Puede haber estudiantes de un mismo grado en clases distintas?
 
 # Restricciones
 ## Hard Constrains
