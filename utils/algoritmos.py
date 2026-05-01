@@ -1,5 +1,6 @@
 import random
 import time
+import copy
 from utils.restricciones import RESTRICCIONES_DISPONIBLES
 
 def verificar_solapamiento(inicio1, duracion1, inicio2, duracion2):
@@ -124,3 +125,59 @@ def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, a
                         return True
                     asignaciones.pop()
     return False
+
+# Función de optimización de horarios
+def optimizar_horario(horario_inicial, restricciones, data, iteraciones=2000): # Cantidad de iteraciones modificable
+    """
+    Toma un horario base y realiza mutaciones aleatorias controladas para reducir
+    las penalizaciones de restricciones blandas.
+    """
+    mejor_horario = copy.deepcopy(horario_inicial)
+    mejor_puntuacion, _ = evaluar_horario(mejor_horario, restricciones)
+    puntuacion_inicial = mejor_puntuacion
+
+    print(f"\n--- Iniciando Optimización ---")
+    print(f"Puntuación inicial: {puntuacion_inicial}")
+
+    aulas = data['rooms']
+    slots_posibles = list(range(0, 12))
+    dias_posibles = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+    for i in range(1, iteraciones + 1):
+        # Copiar para no corromper el horario original
+        candidato = copy.deepcopy(mejor_horario)
+
+        # Seleccionar una clase al azar y extrar para validar solapamientos
+        idx = random.randrange(len(candidato))
+        sesion = candidato.pop(idx)
+
+        # Mutación aleatoria: Cambiar día, slot o aula
+        sesion['dia'] = random.choice(dias_posibles)
+        sesion['slot'] = random.choice(slots_posibles)
+
+        # Ajuste de seguridad para no desbordar el último slot
+        if sesion['slot'] + sesion['duracion'] > max(slots_posibles) + 1:
+            sesion['slot'] = max(slots_posibles) + 1 - sesion['duracion']
+        
+        # Validar restricciones duras antes de evaluar las blandas
+        if es_valida(sesion, candidato):
+            candidato.append(sesion)
+            puntuacion_actual, _ = evaluar_horario(candidato, restricciones)
+
+            # Si la penalización es menor, actualizar el "mejor"
+            if puntuacion_actual < mejor_puntuacion:
+                mejor_puntuacion = puntuacion_actual
+                mejor_horario = candidato
+        
+        else:
+            # Si el cambio es inválido, descartar
+            continue
+
+        # Mostrar progeso por consola para ver avance real
+        if i %100 == 0:
+            print (f"Puntuacion tras {i} iteraciones: {mejor_puntuacion}")
+    
+    print(f"Optimización finalizada. Mejora total: {puntuacion_inicial - mejor_puntuacion} puntos.")
+    print(f"------------------------------\n")
+    
+    return mejor_horario, mejor_puntuacion

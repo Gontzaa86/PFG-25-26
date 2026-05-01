@@ -34,48 +34,32 @@ btn.onclick = function() {
     // Pasamos el cuatrimestre en la URL
     const eventSource = new EventSource(`/solver/progress?term=${termSeleccionado}${paramsRes}`);
 
-eventSource.onmessage = function(e) {
-        // Parsear los datos recibidos del servidor
+    eventSource.onmessage = function(e) {
         const data = JSON.parse(e.data);
         
-        // Actualizar el contador en la interfaz
-        contadorText.innerText = data.progreso;
-
-        // Si hay un error reportado por el algoritmo
-        if (data.error) {
-            contenedorCalendarios.innerHTML = `<div class='alert alert-danger'>Error: ${data.error}</div>`;
-            eventSource.close();
-            btn.disabled = false;
-            selectorTerm.disabled = false;
-            loadingArea.style.display = 'none';
-            return;
+        // Mostramos la fase actual (Generando o Optimizando)
+        if (data.fase === 'optimizando') {
+            contadorText.innerText = "Optimizando la élite...";
+        } else {
+            contadorText.innerText = data.progreso;
         }
 
-        // Cuando llegamos al intento 20, finalizamos y dibujamos
-        if (data.progreso === 20) {
+        if (data.fase === 'finalizado') {
             eventSource.close();
             btn.disabled = false;
             selectorTerm.disabled = false;
             loadingArea.style.display = 'none';
             
-            // Verificamos si el último objeto 'horario' contiene datos
             if (data.horario && data.horario.length > 0) {
                 procesarYDibujarCalendarios(data.horario);
-            } else {
-                contenedorCalendarios.innerHTML = "<div class='alert alert-warning text-center'>No se encontró una solución válida en los 20 intentos.</div>";
-            }
-
-            // Mostrar autidotría
-            if (data.horario && data.logs)
-            {
+                
+                // Actualizar panel de auditoría
                 const logArea = document.getElementById('log-restricciones');
                 const lista = document.getElementById('lista-logs');
                 logArea.style.display = 'block';
                 lista.innerHTML = "";
-
-                for (const [res, puntos] of Object.entries(data.logs))
-                {
-                    lista.innerHTML += `<li>${res}: <strong>${puntos} pts</strong> de penalización aplicados.</li>`
+                for (const [res, puntos] of Object.entries(data.logs)) {
+                    lista.innerHTML += `<li>${res}: <strong>${puntos} pts</strong></li>`;
                 }
             }
         }

@@ -1,7 +1,7 @@
 import json
 import os
 from flask import Flask, render_template, Response, request, jsonify
-from utils.algoritmos import generar_horario_iterativo
+from utils.algoritmos import generar_horario_iterativo, evaluar_horario, optimizar_horario
 from utils.restricciones import RESTRICCIONES_DISPONIBLES
 
 app = Flask(__name__)
@@ -75,15 +75,48 @@ def solver_progress():
         with open(ruta_json, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
+        pool_horarios = [] # Para almacenar los 20 intentos iniciales
+
         # Ejecutamos el generador del algoritmo
         for progreso, resultado in generar_horario_iterativo(data, term=term_usuario, restricciones=restricciones_usuario):
-            # Enviamos cada paso del 1 al 20 al navegador
-            payload = {
-                'progreso': progreso,
-                'horario': resultado['horario'],
-                'logs': resultado['logs']
-            }
-            yield f"data: {json.dumps(payload)}\n\n"
+            if resultado['horario']:
+                puntaje, logs = evaluar_horario(resultado['horario'], restricciones_usuario)
+                pool_horarios.append({
+                    "horario": resultado['horario'],
+                    "puntuacion": puntaje,
+                    "logs": logs
+                })
+
+            # Notificamos progreso al frontend
+            yield f"data: {json.dumps({'progreso': progreso, 'fase': 'generando'})}\n\n"
+        
+        # Optimización de la "Élite" (Top 5)
+        # Ordenamos por menor puntuación (penalización)
+        pool_horarios.sort(key=lambda x: x['puntuacion'])
+        top_5 = pool_horarios[:5]
+
+        ganador_absoluto = None
+        mejor_puntaje_global = float('inf')
+
+        for i, candidato in enumerate(top_5):
+            # Notificamos al usuario que estamos optimizando
+            yield f"data: {json.dumps({'progreso': 20, 'fase': f'optimizando {i+1}/5'})}\n\n"
+
+            h_opt, p_opt = optimizar_horario(candidato['horario'], restricciones_usuario, data)
+
+            if p_opt < mejor_puntaje_global:
+                mejor_puntaje_global = p_opt
+                _, logs_finales = evaluar_horario(h_opt, restricciones_usuario)
+                ganador_absoluto = {"horario": h_opt, "logs": logs_finales}
+        
+        # Resultado final
+        payload = {
+            'progreso': 20,
+            'fase': 'finalizado',
+            'horario': ganador_absoluto['horario'],
+            'logs': ganador_absoluto['logs']
+        }
+        yield f"data: {json.dumps(payload)}\n\n"
     
     return Response(generate(), mimetype='text/event-stream')
 
