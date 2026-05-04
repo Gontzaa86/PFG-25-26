@@ -56,7 +56,7 @@ async function guardarProfesor()
     const payload = {
         name: nombre,
         branch: rama,
-        availability: [] // Por defecto vacío
+        unavailability: [] // Por defecto vacío
     };
     if (id) payload.id = id;
 

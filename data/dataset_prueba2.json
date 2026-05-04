@@ -92,25 +92,37 @@
       "id": "T_ING_01",
       "name": "Fernando Boto",
       "branch": "INGENIERÍA",
-      "unavailability": {"Monday": "all"}
+      "unavailability": {
+        "Monday": "all"
+      }
     },
     {
       "id": "T_ING_02",
       "name": "Alain Andres",
       "branch": "INGENIERÍA",
-      "unavailability": {"Tuesday": ["10:00-12:00"]}
+      "unavailability": {
+        "Tuesday": [
+          "10:00-12:00"
+        ]
+      }
     },
     {
       "id": "T_ING_03",
       "name": "David Buján",
       "branch": "INGENIERÍA",
-      "unavailability": {"Wednesday": "all"}
+      "unavailability": {
+        "Wednesday": "all"
+      }
     },
     {
       "id": "T_ING_04",
       "name": "Alex Barco",
       "branch": "INGENIERÍA",
-      "unavailability": {"Friday": ["08:00-10:00"]}
+      "unavailability": {
+        "Friday": [
+          "08:00-10:00"
+        ]
+      }
     },
     {
       "id": "T_ING_05",
@@ -122,13 +134,21 @@
       "id": "T_ING_06",
       "name": "Jose Luis Gonzalez",
       "branch": "INGENIERÍA",
-      "unavailability": {"Thursday": ["14:00-16:30"]}
+      "unavailability": {
+        "Thursday": [
+          "14:00-16:30"
+        ]
+      }
     },
     {
       "id": "T_ING_07",
       "name": "Ignacio Lekuona",
       "branch": "INGENIERÍA",
-      "unavailability": {"Tuesday": ["09:00-11:30"]}
+      "unavailability": {
+        "Tuesday": [
+          "09:00-11:30"
+        ]
+      }
     },
     {
       "id": "T_EMP_01",
@@ -140,25 +160,42 @@
       "id": "T_EMP_02",
       "name": "Profesor ADE 2",
       "branch": "EMPRESA",
-      "unavailability": {"Wednesday": "all"}
+      "unavailability": {
+        "Wednesday": "all"
+      }
     },
     {
       "id": "T_EMP_03",
       "name": "Profesor ADE 3",
       "branch": "EMPRESA",
-      "unavailability": {"Monday": ["08:00-09:30"]}
+      "unavailability": {
+        "Monday": [
+          "08:00-09:30"
+        ]
+      }
     },
     {
       "id": "T_EMP_04",
       "name": "Profesor ADE 4",
       "branch": "EMPRESA",
-      "unavailability": {"Tuesday": ["08:00-10:00", "15:00-16:30"]}
+      "unavailability": {
+        "Tuesday": [
+          "08:00-10:00",
+          "15:00-16:30"
+        ]
+      }
     },
     {
       "name": "Profesor Derecho 1",
       "branch": "DERECHO",
       "id": "T_DER_01",
       "unavailability": []
+    },
+    {
+      "name": "Profesor Derecho 2",
+      "branch": "DERECHO",
+      "unavailability": [],
+      "id": "T_DER_02"
     }
   ],
   "grades": [
