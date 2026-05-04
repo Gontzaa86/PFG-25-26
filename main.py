@@ -80,7 +80,7 @@ def solver_progress():
         # Ejecutamos el generador del algoritmo
         for progreso, resultado in generar_horario_iterativo(data, term=term_usuario, restricciones=restricciones_usuario):
             if resultado['horario']:
-                puntaje, logs = evaluar_horario(resultado['horario'], restricciones_usuario)
+                puntaje, logs = evaluar_horario(resultado['horario'], restricciones_usuario, data)
                 pool_horarios.append({
                     "horario": resultado['horario'],
                     "puntuacion": puntaje,
@@ -106,7 +106,7 @@ def solver_progress():
 
             if p_opt < mejor_puntaje_global:
                 mejor_puntaje_global = p_opt
-                _, logs_finales = evaluar_horario(h_opt, restricciones_usuario)
+                _, logs_finales = evaluar_horario(h_opt, restricciones_usuario, data)
                 ganador_absoluto = {"horario": h_opt, "logs": logs_finales}
         
         # Resultado final

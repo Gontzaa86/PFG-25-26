@@ -2,6 +2,7 @@ import random
 import time
 import copy
 from utils.restricciones import RESTRICCIONES_DISPONIBLES
+import inspect
 
 def verificar_solapamiento(inicio1, duracion1, inicio2, duracion2):
     return inicio1 < (inicio2 + duracion2) and inicio2 < (inicio1 + duracion1)
@@ -29,7 +30,7 @@ def es_valida(sesion_actual, asignaciones):
                 
     return True
 
-def evaluar_horario(asignaciones, restricciones_activas=None):
+def evaluar_horario(asignaciones, restricciones_activas=None, data=None):
     """
     RESTRICCIONES BLANDAS (Sistema de penalización)
     Menor puntuación = Mejor horario
@@ -51,10 +52,41 @@ def evaluar_horario(asignaciones, restricciones_activas=None):
             key = (grado, asig['dia'])
             por_grado_dia.setdefault(key, []).append(asig)
         
+    # Antes de ejecutar, comprobación defensiva: si alguna restricción activa necesita el dataset
+    # y no se ha pasado `data`, lanzar un error claro para evitar AttributeError en funciones internas.
+    if data is None:
+        for clave in (restricciones_activas or []):
+            if clave in RESTRICCIONES_DISPONIBLES:
+                func = RESTRICCIONES_DISPONIBLES[clave]["func"]
+                try:
+                    sig = inspect.signature(func)
+                    if len(sig.parameters) == 2:
+                        raise ValueError(f"La restricción '{clave}' requiere el dataset 'data'. Pasa 'data' a evaluar_horario")
+                except ValueError:
+                    # re-raise para que el mensaje llegue al usuario
+                    raise
+                except Exception:
+                    # si no podemos inspeccionar, no asumimos nada
+                    continue
+
     # Ejecutamos solo las funciones seleccionadas
     for clave in (restricciones_activas or []):
         if clave in RESTRICCIONES_DISPONIBLES:
-            valor = RESTRICCIONES_DISPONIBLES[clave]["func"](por_grado_dia)
+            func = RESTRICCIONES_DISPONIBLES[clave]["func"]
+            # si la función acepta 2 parámetros (por_grado_dia, data) la llamamos con data
+            try:
+                sig = inspect.signature(func)
+                if len(sig.parameters) == 2:
+                    valor = func(por_grado_dia, data)
+                else:
+                    valor = func(por_grado_dia)
+            except Exception:
+                # fallback
+                try:
+                    valor = func(por_grado_dia, data)
+                except TypeError:
+                    valor = func(por_grado_dia)
+
             log_penalizaciones[clave] = valor
             total += valor
                 
@@ -78,7 +110,7 @@ def generar_horario_iterativo(data, term="Q1", restricciones=None):
         # Intentamos resolver (con un límite de 3 segundos para no bloquear)
         if resolver_recursivo(0, 0, cursos, aulas, slots_posibles, asignaciones_actuales, start_time, 3, profesores_map):
             # Si es válido, evaluamos las restricciones blandas
-            puntuacion, logs_actuales = evaluar_horario(asignaciones_actuales, restricciones)
+            puntuacion, logs_actuales = evaluar_horario(asignaciones_actuales, restricciones, data)
             
             if puntuacion < mejor_puntuacion:
                 mejor_puntuacion = puntuacion
@@ -133,7 +165,7 @@ def optimizar_horario(horario_inicial, restricciones, data, iteraciones=2000): #
     las penalizaciones de restricciones blandas.
     """
     mejor_horario = copy.deepcopy(horario_inicial)
-    mejor_puntuacion, _ = evaluar_horario(mejor_horario, restricciones)
+    mejor_puntuacion, _ = evaluar_horario(mejor_horario, restricciones, data)
     puntuacion_inicial = mejor_puntuacion
 
     print(f"\n--- Iniciando Optimización ---")
@@ -162,7 +194,7 @@ def optimizar_horario(horario_inicial, restricciones, data, iteraciones=2000): #
         # Validar restricciones duras antes de evaluar las blandas
         if es_valida(sesion, candidato):
             candidato.append(sesion)
-            puntuacion_actual, _ = evaluar_horario(candidato, restricciones)
+            puntuacion_actual, _ = evaluar_horario(candidato, restricciones, data)
 
             # Si la penalización es menor, actualizar el "mejor"
             if puntuacion_actual < mejor_puntuacion:

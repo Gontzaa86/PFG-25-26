@@ -27,17 +27,17 @@
   ],
   "teachers": 
   [
-    {"id": "T_ING_01", "name": "Fernando Boto", "branch": "INGENIERÍA"},
-    {"id": "T_ING_02", "name": "Alain Andres", "branch": "INGENIERÍA"},
-    {"id": "T_ING_03", "name": "David Buján", "branch": "INGENIERÍA"},
-    {"id": "T_ING_04", "name": "Alex Barco", "branch": "INGENIERÍA"},
-    {"id": "T_ING_05", "name": "Luis Enrique Díez", "branch": "INGENIERÍA"},
-    {"id": "T_ING_06", "name": "Jose Luis Gonzalez", "branch": "INGENIERÍA"},
-    {"id": "T_ING_07", "name": "Ignacio Lekuona", "branch": "INGENIERÍA"},
-    {"id": "T_EMP_01", "name": "Profesor ADE 1", "branch": "EMPRESA"},
-    {"id": "T_EMP_02", "name": "Profesor ADE 2", "branch": "EMPRESA"},
-    {"id": "T_EMP_03", "name": "Profesor ADE 3", "branch": "EMPRESA"},
-    {"id": "T_EMP_04", "name": "Profesor ADE 4", "branch": "EMPRESA"}
+    {"id": "T_ING_01", "name": "Fernando Boto", "branch": "INGENIERÍA", "unavailability": {"Monday": "all"}},
+    {"id": "T_ING_02", "name": "Alain Andres", "branch": "INGENIERÍA", "unavailability": {"Tuesday": ["10:00-12:00"]}},
+    {"id": "T_ING_03", "name": "David Buján", "branch": "INGENIERÍA", "unavailability": {"Wednesday": "all"}},
+    {"id": "T_ING_04", "name": "Alex Barco", "branch": "INGENIERÍA", "unavailability": {"Friday": ["08:00-10:00"]}},
+    {"id": "T_ING_05", "name": "Luis Enrique Díez", "branch": "INGENIERÍA", "unavailability": {}},
+    {"id": "T_ING_06", "name": "Jose Luis Gonzalez", "branch": "INGENIERÍA", "unavailability": {"Thursday": ["14:00-16:30"]}},
+    {"id": "T_ING_07", "name": "Ignacio Lekuona", "branch": "INGENIERÍA", "unavailability": {"Tuesday": ["09:00-11:30"]}},
+    {"id": "T_EMP_01", "name": "Profesor ADE 1", "branch": "EMPRESA", "unavailability": {}},
+    {"id": "T_EMP_02", "name": "Profesor ADE 2", "branch": "EMPRESA", "unavailability": {"Wednesday": "all"}},
+    {"id": "T_EMP_03", "name": "Profesor ADE 3", "branch": "EMPRESA", "unavailability": {"Monday": ["08:00-09:30"]}},
+    {"id": "T_EMP_04", "name": "Profesor ADE 4", "branch": "EMPRESA", "unavailability": {"Tuesday": ["08:00-10:00", "15:00-16:30"]}}
   ],
   "grades": 
   [
