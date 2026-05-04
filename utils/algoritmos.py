@@ -124,7 +124,12 @@ def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, a
     if index_curso >= len(cursos): return True
     
     curso = cursos[index_curso]
-    dias = list(curso['possible_days'])
+    # possible_days puede ser una lista de días o 'all', representando los cinco días
+    pd = curso.get('possible_days', 'all')
+    if isinstance(pd, str) and pd == 'all':
+        dias = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    else:
+        dias = list(pd)
     random.shuffle(dias)
     
     # Para favorecer la falta de huecos, intentamos los slots en orden (0, 1, 2...)
