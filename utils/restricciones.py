@@ -105,9 +105,29 @@ def penalizar_unavailability(por_grado_dia, data):
 
 # Diccionario para mapear los IDs que envíe el usuario con las funciones
 RESTRICCIONES_DISPONIBLES = {
-    "evitar_clase_unica": {"func": penalizar_clase_unica, "label": "Evitar días de clase única"},
-    "equilibrar_tres_clases": {"func": penalizar_tres_clases, "label": "Equilibrar días de 3 clases"},
-    "minimizar_ventanas": {"func": penalizar_ventanas, "label": "Minimizar huecos (Ventanas)"},
-    "minimizar_desplazamientos": {"func": penalizar_cambio_edificio, "label": "Evitar cambios de edificio"},
-    "evitar_unavailability": {"func": penalizar_unavailability, "label": "Evitar horarios fuera de disponibilidad (Unavailability)"}
+    "evitar_clase_unica": {
+        "func": penalizar_clase_unica,
+        "label": "Clase Única",
+        "description": "Evita que un grado tenga un único bloque de clase en un día."
+    },
+    "equilibrar_tres_clases": {
+        "func": penalizar_tres_clases,
+        "label": "Tres Clases",
+        "description": "Busca evitar que un grado tenga exactamente tres clases en el mismo día."
+    },
+    "minimizar_ventanas": {
+        "func": penalizar_ventanas,
+        "label": "Minimizar Huecos",
+        "description": "Reduce huecos libres entre clases consecutivas para un horario más compacto."
+    },
+    "minimizar_desplazamientos": {
+        "func": penalizar_cambio_edificio,
+        "label": "Movilización",
+        "description": "Prefiere horarios donde los estudiantes no tengan que cambiar de edificio entre clases."
+    },
+    "evitar_unavailability": {
+        "func": penalizar_unavailability,
+        "label": "Disponibilidad Profesores",
+        "description": "Desalienta asignaciones que caen en los horarios en los que el profesor no puede impartir clase."
+    }
 }

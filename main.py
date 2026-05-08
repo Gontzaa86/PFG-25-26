@@ -215,8 +215,8 @@ def actualizar_disponibilidad(id):
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
 def obtener_restricciones():
-    # Enviamos solo los ID y los nombres legibles al frontend
-    return jsonify({k: v['label'] for k, v in RESTRICCIONES_DISPONIBLES.items()})
+    # Enviamos ID, label y descripción para que el frontend pueda mostrar tooltips.
+    return jsonify({k: {"label": v['label'], "description": v.get('description', '')} for k, v in RESTRICCIONES_DISPONIBLES.items()})
 
 # ---------------------------------------------------------
 # FUNCIONES

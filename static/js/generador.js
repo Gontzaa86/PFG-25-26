@@ -168,11 +168,14 @@ fetch('/api/config/restricciones')
     .then(res => res.json())
     .then(data => {
         const container = document.getElementById('contenedor-checks');
-        for (const [id, label] of Object.entries(data)) {
+        for (const [id, config] of Object.entries(data)) {
+            const label = config.label || '';
+            const description = config.description || '';
             container.innerHTML += `
-                <div class="form-check">
+                <div class="form-check me-3 mb-2 d-flex align-items-center gap-1">
                     <input class="form-check-input res-check" type="checkbox" value="${id}" id="check-${id}">
-                    <label class="form-check-label" for="check-${id}">${label}</label>
+                    <label class="form-check-label mb-0" for="check-${id}">${label}</label>
+                    <span class="text-muted" title="${description}" style="cursor: help; font-size: 1.2rem;">🛈</span>
                 </div>`;
         }
     });
