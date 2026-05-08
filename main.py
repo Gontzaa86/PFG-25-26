@@ -18,11 +18,24 @@ def inicio():
 @app.route('/profesores')
 def lista_profesores():
     data = cargar_datos()
-    profesores = data.get('teachers', [])
+    profesores_originales = data.get('teachers', [])
     asignaturas = data.get('courses', []) # Recopilación de asignaturas para visualización de asignaturas impartidas por cada profesor.
 
+    # Expandir profesores por cada rama (si un profesor tiene múltiples ramas, aparecerá en cada una)
+    profesores_expandidos = []
+    for profesor in profesores_originales:
+        ramas_profesor = profesor.get('branch', [])
+        # Manejar tanto strings antiguos como arrays nuevos
+        if isinstance(ramas_profesor, str):
+            ramas_profesor = [ramas_profesor]
+        
+        for rama in ramas_profesor:
+            prof_expandido = profesor.copy()
+            prof_expandido['branch'] = rama  # Una sola rama para esta instancia
+            profesores_expandidos.append(prof_expandido)
+
     # Añadir un indicador de si el profesor tiene asignaturas asignadas
-    for profesor in profesores:
+    for profesor in profesores_expandidos:
         profesor_id = str(profesor.get('id', ''))
         profesor['has_courses'] = any(
             str(curso.get('teacher', '')) == profesor_id
@@ -30,9 +43,9 @@ def lista_profesores():
         )
 
     # Agrupación por rama a los profesores
-    ramas = sorted(list(set(p['branch'] for p in profesores)))
+    ramas = sorted(list(set(p['branch'] for p in profesores_expandidos)))
 
-    return render_template('profesores.html', profesores=profesores, asignaturas=asignaturas, ramas=ramas)
+    return render_template('profesores.html', profesores=profesores_expandidos, asignaturas=asignaturas, ramas=ramas)
 
 # Ruta de datos de aulas
 @app.route('/aulas')
@@ -132,8 +145,13 @@ def gestionar_profesor():
 
     # Si tiene ID es una edición, si no una agregación/creación
     if not nuevo.get('id'):
-        rama = nuevo['branch'].upper()
-        prefijo = rama[:3] # 3 primeras letras como prefijo
+        # Manejo de branch como array
+        ramas = nuevo.get('branch', [])
+        if isinstance(ramas, str):
+            ramas = [ramas]
+        
+        rama_principal = ramas[0].upper() if ramas else "DEF"
+        prefijo = rama_principal[:3] # 3 primeras letras como prefijo
 
         profesores_rama = [p for p in data['teachers'] if p['id'].startswith(f"T_{prefijo}_")]
 
@@ -147,22 +165,50 @@ def gestionar_profesor():
                 continue
         
         nuevo['id'] = f"T_{prefijo}_{str(max_num + 1).zfill(2)}"
+        nuevo['branch'] = ramas  # Guardar como array
+        if 'unavailability' not in nuevo:
+            nuevo['unavailability'] = {}
         data['teachers'].append(nuevo)
     else:
         for i, p in enumerate(data['teachers']):
             if p['id'] == nuevo['id']:
                 data['teachers'][i]['name'] = nuevo['name']
-                data['teachers'][i]['branch'] = nuevo['branch']
+                # Manejar branch como array
+                ramas = nuevo.get('branch', [])
+                if isinstance(ramas, str):
+                    ramas = [ramas]
+                data['teachers'][i]['branch'] = ramas
                 break
 
     guardar_datos(data)
     return jsonify({"success": True, "id": nuevo['id']})
+
+@app.route('/api/profesores/<id>', methods=['GET'])
+def obtener_profesor(id):
+    data = cargar_datos()
+    profesor = next((p for p in data['teachers'] if p['id'] == id), None)
+    if profesor:
+        return jsonify(profesor)
+    return jsonify({"error": "Profesor no encontrado"}), 404
 
 @app.route('/api/profesores/<id>', methods=['DELETE'])
 def eliminar_profesor(id):
     data = cargar_datos()
     # Filtrar para eliminar
     data['teachers'] = [p for p in data['teachers'] if p ['id'] != id]
+    guardar_datos(data)
+    return jsonify({"success": True})
+
+@app.route('/api/profesores/<id>/unavailability', methods=['PUT'])
+def actualizar_disponibilidad(id):
+    data = cargar_datos()
+    nueva_disponibilidad = request.json.get('unavailability', {})
+    
+    for i, p in enumerate(data['teachers']):
+        if p['id'] == id:
+            data['teachers'][i]['unavailability'] = nueva_disponibilidad
+            break
+    
     guardar_datos(data)
     return jsonify({"success": True})
 

@@ -82,6 +82,10 @@
                             </div>
                             
                             <div class="d-flex gap-2">
+                                <button class="btn btn-sm btn-outline-info" onclick="abrirModalDisponibilidad('{{p.id}}', '{{p.name}}')">
+                                    Disponibilidad
+                                </button>
+                                
                                 <button class="btn btn-sm btn-outline-warning" onclick="prepararEdicion('{{p.id}}', '{{p.name}}', '{{p.branch}}')">
                                     Editar
                                 </button>
@@ -138,6 +142,29 @@
             </div>
             <div class="modal-footer bg-light">
                 <button type="button" class="btn btn-primary w-100" onclick="guardarProfesor()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalDisponibilidad" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="modalDisponibilidadTitulo">Disponibilidad del Profesor</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="profIdDisp">
+                <p class="text-muted mb-3">Selecciona los rangos horarios en los que el profesor NO está disponible:</p>
+                
+                <div id="contenedorDiasHoras" class="row g-3">
+                    <!-- Se llenará con JavaScript -->
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarDisponibilidad()">Guardar Cambios</button>
             </div>
         </div>
     </div>

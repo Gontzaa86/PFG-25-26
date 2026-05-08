@@ -11,6 +11,8 @@ const diasNombresES = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
 const btn = document.getElementById('btnEjecutar');
 const selectorTerm = document.getElementById('selectorTerm');
 const loadingArea = document.getElementById('loading-area');
+const loadingLabel = document.getElementById('loading-label');
+const loadingSuffix = document.getElementById('loading-suffix');
 const contadorText = document.getElementById('contador');
 const contenedorCalendarios = document.getElementById('calendarios-grados');
 
@@ -38,10 +40,14 @@ btn.onclick = function() {
         const data = JSON.parse(e.data);
         
         // Mostramos la fase actual (Generando o Optimizando)
-        if (data.fase === 'optimizando') {
-            contadorText.innerText = "Optimizando la élite...";
+        if (data.fase && data.fase.startsWith('optimizando')) {
+            loadingLabel.innerText = "Optimizando Horarios...";
+            contadorText.innerText = "";
+            loadingSuffix.style.display = 'none';
         } else {
+            loadingLabel.innerText = "Generando Horarios:";
             contadorText.innerText = data.progreso;
+            loadingSuffix.style.display = 'inline';
         }
 
         if (data.fase === 'finalizado') {

@@ -164,7 +164,7 @@ def resolver_recursivo(index_curso, num_sesion, cursos, aulas, slots_posibles, a
     return False
 
 # Función de optimización de horarios
-def optimizar_horario(horario_inicial, restricciones, data, iteraciones=2000): # Cantidad de iteraciones modificable
+def optimizar_horario(horario_inicial, restricciones, data, iteraciones=5000): # Cantidad de iteraciones modificable
     """
     Toma un horario base y realiza mutaciones aleatorias controladas para reducir
     las penalizaciones de restricciones blandas.
@@ -211,10 +211,11 @@ def optimizar_horario(horario_inicial, restricciones, data, iteraciones=2000): #
             continue
 
         # Mostrar progeso por consola para ver avance real
-        if i %100 == 0:
+        if i % 100 == 0:
             print (f"Puntuacion tras {i} iteraciones: {mejor_puntuacion}")
     
-    print(f"Optimización finalizada. Mejora total: {puntuacion_inicial - mejor_puntuacion} puntos.")
+    print(f"Optimización finalizada. Puntuación final: {mejor_puntuacion}")
+    print(f"Mejora total: {puntuacion_inicial - mejor_puntuacion} puntos.")
     print(f"------------------------------\n")
     
     return mejor_horario, mejor_puntuacion
