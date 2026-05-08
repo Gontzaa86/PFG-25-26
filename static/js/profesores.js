@@ -13,13 +13,25 @@ const horasDisponibles = [
     '08:00', '08:30', '09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30',
     '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00'
 ];
+const ramaOptionsHTML = document.getElementById('profRama').innerHTML;
 
 function prepararEdicion(id, nombre, rama) 
 {
     document.getElementById('modalTitulo').innerText = "Editar Profesor";
     document.getElementById('profId').value = id;
     document.getElementById('profNombre').value = nombre;
-    document.getElementById('profRama').value = rama;  // Esto mostrará la rama principal
+    document.getElementById('nuevaRamaNombre').value = "";
+    resetSelectoresRama();
+
+    fetch(`/api/profesores/${id}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(profesor => {
+            if (profesor) {
+                cargarRamasProfesor(profesor.branch || []);
+            }
+        })
+        .catch(error => console.error('Error cargando profesor:', error));
+
     window.modalProfesor.show();
 }
 
@@ -28,6 +40,8 @@ function abrirModalCrear()
     document.getElementById('modalTitulo').innerText = "Añadir Profesor";
     document.getElementById('formProfesor').reset();
     document.getElementById('profId').value = "";
+    document.getElementById('nuevaRamaNombre').value = "";
+    resetSelectoresRama();
     window.modalProfesor.show();
 }
 
@@ -52,24 +66,18 @@ async function guardarProfesor()
 {
     const id = document.getElementById('profId').value;
     const nombre = document.getElementById('profNombre').value;
-    let rama = document.getElementById('profRama').value;
+    const ramas = obtenerRamasSeleccionadas();
 
-    // Si el usuario decide crear una nueva rama
-    if (rama === "NUEVA")
-    {
-        rama = document.getElementById('nuevaRamaNombre').value.toUpperCase();
-    }
-
-    if (!nombre || !rama) return alert("Por favor, rellena todos los campos");
+    if (!nombre || !ramas || ramas.length === 0) return alert("Por favor, rellena todos los campos");
 
     const payload = {
         name: nombre,
-        branch: [rama],  // Convertir a array
+        branch: ramas,
         unavailability: {}  // Por defecto vacío
     };
     if (id) payload.id = id;
 
-    const res = await fetch ('/api/profesores',
+    const res = await fetch('/api/profesores',
     {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -88,7 +96,10 @@ async function guardarProfesor()
 function verificarNuevaRama(select) 
 {
     const inputDiv = document.getElementById('inputNuevaRama');
-    if (select.value === "NUEVA") 
+    const selects = Array.from(document.querySelectorAll('.profRamaSelect'));
+    const anyNueva = selects.some(s => s.value === "NUEVA");
+
+    if (anyNueva) 
     {
         inputDiv.classList.remove('d-none');
     } 
@@ -96,6 +107,108 @@ function verificarNuevaRama(select)
     {
         inputDiv.classList.add('d-none');
     }
+
+    const hasEmpty = selects.some(s => !s.value);
+    if (!hasEmpty) 
+    {
+        agregarSelectorRama();
+    }
+}
+
+function crearSelectorRama(value = '', required = false) {
+    const select = document.createElement('select');
+    select.className = 'form-select profRamaSelect';
+    select.innerHTML = ramaOptionsHTML;
+    if (required) select.required = true;
+    select.value = value;
+    select.addEventListener('change', () => verificarNuevaRama(select));
+
+    const deleteButton = document.createElement('button');
+    deleteButton.type = 'button';
+    deleteButton.className = 'btn btn-sm btn-outline-danger';
+    deleteButton.style.cssText = 'width: 2.5rem; padding: 0.25rem 0.5rem;';
+    deleteButton.textContent = 'X';
+    deleteButton.addEventListener('click', () => eliminarSelectorRama(deleteButton));
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'rama-item d-flex align-items-center gap-2 mb-2';
+    wrapper.appendChild(select);
+    wrapper.appendChild(deleteButton);
+    return wrapper;
+}
+
+function resetSelectoresRama() {
+    const contenedor = document.getElementById('contenedorRamas');
+    contenedor.innerHTML = '';
+    contenedor.appendChild(crearSelectorRama('', true));
+    document.getElementById('inputNuevaRama').classList.add('d-none');
+}
+
+function agregarSelectorRama(value = '') {
+    const contenedor = document.getElementById('contenedorRamas');
+    contenedor.appendChild(crearSelectorRama(value, false));
+}
+
+function eliminarSelectorRama(button) {
+    const wrapper = button.closest('.rama-item');
+    if (!wrapper) return;
+    wrapper.remove();
+
+    const selects = document.querySelectorAll('.profRamaSelect');
+    if (selects.length === 0) {
+        const contenedor = document.getElementById('contenedorRamas');
+        contenedor.appendChild(crearSelectorRama('', true));
+    }
+    verificarNuevaRama();
+}
+
+function cargarRamasProfesor(ramas) {
+    const contenedor = document.getElementById('contenedorRamas');
+    contenedor.innerHTML = '';
+
+    if (!Array.isArray(ramas)) {
+        ramas = ramas ? [ramas] : [];
+    }
+
+    if (ramas.length === 0) {
+        contenedor.appendChild(crearSelectorRama('', true));
+        return;
+    }
+
+    ramas.forEach((rama, index) => {
+        contenedor.appendChild(crearSelectorRama(rama, index === 0));
+    });
+
+    contenedor.appendChild(crearSelectorRama('', false));
+}
+
+function obtenerRamasSeleccionadas() {
+    const selects = Array.from(document.querySelectorAll('.profRamaSelect'));
+    const ramas = [];
+    let nuevaRama = null;
+
+    for (const select of selects) {
+        if (!select.value) continue;
+        if (select.value === 'NUEVA') {
+            nuevaRama = document.getElementById('nuevaRamaNombre').value.trim().toUpperCase();
+            continue;
+        }
+        if (!ramas.includes(select.value)) {
+            ramas.push(select.value);
+        }
+    }
+
+    if (selects.some(s => s.value === 'NUEVA')) {
+        if (!nuevaRama) {
+            alert('Por favor indica el nombre de la nueva rama');
+            return null;
+        }
+        if (!ramas.includes(nuevaRama)) {
+            ramas.push(nuevaRama);
+        }
+    }
+
+    return ramas;
 }
 
 function filtrarProfesores() 

@@ -119,16 +119,20 @@
                         <input type="text" class="form-control" id="profNombre" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label fw-bold">Rama</label>
-                        <select class="form-select" id="profRama" onchange="verificarNuevaRama(this)" required>
-                            <option value="" selected disabled>Selecciona una rama...</option>
-                            {% for r in ramas %}
-                                <option value="{{ r }}">{{ r }}</option>
-                            {% endfor %}
-                            <option value="NUEVA" style="background-color: #e9ecef; font-weight: bold; color: #0d6efd;">
-                                Añadir Nueva Rama...
-                            </button>
-                        </select>
+                        <label class="form-label fw-bold">Ramas</label>
+                        <div id="contenedorRamas">
+                            <div class="rama-item mb-2">
+                                <select class="form-select profRamaSelect" id="profRama" onchange="verificarNuevaRama(this)" required>
+                                    <option value="" selected disabled>Selecciona una rama...</option>
+                                    {% for r in ramas %}
+                                        <option value="{{ r }}">{{ r }}</option>
+                                    {% endfor %}
+                                    <option value="NUEVA" style="background-color: #e9ecef; font-weight: bold; color: #0d6efd;">
+                                        Añadir Nueva Rama...
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3 d-none" id="inputNuevaRama">
                         <label class="form-label fw-bold">Nombre de la nueva rama</label>

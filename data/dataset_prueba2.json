@@ -239,7 +239,10 @@
         "DERECHO",
         "EMPRESA"
       ],
-      "unavailability": {},
+      "unavailability": {
+        "Wednesday": "all",
+        "Friday": "all"
+      },
       "id": "T_DER_03"
     }
   ],
