@@ -232,6 +232,20 @@ def importar_profesores():
         nuevos_profesores = []
         data = cargar_datos()
         
+        # Obtener el número más alto de ID de profesor existente
+        existing_ids = [p.get('id', '') for p in data.get('teachers', [])]
+        max_num = 0
+        for id_str in existing_ids:
+            if id_str.startswith('T') and id_str[1:].isdigit():
+                try:
+                    num = int(id_str[1:])
+                    max_num = max(max_num, num)
+                except ValueError:
+                    pass
+        
+        next_id_num = max_num + 1
+        row_index = 0
+        
         for index, row in enumerate(reader):
             # Limpiamos las claves por si tienen espacios o caracteres raros
             # Esto ayuda si la columna se llama " NOMBRE" o "NOMBRE "
@@ -244,7 +258,7 @@ def importar_profesores():
                 continue
 
             grupo_facultad = facultad if facultad else "SIN FACULTAD"
-            nuevo_id = f"T_IMP_{str(index + 1).zfill(3)}"
+            nuevo_id = f"T{next_id_num:03d}"
 
             nuevos_profesores.append({
                 "id": nuevo_id,
@@ -252,6 +266,8 @@ def importar_profesores():
                 "branch": [grupo_facultad],
                 "unavailability": {}
             })
+            
+            next_id_num += 1
 
         if not nuevos_profesores:
             # Si llegamos aquí, es que leyó el archivo pero no encontró la columna 'NOMBRE'
