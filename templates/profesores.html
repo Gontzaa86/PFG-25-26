@@ -4,7 +4,13 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-5">
         <h2 class="fw-bold">Gestión de Docentes</h2>
-        <button class="btn btn-primary shadow-sm" onclick="abrirModalCrear()">Nuevo Profesor</button>
+        <div class="d-flex gap-2">
+            <input type="file" id="importarCSV" accept=".csv" style="display: none;" onchange="procesarImportacion(this)">
+            <button class="btn btn-outline-secondary shadow-sm" onclick="document.getElementById('importarCSV').click()">
+                <i class="bi bi-file-earmark-arrow-up"></i> Importar Docentes (.csv)
+            </button>
+            <button class="btn btn-primary shadow-sm" onclick="abrirModalCrear()">Nuevo Profesor</button>
+        </div>
     </div>
 
     <div class="row mb-4">
@@ -18,6 +24,7 @@
                     id="buscadorNombre" 
                     class="form-control border-start-0 ps-0" 
                     placeholder="Buscar profesor por nombre..."
+                    autocomplete="off"
                     onkeyup="filtrarProfesores()">
 
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btnFiltroRama">
@@ -179,6 +186,28 @@
         <div class="d-flex">
             <div class="toast-body" id="toastMsg"></div>
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalConfirmarImportar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-dark">
+                <h5 class="modal-title"><i class="bi bi-exclamation-triangle-fill me-2"></i>Atención: Importación Crítica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Estás a punto de importar una nueva lista de docentes desde un archivo CSV.</p>
+                <div class="alert alert-danger">
+                    <strong>¡Advertencia!</strong> Esta acción <b>sobreescribirá</b> todos los datos actuales de profesores de forma irreversible.
+                </div>
+                <p>¿Deseas continuar con la operación?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="btnConfirmarSubida">Sí, sobreescribir datos</button>
+            </div>
         </div>
     </div>
 </div>

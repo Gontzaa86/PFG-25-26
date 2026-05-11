@@ -412,3 +412,69 @@ async function guardarDisponibilidad()
         alert('Error al guardar la disponibilidad');
     }
 }
+
+// Variables globales para almacenar csv durante la confirmación
+let archivoPendiente = null;
+let modalConfirmacion = null;
+
+function procesarImportacion(input) 
+{
+    if (!input.files || input.files.length === 0) return;
+
+    archivoPendiente = input.files[0];
+    
+    // Inicializar y mostrar el modal
+    if (!modalConfirmacion) 
+    {
+        modalConfirmacion = new bootstrap.Modal(document.getElementById('modalConfirmarImportar'));
+    }
+    modalConfirmacion.show();
+}
+
+document.getElementById('btnConfirmarSubida').addEventListener('click', async () => {
+    if (!archivoPendiente) return;
+
+    // Cambiar estado del botón para evitar doble clic
+    const btn = document.getElementById('btnConfirmarSubida');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Procesando...';
+    btn.disabled = true;
+
+    const formData = new FormData();
+    formData.append('file', archivoPendiente);
+
+    try 
+    {
+        const res = await fetch('/api/profesores/importar', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await res.json();
+
+        if (res.ok) 
+        {
+            modalConfirmacion.hide();
+            alert(`¡Éxito! Se han importado ${result.count} profesores correctamente.`);
+            window.location.reload();
+        } 
+        else 
+        {
+            alert("Error: " + result.error);
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+        }
+    } 
+    catch (error) 
+    {
+        alert("Error crítico al conectar con el servidor.");
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+    }
+});
+
+// Limpiar el input si se cierra el modal sin confirmar
+document.getElementById('modalConfirmarImportar').addEventListener('hidden.bs.modal', function () {
+    document.getElementById('importarCSV').value = '';
+    archivoPendiente = null;
+});

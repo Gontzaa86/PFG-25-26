@@ -1,5 +1,7 @@
 import json
 import os
+import csv
+import io
 from flask import Flask, render_template, Response, request, jsonify
 from utils.algoritmos import generar_horario_iterativo, evaluar_horario, optimizar_horario
 from utils.restricciones import RESTRICCIONES_DISPONIBLES
@@ -211,6 +213,61 @@ def actualizar_disponibilidad(id):
     
     guardar_datos(data)
     return jsonify({"success": True})
+
+@app.route('/api/profesores/importar', methods=['POST'])
+def importar_profesores():
+    if 'file' not in request.files:
+        return jsonify({"error": "No hay archivo"}), 400
+    
+    file = request.files['file']
+    try:
+        # Leer el contenido y decodificarlo manejando posibles BOM de Excel (utf-8-sig)
+        content = file.stream.read().decode("utf-8-sig")
+        stream = io.StringIO(content)
+        
+        # Detectar automáticamente si el separador es , o ;
+        dialect = csv.Sniffer().sniff(content[:1024])
+        reader = csv.DictReader(stream, delimiter=dialect.delimiter)
+        
+        nuevos_profesores = []
+        data = cargar_datos()
+        
+        for index, row in enumerate(reader):
+            # Limpiamos las claves por si tienen espacios o caracteres raros
+            # Esto ayuda si la columna se llama " NOMBRE" o "NOMBRE "
+            clean_row = {k.strip().upper(): v.strip() for k, v in row.items() if k}
+            
+            nombre = clean_row.get('NOMBRE')
+            facultad = clean_row.get('FACULTAD')
+
+            if not nombre:
+                continue
+
+            grupo_facultad = facultad if facultad else "SIN FACULTAD"
+            nuevo_id = f"T_IMP_{str(index + 1).zfill(3)}"
+
+            nuevos_profesores.append({
+                "id": nuevo_id,
+                "name": nombre,
+                "branch": [grupo_facultad],
+                "unavailability": {}
+            })
+
+        if not nuevos_profesores:
+            # Si llegamos aquí, es que leyó el archivo pero no encontró la columna 'NOMBRE'
+            return jsonify({
+                "error": "No se encontraron datos. Verifica que las columnas se llamen NOMBRE y FACULTAD."
+            }), 400
+
+        # Solo sobreescribimos si realmente hay datos nuevos
+        data['teachers'] = nuevos_profesores
+        guardar_datos(data)
+        
+        return jsonify({"success": True, "count": len(nuevos_profesores)})
+    
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"error": f"Error al procesar el CSV: {str(e)}"}), 500
 
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
