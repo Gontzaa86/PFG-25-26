@@ -1337,7 +1337,38 @@
       "branch": [
         "INGENIERÍA"
       ],
-      "unavailability": {}
+      "unavailability": {
+        "Monday": [
+          "08:00-08:30",
+          "08:30-09:00",
+          "09:00-09:30",
+          "09:30-10:00"
+        ],
+        "Tuesday": [
+          "08:00-08:30",
+          "08:30-09:00",
+          "09:00-09:30",
+          "09:30-10:00"
+        ],
+        "Thursday": [
+          "08:00-08:30",
+          "08:30-09:00",
+          "09:00-09:30",
+          "09:30-10:00"
+        ],
+        "Wednesday": [
+          "08:00-08:30",
+          "08:30-09:00",
+          "09:00-09:30",
+          "09:30-10:00"
+        ],
+        "Friday": [
+          "08:00-08:30",
+          "08:30-09:00",
+          "09:00-09:30",
+          "09:30-10:00"
+        ]
+      }
     },
     {
       "id": "T153",
@@ -2743,7 +2774,7 @@
       "id": "DIR_EMPR_Q1",
       "name": "Administración de Empresa",
       "term": "Q1",
-      "teacher": "T263",
+      "teacher": "T177",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -2787,7 +2818,7 @@
       "id": "PROG1_Q1",
       "name": "Programación I",
       "term": "Q1",
-      "teacher": "T075",
+      "teacher": "T182",
       "grades": [
         "INGINF1",
         "INFCDIA1",
@@ -2831,7 +2862,7 @@
       "id": "INTRO_COMP_Q1",
       "name": "Introducción a los Computadores",
       "term": "Q1",
-      "teacher": "T060",
+      "teacher": "T075",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -2914,7 +2945,7 @@
       "id": "DISCRETA_Q2",
       "name": "Matemática Discreta",
       "term": "Q2",
-      "teacher": "T082",
+      "teacher": "T246",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -2935,7 +2966,7 @@
       "id": "FISICA_Q2",
       "name": "Física",
       "term": "Q2",
-      "teacher": "T028",
+      "teacher": "T152",
       "grades": [
         "INGINF1",
         "INFCDIA1"
@@ -2954,7 +2985,7 @@
       "id": "ESTR_COMP_Q2",
       "name": "Estructura de Computadores",
       "term": "Q2",
-      "teacher": "T028",
+      "teacher": "T091",
       "grades": [
         "INGINF1",
         "INFCDIA1"
@@ -2972,7 +3003,7 @@
       "id": "ALGORITMICA_Q2",
       "name": "Algorítmica",
       "term": "Q2",
-      "teacher": "T026",
+      "teacher": "T247",
       "grades": [
         "CDIA1",
         "INFCDIA1"
@@ -3026,7 +3057,7 @@
       "id": "EMPRESA_SOSTEN_Q1",
       "name": "Empresa y Sostenibilidad",
       "term": "Q1",
-      "teacher": "T010",
+      "teacher": "T138",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3046,7 +3077,7 @@
       "id": "ENT_EMPR_Q1",
       "name": "Entorno Empresarial",
       "term": "Q1",
-      "teacher": "T013",
+      "teacher": "T056",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3065,7 +3096,7 @@
       "id": "SIST_INF_Q1",
       "name": "Sistemas de Información I",
       "term": "Q1",
-      "teacher": "T011",
+      "teacher": "T255",
       "grades": [
         "ADE1"
       ],
@@ -3104,7 +3135,7 @@
       "id": "MATE_ADE_Q1",
       "name": "Métodos Matemáticos",
       "term": "Q1",
-      "teacher": "T013",
+      "teacher": "T121",
       "grades": [
         "ADE1"
       ],
@@ -3122,7 +3153,7 @@
       "id": "CONTAB_CALC_Y_GEST_COST_Q2",
       "name": "Contabilidad Financiera y Cálculo y Gestión de Costes",
       "term": "Q2",
-      "teacher": "T008",
+      "teacher": "T214",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3140,7 +3171,7 @@
       "id": "MICRO_Q2",
       "name": "Microeconomía",
       "term": "Q2",
-      "teacher": "T011",
+      "teacher": "T278",
       "grades": [
         "ADE1"
       ],
@@ -3158,7 +3189,7 @@
       "id": "INTRO_ANALISIS_DATOS_Q2",
       "name": "Introducción al Análisis de Datos-Business Statistics",
       "term": "Q2",
-      "teacher": "T008",
+      "teacher": "T279",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3177,7 +3208,7 @@
       "id": "FUND_COMPOR_ORG_Q2",
       "name": "Fundamentos del Comportamiento Organizacional",
       "term": "Q2",
-      "teacher": "T013",
+      "teacher": "T163",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3196,7 +3227,7 @@
       "id": "ENT_LEGAL_Q2",
       "name": "Entorno Legal",
       "term": "Q2",
-      "teacher": "T010",
+      "teacher": "T056",
       "grades": [
         "ADE1"
       ],
