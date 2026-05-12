@@ -456,6 +456,43 @@ def obtener_restricciones():
     return jsonify({k: {"label": v['label'], "description": v.get('description', '')} for k, v in RESTRICCIONES_DISPONIBLES.items()})
 
 # ---------------------------------------------------------
+# RUTAS PRUEBAS ============ ELIMINAR EN EL FUTURO ==============
+# ---------------------------------------------------------
+
+@app.route("/revision/carreras", methods=['GET', 'POST'])
+def revision_carreras():
+    elementos_unicos = set()
+    
+    if request.method == 'POST':
+        if 'file' in request.files:
+            file = request.files['file']
+            if file.filename != '':
+                content = file.stream.read().decode("utf-8-sig")
+                stream = io.StringIO(content)
+                
+                # Detectar delimitador automáticamente
+                dialect = csv.Sniffer().sniff(content[:1024]) if content else None
+                delimiter = dialect.delimiter if dialect else ','
+                
+                reader = csv.DictReader(stream, delimiter=delimiter)
+                
+                for row in reader:
+                    # Normalizar cabeceras para encontrar "SE JUNTA CON"
+                    clean_row = {str(k).strip().upper(): v for k, v in row.items() if k}
+                    valor = clean_row.get('SE JUNTA CON')
+                    
+                    if valor:
+                        # Si hay varios elementos separados por comas en la misma celda, los separamos
+                        partes = [p.strip() for p in str(valor).split(',') if p.strip()]
+                        for p in partes:
+                            elementos_unicos.add(p)
+
+    # Ordenar alfabéticamente
+    lista_ordenada = sorted(list(elementos_unicos))
+    
+    return render_template('revision_carreras.html', carreras=lista_ordenada)
+
+# ---------------------------------------------------------
 # FUNCIONES
 # ---------------------------------------------------------
 

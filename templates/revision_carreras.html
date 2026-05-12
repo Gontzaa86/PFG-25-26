@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Revisión de Carreras</title>
+</head>
+<body>
+    <h1>Lista de Carreras (SE JUNTA CON)</h1>
+    <ul>
+        {% for carrera in carreras %}
+            <li>{{ carrera }}</li>
+        {% endfor %}
+    </ul>
+    {% if not carreras %}
+        <p>No se encontraron datos o no se ha subido ningún archivo aún.</p>
+    {% endif %}
+    <hr>
+    <h3>Subir CSV para revisión</h3>
+    <form action="/revision/carreras" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv">
+        <button type="submit">Cargar y Filtrar</button>
+    </form>
+</body>
+</html>
