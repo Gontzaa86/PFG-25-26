@@ -337,7 +337,7 @@ def importar_aulas():
                 print(f"Fila ignorada por falta de datos: {clean_row}") # Ver en consola de Flask
                 continue
 
-            nombre_edificio = f"Ed-{edificio_raw}"
+            nombre_edificio = normalizar_nombre_edificio(edificio_raw)
             
             # Si contiene "(" se queda solo con lo anterior
             aula_id = aula_raw.split('(')[0].strip()
@@ -382,6 +382,73 @@ def importar_aulas():
         print(f"Error crítico: {e}")
         return jsonify({"error": f"Error al procesar el CSV: {str(e)}"}), 500
 
+# ==== Rutas de aulas ==== 
+@app.route('/api/aulas', methods=['POST'])
+def gestionar_aula():
+    data = cargar_datos()
+    aula = request.json or {}
+
+    original_id = str(aula.get('original_id', '')).strip()
+    aula_id = str(aula.get('id', '')).strip()
+    building = str(aula.get('building', '')).strip()
+    capacity_value = aula.get('capacity')
+
+    if not aula_id or not building or capacity_value in (None, ''):
+        return jsonify({"error": "El ID del aula, el edificio y la capacidad son obligatorios."}), 400
+
+    building = normalizar_nombre_edificio(building)
+
+    try:
+        capacity = int(capacity_value)
+    except (ValueError, TypeError):
+        return jsonify({"error": "La capacidad debe ser un número entero."}), 400
+
+    rooms = data.get('rooms', [])
+
+    if original_id:
+        existing = next((r for r in rooms if r['id'] == original_id), None)
+        if not existing:
+            return jsonify({"error": "Aula no encontrada para edición."}), 404
+        if aula_id != original_id and any(r['id'] == aula_id for r in rooms):
+            return jsonify({"error": "Ya existe un aula con ese ID."}), 400
+        existing['id'] = aula_id
+        existing['building'] = building
+        existing['capacity'] = capacity
+    else:
+        if any(r['id'] == aula_id for r in rooms):
+            return jsonify({"error": "Ya existe un aula con ese ID."}), 400
+        rooms.append({
+            "id": aula_id,
+            "building": building,
+            "capacity": capacity
+        })
+
+    edificios = sorted({r['building'] for r in rooms})
+    data['rooms'] = rooms
+    data['buildings'] = edificios
+    guardar_datos(data)
+    return jsonify({"success": True, "id": aula_id})
+
+@app.route('/api/aulas/<id>', methods=['GET'])
+def obtener_aula(id):
+    data = cargar_datos()
+    aula = next((r for r in data.get('rooms', []) if r['id'] == id), None)
+    if aula:
+        return jsonify(aula)
+    return jsonify({"error": "Aula no encontrada"}), 404
+
+@app.route('/api/aulas/<id>', methods=['DELETE'])
+def eliminar_aula(id):
+    data = cargar_datos()
+    rooms = [r for r in data.get('rooms', []) if r['id'] != id]
+    if len(rooms) == len(data.get('rooms', [])):
+        return jsonify({"error": "Aula no encontrada"}), 404
+
+    data['rooms'] = rooms
+    data['buildings'] = sorted({r['building'] for r in rooms})
+    guardar_datos(data)
+    return jsonify({"success": True})
+
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
 def obtener_restricciones():
@@ -391,6 +458,27 @@ def obtener_restricciones():
 # ---------------------------------------------------------
 # FUNCIONES
 # ---------------------------------------------------------
+
+def normalizar_nombre_edificio(raw):
+    if raw is None:
+        return ''
+
+    value = str(raw).strip()
+    if value.lower().startswith('ed-'):
+        value = value[3:].strip()
+
+    if '(' in value:
+        value = value.split('(')[0].strip()
+
+    value = ' '.join(value.split())
+
+    def capitalizar_segmento(segmento):
+        partes = segmento.split('-')
+        return '-'.join(part.capitalize() for part in partes if part)
+
+    value = ' '.join(capitalizar_segmento(palabra) for palabra in value.split(' '))
+    return f"Ed-{value}" if value else ''
+
 
 def cargar_datos(): # Función general de carga de datos para evitar repetición en cada caso individual
     ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')

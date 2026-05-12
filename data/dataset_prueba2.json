@@ -6,322 +6,322 @@
     "start_hour": "08:00"
   },
   "buildings": [
-    "Ed-ALTUNA (AULARIO)",
-    "Ed-ARANZADI",
-    "Ed-ARRUPE",
-    "Ed-ERRANDONEA",
-    "Ed-LARRAMENDI",
-    "Ed-MATEO RICCI"
+    "Ed-Altuna",
+    "Ed-Aranzadi",
+    "Ed-Arrupe",
+    "Ed-Errandonea",
+    "Ed-Larramendi",
+    "Ed-Mateo Ricci"
   ],
   "rooms": [
     {
       "id": "43",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 82
     },
     {
       "id": "009",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 54
     },
     {
       "id": "42",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 85
     },
     {
       "id": "113",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 9
     },
     {
       "id": "103",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 76
     },
     {
       "id": "004",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 82
     },
     {
       "id": "111",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 32
     },
     {
       "id": "011",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 42
     },
     {
       "id": "105",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 30
     },
     {
       "id": "33",
-      "building": "Ed-ERRANDONEA",
+      "building": "Ed-Errandonea",
       "capacity": 70
     },
     {
       "id": "27",
-      "building": "Ed-ERRANDONEA",
+      "building": "Ed-Errandonea",
       "capacity": 144
     },
     {
       "id": "010",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 52
     },
     {
       "id": "40",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 70
     },
     {
       "id": "57",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 81
     },
     {
       "id": "59",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 56
     },
     {
       "id": "106",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 20
     },
     {
       "id": "53",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 56
     },
     {
       "id": "12",
-      "building": "Ed-ARANZADI",
+      "building": "Ed-Aranzadi",
       "capacity": 17
     },
     {
       "id": "11",
-      "building": "Ed-ARANZADI",
+      "building": "Ed-Aranzadi",
       "capacity": 52
     },
     {
       "id": "13",
-      "building": "Ed-ARANZADI",
+      "building": "Ed-Aranzadi",
       "capacity": 23
     },
     {
       "id": "012",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 48
     },
     {
       "id": "30",
-      "building": "Ed-ERRANDONEA",
+      "building": "Ed-Errandonea",
       "capacity": 165
     },
     {
       "id": "52",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 80
     },
     {
       "id": "003",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 82
     },
     {
       "id": "61",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 43
     },
     {
       "id": "112",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 23
     },
     {
       "id": "109",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 12
     },
     {
       "id": "114",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 58
     },
     {
       "id": "49",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 46
     },
     {
       "id": "001",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 60
     },
     {
       "id": "31",
-      "building": "Ed-ERRANDONEA",
+      "building": "Ed-Errandonea",
       "capacity": 76
     },
     {
       "id": "108",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 92
     },
     {
       "id": "014",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 72
     },
     {
       "id": "51",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 63
     },
     {
       "id": "55",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 56
     },
     {
       "id": "B2",
-      "building": "Ed-ARANZADI",
+      "building": "Ed-Aranzadi",
       "capacity": 20
     },
     {
       "id": "28",
-      "building": "Ed-ERRANDONEA",
+      "building": "Ed-Errandonea",
       "capacity": 144
     },
     {
       "id": "46",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 50
     },
     {
       "id": "B3",
-      "building": "Ed-ARANZADI",
+      "building": "Ed-Aranzadi",
       "capacity": 22
     },
     {
       "id": "56",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 48
     },
     {
       "id": "005",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 84
     },
     {
       "id": "58",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 90
     },
     {
       "id": "29",
-      "building": "Ed-ERRANDONEA",
+      "building": "Ed-Errandonea",
       "capacity": 48
     },
     {
       "id": "008",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 52
     },
     {
       "id": "110",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 30
     },
     {
       "id": "41",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 87
     },
     {
       "id": "50",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 90
     },
     {
       "id": "013",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 53
     },
     {
       "id": "006",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 64
     },
     {
       "id": "007",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 64
     },
     {
       "id": "54",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 63
     },
     {
       "id": "104",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 40
     },
     {
       "id": "45",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 68
     },
     {
       "id": "B1",
-      "building": "Ed-ARANZADI",
+      "building": "Ed-Aranzadi",
       "capacity": 49
     },
     {
       "id": "48",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 47
     },
     {
       "id": "Sala ordenadores / ordenagailu gela",
-      "building": "Ed-MATEO RICCI",
+      "building": "Ed-Mateo Ricci",
       "capacity": 0
     },
     {
       "id": "62",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 53
     },
     {
       "id": "60",
-      "building": "Ed-LARRAMENDI",
+      "building": "Ed-Larramendi",
       "capacity": 56
     },
     {
       "id": "Plato TV",
-      "building": "Ed-ALTUNA (AULARIO)",
+      "building": "Ed-Altuna",
       "capacity": 0
     },
     {
       "id": "Aula digital / Gela digitala",
-      "building": "Ed-MATEO RICCI",
+      "building": "Ed-Mateo Ricci",
       "capacity": 0
     },
     {
       "id": "Sala 227 gela",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 0
     },
     {
       "id": "002",
-      "building": "Ed-ARRUPE",
+      "building": "Ed-Arrupe",
       "capacity": 82
     }
   ],
