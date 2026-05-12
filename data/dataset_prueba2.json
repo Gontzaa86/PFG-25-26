@@ -327,18 +327,15 @@
   ],
   "teachers": [
     {
-      "id": "T008",
+      "id": "T001",
       "name": "Barandiaran Irastorza, Xabier",
       "branch": [
         "CCSSHH"
       ],
-      "unavailability": {
-        "Thursday": "all",
-        "Friday": "all"
-      }
+      "unavailability": {}
     },
     {
-      "id": "T009",
+      "id": "T002",
       "name": "Arano Irizar, Aritz",
       "branch": [
         "CCSSHH-FHV, DBS"
@@ -346,41 +343,15 @@
       "unavailability": {}
     },
     {
-      "id": "T010",
+      "id": "T003",
       "name": "Bermúdez González, Jorge",
       "branch": [
         "CCSSHH"
       ],
-      "unavailability": {
-        "Tuesday": "all",
-        "Monday": [
-          "15:00-15:30",
-          "15:30-16:00",
-          "16:00-16:30",
-          "16:30-17:00"
-        ],
-        "Wednesday": [
-          "15:00-15:30",
-          "15:30-16:00",
-          "16:00-16:30",
-          "16:30-17:00"
-        ],
-        "Thursday": [
-          "15:00-15:30",
-          "15:30-16:00",
-          "16:00-16:30",
-          "16:30-17:00"
-        ],
-        "Friday": [
-          "15:00-15:30",
-          "15:30-16:00",
-          "16:00-16:30",
-          "16:30-17:00"
-        ]
-      }
+      "unavailability": {}
     },
     {
-      "id": "T011",
+      "id": "T004",
       "name": "Rodriguez Camacho, David Andres",
       "branch": [
         "CCSSHH"
@@ -388,7 +359,7 @@
       "unavailability": {}
     },
     {
-      "id": "T012",
+      "id": "T005",
       "name": "Paisán Ruiz, Pablo",
       "branch": [
         "DBS, DERECHO"
@@ -396,7 +367,7 @@
       "unavailability": {}
     },
     {
-      "id": "T013",
+      "id": "T006",
       "name": "Echave Torres, Javier",
       "branch": [
         "CCSSHH"
@@ -404,7 +375,7 @@
       "unavailability": {}
     },
     {
-      "id": "T014",
+      "id": "T007",
       "name": "Landaberea Abad, Eider",
       "branch": [
         "CCSSHH"
@@ -412,7 +383,7 @@
       "unavailability": {}
     },
     {
-      "id": "T015",
+      "id": "T008",
       "name": "Pantigoso Moledo, Demelza",
       "branch": [
         "DERECHO"
@@ -420,7 +391,7 @@
       "unavailability": {}
     },
     {
-      "id": "T016",
+      "id": "T009",
       "name": "Piñeiro Gonzalez, Soraya",
       "branch": [
         "CCSSHH"
@@ -428,7 +399,7 @@
       "unavailability": {}
     },
     {
-      "id": "T017",
+      "id": "T010",
       "name": "Puertas Paz, Iñigo",
       "branch": [
         "CCSSHH"
@@ -436,7 +407,7 @@
       "unavailability": {}
     },
     {
-      "id": "T018",
+      "id": "T011",
       "name": "Alcalde Henar",
       "branch": [
         "DBS"
@@ -444,7 +415,7 @@
       "unavailability": {}
     },
     {
-      "id": "T019",
+      "id": "T012",
       "name": "Txaparro López, Dionisio",
       "branch": [
         "DERECHO"
@@ -452,7 +423,7 @@
       "unavailability": {}
     },
     {
-      "id": "T020",
+      "id": "T013",
       "name": "Pascual Careaga, Iratxe",
       "branch": [
         "DBS"
@@ -460,7 +431,7 @@
       "unavailability": {}
     },
     {
-      "id": "T021",
+      "id": "T014",
       "name": "Gabilondo Batiz, Mikel",
       "branch": [
         "CCSSHH, DBS, DERECHO"
@@ -468,7 +439,7 @@
       "unavailability": {}
     },
     {
-      "id": "T022",
+      "id": "T015",
       "name": "Gómez Sánchez, Davinia",
       "branch": [
         "DBS, DERECHO"
@@ -476,7 +447,7 @@
       "unavailability": {}
     },
     {
-      "id": "T023",
+      "id": "T016",
       "name": "Ageitos Varela, Nagore",
       "branch": [
         "CCSSHH"
@@ -484,7 +455,7 @@
       "unavailability": {}
     },
     {
-      "id": "T024",
+      "id": "T017",
       "name": "González Perabá Miralles, Pedro",
       "branch": [
         "DERECHO"
@@ -492,7 +463,7 @@
       "unavailability": {}
     },
     {
-      "id": "T025",
+      "id": "T018",
       "name": "Vidal Martínez, César",
       "branch": [
         "DERECHO"
@@ -500,7 +471,7 @@
       "unavailability": {}
     },
     {
-      "id": "T026",
+      "id": "T019",
       "name": "Andrés Fernández, Alain",
       "branch": [
         "INGENIERÍA"
@@ -508,7 +479,7 @@
       "unavailability": {}
     },
     {
-      "id": "T027",
+      "id": "T020",
       "name": "Madariaga Gómez, Aritz",
       "branch": [
         "INGENIERÍA"
@@ -516,46 +487,15 @@
       "unavailability": {}
     },
     {
-      "id": "T028",
+      "id": "T021",
       "name": "Buján Carvallal, David",
       "branch": [
         "INGENIERÍA"
       ],
-      "unavailability": {
-        "Monday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Tuesday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Thursday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Wednesday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Friday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ]
-      }
+      "unavailability": {}
     },
     {
-      "id": "T029",
+      "id": "T022",
       "name": "Peña Saiz, Asier",
       "branch": [
         "CCSSHH"
@@ -563,7 +503,7 @@
       "unavailability": {}
     },
     {
-      "id": "T030",
+      "id": "T023",
       "name": "Arias Benéitez, Raquel",
       "branch": [
         "DBS, DERECHO"
@@ -571,7 +511,7 @@
       "unavailability": {}
     },
     {
-      "id": "T031",
+      "id": "T024",
       "name": "Azkona Ramos, Nerea",
       "branch": [
         "CCSSHH, EdyDep"
@@ -579,7 +519,7 @@
       "unavailability": {}
     },
     {
-      "id": "T032",
+      "id": "T025",
       "name": "Ona Saenz, Jon",
       "branch": [
         "CCSSHH, CCSSHH-FHV"
@@ -587,7 +527,7 @@
       "unavailability": {}
     },
     {
-      "id": "T033",
+      "id": "T026",
       "name": "Madariaga Ortuzar, Aurora",
       "branch": [
         "CCSSHH"
@@ -595,7 +535,7 @@
       "unavailability": {}
     },
     {
-      "id": "T034",
+      "id": "T027",
       "name": "Bienzobas Aramburu, Francisco Javier",
       "branch": [
         "CCSSHH"
@@ -603,7 +543,7 @@
       "unavailability": {}
     },
     {
-      "id": "T035",
+      "id": "T028",
       "name": "Malagón Ruiz, Pedro José",
       "branch": [
         "DERECHO"
@@ -611,7 +551,7 @@
       "unavailability": {}
     },
     {
-      "id": "T036",
+      "id": "T029",
       "name": "Solanes Ortega, Aida",
       "branch": [
         "SIN FACULTAD"
@@ -619,7 +559,7 @@
       "unavailability": {}
     },
     {
-      "id": "T037",
+      "id": "T030",
       "name": "Navajas Laboa, Adriana",
       "branch": [
         "DERECHO"
@@ -627,7 +567,7 @@
       "unavailability": {}
     },
     {
-      "id": "T038",
+      "id": "T031",
       "name": "Aranguren Aizpurua, Julen",
       "branch": [
         "CCSSHH"
@@ -635,7 +575,7 @@
       "unavailability": {}
     },
     {
-      "id": "T039",
+      "id": "T032",
       "name": "Simons, José Ignacio",
       "branch": [
         "DBS"
@@ -643,7 +583,7 @@
       "unavailability": {}
     },
     {
-      "id": "T040",
+      "id": "T033",
       "name": "Müller, Patrick",
       "branch": [
         "CCSSHH, DBS"
@@ -651,7 +591,7 @@
       "unavailability": {}
     },
     {
-      "id": "T041",
+      "id": "T034",
       "name": "Esnaola Arribillaga, Iratxe",
       "branch": [
         "DBS"
@@ -659,7 +599,7 @@
       "unavailability": {}
     },
     {
-      "id": "T042",
+      "id": "T035",
       "name": "Espinosa Blanco, Patricia",
       "branch": [
         "CCSSHH, EdyDep"
@@ -667,7 +607,7 @@
       "unavailability": {}
     },
     {
-      "id": "T043",
+      "id": "T036",
       "name": "Sagastagoitia Orbea, Jon",
       "branch": [
         "CCSSHH"
@@ -675,7 +615,7 @@
       "unavailability": {}
     },
     {
-      "id": "T044",
+      "id": "T037",
       "name": "Rodriguez Aizcorreta, Ziortza",
       "branch": [
         "CCSSHH"
@@ -683,7 +623,7 @@
       "unavailability": {}
     },
     {
-      "id": "T045",
+      "id": "T038",
       "name": "Muñoa Errasti, Jon",
       "branch": [
         "CCSSHH"
@@ -691,7 +631,7 @@
       "unavailability": {}
     },
     {
-      "id": "T046",
+      "id": "T039",
       "name": "Diaz Labrador, Josuka",
       "branch": [
         "INGENIERÍA"
@@ -699,7 +639,7 @@
       "unavailability": {}
     },
     {
-      "id": "T047",
+      "id": "T040",
       "name": "Bujan Carballal, David",
       "branch": [
         "DBS"
@@ -707,7 +647,7 @@
       "unavailability": {}
     },
     {
-      "id": "T048",
+      "id": "T041",
       "name": "Buendía Gutierrez, Rebeca",
       "branch": [
         "DERECHO"
@@ -715,7 +655,7 @@
       "unavailability": {}
     },
     {
-      "id": "T049",
+      "id": "T042",
       "name": "Pagola Carte, Juan Ignacio",
       "branch": [
         "CCSSHH, CCSSHH-FHV"
@@ -723,7 +663,7 @@
       "unavailability": {}
     },
     {
-      "id": "T050",
+      "id": "T043",
       "name": "Lecaroz Agara, Endika",
       "branch": [
         "CCSSHH"
@@ -731,7 +671,7 @@
       "unavailability": {}
     },
     {
-      "id": "T051",
+      "id": "T044",
       "name": "Vea Ricardo",
       "branch": [
         "SIN FACULTAD"
@@ -739,7 +679,7 @@
       "unavailability": {}
     },
     {
-      "id": "T052",
+      "id": "T045",
       "name": "Arizkuren, Amaia",
       "branch": [
         "DBS"
@@ -747,7 +687,7 @@
       "unavailability": {}
     },
     {
-      "id": "T053",
+      "id": "T046",
       "name": "Madina Ugartemendia, Mikel",
       "branch": [
         "CCSSHH"
@@ -755,7 +695,7 @@
       "unavailability": {}
     },
     {
-      "id": "T054",
+      "id": "T047",
       "name": "Pardo Bazán, Eduardo",
       "branch": [
         "DBS, DERECHO"
@@ -763,7 +703,7 @@
       "unavailability": {}
     },
     {
-      "id": "T055",
+      "id": "T048",
       "name": "Pérez Rastelli, Joshue",
       "branch": [
         "SIN FACULTAD"
@@ -771,7 +711,7 @@
       "unavailability": {}
     },
     {
-      "id": "T056",
+      "id": "T049",
       "name": "Fernández-Rivera, Iñigo",
       "branch": [
         "DBS, DERECHO"
@@ -779,7 +719,7 @@
       "unavailability": {}
     },
     {
-      "id": "T057",
+      "id": "T050",
       "name": "Perez Gaztelu, Miren Elixabete",
       "branch": [
         "CCSSHH"
@@ -787,7 +727,7 @@
       "unavailability": {}
     },
     {
-      "id": "T058",
+      "id": "T051",
       "name": "Guereño Omil, Basagaitz",
       "branch": [
         "CCSSHH, CCSSHH-FHV, DBS"
@@ -795,7 +735,7 @@
       "unavailability": {}
     },
     {
-      "id": "T059",
+      "id": "T052",
       "name": "Rioja Andueza, Iker",
       "branch": [
         "CCSSHH"
@@ -803,7 +743,7 @@
       "unavailability": {}
     },
     {
-      "id": "T060",
+      "id": "T053",
       "name": "Lekuona Ezkurdia, Iñaki",
       "branch": [
         "INGENIERÍA"
@@ -811,7 +751,7 @@
       "unavailability": {}
     },
     {
-      "id": "T061",
+      "id": "T054",
       "name": "Garmendia Lazcano, Aitor",
       "branch": [
         "CCSSHH, DBS"
@@ -819,7 +759,7 @@
       "unavailability": {}
     },
     {
-      "id": "T062",
+      "id": "T055",
       "name": "Govillard Garmendia, Leila",
       "branch": [
         "CCSSHH"
@@ -827,7 +767,7 @@
       "unavailability": {}
     },
     {
-      "id": "T063",
+      "id": "T056",
       "name": "Pendiente",
       "branch": [
         "CCSSHH, DERECHO"
@@ -835,7 +775,7 @@
       "unavailability": {}
     },
     {
-      "id": "T064",
+      "id": "T057",
       "name": "Mosquera Lajas, Alvaro",
       "branch": [
         "CCSSHH, EdyDep"
@@ -843,7 +783,7 @@
       "unavailability": {}
     },
     {
-      "id": "T065",
+      "id": "T058",
       "name": "López Belloso, María",
       "branch": [
         "CCSSHH, DERECHO"
@@ -851,7 +791,7 @@
       "unavailability": {}
     },
     {
-      "id": "T066",
+      "id": "T059",
       "name": "Gonzalez Rodriguez, Leire",
       "branch": [
         "CCSSHH, EdyDep"
@@ -859,7 +799,7 @@
       "unavailability": {}
     },
     {
-      "id": "T067",
+      "id": "T060",
       "name": "Viguri Axpe, Miguel Ramón",
       "branch": [
         "DERECHO"
@@ -867,7 +807,7 @@
       "unavailability": {}
     },
     {
-      "id": "T068",
+      "id": "T061",
       "name": "Agundez del Castillo, Rosa",
       "branch": [
         "CCSSHH, EdyDep"
@@ -875,7 +815,7 @@
       "unavailability": {}
     },
     {
-      "id": "T069",
+      "id": "T062",
       "name": "Korres Alonso, Oihane",
       "branch": [
         "CCSSHH, EdyDep"
@@ -883,7 +823,7 @@
       "unavailability": {}
     },
     {
-      "id": "T070",
+      "id": "T063",
       "name": "Loyo Mendivil, Estibaliz",
       "branch": [
         "INGENIERÍA"
@@ -891,7 +831,7 @@
       "unavailability": {}
     },
     {
-      "id": "T071",
+      "id": "T064",
       "name": "Navarro Picabea, Itziar",
       "branch": [
         "CCSSHH-FHV"
@@ -899,7 +839,7 @@
       "unavailability": {}
     },
     {
-      "id": "T072",
+      "id": "T065",
       "name": "Mugarza, Iñigo",
       "branch": [
         "DBS"
@@ -907,7 +847,7 @@
       "unavailability": {}
     },
     {
-      "id": "T073",
+      "id": "T066",
       "name": "Brión Berdote, Estela",
       "branch": [
         "DBS, DERECHO"
@@ -915,7 +855,7 @@
       "unavailability": {}
     },
     {
-      "id": "T074",
+      "id": "T067",
       "name": "Barbarín Urquiaga, María José",
       "branch": [
         "DERECHO"
@@ -923,7 +863,7 @@
       "unavailability": {}
     },
     {
-      "id": "T075",
+      "id": "T068",
       "name": "Boto Sánchez, Fernando",
       "branch": [
         "INGENIERÍA"
@@ -931,7 +871,7 @@
       "unavailability": {}
     },
     {
-      "id": "T076",
+      "id": "T069",
       "name": "Arrieta Frutos, Felix",
       "branch": [
         "CCSSHH"
@@ -939,7 +879,7 @@
       "unavailability": {}
     },
     {
-      "id": "T077",
+      "id": "T070",
       "name": "Quesada Granja, Carlos",
       "branch": [
         "INGENIERÍA"
@@ -947,7 +887,7 @@
       "unavailability": {}
     },
     {
-      "id": "T078",
+      "id": "T071",
       "name": "Izaguirre Choperena, Ainhoa",
       "branch": [
         "CCSSHH"
@@ -955,7 +895,7 @@
       "unavailability": {}
     },
     {
-      "id": "T079",
+      "id": "T072",
       "name": "Pau de Echave-Sustaeta, José Blas",
       "branch": [
         "DBS, DERECHO"
@@ -963,7 +903,7 @@
       "unavailability": {}
     },
     {
-      "id": "T080",
+      "id": "T073",
       "name": "Pendiente EDUCACION SOCIAL",
       "branch": [
         "CCSSHH, EdyDep"
@@ -971,7 +911,7 @@
       "unavailability": {}
     },
     {
-      "id": "T081",
+      "id": "T074",
       "name": "Rivera, Olga",
       "branch": [
         "DBS"
@@ -979,46 +919,15 @@
       "unavailability": {}
     },
     {
-      "id": "T082",
+      "id": "T075",
       "name": "Díez Blanco, Luís Enrique",
       "branch": [
         "INGENIERÍA"
       ],
-      "unavailability": {
-        "Monday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Wednesday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Friday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Tuesday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Thursday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ]
-      }
+      "unavailability": {}
     },
     {
-      "id": "T083",
+      "id": "T076",
       "name": "Piñero Pradera, Andoni",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1026,7 +935,7 @@
       "unavailability": {}
     },
     {
-      "id": "T084",
+      "id": "T077",
       "name": "Echeverría Uranga, Maitane",
       "branch": [
         "DBS, DERECHO"
@@ -1034,7 +943,7 @@
       "unavailability": {}
     },
     {
-      "id": "T085",
+      "id": "T078",
       "name": "Juanjo Gibaja",
       "branch": [
         "DBS"
@@ -1042,7 +951,7 @@
       "unavailability": {}
     },
     {
-      "id": "T086",
+      "id": "T079",
       "name": "Dacougna Minkette, Jeanne Rolande",
       "branch": [
         "CCSSHH"
@@ -1050,7 +959,7 @@
       "unavailability": {}
     },
     {
-      "id": "T087",
+      "id": "T080",
       "name": "Ibañez Romero, Asun",
       "branch": [
         "CCSSHH-FHV, DBS"
@@ -1058,7 +967,7 @@
       "unavailability": {}
     },
     {
-      "id": "T088",
+      "id": "T081",
       "name": "Hermoso Humbert, Alejandra",
       "branch": [
         "CCSSHH"
@@ -1066,7 +975,7 @@
       "unavailability": {}
     },
     {
-      "id": "T089",
+      "id": "T082",
       "name": "Larrion Cortabarria, Belen",
       "branch": [
         "CCSSHH"
@@ -1074,7 +983,7 @@
       "unavailability": {}
     },
     {
-      "id": "T090",
+      "id": "T083",
       "name": "Mingot Felip, Tomás",
       "branch": [
         "DBS, DERECHO"
@@ -1082,7 +991,7 @@
       "unavailability": {}
     },
     {
-      "id": "T091",
+      "id": "T084",
       "name": "Barco Martelo, Alex",
       "branch": [
         "INGENIERÍA"
@@ -1090,7 +999,7 @@
       "unavailability": {}
     },
     {
-      "id": "T092",
+      "id": "T085",
       "name": "Irigaray Apalategui, Idoia",
       "branch": [
         "CCSSHH-FHV"
@@ -1098,7 +1007,7 @@
       "unavailability": {}
     },
     {
-      "id": "T093",
+      "id": "T086",
       "name": "Juez Martín, Beatriz",
       "branch": [
         "INGENIERÍA"
@@ -1106,7 +1015,7 @@
       "unavailability": {}
     },
     {
-      "id": "T094",
+      "id": "T087",
       "name": "Leoz Aizpuru, Asier",
       "branch": [
         "CCSSHH"
@@ -1114,7 +1023,7 @@
       "unavailability": {}
     },
     {
-      "id": "T095",
+      "id": "T088",
       "name": "Atxurra Badiola, Kemen",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1122,7 +1031,7 @@
       "unavailability": {}
     },
     {
-      "id": "T096",
+      "id": "T089",
       "name": "Marín Paredes, José Antonio",
       "branch": [
         "CCSSHH"
@@ -1130,7 +1039,7 @@
       "unavailability": {}
     },
     {
-      "id": "T097",
+      "id": "T090",
       "name": "Fernández Ortea, Rogelio",
       "branch": [
         "CCSSHH, DBS"
@@ -1138,7 +1047,7 @@
       "unavailability": {}
     },
     {
-      "id": "T098",
+      "id": "T091",
       "name": "Sanz Garrido, Begoña",
       "branch": [
         "CCSSHH"
@@ -1146,7 +1055,7 @@
       "unavailability": {}
     },
     {
-      "id": "T099",
+      "id": "T092",
       "name": "Arrondo, Elvira",
       "branch": [
         "DBS"
@@ -1154,7 +1063,7 @@
       "unavailability": {}
     },
     {
-      "id": "T100",
+      "id": "T093",
       "name": "Calvo Cia, Iñigo",
       "branch": [
         "CCSSHH"
@@ -1162,7 +1071,7 @@
       "unavailability": {}
     },
     {
-      "id": "T101",
+      "id": "T094",
       "name": "Abad Galzacorta, Marina",
       "branch": [
         "CCSSHH"
@@ -1170,7 +1079,7 @@
       "unavailability": {}
     },
     {
-      "id": "T102",
+      "id": "T095",
       "name": "Arrieta Alberdi, Leyre",
       "branch": [
         "CCSSHH"
@@ -1178,7 +1087,7 @@
       "unavailability": {}
     },
     {
-      "id": "T103",
+      "id": "T096",
       "name": "Elorza Saez, Ania",
       "branch": [
         "CCSSHH"
@@ -1186,7 +1095,7 @@
       "unavailability": {}
     },
     {
-      "id": "T104",
+      "id": "T097",
       "name": "Iribar Ibabe, Alexander",
       "branch": [
         "CCSSHH-FHV"
@@ -1194,7 +1103,7 @@
       "unavailability": {}
     },
     {
-      "id": "T105",
+      "id": "T098",
       "name": "Urdaneta Ponte, Cora",
       "branch": [
         "INGENIERÍA"
@@ -1202,7 +1111,7 @@
       "unavailability": {}
     },
     {
-      "id": "T106",
+      "id": "T099",
       "name": "Arce Larrory, Olatz",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1210,7 +1119,7 @@
       "unavailability": {}
     },
     {
-      "id": "T107",
+      "id": "T100",
       "name": "Oliver, Jorge",
       "branch": [
         "DBS"
@@ -1218,7 +1127,7 @@
       "unavailability": {}
     },
     {
-      "id": "T108",
+      "id": "T101",
       "name": "Jiménez Sistiaga, Pablo",
       "branch": [
         "DBS, DERECHO"
@@ -1226,7 +1135,7 @@
       "unavailability": {}
     },
     {
-      "id": "T109",
+      "id": "T102",
       "name": "Irigoyen Diez, Jose Ramon",
       "branch": [
         "CCSSHH"
@@ -1234,7 +1143,7 @@
       "unavailability": {}
     },
     {
-      "id": "T110",
+      "id": "T103",
       "name": "Zuñiga Ruiz de Loizaga, Martin",
       "branch": [
         "CCSSHH"
@@ -1242,7 +1151,7 @@
       "unavailability": {}
     },
     {
-      "id": "T111",
+      "id": "T104",
       "name": "García Barriga, Juan",
       "branch": [
         "CCSSHH"
@@ -1250,7 +1159,7 @@
       "unavailability": {}
     },
     {
-      "id": "T112",
+      "id": "T105",
       "name": "Sanchez Escalante, Samir Abdala",
       "branch": [
         "CCSSHH-FHV"
@@ -1258,7 +1167,7 @@
       "unavailability": {}
     },
     {
-      "id": "T113",
+      "id": "T106",
       "name": "Ezeizabarrena Sáez, Xabier",
       "branch": [
         "DBS, DERECHO"
@@ -1266,7 +1175,7 @@
       "unavailability": {}
     },
     {
-      "id": "T114",
+      "id": "T107",
       "name": "Yiannibas, Katerina",
       "branch": [
         "DBS"
@@ -1274,7 +1183,7 @@
       "unavailability": {}
     },
     {
-      "id": "T115",
+      "id": "T108",
       "name": "Zulaika Ijurko, Esther",
       "branch": [
         "CCSSHH"
@@ -1282,7 +1191,7 @@
       "unavailability": {}
     },
     {
-      "id": "T116",
+      "id": "T109",
       "name": "Berasategi Zeberio, Miren",
       "branch": [
         "CCSSHH"
@@ -1290,7 +1199,7 @@
       "unavailability": {}
     },
     {
-      "id": "T117",
+      "id": "T110",
       "name": "Muñecas San Segundo, Rocío de las",
       "branch": [
         "CCSSHH"
@@ -1298,7 +1207,7 @@
       "unavailability": {}
     },
     {
-      "id": "T118",
+      "id": "T111",
       "name": "Koch, Maximiliano",
       "branch": [
         "CCSSHH"
@@ -1306,7 +1215,7 @@
       "unavailability": {}
     },
     {
-      "id": "T119",
+      "id": "T112",
       "name": "Brusau Salaberria, Ainara",
       "branch": [
         "CCSSHH"
@@ -1314,7 +1223,7 @@
       "unavailability": {}
     },
     {
-      "id": "T120",
+      "id": "T113",
       "name": "Orcajo González, Maddi",
       "branch": [
         "CCSSHH"
@@ -1322,7 +1231,7 @@
       "unavailability": {}
     },
     {
-      "id": "T121",
+      "id": "T114",
       "name": "Zubiaurre Goena, Arantza",
       "branch": [
         "DBS"
@@ -1330,7 +1239,7 @@
       "unavailability": {}
     },
     {
-      "id": "T122",
+      "id": "T115",
       "name": "Segu Odriozola, Mabel",
       "branch": [
         "CCSSHH"
@@ -1338,7 +1247,7 @@
       "unavailability": {}
     },
     {
-      "id": "T123",
+      "id": "T116",
       "name": "Olano Iriarte, Carmen",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1346,7 +1255,7 @@
       "unavailability": {}
     },
     {
-      "id": "T124",
+      "id": "T117",
       "name": "Vicente Torrado, Trinidad L.",
       "branch": [
         "CCSSHH"
@@ -1354,7 +1263,7 @@
       "unavailability": {}
     },
     {
-      "id": "T125",
+      "id": "T118",
       "name": "Galarraga Arrieta, Irene",
       "branch": [
         "CCSSHH"
@@ -1362,7 +1271,7 @@
       "unavailability": {}
     },
     {
-      "id": "T126",
+      "id": "T119",
       "name": "Alzua Sorzabal, Aurkene",
       "branch": [
         "CCSSHH, CCSSHH-FHV"
@@ -1370,7 +1279,7 @@
       "unavailability": {}
     },
     {
-      "id": "T127",
+      "id": "T120",
       "name": "Mujika Alberdi, Alazne",
       "branch": [
         "CCSSHH, DBS"
@@ -1378,7 +1287,7 @@
       "unavailability": {}
     },
     {
-      "id": "T128",
+      "id": "T121",
       "name": "Aguirre, Virginia",
       "branch": [
         "DBS"
@@ -1386,7 +1295,7 @@
       "unavailability": {}
     },
     {
-      "id": "T129",
+      "id": "T122",
       "name": "Paños Castro, Jessica",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1394,7 +1303,7 @@
       "unavailability": {}
     },
     {
-      "id": "T130",
+      "id": "T123",
       "name": "Lopetegi Salegi, Gurutze (Baja del 07/01/2026)",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1402,7 +1311,7 @@
       "unavailability": {}
     },
     {
-      "id": "T131",
+      "id": "T124",
       "name": "Curto Eraso, María Micaela",
       "branch": [
         "DERECHO"
@@ -1410,7 +1319,7 @@
       "unavailability": {}
     },
     {
-      "id": "T132",
+      "id": "T125",
       "name": "Chistov, Valery",
       "branch": [
         "DBS"
@@ -1418,7 +1327,7 @@
       "unavailability": {}
     },
     {
-      "id": "T133",
+      "id": "T126",
       "name": "Maric, Tonka",
       "branch": [
         "CCSSHH-FHV"
@@ -1426,7 +1335,7 @@
       "unavailability": {}
     },
     {
-      "id": "T134",
+      "id": "T127",
       "name": "Atienza Macías, Elena",
       "branch": [
         "DBS, DERECHO"
@@ -1434,7 +1343,7 @@
       "unavailability": {}
     },
     {
-      "id": "T135",
+      "id": "T128",
       "name": "Wang, Adela",
       "branch": [
         "DBS"
@@ -1442,7 +1351,7 @@
       "unavailability": {}
     },
     {
-      "id": "T136",
+      "id": "T129",
       "name": "Serón Arizmendi, Natale",
       "branch": [
         "DBS, DERECHO"
@@ -1450,7 +1359,7 @@
       "unavailability": {}
     },
     {
-      "id": "T137",
+      "id": "T130",
       "name": "Rodriguez Perez, Mª Pilar",
       "branch": [
         "CCSSHH, DBS"
@@ -1458,7 +1367,7 @@
       "unavailability": {}
     },
     {
-      "id": "T138",
+      "id": "T131",
       "name": "Aragón, Cristina",
       "branch": [
         "DBS"
@@ -1466,7 +1375,7 @@
       "unavailability": {}
     },
     {
-      "id": "T139",
+      "id": "T132",
       "name": "Martin Mateos, Ana María",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1474,7 +1383,7 @@
       "unavailability": {}
     },
     {
-      "id": "T140",
+      "id": "T133",
       "name": "Arraiz, José Ignacio",
       "branch": [
         "DBS"
@@ -1482,7 +1391,7 @@
       "unavailability": {}
     },
     {
-      "id": "T141",
+      "id": "T134",
       "name": "Ruiz Vieytez, Eduardo",
       "branch": [
         "CCSSHH"
@@ -1490,7 +1399,7 @@
       "unavailability": {}
     },
     {
-      "id": "T142",
+      "id": "T135",
       "name": "Iturrioz Landart, Cristina",
       "branch": [
         "CCSSHH-FHV, DBS"
@@ -1498,7 +1407,7 @@
       "unavailability": {}
     },
     {
-      "id": "T143",
+      "id": "T136",
       "name": "Ortega Alonso, Dan",
       "branch": [
         "DBS, DERECHO"
@@ -1506,7 +1415,7 @@
       "unavailability": {}
     },
     {
-      "id": "T144",
+      "id": "T137",
       "name": "Dominguez Fanlo, Ana",
       "branch": [
         "CCSSHH"
@@ -1514,7 +1423,7 @@
       "unavailability": {}
     },
     {
-      "id": "T145",
+      "id": "T138",
       "name": "López Benito, Jorge R.",
       "branch": [
         "CCSSHH"
@@ -1522,7 +1431,7 @@
       "unavailability": {}
     },
     {
-      "id": "T146",
+      "id": "T139",
       "name": "Riezu Arregui, Xabier",
       "branch": [
         "CCSSHH"
@@ -1530,7 +1439,7 @@
       "unavailability": {}
     },
     {
-      "id": "T147",
+      "id": "T140",
       "name": "Gonzalez Goya, Edurne (Baja del 22/04/2026)",
       "branch": [
         "CCSSHH"
@@ -1538,7 +1447,7 @@
       "unavailability": {}
     },
     {
-      "id": "T148",
+      "id": "T141",
       "name": "Uriarte Isacelaya, Andikona",
       "branch": [
         "DBS, DERECHO"
@@ -1546,7 +1455,7 @@
       "unavailability": {}
     },
     {
-      "id": "T149",
+      "id": "T142",
       "name": "García Imaz, Andoni",
       "branch": [
         "DERECHO"
@@ -1554,7 +1463,7 @@
       "unavailability": {}
     },
     {
-      "id": "T150",
+      "id": "T143",
       "name": "Irastorza Arandia, Nahikari",
       "branch": [
         "CCSSHH"
@@ -1562,7 +1471,7 @@
       "unavailability": {}
     },
     {
-      "id": "T151",
+      "id": "T144",
       "name": "Solanes Ortega, Aida",
       "branch": [
         "SIN FACULTAD"
@@ -1570,46 +1479,15 @@
       "unavailability": {}
     },
     {
-      "id": "T152",
+      "id": "T145",
       "name": "García Zubia, Javier",
       "branch": [
         "INGENIERÍA"
       ],
-      "unavailability": {
-        "Monday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Tuesday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Thursday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Wednesday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ],
-        "Friday": [
-          "08:00-08:30",
-          "08:30-09:00",
-          "09:00-09:30",
-          "09:30-10:00"
-        ]
-      }
+      "unavailability": {}
     },
     {
-      "id": "T153",
+      "id": "T146",
       "name": "Guinot Viciano, Cinta",
       "branch": [
         "CCSSHH, CCSSHH-FHV"
@@ -1617,7 +1495,7 @@
       "unavailability": {}
     },
     {
-      "id": "T154",
+      "id": "T147",
       "name": "Lazcano Quintana, Idurre",
       "branch": [
         "CCSSHH"
@@ -1625,7 +1503,7 @@
       "unavailability": {}
     },
     {
-      "id": "T155",
+      "id": "T148",
       "name": "Litago Napal, Raquel",
       "branch": [
         "CCSSHH"
@@ -1633,7 +1511,7 @@
       "unavailability": {}
     },
     {
-      "id": "T156",
+      "id": "T149",
       "name": "Trimiño Perez, Laura",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1641,7 +1519,7 @@
       "unavailability": {}
     },
     {
-      "id": "T157",
+      "id": "T150",
       "name": "Ferran Zubillaga, Ane",
       "branch": [
         "CCSSHH"
@@ -1649,7 +1527,7 @@
       "unavailability": {}
     },
     {
-      "id": "T158",
+      "id": "T151",
       "name": "Esnaola Iratxe",
       "branch": [
         "DBS"
@@ -1657,7 +1535,7 @@
       "unavailability": {}
     },
     {
-      "id": "T159",
+      "id": "T152",
       "name": "Roa Mora, Danel",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1665,7 +1543,7 @@
       "unavailability": {}
     },
     {
-      "id": "T160",
+      "id": "T153",
       "name": "Romero Sánchez, Garazi",
       "branch": [
         "DERECHO"
@@ -1673,7 +1551,7 @@
       "unavailability": {}
     },
     {
-      "id": "T161",
+      "id": "T154",
       "name": "Etxeberria Erauskin, Bakarne",
       "branch": [
         "CCSSHH"
@@ -1681,7 +1559,7 @@
       "unavailability": {}
     },
     {
-      "id": "T162",
+      "id": "T155",
       "name": "Pison Arizcuren, Olatz",
       "branch": [
         "CCSSHH"
@@ -1689,7 +1567,7 @@
       "unavailability": {}
     },
     {
-      "id": "T163",
+      "id": "T156",
       "name": "Pérez Gonzalez, Mila",
       "branch": [
         "CCSSHH-FHV, DBS"
@@ -1697,7 +1575,7 @@
       "unavailability": {}
     },
     {
-      "id": "T164",
+      "id": "T157",
       "name": "Aizpuru Ayerbe, María",
       "branch": [
         "CCSSHH"
@@ -1705,7 +1583,7 @@
       "unavailability": {}
     },
     {
-      "id": "T165",
+      "id": "T158",
       "name": "Gutierrez Almazor, Miren",
       "branch": [
         "CCSSHH"
@@ -1713,7 +1591,7 @@
       "unavailability": {}
     },
     {
-      "id": "T166",
+      "id": "T159",
       "name": "Achón Insausti, Jose Ángel",
       "branch": [
         "CCSSHH, DERECHO"
@@ -1721,7 +1599,7 @@
       "unavailability": {}
     },
     {
-      "id": "T167",
+      "id": "T160",
       "name": "Pérez Urruchi, Diego",
       "branch": [
         "CCSSHH"
@@ -1729,7 +1607,7 @@
       "unavailability": {}
     },
     {
-      "id": "T168",
+      "id": "T161",
       "name": "García Mostajo, Ainhoa",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1737,7 +1615,7 @@
       "unavailability": {}
     },
     {
-      "id": "T169",
+      "id": "T162",
       "name": "Iraola Alkorta, Arantxa",
       "branch": [
         "CCSSHH"
@@ -1745,7 +1623,7 @@
       "unavailability": {}
     },
     {
-      "id": "T170",
+      "id": "T163",
       "name": "ana",
       "branch": [
         "DBS"
@@ -1753,7 +1631,7 @@
       "unavailability": {}
     },
     {
-      "id": "T171",
+      "id": "T164",
       "name": "Ochoa Laburu, Juan Luis",
       "branch": [
         "DBS, DERECHO"
@@ -1761,7 +1639,7 @@
       "unavailability": {}
     },
     {
-      "id": "T172",
+      "id": "T165",
       "name": "Somoano Barrionuevo, Laura",
       "branch": [
         "CCSSHH"
@@ -1769,7 +1647,7 @@
       "unavailability": {}
     },
     {
-      "id": "T173",
+      "id": "T166",
       "name": "Benegas Gutierrez, Sara",
       "branch": [
         "CCSSHH"
@@ -1777,7 +1655,7 @@
       "unavailability": {}
     },
     {
-      "id": "T174",
+      "id": "T167",
       "name": "Crescentino, Diego Sebastian",
       "branch": [
         "CCSSHH"
@@ -1785,7 +1663,7 @@
       "unavailability": {}
     },
     {
-      "id": "T175",
+      "id": "T168",
       "name": "Aycart Carbajo, Elena",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1793,7 +1671,7 @@
       "unavailability": {}
     },
     {
-      "id": "T176",
+      "id": "T169",
       "name": "Alicostes Murua, Conchi",
       "branch": [
         "CCSSHH"
@@ -1801,7 +1679,7 @@
       "unavailability": {}
     },
     {
-      "id": "T177",
+      "id": "T170",
       "name": "Cuesta Zulaica, Ana",
       "branch": [
         "INGENIERÍA"
@@ -1809,7 +1687,7 @@
       "unavailability": {}
     },
     {
-      "id": "T178",
+      "id": "T171",
       "name": "Ochoa Laburu, Elena",
       "branch": [
         "DBS"
@@ -1817,7 +1695,7 @@
       "unavailability": {}
     },
     {
-      "id": "T179",
+      "id": "T172",
       "name": "Iruin Ibarzabal, Lander",
       "branch": [
         "CCSSHH"
@@ -1825,7 +1703,7 @@
       "unavailability": {}
     },
     {
-      "id": "T180",
+      "id": "T173",
       "name": "Celis Martin, Patricia",
       "branch": [
         "CCSSHH"
@@ -1833,7 +1711,7 @@
       "unavailability": {}
     },
     {
-      "id": "T181",
+      "id": "T174",
       "name": "Navarro Lashayas, Miguel Angel",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1841,7 +1719,7 @@
       "unavailability": {}
     },
     {
-      "id": "T182",
+      "id": "T175",
       "name": "García Gangoiti, Ander",
       "branch": [
         "INGENIERÍA"
@@ -1849,7 +1727,7 @@
       "unavailability": {}
     },
     {
-      "id": "T183",
+      "id": "T176",
       "name": "Aliperti, Giuseppe",
       "branch": [
         "CCSSHH"
@@ -1857,7 +1735,7 @@
       "unavailability": {}
     },
     {
-      "id": "T184",
+      "id": "T177",
       "name": "Nieto Arizmendiarrieta, Eduardo",
       "branch": [
         "DERECHO"
@@ -1865,7 +1743,7 @@
       "unavailability": {}
     },
     {
-      "id": "T185",
+      "id": "T178",
       "name": "López Gorostidi, Jon",
       "branch": [
         "CCSSHH, DBS, DERECHO"
@@ -1873,7 +1751,7 @@
       "unavailability": {}
     },
     {
-      "id": "T186",
+      "id": "T179",
       "name": "Aizpiri Etxeberria, Maite",
       "branch": [
         "DERECHO"
@@ -1881,7 +1759,7 @@
       "unavailability": {}
     },
     {
-      "id": "T187",
+      "id": "T180",
       "name": "Sáez, Joseba Imanol",
       "branch": [
         "DBS, DERECHO"
@@ -1889,7 +1767,7 @@
       "unavailability": {}
     },
     {
-      "id": "T188",
+      "id": "T181",
       "name": "Pendiente CCSSHH",
       "branch": [
         "CCSSHH"
@@ -1897,7 +1775,7 @@
       "unavailability": {}
     },
     {
-      "id": "T189",
+      "id": "T182",
       "name": "Kroczek, Boris",
       "branch": [
         "DBS, DERECHO"
@@ -1905,7 +1783,7 @@
       "unavailability": {}
     },
     {
-      "id": "T190",
+      "id": "T183",
       "name": "Fonseca Peso, Janire",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1913,7 +1791,7 @@
       "unavailability": {}
     },
     {
-      "id": "T191",
+      "id": "T184",
       "name": "Artetxe González, Enara",
       "branch": [
         "CCSSHH"
@@ -1921,7 +1799,7 @@
       "unavailability": {}
     },
     {
-      "id": "T192",
+      "id": "T185",
       "name": "Gago Rezola, Nerea",
       "branch": [
         "CCSSHH"
@@ -1929,7 +1807,7 @@
       "unavailability": {}
     },
     {
-      "id": "T193",
+      "id": "T186",
       "name": "Calvo Soraluze, Hodei",
       "branch": [
         "INGENIERÍA"
@@ -1937,7 +1815,7 @@
       "unavailability": {}
     },
     {
-      "id": "T194",
+      "id": "T187",
       "name": "Hoyo Bilbao, Joana del",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1945,7 +1823,7 @@
       "unavailability": {}
     },
     {
-      "id": "T195",
+      "id": "T188",
       "name": "Salazar Iglesias, David",
       "branch": [
         "INGENIERÍA"
@@ -1953,7 +1831,7 @@
       "unavailability": {}
     },
     {
-      "id": "T196",
+      "id": "T189",
       "name": "Izkara, José Luis",
       "branch": [
         "INGENIERÍA"
@@ -1961,7 +1839,7 @@
       "unavailability": {}
     },
     {
-      "id": "T197",
+      "id": "T190",
       "name": "Recalde Delgado, Ana Isabel (Baja)",
       "branch": [
         "CCSSHH"
@@ -1969,7 +1847,7 @@
       "unavailability": {}
     },
     {
-      "id": "T198",
+      "id": "T191",
       "name": "Fajardo Calderín, Jenny",
       "branch": [
         "INGENIERÍA"
@@ -1977,7 +1855,7 @@
       "unavailability": {}
     },
     {
-      "id": "T199",
+      "id": "T192",
       "name": "Altamira Basterrechea, Jose Fernando",
       "branch": [
         "CCSSHH, EdyDep"
@@ -1985,7 +1863,7 @@
       "unavailability": {}
     },
     {
-      "id": "T200",
+      "id": "T193",
       "name": "Asensio Valverde, Iñigo",
       "branch": [
         "CCSSHH"
@@ -1993,7 +1871,7 @@
       "unavailability": {}
     },
     {
-      "id": "T201",
+      "id": "T194",
       "name": "Urtizberea Puy, Nora",
       "branch": [
         "DERECHO"
@@ -2001,7 +1879,7 @@
       "unavailability": {}
     },
     {
-      "id": "T202",
+      "id": "T195",
       "name": "Simone H.",
       "branch": [
         "SIN FACULTAD"
@@ -2009,7 +1887,7 @@
       "unavailability": {}
     },
     {
-      "id": "T203",
+      "id": "T196",
       "name": "Balderás, Adela",
       "branch": [
         "SIN FACULTAD"
@@ -2017,7 +1895,7 @@
       "unavailability": {}
     },
     {
-      "id": "T204",
+      "id": "T197",
       "name": "Madeleine L.",
       "branch": [
         "SIN FACULTAD"
@@ -2025,7 +1903,7 @@
       "unavailability": {}
     },
     {
-      "id": "T205",
+      "id": "T198",
       "name": "Jenny L.",
       "branch": [
         "SIN FACULTAD"
@@ -2033,7 +1911,7 @@
       "unavailability": {}
     },
     {
-      "id": "T206",
+      "id": "T199",
       "name": "Rafa E.",
       "branch": [
         "SIN FACULTAD"
@@ -2041,7 +1919,7 @@
       "unavailability": {}
     },
     {
-      "id": "T207",
+      "id": "T200",
       "name": "Zixi, Adela",
       "branch": [
         "SIN FACULTAD"
@@ -2049,7 +1927,7 @@
       "unavailability": {}
     },
     {
-      "id": "T208",
+      "id": "T201",
       "name": "Isabel P.",
       "branch": [
         "SIN FACULTAD"
@@ -2057,7 +1935,7 @@
       "unavailability": {}
     },
     {
-      "id": "T209",
+      "id": "T202",
       "name": "Elola, Aitziber",
       "branch": [
         "SIN FACULTAD"
@@ -2065,7 +1943,7 @@
       "unavailability": {}
     },
     {
-      "id": "T210",
+      "id": "T203",
       "name": "Wilson, James",
       "branch": [
         "SIN FACULTAD"
@@ -2073,7 +1951,7 @@
       "unavailability": {}
     },
     {
-      "id": "T211",
+      "id": "T204",
       "name": "Magro, Edurne",
       "branch": [
         "SIN FACULTAD"
@@ -2081,7 +1959,7 @@
       "unavailability": {}
     },
     {
-      "id": "T212",
+      "id": "T205",
       "name": "Iraola, Marta",
       "branch": [
         "SIN FACULTAD"
@@ -2089,7 +1967,7 @@
       "unavailability": {}
     },
     {
-      "id": "T213",
+      "id": "T206",
       "name": "Iruretagoyena, Amaia",
       "branch": [
         "SIN FACULTAD"
@@ -2097,7 +1975,7 @@
       "unavailability": {}
     },
     {
-      "id": "T214",
+      "id": "T207",
       "name": "Zabala, Alaitz",
       "branch": [
         "SIN FACULTAD"
@@ -2105,7 +1983,7 @@
       "unavailability": {}
     },
     {
-      "id": "T215",
+      "id": "T208",
       "name": "Sisti, Eduardo",
       "branch": [
         "SIN FACULTAD"
@@ -2113,7 +1991,7 @@
       "unavailability": {}
     },
     {
-      "id": "T216",
+      "id": "T209",
       "name": "Saenz, Josune",
       "branch": [
         "SIN FACULTAD"
@@ -2121,7 +1999,7 @@
       "unavailability": {}
     },
     {
-      "id": "T217",
+      "id": "T210",
       "name": "Ferreira, Luana",
       "branch": [
         "SIN FACULTAD"
@@ -2129,7 +2007,7 @@
       "unavailability": {}
     },
     {
-      "id": "T218",
+      "id": "T211",
       "name": "Pizarro, Jon",
       "branch": [
         "SIN FACULTAD"
@@ -2137,7 +2015,7 @@
       "unavailability": {}
     },
     {
-      "id": "T219",
+      "id": "T212",
       "name": "Soto, Idoia",
       "branch": [
         "SIN FACULTAD"
@@ -2145,7 +2023,7 @@
       "unavailability": {}
     },
     {
-      "id": "T220",
+      "id": "T213",
       "name": "Cortés, Mikel",
       "branch": [
         "SIN FACULTAD"
@@ -2153,7 +2031,7 @@
       "unavailability": {}
     },
     {
-      "id": "T221",
+      "id": "T214",
       "name": "Abad, Imanol",
       "branch": [
         "SIN FACULTAD"
@@ -2161,7 +2039,7 @@
       "unavailability": {}
     },
     {
-      "id": "T222",
+      "id": "T215",
       "name": "Filiatreaux, Alex",
       "branch": [
         "SIN FACULTAD"
@@ -2169,7 +2047,7 @@
       "unavailability": {}
     },
     {
-      "id": "T223",
+      "id": "T216",
       "name": "Ibarburu, Miguel",
       "branch": [
         "SIN FACULTAD"
@@ -2177,7 +2055,7 @@
       "unavailability": {}
     },
     {
-      "id": "T224",
+      "id": "T217",
       "name": "Suárez, Luis",
       "branch": [
         "SIN FACULTAD"
@@ -2185,7 +2063,7 @@
       "unavailability": {}
     },
     {
-      "id": "T225",
+      "id": "T218",
       "name": "Aranguren, Marijo",
       "branch": [
         "SIN FACULTAD"
@@ -2193,7 +2071,7 @@
       "unavailability": {}
     },
     {
-      "id": "T226",
+      "id": "T219",
       "name": "Aranburu, Edriga",
       "branch": [
         "SIN FACULTAD"
@@ -2201,7 +2079,7 @@
       "unavailability": {}
     },
     {
-      "id": "T227",
+      "id": "T220",
       "name": "Minondo, Asier",
       "branch": [
         "SIN FACULTAD"
@@ -2209,7 +2087,7 @@
       "unavailability": {}
     },
     {
-      "id": "T228",
+      "id": "T221",
       "name": "González, Alex Oier",
       "branch": [
         "SIN FACULTAD"
@@ -2217,7 +2095,7 @@
       "unavailability": {}
     },
     {
-      "id": "T229",
+      "id": "T222",
       "name": "Cuesta, Irene",
       "branch": [
         "SIN FACULTAD"
@@ -2225,7 +2103,7 @@
       "unavailability": {}
     },
     {
-      "id": "T230",
+      "id": "T223",
       "name": "Peñalba, Carmela",
       "branch": [
         "SIN FACULTAD"
@@ -2233,7 +2111,7 @@
       "unavailability": {}
     },
     {
-      "id": "T231",
+      "id": "T224",
       "name": "Iñigo, Edurne",
       "branch": [
         "SIN FACULTAD"
@@ -2241,7 +2119,7 @@
       "unavailability": {}
     },
     {
-      "id": "T232",
+      "id": "T225",
       "name": "Lizaso, José",
       "branch": [
         "SIN FACULTAD"
@@ -2249,7 +2127,7 @@
       "unavailability": {}
     },
     {
-      "id": "T233",
+      "id": "T226",
       "name": "Del Orden, Olga",
       "branch": [
         "SIN FACULTAD"
@@ -2257,7 +2135,7 @@
       "unavailability": {}
     },
     {
-      "id": "T234",
+      "id": "T227",
       "name": "Del Orden, Olga",
       "branch": [
         "SIN FACULTAD"
@@ -2265,7 +2143,7 @@
       "unavailability": {}
     },
     {
-      "id": "T235",
+      "id": "T228",
       "name": "Lobán, Lidia",
       "branch": [
         "SIN FACULTAD"
@@ -2273,7 +2151,7 @@
       "unavailability": {}
     },
     {
-      "id": "T236",
+      "id": "T229",
       "name": "Arrieta, Iñigo",
       "branch": [
         "SIN FACULTAD"
@@ -2281,7 +2159,7 @@
       "unavailability": {}
     },
     {
-      "id": "T237",
+      "id": "T230",
       "name": "Erauskin, Iñaki",
       "branch": [
         "SIN FACULTAD"
@@ -2289,7 +2167,7 @@
       "unavailability": {}
     },
     {
-      "id": "T238",
+      "id": "T231",
       "name": "Grimbert, Stephanie",
       "branch": [
         "SIN FACULTAD"
@@ -2297,7 +2175,7 @@
       "unavailability": {}
     },
     {
-      "id": "T239",
+      "id": "T232",
       "name": "Ruiz de Escudero, Nagore",
       "branch": [
         "SIN FACULTAD"
@@ -2305,7 +2183,7 @@
       "unavailability": {}
     },
     {
-      "id": "T240",
+      "id": "T233",
       "name": "Ibañez, Iulen",
       "branch": [
         "SIN FACULTAD"
@@ -2313,7 +2191,7 @@
       "unavailability": {}
     },
     {
-      "id": "T241",
+      "id": "T234",
       "name": "Astigarraga, Eneko",
       "branch": [
         "SIN FACULTAD"
@@ -2321,7 +2199,7 @@
       "unavailability": {}
     },
     {
-      "id": "T242",
+      "id": "T235",
       "name": "Salegi, Esteban",
       "branch": [
         "SIN FACULTAD"
@@ -2329,7 +2207,7 @@
       "unavailability": {}
     },
     {
-      "id": "T243",
+      "id": "T236",
       "name": "Alberro Goikoetxea, Luzia",
       "branch": [
         "CCSSHH"
@@ -2337,7 +2215,7 @@
       "unavailability": {}
     },
     {
-      "id": "T244",
+      "id": "T237",
       "name": "González-Pernía, José Luis",
       "branch": [
         "DBS"
@@ -2345,7 +2223,7 @@
       "unavailability": {}
     },
     {
-      "id": "T245",
+      "id": "T238",
       "name": "García Zubia, Javier",
       "branch": [
         "SIN FACULTAD"
@@ -2353,7 +2231,7 @@
       "unavailability": {}
     },
     {
-      "id": "T246",
+      "id": "T239",
       "name": "Aguilera Paz, Evelyn",
       "branch": [
         "INGENIERÍA"
@@ -2361,7 +2239,7 @@
       "unavailability": {}
     },
     {
-      "id": "T247",
+      "id": "T240",
       "name": "Echeverria Franco, Imanol",
       "branch": [
         "INGENIERÍA"
@@ -2369,7 +2247,7 @@
       "unavailability": {}
     },
     {
-      "id": "T248",
+      "id": "T241",
       "name": "Unanue Gual, Imanol",
       "branch": [
         "SIN FACULTAD"
@@ -2377,7 +2255,7 @@
       "unavailability": {}
     },
     {
-      "id": "T249",
+      "id": "T242",
       "name": "García Olaizola, Igor",
       "branch": [
         "INGENIERÍA"
@@ -2385,7 +2263,7 @@
       "unavailability": {}
     },
     {
-      "id": "T250",
+      "id": "T243",
       "name": "Mosquera, Carolina",
       "branch": [
         "INGENIERÍA"
@@ -2393,7 +2271,7 @@
       "unavailability": {}
     },
     {
-      "id": "T251",
+      "id": "T244",
       "name": "Santos Torres, Andrés",
       "branch": [
         "INGENIERÍA"
@@ -2401,7 +2279,7 @@
       "unavailability": {}
     },
     {
-      "id": "T252",
+      "id": "T245",
       "name": "Maiza Galparsoro, Mikel",
       "branch": [
         "INGENIERÍA"
@@ -2409,7 +2287,7 @@
       "unavailability": {}
     },
     {
-      "id": "T253",
+      "id": "T246",
       "name": "Zamorano Aliaga, Sebastián",
       "branch": [
         "INGENIERÍA"
@@ -2417,7 +2295,7 @@
       "unavailability": {}
     },
     {
-      "id": "T254",
+      "id": "T247",
       "name": "Dominguez Fanlo, Ana",
       "branch": [
         "INGENIERÍA"
@@ -2425,7 +2303,7 @@
       "unavailability": {}
     },
     {
-      "id": "T255",
+      "id": "T248",
       "name": "Palmero Cisnero, Pedro José",
       "branch": [
         "INGENIERÍA"
@@ -2433,7 +2311,7 @@
       "unavailability": {}
     },
     {
-      "id": "T256",
+      "id": "T249",
       "name": "Tubía Treviño. Mónica",
       "branch": [
         "INGENIERÍA"
@@ -2441,7 +2319,7 @@
       "unavailability": {}
     },
     {
-      "id": "T257",
+      "id": "T250",
       "name": "Pérez Rastelli, Joshue",
       "branch": [
         "INGENIERÍA"
@@ -2449,7 +2327,7 @@
       "unavailability": {}
     },
     {
-      "id": "T258",
+      "id": "T251",
       "name": "García Castaño, Jorge",
       "branch": [
         "INGENIERÍA"
@@ -2457,7 +2335,7 @@
       "unavailability": {}
     },
     {
-      "id": "T259",
+      "id": "T252",
       "name": "García Amado, Patricia",
       "branch": [
         "CCSSHH"
@@ -2465,7 +2343,7 @@
       "unavailability": {}
     },
     {
-      "id": "T260",
+      "id": "T253",
       "name": "INGENIERIA BASE",
       "branch": [
         "INGENIERÍA"
@@ -2473,7 +2351,7 @@
       "unavailability": {}
     },
     {
-      "id": "T261",
+      "id": "T254",
       "name": "Aramburu, Nekane",
       "branch": [
         "SIN FACULTAD"
@@ -2481,7 +2359,7 @@
       "unavailability": {}
     },
     {
-      "id": "T262",
+      "id": "T255",
       "name": "DBS BASE",
       "branch": [
         "DBS"
@@ -2489,7 +2367,7 @@
       "unavailability": {}
     },
     {
-      "id": "T263",
+      "id": "T256",
       "name": "González-Pernia, José Luis",
       "branch": [
         "SIN FACULTAD"
@@ -2497,7 +2375,7 @@
       "unavailability": {}
     },
     {
-      "id": "T264",
+      "id": "T257",
       "name": "Serrat, Beatriz",
       "branch": [
         "SIN FACULTAD"
@@ -2505,7 +2383,7 @@
       "unavailability": {}
     },
     {
-      "id": "T265",
+      "id": "T258",
       "name": "Baselga, Laura",
       "branch": [
         "SIN FACULTAD"
@@ -2513,7 +2391,7 @@
       "unavailability": {}
     },
     {
-      "id": "T266",
+      "id": "T259",
       "name": "Diez Ruiz, Fernando",
       "branch": [
         "CCSSHH, EdyDep"
@@ -2521,7 +2399,7 @@
       "unavailability": {}
     },
     {
-      "id": "T267",
+      "id": "T260",
       "name": "Vasquez Perez, Nely",
       "branch": [
         "CCSSHH, CCSSHH-FHV"
@@ -2529,7 +2407,7 @@
       "unavailability": {}
     },
     {
-      "id": "T268",
+      "id": "T261",
       "name": "Vieites López, Veronica",
       "branch": [
         "CCSSHH"
@@ -2537,7 +2415,7 @@
       "unavailability": {}
     },
     {
-      "id": "T269",
+      "id": "T262",
       "name": "Begiristain Etxezarreta, Naia",
       "branch": [
         "CCSSHH"
@@ -2545,7 +2423,7 @@
       "unavailability": {}
     },
     {
-      "id": "T270",
+      "id": "T263",
       "name": "Lasa Briz, Victor J.",
       "branch": [
         "CCSSHH"
@@ -2553,7 +2431,7 @@
       "unavailability": {}
     },
     {
-      "id": "T271",
+      "id": "T264",
       "name": "Zabaleta Merino, Aitor",
       "branch": [
         "CCSSHH"
@@ -2561,7 +2439,7 @@
       "unavailability": {}
     },
     {
-      "id": "T272",
+      "id": "T265",
       "name": "Valle García, Sandra del",
       "branch": [
         "CCSSHH"
@@ -2569,7 +2447,7 @@
       "unavailability": {}
     },
     {
-      "id": "T273",
+      "id": "T266",
       "name": "Zabala, Kristina",
       "branch": [
         "SIN FACULTAD"
@@ -2577,7 +2455,7 @@
       "unavailability": {}
     },
     {
-      "id": "T274",
+      "id": "T267",
       "name": "Jimenez Garrido, Jon",
       "branch": [
         "CCSSHH"
@@ -2585,7 +2463,7 @@
       "unavailability": {}
     },
     {
-      "id": "T275",
+      "id": "T268",
       "name": "Milosevic, Nemanja",
       "branch": [
         "CCSSHH"
@@ -2593,7 +2471,7 @@
       "unavailability": {}
     },
     {
-      "id": "T276",
+      "id": "T269",
       "name": "Amenabar, Eider",
       "branch": [
         "SIN FACULTAD"
@@ -2601,7 +2479,7 @@
       "unavailability": {}
     },
     {
-      "id": "T277",
+      "id": "T270",
       "name": "Berriozabal, Iñaki",
       "branch": [
         "SIN FACULTAD"
@@ -2609,7 +2487,7 @@
       "unavailability": {}
     },
     {
-      "id": "T278",
+      "id": "T271",
       "name": "Zabala, Jon Mikel",
       "branch": [
         "SIN FACULTAD"
@@ -2617,7 +2495,7 @@
       "unavailability": {}
     },
     {
-      "id": "T279",
+      "id": "T272",
       "name": "Aranguren, Nagore",
       "branch": [
         "SIN FACULTAD"
@@ -2625,7 +2503,7 @@
       "unavailability": {}
     },
     {
-      "id": "T280",
+      "id": "T273",
       "name": "Urretavizcaya, Iñigo",
       "branch": [
         "SIN FACULTAD"
@@ -2633,7 +2511,7 @@
       "unavailability": {}
     },
     {
-      "id": "T281",
+      "id": "T274",
       "name": "Bohorquez, Santiago",
       "branch": [
         "SIN FACULTAD"
@@ -2641,7 +2519,7 @@
       "unavailability": {}
     },
     {
-      "id": "T282",
+      "id": "T275",
       "name": "Beraza, Isabel",
       "branch": [
         "SIN FACULTAD"
@@ -2649,7 +2527,7 @@
       "unavailability": {}
     },
     {
-      "id": "T283",
+      "id": "T276",
       "name": "Basa, María",
       "branch": [
         "SIN FACULTAD"
@@ -2657,7 +2535,7 @@
       "unavailability": {}
     },
     {
-      "id": "T284",
+      "id": "T277",
       "name": "Casado, Patricia",
       "branch": [
         "SIN FACULTAD"
@@ -2665,7 +2543,7 @@
       "unavailability": {}
     },
     {
-      "id": "T285",
+      "id": "T278",
       "name": "Aresti, Nuria",
       "branch": [
         "SIN FACULTAD"
@@ -2673,7 +2551,7 @@
       "unavailability": {}
     },
     {
-      "id": "T286",
+      "id": "T279",
       "name": "Urcelay, Victor",
       "branch": [
         "SIN FACULTAD"
@@ -2681,7 +2559,7 @@
       "unavailability": {}
     },
     {
-      "id": "T287",
+      "id": "T280",
       "name": "Cristobal, Rosa",
       "branch": [
         "SIN FACULTAD"
@@ -2689,7 +2567,7 @@
       "unavailability": {}
     },
     {
-      "id": "T288",
+      "id": "T281",
       "name": "Jiménez, Noelia",
       "branch": [
         "SIN FACULTAD"
@@ -2697,7 +2575,7 @@
       "unavailability": {}
     },
     {
-      "id": "T289",
+      "id": "T282",
       "name": "Tacke, Tilman",
       "branch": [
         "SIN FACULTAD"
@@ -2705,7 +2583,7 @@
       "unavailability": {}
     },
     {
-      "id": "T290",
+      "id": "T283",
       "name": "Escalero, Julen",
       "branch": [
         "SIN FACULTAD"
@@ -2713,7 +2591,7 @@
       "unavailability": {}
     },
     {
-      "id": "T291",
+      "id": "T284",
       "name": "Gonzalez Alvarez, Sara",
       "branch": [
         "CCSSHH, EdyDep"
@@ -2721,7 +2599,7 @@
       "unavailability": {}
     },
     {
-      "id": "T292",
+      "id": "T285",
       "name": "Peña, Iñaki",
       "branch": [
         "SIN FACULTAD"
@@ -2729,7 +2607,7 @@
       "unavailability": {}
     },
     {
-      "id": "T293",
+      "id": "T286",
       "name": "Errezola, Loinaz",
       "branch": [
         "SIN FACULTAD"
@@ -2737,7 +2615,7 @@
       "unavailability": {}
     },
     {
-      "id": "T294",
+      "id": "T287",
       "name": "Narvaiza, Lorea",
       "branch": [
         "SIN FACULTAD"
@@ -2745,7 +2623,7 @@
       "unavailability": {}
     },
     {
-      "id": "T295",
+      "id": "T288",
       "name": "Aresti Bartolomé, Nuria",
       "branch": [
         "INGENIERÍA"
@@ -2753,7 +2631,7 @@
       "unavailability": {}
     },
     {
-      "id": "T296",
+      "id": "T289",
       "name": "Aguirre Pascual de Zulueta, Maia",
       "branch": [
         "INGENIERÍA"
@@ -2761,7 +2639,7 @@
       "unavailability": {}
     },
     {
-      "id": "T297",
+      "id": "T290",
       "name": "Cañas Rodríguez, Paola Natalia",
       "branch": [
         "INGENIERÍA"
@@ -2769,7 +2647,7 @@
       "unavailability": {}
     },
     {
-      "id": "T298",
+      "id": "T291",
       "name": "Galisteo Zabalo, Ander",
       "branch": [
         "INGENIERÍA"
@@ -2777,7 +2655,7 @@
       "unavailability": {}
     },
     {
-      "id": "T299",
+      "id": "T292",
       "name": "Gaviria de la Puerta, José",
       "branch": [
         "INGENIERÍA"
@@ -2785,7 +2663,7 @@
       "unavailability": {}
     },
     {
-      "id": "T300",
+      "id": "T293",
       "name": "Gibaja Martins, Juan José",
       "branch": [
         "INGENIERÍA"
@@ -2793,7 +2671,7 @@
       "unavailability": {}
     },
     {
-      "id": "T301",
+      "id": "T294",
       "name": "Pascual Careaga, Iratxe",
       "branch": [
         "INGENIERÍA"
@@ -2801,7 +2679,7 @@
       "unavailability": {}
     },
     {
-      "id": "T302",
+      "id": "T295",
       "name": "Retegui Carrión, Sugoi",
       "branch": [
         "INGENIERÍA"
@@ -2809,7 +2687,7 @@
       "unavailability": {}
     },
     {
-      "id": "T303",
+      "id": "T296",
       "name": "Urbieta Izquiero, Itziar",
       "branch": [
         "INGENIERÍA"
@@ -2817,7 +2695,7 @@
       "unavailability": {}
     },
     {
-      "id": "T304",
+      "id": "T297",
       "name": "Urcola Lecuona, Irantzu",
       "branch": [
         "INGENIERÍA"
@@ -2825,7 +2703,7 @@
       "unavailability": {}
     },
     {
-      "id": "T305",
+      "id": "T298",
       "name": "Astigarraga, Juan",
       "branch": [
         "SIN FACULTAD"
@@ -2833,7 +2711,7 @@
       "unavailability": {}
     },
     {
-      "id": "T306",
+      "id": "T299",
       "name": "Claveras, Francisco Javier",
       "branch": [
         "SIN FACULTAD"
@@ -2841,7 +2719,7 @@
       "unavailability": {}
     },
     {
-      "id": "T307",
+      "id": "T300",
       "name": "Olaizola, Xele",
       "branch": [
         "SIN FACULTAD"
@@ -2849,7 +2727,7 @@
       "unavailability": {}
     },
     {
-      "id": "T308",
+      "id": "T301",
       "name": "García, Iñaki",
       "branch": [
         "SIN FACULTAD"
@@ -2857,7 +2735,7 @@
       "unavailability": {}
     },
     {
-      "id": "T309",
+      "id": "T302",
       "name": "Pérez, Mariel",
       "branch": [
         "SIN FACULTAD"
@@ -2865,7 +2743,7 @@
       "unavailability": {}
     },
     {
-      "id": "T310",
+      "id": "T303",
       "name": "Pérez, Mariel",
       "branch": [
         "SIN FACULTAD"
@@ -2873,7 +2751,7 @@
       "unavailability": {}
     },
     {
-      "id": "T311",
+      "id": "T304",
       "name": "Fernández, Isabel",
       "branch": [
         "SIN FACULTAD"
@@ -2881,7 +2759,7 @@
       "unavailability": {}
     },
     {
-      "id": "T312",
+      "id": "T305",
       "name": "Rodríguez Talavera, Pablo",
       "branch": [
         "SIN FACULTAD"
@@ -2889,7 +2767,7 @@
       "unavailability": {}
     },
     {
-      "id": "T313",
+      "id": "T306",
       "name": "Carbajo, Ruth",
       "branch": [
         "SIN FACULTAD"
@@ -2897,7 +2775,7 @@
       "unavailability": {}
     },
     {
-      "id": "T314",
+      "id": "T307",
       "name": "Mercedes Ccesa Quincho",
       "branch": [
         "SIN FACULTAD"
@@ -2905,7 +2783,7 @@
       "unavailability": {}
     },
     {
-      "id": "T315",
+      "id": "T308",
       "name": "Moreno, Ane",
       "branch": [
         "CCSSHH"
@@ -2913,7 +2791,7 @@
       "unavailability": {}
     },
     {
-      "id": "T316",
+      "id": "T309",
       "name": "Bellido Sesma, Oihana",
       "branch": [
         "CCSSHH"
@@ -2921,7 +2799,7 @@
       "unavailability": {}
     },
     {
-      "id": "T317",
+      "id": "T310",
       "name": "Santamaria Goicuria, Imanol",
       "branch": [
         "CCSSHH, EdyDep"
@@ -2929,7 +2807,7 @@
       "unavailability": {}
     },
     {
-      "id": "T318",
+      "id": "T311",
       "name": "Pastor de la Cal, Marta",
       "branch": [
         "CCSSHH, EdyDep"
@@ -2937,7 +2815,7 @@
       "unavailability": {}
     },
     {
-      "id": "T319",
+      "id": "T312",
       "name": "Ordoñez Ferrer, Karlos",
       "branch": [
         "CCSSHH, EdyDep"
@@ -2945,7 +2823,7 @@
       "unavailability": {}
     },
     {
-      "id": "T320",
+      "id": "T313",
       "name": "Gorostiza Etxeberria, Iratxo",
       "branch": [
         "DERECHO"
@@ -2953,7 +2831,7 @@
       "unavailability": {}
     },
     {
-      "id": "T321",
+      "id": "T314",
       "name": "Rodríguez-Monsalve Navarro, Ángela",
       "branch": [
         "SIN FACULTAD"
@@ -2961,7 +2839,7 @@
       "unavailability": {}
     },
     {
-      "id": "T322",
+      "id": "T315",
       "name": "Santamaria Goicuria, Imanol",
       "branch": [
         "SIN FACULTAD"
@@ -2969,7 +2847,7 @@
       "unavailability": {}
     },
     {
-      "id": "T323",
+      "id": "T316",
       "name": "Perez Hoyos, Javier",
       "branch": [
         "SIN FACULTAD"
@@ -2977,7 +2855,7 @@
       "unavailability": {}
     },
     {
-      "id": "T324",
+      "id": "T317",
       "name": "Campanillas Ciaurriz, Jorge",
       "branch": [
         "DERECHO"
@@ -3012,7 +2890,7 @@
       "id": "DIR_EMPR_Q1",
       "name": "Administración de Empresa",
       "term": "Q1",
-      "teacher": "T177",
+      "teacher": "T_ING_06",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -3034,7 +2912,7 @@
       "id": "ALGEBRA_Q1",
       "name": "Álgebra",
       "term": "Q1",
-      "teacher": "T082",
+      "teacher": "T_ING_05",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -3056,7 +2934,7 @@
       "id": "PROG1_Q1",
       "name": "Programación I",
       "term": "Q1",
-      "teacher": "T182",
+      "teacher": "T_ING_01",
       "grades": [
         "INGINF1",
         "INFCDIA1",
@@ -3078,7 +2956,7 @@
       "id": "ELEC_DIG_Q1",
       "name": "Electrónica Digital",
       "term": "Q1",
-      "teacher": "T091",
+      "teacher": "T_ING_04",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -3100,7 +2978,7 @@
       "id": "INTRO_COMP_Q1",
       "name": "Introducción a los Computadores",
       "term": "Q1",
-      "teacher": "T075",
+      "teacher": "T_ING_07",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -3122,7 +3000,7 @@
       "id": "FUND_PROG_Q1",
       "name": "Fundamentos de la Programación",
       "term": "Q1",
-      "teacher": "T075",
+      "teacher": "T_ING_01",
       "grades": [
         "CDIA1"
       ],
@@ -3139,7 +3017,7 @@
       "id": "CALCULO_Q2",
       "name": "Cálculo",
       "term": "Q2",
-      "teacher": "T082",
+      "teacher": "T_ING_05",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -3152,7 +3030,7 @@
       "possible_rooms": [
         "41",
         "42",
-        "51",
+        "50",
         "52"
       ],
       "possible_days": "all"
@@ -3161,7 +3039,7 @@
       "id": "PROG2_Q2",
       "name": "Programación II",
       "term": "Q2",
-      "teacher": "T075",
+      "teacher": "T_ING_01",
       "grades": [
         "INGINF1",
         "INFCDIA1",
@@ -3183,7 +3061,7 @@
       "id": "DISCRETA_Q2",
       "name": "Matemática Discreta",
       "term": "Q2",
-      "teacher": "T246",
+      "teacher": "T_ING_05",
       "grades": [
         "INGINF1",
         "CDIA1",
@@ -3204,7 +3082,7 @@
       "id": "FISICA_Q2",
       "name": "Física",
       "term": "Q2",
-      "teacher": "T152",
+      "teacher": "T_ING_03",
       "grades": [
         "INGINF1",
         "INFCDIA1"
@@ -3223,7 +3101,7 @@
       "id": "ESTR_COMP_Q2",
       "name": "Estructura de Computadores",
       "term": "Q2",
-      "teacher": "T091",
+      "teacher": "T_ING_03",
       "grades": [
         "INGINF1",
         "INFCDIA1"
@@ -3241,7 +3119,7 @@
       "id": "ALGORITMICA_Q2",
       "name": "Algorítmica",
       "term": "Q2",
-      "teacher": "T247",
+      "teacher": "T_ING_02",
       "grades": [
         "CDIA1",
         "INFCDIA1"
@@ -3260,7 +3138,7 @@
       "id": "ING_COMP_Q2",
       "name": "Ingeniería de Computadores",
       "term": "Q2",
-      "teacher": "T026",
+      "teacher": "T_ING_02",
       "grades": [
         "CDIA1"
       ],
@@ -3277,7 +3155,7 @@
       "id": "PROG_ORIEN_OBJ_Q2",
       "name": "Programación Orientada a Objetos",
       "term": "Q2",
-      "teacher": "T075",
+      "teacher": "T_ING_01",
       "grades": [
         "CDIA1"
       ],
@@ -3295,7 +3173,7 @@
       "id": "EMPRESA_SOSTEN_Q1",
       "name": "Empresa y Sostenibilidad",
       "term": "Q1",
-      "teacher": "T138",
+      "teacher": "T_EMP_02",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3315,7 +3193,7 @@
       "id": "ENT_EMPR_Q1",
       "name": "Entorno Empresarial",
       "term": "Q1",
-      "teacher": "T056",
+      "teacher": "T_EMP_04",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3334,7 +3212,7 @@
       "id": "SIST_INF_Q1",
       "name": "Sistemas de Información I",
       "term": "Q1",
-      "teacher": "T255",
+      "teacher": "T_EMP_03",
       "grades": [
         "ADE1"
       ],
@@ -3352,7 +3230,7 @@
       "id": "INTRO_CONT_Q1",
       "name": "Introducción a la Contabilidad",
       "term": "Q1",
-      "teacher": "T008",
+      "teacher": "T_EMP_01",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3373,7 +3251,7 @@
       "id": "MATE_ADE_Q1",
       "name": "Métodos Matemáticos",
       "term": "Q1",
-      "teacher": "T121",
+      "teacher": "T_EMP_04",
       "grades": [
         "ADE1"
       ],
@@ -3391,7 +3269,7 @@
       "id": "CONTAB_CALC_Y_GEST_COST_Q2",
       "name": "Contabilidad Financiera y Cálculo y Gestión de Costes",
       "term": "Q2",
-      "teacher": "T214",
+      "teacher": "T_EMP_01",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3400,8 +3278,8 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "104",
-        "105"
+        "14",
+        "103"
       ],
       "possible_days": "all"
     },
@@ -3409,7 +3287,7 @@
       "id": "MICRO_Q2",
       "name": "Microeconomía",
       "term": "Q2",
-      "teacher": "T278",
+      "teacher": "T_EMP_03",
       "grades": [
         "ADE1"
       ],
@@ -3427,7 +3305,7 @@
       "id": "INTRO_ANALISIS_DATOS_Q2",
       "name": "Introducción al Análisis de Datos-Business Statistics",
       "term": "Q2",
-      "teacher": "T279",
+      "teacher": "T_EMP_01",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3436,9 +3314,10 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
+        "103",
         "104",
-        "105",
-        "51"
+        "50",
+        "52"
       ],
       "possible_days": "all"
     },
@@ -3446,7 +3325,7 @@
       "id": "FUND_COMPOR_ORG_Q2",
       "name": "Fundamentos del Comportamiento Organizacional",
       "term": "Q2",
-      "teacher": "T163",
+      "teacher": "T_EMP_04",
       "grades": [
         "ADE1",
         "INFADE1"
@@ -3455,9 +3334,10 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "105",
+        "103",
         "50",
-        "51"
+        "51",
+        "52"
       ],
       "possible_days": "all"
     },
@@ -3465,7 +3345,7 @@
       "id": "ENT_LEGAL_Q2",
       "name": "Entorno Legal",
       "term": "Q2",
-      "teacher": "T056",
+      "teacher": "T_EMP_02",
       "grades": [
         "ADE1"
       ],
