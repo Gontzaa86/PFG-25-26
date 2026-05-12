@@ -54,8 +54,15 @@ def lista_profesores():
 def lista_aulas():
     data = cargar_datos()
     edificios = data.get('buildings', [])
-    aulas = data.get('rooms', [])
-    return render_template('aulas.html', edificios=edificios, aulas=aulas)
+    aulas_lista = data.get('rooms', [])
+
+    # Ordenar aulas por ID
+    aulas_ordenadas = sorted(aulas_lista, key=lambda x: (
+        int(''.join(filter(str.isdigit, x['id']))) if any(char.isdigit() for char in x['id']) else float('inf'),
+        x['id']
+    ))
+
+    return render_template('aulas.html', edificios=edificios, aulas=aulas_ordenadas)
 
 # Ruta de datos de grados y asignaturas por cuatrimestre
 @app.route('/grados')
@@ -283,6 +290,96 @@ def importar_profesores():
     
     except Exception as e:
         print(f"Error: {e}")
+        return jsonify({"error": f"Error al procesar el CSV: {str(e)}"}), 500
+
+# ==== Rutas de profesores ====
+@app.route('/api/aulas/importar', methods=['POST'])
+def importar_aulas():
+    if 'file' not in request.files:
+        return jsonify({"error": "No se subió ningún archivo"}), 400
+    
+    file = request.files['file']
+    try:
+        # Leer contenido y normalizar saltos de línea
+        content = file.stream.read().decode("utf-8-sig").replace('\r\n', '\n').replace('\r', '\n')
+        stream = io.StringIO(content)
+        
+        # Intentar detectar el separador manualmente si falla el sniffer
+        sample = content[:1024]
+        if ';' in sample:
+            delimiter = ';'
+        elif '\t' in sample:
+            delimiter = '\t'
+        else:
+            delimiter = ','
+            
+        reader = csv.DictReader(stream, delimiter=delimiter)
+        
+        nuevas_aulas = []
+        nombres_edificios = set()
+        aulas_procesadas = set() # Para evitar aulas duplicadas
+
+        for row in reader:
+            # Normalización extrema de claves: quitar espacios, acentos y pasar a mayúsculas
+            # Esto ayuda si la columna se llama "Aulas", "AULA " o "aula"
+            clean_row = {}
+            for k, v in row.items():
+                if k:
+                    key_norm = str(k).strip().upper()
+                    clean_row[key_norm] = str(v).strip() if v else ""
+
+            # Buscamos las columnas por nombre exacto o aproximado
+            aula_raw = clean_row.get('AULA')
+            edificio_raw = clean_row.get('EDIFICIO')
+            aforo_raw = clean_row.get('AFORO') or "0"
+
+            if not aula_raw or not edificio_raw:
+                print(f"Fila ignorada por falta de datos: {clean_row}") # Ver en consola de Flask
+                continue
+
+            nombre_edificio = f"Ed-{edificio_raw}"
+            
+            # Si contiene "(" se queda solo con lo anterior
+            aula_id = aula_raw.split('(')[0].strip()
+
+            # Filtro de aulas duplicadas
+            if aula_id in aulas_procesadas:
+                print(f"Aula duplicada ignorada: {aula_id}")
+                continue
+
+            aulas_procesadas.add(aula_id)
+
+            try:
+                # Limpiar el aforo de posibles decimales o caracteres no numéricos
+                capacidad = int(float(aforo_raw.replace(',', '.')))
+            except:
+                capacidad = 0
+            
+            nuevas_aulas.append({
+                "id": aula_id,
+                "building": nombre_edificio,
+                "capacity": capacidad
+            })
+            nombres_edificios.add(nombre_edificio)
+
+        if not nuevas_aulas:
+            # Imprimir las cabeceras detectadas para depurar si falla
+            print(f"Cabeceras detectadas: {reader.fieldnames}")
+            return jsonify({
+                "error": f"No se encontraron datos. Cabeceras detectadas: {reader.fieldnames}. Asegúrate de usar AULA, AFORO y EDIFICIO."
+            }), 400
+
+        # Sobrescribir datos en el JSON
+        data = cargar_datos()
+        data['rooms'] = nuevas_aulas
+        data['buildings'] = sorted(list(nombres_edificios))
+        
+        guardar_datos(data)
+        
+        return jsonify({"success": True, "count": len(nuevas_aulas)})
+    
+    except Exception as e:
+        print(f"Error crítico: {e}")
         return jsonify({"error": f"Error al procesar el CSV: {str(e)}"}), 500
 
 # ==== Rutas de restricciones ====

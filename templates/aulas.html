@@ -2,8 +2,14 @@
 
 {% block content %}
 <div class="container">
-    <div class="mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-5">
         <h2 class="fw-bold">Infraestructura y Aulas</h2>
+        <div class="d-flex gap-2">
+            <input type="file" id="csv-aulas" accept=".csv" style="display: none;" onchange="subirAulas(this)">
+            <button class="btn btn-success shadow-sm" onclick="document.getElementById('csv-aulas').click()">
+                <i class="bi bi-file-earmark-arrow-up"></i> Importar Aulas (.csv)
+            </button>
+        </div>
     </div>
 
     {% for edificio in edificios %}
@@ -30,4 +36,30 @@
     </div>
     {% endfor %}
 </div>
+
+<div class="modal fade" id="modalConfirmarImportarAulas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-dark">
+                <h5 class="modal-title"><i class="bi bi-exclamation-triangle-fill me-2"></i>Atención: Importación de Infraestructura</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Estás a punto de importar una nueva lista de aulas y edificios desde un archivo CSV.</p>
+                <div class="alert alert-danger">
+                    <strong>¡Advertencia!</strong> Esta acción <b>sobreescribirá</b> todas las aulas y nombres de edificios actuales de forma irreversible.
+                </div>
+                <p>¿Deseas continuar?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="btnConfirmarSubidaAulas">Sí, sobreescribir datos</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/aulas.js') }}"></script>
 {% endblock %}
