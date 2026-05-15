@@ -1,0 +1,3381 @@
+{
+  "university": "Universidad de Deusto",
+  "config": {
+    "timeslots_per_day": 48,
+    "minutes_per_slot": 30,
+    "start_hour": "08:00"
+  },
+  "buildings": [
+    "Ed-Altuna",
+    "Ed-Aranzadi",
+    "Ed-Arrupe",
+    "Ed-Errandonea",
+    "Ed-Larramendi",
+    "Ed-Mateo Ricci"
+  ],
+  "rooms": [
+    {
+      "id": "43",
+      "building": "Ed-Altuna",
+      "capacity": 82
+    },
+    {
+      "id": "009",
+      "building": "Ed-Arrupe",
+      "capacity": 54
+    },
+    {
+      "id": "42",
+      "building": "Ed-Altuna",
+      "capacity": 85
+    },
+    {
+      "id": "113",
+      "building": "Ed-Arrupe",
+      "capacity": 9
+    },
+    {
+      "id": "103",
+      "building": "Ed-Arrupe",
+      "capacity": 76
+    },
+    {
+      "id": "004",
+      "building": "Ed-Arrupe",
+      "capacity": 82
+    },
+    {
+      "id": "111",
+      "building": "Ed-Arrupe",
+      "capacity": 32
+    },
+    {
+      "id": "011",
+      "building": "Ed-Arrupe",
+      "capacity": 42
+    },
+    {
+      "id": "105",
+      "building": "Ed-Arrupe",
+      "capacity": 30
+    },
+    {
+      "id": "33",
+      "building": "Ed-Errandonea",
+      "capacity": 70
+    },
+    {
+      "id": "27",
+      "building": "Ed-Errandonea",
+      "capacity": 144
+    },
+    {
+      "id": "010",
+      "building": "Ed-Arrupe",
+      "capacity": 52
+    },
+    {
+      "id": "40",
+      "building": "Ed-Altuna",
+      "capacity": 70
+    },
+    {
+      "id": "57",
+      "building": "Ed-Larramendi",
+      "capacity": 81
+    },
+    {
+      "id": "59",
+      "building": "Ed-Larramendi",
+      "capacity": 56
+    },
+    {
+      "id": "106",
+      "building": "Ed-Arrupe",
+      "capacity": 20
+    },
+    {
+      "id": "53",
+      "building": "Ed-Larramendi",
+      "capacity": 56
+    },
+    {
+      "id": "12",
+      "building": "Ed-Aranzadi",
+      "capacity": 17
+    },
+    {
+      "id": "11",
+      "building": "Ed-Aranzadi",
+      "capacity": 52
+    },
+    {
+      "id": "13",
+      "building": "Ed-Aranzadi",
+      "capacity": 23
+    },
+    {
+      "id": "012",
+      "building": "Ed-Arrupe",
+      "capacity": 48
+    },
+    {
+      "id": "30",
+      "building": "Ed-Errandonea",
+      "capacity": 165
+    },
+    {
+      "id": "52",
+      "building": "Ed-Larramendi",
+      "capacity": 80
+    },
+    {
+      "id": "003",
+      "building": "Ed-Arrupe",
+      "capacity": 82
+    },
+    {
+      "id": "61",
+      "building": "Ed-Larramendi",
+      "capacity": 43
+    },
+    {
+      "id": "112",
+      "building": "Ed-Arrupe",
+      "capacity": 23
+    },
+    {
+      "id": "109",
+      "building": "Ed-Arrupe",
+      "capacity": 12
+    },
+    {
+      "id": "114",
+      "building": "Ed-Arrupe",
+      "capacity": 58
+    },
+    {
+      "id": "49",
+      "building": "Ed-Altuna",
+      "capacity": 46
+    },
+    {
+      "id": "001",
+      "building": "Ed-Arrupe",
+      "capacity": 60
+    },
+    {
+      "id": "31",
+      "building": "Ed-Errandonea",
+      "capacity": 76
+    },
+    {
+      "id": "108",
+      "building": "Ed-Arrupe",
+      "capacity": 92
+    },
+    {
+      "id": "014",
+      "building": "Ed-Arrupe",
+      "capacity": 72
+    },
+    {
+      "id": "51",
+      "building": "Ed-Larramendi",
+      "capacity": 63
+    },
+    {
+      "id": "55",
+      "building": "Ed-Larramendi",
+      "capacity": 56
+    },
+    {
+      "id": "B2",
+      "building": "Ed-Aranzadi",
+      "capacity": 20
+    },
+    {
+      "id": "28",
+      "building": "Ed-Errandonea",
+      "capacity": 144
+    },
+    {
+      "id": "46",
+      "building": "Ed-Altuna",
+      "capacity": 50
+    },
+    {
+      "id": "B3",
+      "building": "Ed-Aranzadi",
+      "capacity": 22
+    },
+    {
+      "id": "56",
+      "building": "Ed-Larramendi",
+      "capacity": 48
+    },
+    {
+      "id": "005",
+      "building": "Ed-Arrupe",
+      "capacity": 84
+    },
+    {
+      "id": "58",
+      "building": "Ed-Larramendi",
+      "capacity": 90
+    },
+    {
+      "id": "29",
+      "building": "Ed-Errandonea",
+      "capacity": 48
+    },
+    {
+      "id": "008",
+      "building": "Ed-Arrupe",
+      "capacity": 52
+    },
+    {
+      "id": "110",
+      "building": "Ed-Arrupe",
+      "capacity": 30
+    },
+    {
+      "id": "41",
+      "building": "Ed-Altuna",
+      "capacity": 87
+    },
+    {
+      "id": "50",
+      "building": "Ed-Larramendi",
+      "capacity": 90
+    },
+    {
+      "id": "013",
+      "building": "Ed-Arrupe",
+      "capacity": 53
+    },
+    {
+      "id": "006",
+      "building": "Ed-Arrupe",
+      "capacity": 64
+    },
+    {
+      "id": "007",
+      "building": "Ed-Arrupe",
+      "capacity": 64
+    },
+    {
+      "id": "54",
+      "building": "Ed-Larramendi",
+      "capacity": 63
+    },
+    {
+      "id": "104",
+      "building": "Ed-Arrupe",
+      "capacity": 40
+    },
+    {
+      "id": "45",
+      "building": "Ed-Altuna",
+      "capacity": 68
+    },
+    {
+      "id": "B1",
+      "building": "Ed-Aranzadi",
+      "capacity": 49
+    },
+    {
+      "id": "48",
+      "building": "Ed-Altuna",
+      "capacity": 47
+    },
+    {
+      "id": "Sala ordenadores / ordenagailu gela",
+      "building": "Ed-Mateo Ricci",
+      "capacity": 0
+    },
+    {
+      "id": "62",
+      "building": "Ed-Larramendi",
+      "capacity": 53
+    },
+    {
+      "id": "60",
+      "building": "Ed-Larramendi",
+      "capacity": 56
+    },
+    {
+      "id": "Plato TV",
+      "building": "Ed-Altuna",
+      "capacity": 0
+    },
+    {
+      "id": "Aula digital / Gela digitala",
+      "building": "Ed-Mateo Ricci",
+      "capacity": 0
+    },
+    {
+      "id": "Sala 227 gela",
+      "building": "Ed-Arrupe",
+      "capacity": 0
+    },
+    {
+      "id": "002",
+      "building": "Ed-Arrupe",
+      "capacity": 82
+    }
+  ],
+  "teachers": [
+    {
+      "id": "T001",
+      "name": "Barandiaran Irastorza, Xabier",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T002",
+      "name": "Arano Irizar, Aritz",
+      "branch": [
+        "CCSSHH-FHV, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T003",
+      "name": "Bermúdez González, Jorge",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T004",
+      "name": "Rodriguez Camacho, David Andres",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T005",
+      "name": "Paisán Ruiz, Pablo",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T006",
+      "name": "Echave Torres, Javier",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T007",
+      "name": "Landaberea Abad, Eider",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T008",
+      "name": "Pantigoso Moledo, Demelza",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T009",
+      "name": "Piñeiro Gonzalez, Soraya",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T010",
+      "name": "Puertas Paz, Iñigo",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T011",
+      "name": "Alcalde Henar",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T012",
+      "name": "Txaparro López, Dionisio",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T013",
+      "name": "Pascual Careaga, Iratxe",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T014",
+      "name": "Gabilondo Batiz, Mikel",
+      "branch": [
+        "CCSSHH, DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T015",
+      "name": "Gómez Sánchez, Davinia",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T016",
+      "name": "Ageitos Varela, Nagore",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T017",
+      "name": "González Perabá Miralles, Pedro",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T018",
+      "name": "Vidal Martínez, César",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T019",
+      "name": "Andrés Fernández, Alain",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T020",
+      "name": "Madariaga Gómez, Aritz",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T021",
+      "name": "Buján Carvallal, David",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T022",
+      "name": "Peña Saiz, Asier",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T023",
+      "name": "Arias Benéitez, Raquel",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T024",
+      "name": "Azkona Ramos, Nerea",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T025",
+      "name": "Ona Saenz, Jon",
+      "branch": [
+        "CCSSHH, CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T026",
+      "name": "Madariaga Ortuzar, Aurora",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T027",
+      "name": "Bienzobas Aramburu, Francisco Javier",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T028",
+      "name": "Malagón Ruiz, Pedro José",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T029",
+      "name": "Solanes Ortega, Aida",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T030",
+      "name": "Navajas Laboa, Adriana",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T031",
+      "name": "Aranguren Aizpurua, Julen",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T032",
+      "name": "Simons, José Ignacio",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T033",
+      "name": "Müller, Patrick",
+      "branch": [
+        "CCSSHH, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T034",
+      "name": "Esnaola Arribillaga, Iratxe",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T035",
+      "name": "Espinosa Blanco, Patricia",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T036",
+      "name": "Sagastagoitia Orbea, Jon",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T037",
+      "name": "Rodriguez Aizcorreta, Ziortza",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T038",
+      "name": "Muñoa Errasti, Jon",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T039",
+      "name": "Diaz Labrador, Josuka",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T040",
+      "name": "Bujan Carballal, David",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T041",
+      "name": "Buendía Gutierrez, Rebeca",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T042",
+      "name": "Pagola Carte, Juan Ignacio",
+      "branch": [
+        "CCSSHH, CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T043",
+      "name": "Lecaroz Agara, Endika",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T044",
+      "name": "Vea Ricardo",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T045",
+      "name": "Arizkuren, Amaia",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T046",
+      "name": "Madina Ugartemendia, Mikel",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T047",
+      "name": "Pardo Bazán, Eduardo",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T048",
+      "name": "Pérez Rastelli, Joshue",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T049",
+      "name": "Fernández-Rivera, Iñigo",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T050",
+      "name": "Perez Gaztelu, Miren Elixabete",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T051",
+      "name": "Guereño Omil, Basagaitz",
+      "branch": [
+        "CCSSHH, CCSSHH-FHV, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T052",
+      "name": "Rioja Andueza, Iker",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T053",
+      "name": "Lekuona Ezkurdia, Iñaki",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T054",
+      "name": "Garmendia Lazcano, Aitor",
+      "branch": [
+        "CCSSHH, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T055",
+      "name": "Govillard Garmendia, Leila",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T056",
+      "name": "Pendiente",
+      "branch": [
+        "CCSSHH, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T057",
+      "name": "Mosquera Lajas, Alvaro",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T058",
+      "name": "López Belloso, María",
+      "branch": [
+        "CCSSHH, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T059",
+      "name": "Gonzalez Rodriguez, Leire",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T060",
+      "name": "Viguri Axpe, Miguel Ramón",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T061",
+      "name": "Agundez del Castillo, Rosa",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T062",
+      "name": "Korres Alonso, Oihane",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T063",
+      "name": "Loyo Mendivil, Estibaliz",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T064",
+      "name": "Navarro Picabea, Itziar",
+      "branch": [
+        "CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T065",
+      "name": "Mugarza, Iñigo",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T066",
+      "name": "Brión Berdote, Estela",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T067",
+      "name": "Barbarín Urquiaga, María José",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T068",
+      "name": "Boto Sánchez, Fernando",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T069",
+      "name": "Arrieta Frutos, Felix",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T070",
+      "name": "Quesada Granja, Carlos",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T071",
+      "name": "Izaguirre Choperena, Ainhoa",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T072",
+      "name": "Pau de Echave-Sustaeta, José Blas",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T073",
+      "name": "Pendiente EDUCACION SOCIAL",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T074",
+      "name": "Rivera, Olga",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T075",
+      "name": "Díez Blanco, Luís Enrique",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T076",
+      "name": "Piñero Pradera, Andoni",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T077",
+      "name": "Echeverría Uranga, Maitane",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T078",
+      "name": "Juanjo Gibaja",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T079",
+      "name": "Dacougna Minkette, Jeanne Rolande",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T080",
+      "name": "Ibañez Romero, Asun",
+      "branch": [
+        "CCSSHH-FHV, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T081",
+      "name": "Hermoso Humbert, Alejandra",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T082",
+      "name": "Larrion Cortabarria, Belen",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T083",
+      "name": "Mingot Felip, Tomás",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T084",
+      "name": "Barco Martelo, Alex",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T085",
+      "name": "Irigaray Apalategui, Idoia",
+      "branch": [
+        "CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T086",
+      "name": "Juez Martín, Beatriz",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T087",
+      "name": "Leoz Aizpuru, Asier",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T088",
+      "name": "Atxurra Badiola, Kemen",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T089",
+      "name": "Marín Paredes, José Antonio",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T090",
+      "name": "Fernández Ortea, Rogelio",
+      "branch": [
+        "CCSSHH, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T091",
+      "name": "Sanz Garrido, Begoña",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T092",
+      "name": "Arrondo, Elvira",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T093",
+      "name": "Calvo Cia, Iñigo",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T094",
+      "name": "Abad Galzacorta, Marina",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T095",
+      "name": "Arrieta Alberdi, Leyre",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T096",
+      "name": "Elorza Saez, Ania",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T097",
+      "name": "Iribar Ibabe, Alexander",
+      "branch": [
+        "CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T098",
+      "name": "Urdaneta Ponte, Cora",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T099",
+      "name": "Arce Larrory, Olatz",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T100",
+      "name": "Oliver, Jorge",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T101",
+      "name": "Jiménez Sistiaga, Pablo",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T102",
+      "name": "Irigoyen Diez, Jose Ramon",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T103",
+      "name": "Zuñiga Ruiz de Loizaga, Martin",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T104",
+      "name": "García Barriga, Juan",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T105",
+      "name": "Sanchez Escalante, Samir Abdala",
+      "branch": [
+        "CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T106",
+      "name": "Ezeizabarrena Sáez, Xabier",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T107",
+      "name": "Yiannibas, Katerina",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T108",
+      "name": "Zulaika Ijurko, Esther",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T109",
+      "name": "Berasategi Zeberio, Miren",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T110",
+      "name": "Muñecas San Segundo, Rocío de las",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T111",
+      "name": "Koch, Maximiliano",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T112",
+      "name": "Brusau Salaberria, Ainara",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T113",
+      "name": "Orcajo González, Maddi",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T114",
+      "name": "Zubiaurre Goena, Arantza",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T115",
+      "name": "Segu Odriozola, Mabel",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T116",
+      "name": "Olano Iriarte, Carmen",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T117",
+      "name": "Vicente Torrado, Trinidad L.",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T118",
+      "name": "Galarraga Arrieta, Irene",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T119",
+      "name": "Alzua Sorzabal, Aurkene",
+      "branch": [
+        "CCSSHH, CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T120",
+      "name": "Mujika Alberdi, Alazne",
+      "branch": [
+        "CCSSHH, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T121",
+      "name": "Aguirre, Virginia",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T122",
+      "name": "Paños Castro, Jessica",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T123",
+      "name": "Lopetegi Salegi, Gurutze (Baja del 07/01/2026)",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T124",
+      "name": "Curto Eraso, María Micaela",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T125",
+      "name": "Chistov, Valery",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T126",
+      "name": "Maric, Tonka",
+      "branch": [
+        "CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T127",
+      "name": "Atienza Macías, Elena",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T128",
+      "name": "Wang, Adela",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T129",
+      "name": "Serón Arizmendi, Natale",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T130",
+      "name": "Rodriguez Perez, Mª Pilar",
+      "branch": [
+        "CCSSHH, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T131",
+      "name": "Aragón, Cristina",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T132",
+      "name": "Martin Mateos, Ana María",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T133",
+      "name": "Arraiz, José Ignacio",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T134",
+      "name": "Ruiz Vieytez, Eduardo",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T135",
+      "name": "Iturrioz Landart, Cristina",
+      "branch": [
+        "CCSSHH-FHV, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T136",
+      "name": "Ortega Alonso, Dan",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T137",
+      "name": "Dominguez Fanlo, Ana",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T138",
+      "name": "López Benito, Jorge R.",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T139",
+      "name": "Riezu Arregui, Xabier",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T140",
+      "name": "Gonzalez Goya, Edurne (Baja del 22/04/2026)",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T141",
+      "name": "Uriarte Isacelaya, Andikona",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T142",
+      "name": "García Imaz, Andoni",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T143",
+      "name": "Irastorza Arandia, Nahikari",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T144",
+      "name": "Solanes Ortega, Aida",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T145",
+      "name": "García Zubia, Javier",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T146",
+      "name": "Guinot Viciano, Cinta",
+      "branch": [
+        "CCSSHH, CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T147",
+      "name": "Lazcano Quintana, Idurre",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T148",
+      "name": "Litago Napal, Raquel",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T149",
+      "name": "Trimiño Perez, Laura",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T150",
+      "name": "Ferran Zubillaga, Ane",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T151",
+      "name": "Esnaola Iratxe",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T152",
+      "name": "Roa Mora, Danel",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T153",
+      "name": "Romero Sánchez, Garazi",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T154",
+      "name": "Etxeberria Erauskin, Bakarne",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T155",
+      "name": "Pison Arizcuren, Olatz",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T156",
+      "name": "Pérez Gonzalez, Mila",
+      "branch": [
+        "CCSSHH-FHV, DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T157",
+      "name": "Aizpuru Ayerbe, María",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T158",
+      "name": "Gutierrez Almazor, Miren",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T159",
+      "name": "Achón Insausti, Jose Ángel",
+      "branch": [
+        "CCSSHH, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T160",
+      "name": "Pérez Urruchi, Diego",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T161",
+      "name": "García Mostajo, Ainhoa",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T162",
+      "name": "Iraola Alkorta, Arantxa",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T163",
+      "name": "ana",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T164",
+      "name": "Ochoa Laburu, Juan Luis",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T165",
+      "name": "Somoano Barrionuevo, Laura",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T166",
+      "name": "Benegas Gutierrez, Sara",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T167",
+      "name": "Crescentino, Diego Sebastian",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T168",
+      "name": "Aycart Carbajo, Elena",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T169",
+      "name": "Alicostes Murua, Conchi",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T170",
+      "name": "Cuesta Zulaica, Ana",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T171",
+      "name": "Ochoa Laburu, Elena",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T172",
+      "name": "Iruin Ibarzabal, Lander",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T173",
+      "name": "Celis Martin, Patricia",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T174",
+      "name": "Navarro Lashayas, Miguel Angel",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T175",
+      "name": "García Gangoiti, Ander",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T176",
+      "name": "Aliperti, Giuseppe",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T177",
+      "name": "Nieto Arizmendiarrieta, Eduardo",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T178",
+      "name": "López Gorostidi, Jon",
+      "branch": [
+        "CCSSHH, DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T179",
+      "name": "Aizpiri Etxeberria, Maite",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T180",
+      "name": "Sáez, Joseba Imanol",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T181",
+      "name": "Pendiente CCSSHH",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T182",
+      "name": "Kroczek, Boris",
+      "branch": [
+        "DBS, DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T183",
+      "name": "Fonseca Peso, Janire",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T184",
+      "name": "Artetxe González, Enara",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T185",
+      "name": "Gago Rezola, Nerea",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T186",
+      "name": "Calvo Soraluze, Hodei",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T187",
+      "name": "Hoyo Bilbao, Joana del",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T188",
+      "name": "Salazar Iglesias, David",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T189",
+      "name": "Izkara, José Luis",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T190",
+      "name": "Recalde Delgado, Ana Isabel (Baja)",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T191",
+      "name": "Fajardo Calderín, Jenny",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T192",
+      "name": "Altamira Basterrechea, Jose Fernando",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T193",
+      "name": "Asensio Valverde, Iñigo",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T194",
+      "name": "Urtizberea Puy, Nora",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T195",
+      "name": "Simone H.",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T196",
+      "name": "Balderás, Adela",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T197",
+      "name": "Madeleine L.",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T198",
+      "name": "Jenny L.",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T199",
+      "name": "Rafa E.",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T200",
+      "name": "Zixi, Adela",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T201",
+      "name": "Isabel P.",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T202",
+      "name": "Elola, Aitziber",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T203",
+      "name": "Wilson, James",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T204",
+      "name": "Magro, Edurne",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T205",
+      "name": "Iraola, Marta",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T206",
+      "name": "Iruretagoyena, Amaia",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T207",
+      "name": "Zabala, Alaitz",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T208",
+      "name": "Sisti, Eduardo",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T209",
+      "name": "Saenz, Josune",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T210",
+      "name": "Ferreira, Luana",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T211",
+      "name": "Pizarro, Jon",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T212",
+      "name": "Soto, Idoia",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T213",
+      "name": "Cortés, Mikel",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T214",
+      "name": "Abad, Imanol",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T215",
+      "name": "Filiatreaux, Alex",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T216",
+      "name": "Ibarburu, Miguel",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T217",
+      "name": "Suárez, Luis",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T218",
+      "name": "Aranguren, Marijo",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T219",
+      "name": "Aranburu, Edriga",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T220",
+      "name": "Minondo, Asier",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T221",
+      "name": "González, Alex Oier",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T222",
+      "name": "Cuesta, Irene",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T223",
+      "name": "Peñalba, Carmela",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T224",
+      "name": "Iñigo, Edurne",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T225",
+      "name": "Lizaso, José",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T226",
+      "name": "Del Orden, Olga",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T227",
+      "name": "Del Orden, Olga",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T228",
+      "name": "Lobán, Lidia",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T229",
+      "name": "Arrieta, Iñigo",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T230",
+      "name": "Erauskin, Iñaki",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T231",
+      "name": "Grimbert, Stephanie",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T232",
+      "name": "Ruiz de Escudero, Nagore",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T233",
+      "name": "Ibañez, Iulen",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T234",
+      "name": "Astigarraga, Eneko",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T235",
+      "name": "Salegi, Esteban",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T236",
+      "name": "Alberro Goikoetxea, Luzia",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T237",
+      "name": "González-Pernía, José Luis",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T238",
+      "name": "García Zubia, Javier",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T239",
+      "name": "Aguilera Paz, Evelyn",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T240",
+      "name": "Echeverria Franco, Imanol",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T241",
+      "name": "Unanue Gual, Imanol",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T242",
+      "name": "García Olaizola, Igor",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T243",
+      "name": "Mosquera, Carolina",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T244",
+      "name": "Santos Torres, Andrés",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T245",
+      "name": "Maiza Galparsoro, Mikel",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T246",
+      "name": "Zamorano Aliaga, Sebastián",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T247",
+      "name": "Dominguez Fanlo, Ana",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T248",
+      "name": "Palmero Cisnero, Pedro José",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T249",
+      "name": "Tubía Treviño. Mónica",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T250",
+      "name": "Pérez Rastelli, Joshue",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T251",
+      "name": "García Castaño, Jorge",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T252",
+      "name": "García Amado, Patricia",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T253",
+      "name": "INGENIERIA BASE",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T254",
+      "name": "Aramburu, Nekane",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T255",
+      "name": "DBS BASE",
+      "branch": [
+        "DBS"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T256",
+      "name": "González-Pernia, José Luis",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T257",
+      "name": "Serrat, Beatriz",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T258",
+      "name": "Baselga, Laura",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T259",
+      "name": "Diez Ruiz, Fernando",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T260",
+      "name": "Vasquez Perez, Nely",
+      "branch": [
+        "CCSSHH, CCSSHH-FHV"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T261",
+      "name": "Vieites López, Veronica",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T262",
+      "name": "Begiristain Etxezarreta, Naia",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T263",
+      "name": "Lasa Briz, Victor J.",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T264",
+      "name": "Zabaleta Merino, Aitor",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T265",
+      "name": "Valle García, Sandra del",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T266",
+      "name": "Zabala, Kristina",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T267",
+      "name": "Jimenez Garrido, Jon",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T268",
+      "name": "Milosevic, Nemanja",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T269",
+      "name": "Amenabar, Eider",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T270",
+      "name": "Berriozabal, Iñaki",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T271",
+      "name": "Zabala, Jon Mikel",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T272",
+      "name": "Aranguren, Nagore",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T273",
+      "name": "Urretavizcaya, Iñigo",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T274",
+      "name": "Bohorquez, Santiago",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T275",
+      "name": "Beraza, Isabel",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T276",
+      "name": "Basa, María",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T277",
+      "name": "Casado, Patricia",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T278",
+      "name": "Aresti, Nuria",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T279",
+      "name": "Urcelay, Victor",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T280",
+      "name": "Cristobal, Rosa",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T281",
+      "name": "Jiménez, Noelia",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T282",
+      "name": "Tacke, Tilman",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T283",
+      "name": "Escalero, Julen",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T284",
+      "name": "Gonzalez Alvarez, Sara",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T285",
+      "name": "Peña, Iñaki",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T286",
+      "name": "Errezola, Loinaz",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T287",
+      "name": "Narvaiza, Lorea",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T288",
+      "name": "Aresti Bartolomé, Nuria",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T289",
+      "name": "Aguirre Pascual de Zulueta, Maia",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T290",
+      "name": "Cañas Rodríguez, Paola Natalia",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T291",
+      "name": "Galisteo Zabalo, Ander",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T292",
+      "name": "Gaviria de la Puerta, José",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T293",
+      "name": "Gibaja Martins, Juan José",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T294",
+      "name": "Pascual Careaga, Iratxe",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T295",
+      "name": "Retegui Carrión, Sugoi",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T296",
+      "name": "Urbieta Izquiero, Itziar",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T297",
+      "name": "Urcola Lecuona, Irantzu",
+      "branch": [
+        "INGENIERÍA"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T298",
+      "name": "Astigarraga, Juan",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T299",
+      "name": "Claveras, Francisco Javier",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T300",
+      "name": "Olaizola, Xele",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T301",
+      "name": "García, Iñaki",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T302",
+      "name": "Pérez, Mariel",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T303",
+      "name": "Pérez, Mariel",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T304",
+      "name": "Fernández, Isabel",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T305",
+      "name": "Rodríguez Talavera, Pablo",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T306",
+      "name": "Carbajo, Ruth",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T307",
+      "name": "Mercedes Ccesa Quincho",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T308",
+      "name": "Moreno, Ane",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T309",
+      "name": "Bellido Sesma, Oihana",
+      "branch": [
+        "CCSSHH"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T310",
+      "name": "Santamaria Goicuria, Imanol",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T311",
+      "name": "Pastor de la Cal, Marta",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T312",
+      "name": "Ordoñez Ferrer, Karlos",
+      "branch": [
+        "CCSSHH, EdyDep"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T313",
+      "name": "Gorostiza Etxeberria, Iratxo",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T314",
+      "name": "Rodríguez-Monsalve Navarro, Ángela",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T315",
+      "name": "Santamaria Goicuria, Imanol",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T316",
+      "name": "Perez Hoyos, Javier",
+      "branch": [
+        "SIN FACULTAD"
+      ],
+      "unavailability": {}
+    },
+    {
+      "id": "T317",
+      "name": "Campanillas Ciaurriz, Jorge",
+      "branch": [
+        "DERECHO"
+      ],
+      "unavailability": {}
+    }
+  ],
+  "grades": [
+    {
+      "id": "INGINF1",
+      "name": "Grado en Ingeniería Informática - 1º"
+    },
+    {
+      "id": "CDIA1",
+      "name": "Grado en Ciencia de Datos e IA - 1º"
+    },
+    {
+      "id": "INFCDIA1",
+      "name": "Doble Grado en Ingeniería Informática + Ciencia de Datos e Inteligencia Artificial - 1º"
+    },
+    {
+      "id": "ADE1",
+      "name": "Grado en Administración de Empresas - 1º"
+    },
+    {
+      "id": "INFADE1",
+      "name": "Doble Grado Informática + ADE - 1º"
+    }
+  ],
+  "courses": [
+    {
+      "id": "DIR_EMPR_Q1",
+      "name": "Administración de Empresa",
+      "term": "Q1",
+      "teacher": "T_ING_06",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1"
+      ],
+      "students": 52,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "ALGEBRA_Q1",
+      "name": "Álgebra",
+      "term": "Q1",
+      "teacher": "T_ING_05",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "50",
+        "51"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "PROG1_Q1",
+      "name": "Programación I",
+      "term": "Q1",
+      "teacher": "T_ING_01",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 57,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "50",
+        "51"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "ELEC_DIG_Q1",
+      "name": "Electrónica Digital",
+      "term": "Q1",
+      "teacher": "T_ING_04",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1"
+      ],
+      "students": 52,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "INTRO_COMP_Q1",
+      "name": "Introducción a los Computadores",
+      "term": "Q1",
+      "teacher": "T_ING_07",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "50",
+        "51"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "FUND_PROG_Q1",
+      "name": "Fundamentos de la Programación",
+      "term": "Q1",
+      "teacher": "T_ING_01",
+      "grades": [
+        "CDIA1"
+      ],
+      "students": 20,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "46",
+        "47"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "CALCULO_Q2",
+      "name": "Cálculo",
+      "term": "Q2",
+      "teacher": "T_ING_05",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "50",
+        "52"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "PROG2_Q2",
+      "name": "Programación II",
+      "term": "Q2",
+      "teacher": "T_ING_01",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 57,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "DISCRETA_Q2",
+      "name": "Matemática Discreta",
+      "term": "Q2",
+      "teacher": "T_ING_05",
+      "grades": [
+        "INGINF1",
+        "CDIA1",
+        "INFCDIA1",
+        "INFADE1"
+      ],
+      "students": 77,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "41",
+        "42",
+        "52"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "FISICA_Q2",
+      "name": "Física",
+      "term": "Q2",
+      "teacher": "T_ING_03",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1"
+      ],
+      "students": 32,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "46",
+        "47"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "ESTR_COMP_Q2",
+      "name": "Estructura de Computadores",
+      "term": "Q2",
+      "teacher": "T_ING_03",
+      "grades": [
+        "INGINF1",
+        "INFCDIA1"
+      ],
+      "students": 32,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "47"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "ALGORITMICA_Q2",
+      "name": "Algorítmica",
+      "term": "Q2",
+      "teacher": "T_ING_02",
+      "grades": [
+        "CDIA1",
+        "INFCDIA1"
+      ],
+      "students": 32,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "46",
+        "47"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "ING_COMP_Q2",
+      "name": "Ingeniería de Computadores",
+      "term": "Q2",
+      "teacher": "T_ING_02",
+      "grades": [
+        "CDIA1"
+      ],
+      "students": 20,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "45",
+        "46"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "PROG_ORIEN_OBJ_Q2",
+      "name": "Programación Orientada a Objetos",
+      "term": "Q2",
+      "teacher": "T_ING_01",
+      "grades": [
+        "CDIA1"
+      ],
+      "students": 20,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "44",
+        "46",
+        "47"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "EMPRESA_SOSTEN_Q1",
+      "name": "Empresa y Sostenibilidad",
+      "term": "Q1",
+      "teacher": "T_EMP_02",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "105",
+        "50",
+        "52"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "ENT_EMPR_Q1",
+      "name": "Entorno Empresarial",
+      "term": "Q1",
+      "teacher": "T_EMP_04",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "50",
+        "51"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "SIST_INF_Q1",
+      "name": "Sistemas de Información I",
+      "term": "Q1",
+      "teacher": "T_EMP_03",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "103",
+        "104"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "INTRO_CONT_Q1",
+      "name": "Introducción a la Contabilidad",
+      "term": "Q1",
+      "teacher": "T_EMP_01",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "104",
+        "105",
+        "50",
+        "51",
+        "52"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "MATE_ADE_Q1",
+      "name": "Métodos Matemáticos",
+      "term": "Q1",
+      "teacher": "T_EMP_04",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "102",
+        "103"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "CONTAB_CALC_Y_GEST_COST_Q2",
+      "name": "Contabilidad Financiera y Cálculo y Gestión de Costes",
+      "term": "Q2",
+      "teacher": "T_EMP_01",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "14",
+        "103"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "MICRO_Q2",
+      "name": "Microeconomía",
+      "term": "Q2",
+      "teacher": "T_EMP_03",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "103",
+        "105"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "INTRO_ANALISIS_DATOS_Q2",
+      "name": "Introducción al Análisis de Datos-Business Statistics",
+      "term": "Q2",
+      "teacher": "T_EMP_01",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "103",
+        "104",
+        "50",
+        "52"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "FUND_COMPOR_ORG_Q2",
+      "name": "Fundamentos del Comportamiento Organizacional",
+      "term": "Q2",
+      "teacher": "T_EMP_04",
+      "grades": [
+        "ADE1",
+        "INFADE1"
+      ],
+      "students": 65,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "103",
+        "50",
+        "51",
+        "52"
+      ],
+      "possible_days": "all"
+    },
+    {
+      "id": "ENT_LEGAL_Q2",
+      "name": "Entorno Legal",
+      "term": "Q2",
+      "teacher": "T_EMP_02",
+      "grades": [
+        "ADE1"
+      ],
+      "students": 40,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "101",
+        "103"
+      ],
+      "possible_days": "all"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "HARD",
+      "description": "No overlap for same grade"
+    },
+    {
+      "type": "HARD",
+      "description": "No overlap for same teacher"
+    },
+    {
+      "type": "HARD",
+      "description": "No overlap for same room"
+    },
+    {
+      "type": "SOFT",
+      "description": "Minimize travel between buildings",
+      "penalty": 10
+    }
+  ]
+}

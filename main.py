@@ -2,6 +2,7 @@ import json
 import os
 import csv
 import io
+import re
 from flask import Flask, render_template, Response, request, jsonify
 from utils.algoritmos import generar_horario_iterativo, evaluar_horario, optimizar_horario
 from utils.restricciones import RESTRICCIONES_DISPONIBLES
@@ -72,7 +73,33 @@ def lista_grados():
     asignaturas = data.get('courses', [])
     profesores = {p['id']: p['name'] for p in data.get('teachers', [])}
 
-    return render_template('grados.html', grados=grados, asignaturas=asignaturas, profesores=profesores)
+    # Cursos agrupados por grado (1II, 2II, 3II / 1ADE, 2ADE, 3ADE / 1CDIA, 2CDIA, 3CDIA...) 
+    grupos = {}
+    for grado in grados:
+        grado_id = str(grado.get('id', '')).strip()
+        match = re.match(r'^(\d+)(.+)$', grado_id)
+        if match:
+            curso = int(match.group(1))
+            grupo_codigo = match.group(2).strip()
+        else:
+            curso = 0
+            grupo_codigo = grado_id
+
+        grupos.setdefault(grupo_codigo, []).append({
+            'id': grado_id,
+            'name': grado.get('name', grado_id),
+            'year': curso
+        })
+
+    grupos_grados = []
+    for grupo_codigo, lista in sorted(grupos.items(), key=lambda item: item[0]):
+        lista.sort(key=lambda g: (g['year'], g['id']))
+        grupos_grados.append({
+            'root': grupo_codigo,
+            'grados': lista
+        })
+
+    return render_template('grados.html', grupos_grados=grupos_grados, asignaturas=asignaturas, profesores=profesores)
 
 # Esta ruta solo carga la página HTML con el contador y el botón
 @app.route('/solver/stream')
@@ -292,7 +319,7 @@ def importar_profesores():
         print(f"Error: {e}")
         return jsonify({"error": f"Error al procesar el CSV: {str(e)}"}), 500
 
-# ==== Rutas de profesores ====
+# ==== Rutas de aulas ====
 @app.route('/api/aulas/importar', methods=['POST'])
 def importar_aulas():
     if 'file' not in request.files:
@@ -381,8 +408,7 @@ def importar_aulas():
     except Exception as e:
         print(f"Error crítico: {e}")
         return jsonify({"error": f"Error al procesar el CSV: {str(e)}"}), 500
-
-# ==== Rutas de aulas ==== 
+ 
 @app.route('/api/aulas', methods=['POST'])
 def gestionar_aula():
     data = cargar_datos()
@@ -448,6 +474,127 @@ def eliminar_aula(id):
     data['buildings'] = sorted({r['building'] for r in rooms})
     guardar_datos(data)
     return jsonify({"success": True})
+
+# ==== Rutas de asignaturas/grados ====
+@app.route('/api/asignaturas/importar', methods=['POST'])
+def importar_asignaturas():
+    if 'file' not in request.files:
+        return jsonify({"error": "No se ha subido ningún archivo"}), 400
+
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({"error": "Archivo no seleccionado"}), 400
+    
+    if file and file.filename.endswith('.csv'):
+        # Leer el contenido
+        content = file.stream.read().decode("utf-8-sig")
+        stream = io.StringIO(content)
+        reader = csv.DictReader(stream)
+
+        # Cargar datos actuales (dataset) para búsqueda de profesores
+        data = cargar_datos()
+        profesores_db = data.get('teachers', [])
+        profesores_por_nombre = {
+            normalize_name(p['name']): p['id']
+            for p in profesores_db
+            if p.get('name')
+        }
+
+        nuevas_asignaturas = [] # Listado de asignaturas importadas
+        contador_id = 1 # ID único para las asignaturas, no se utilizará el del csv. Al menos no de momento.
+        grados_importados = set()
+
+        # Diccionario para contar sesiones (Agrupación por nombre + idioma)
+        conteo_sesiones = {}
+        filas_csv = list(reader)
+
+        # Primera pasada: Contar sesiones por asignatua e idioma
+        for fila in filas_csv:
+            clave = (fila['Asignatura'], fila['IDIOMA'], fila['SEMESTRE'], fila['Docente'])
+            conteo_sesiones[clave] = conteo_sesiones.get(clave, 0) + 1
+        
+        # Segunda pasada: Crear los objetos de asignatura (evitando duplicados en el JSON final)
+        asignaturas_procesadas = set()
+        for fila in filas_csv:
+            nombre_base = fila.get('Asignatura', '')
+            idioma = fila.get('IDIOMA', '')
+            docente_nombre = fila.get('Docente', '')
+            semestre = fila.get('SEMESTRE', '')
+
+            id_proceso = f"{nombre_base}-{idioma}-{semestre}-{docente_nombre}"
+            if id_proceso in asignaturas_procesadas:
+                continue
+                
+            # Buscar ID del profesor por el nombre usando normalización
+            nombre_docente_norm = normalize_name(docente_nombre)
+            if nombre_docente_norm.startswith('pendiente') or nombre_docente_norm == '':
+                profesor_id = "No asignado"
+            else:
+                profesor_id = profesores_por_nombre.get(nombre_docente_norm, "No asignado")
+            
+            # Procesar Aula: En el csv: "{id_aula} (edificio)" --> Extraer únicamente id
+            aula_raw = fila.get('Aula', '')
+            aula_id = ""
+            if aula_raw and '(' in aula_raw:
+                aula_id = aula_raw.split('(')[0].strip()
+            elif aula_raw:
+                aula_id = aula_raw.strip()
+            
+            # Procesar Alumnos, si el campo está vacio, entonces 0
+            try:
+                estudiantes = int(fila.get('Nº alumnos', '')) if fila.get('Nº alumnos', '') else 0
+            except ValueError:
+                estudiantes = 0
+            
+            # Procesar códigos de carreras (Grados)
+            grados = [g.strip() for g in fila.get('SE JUNTA CON', '').split(',')] if fila.get('SE JUNTA CON', '') else []
+            for alias in ['GRADO', 'CARRERA', 'GRADO/CARRERA', 'CARRERA PRINCIPAL', 'CURSO']:
+                if alias in fila and fila[alias]:
+                    for valor in [g.strip() for g in fila[alias].split(',') if g.strip()]:
+                        if valor not in grados:
+                            grados.append(valor)
+
+            for grado in grados:
+                if grado:
+                    grados_importados.add(grado)
+
+            # Construir Objeto
+            nueva_asignatura = {
+                "id": str(contador_id),
+                "name": f"{nombre_base} ({idioma})",
+                "term": f"Q{semestre}",
+                "teacher": profesor_id,
+                "grades": grados,
+                "students": estudiantes,
+                "sessions_per_week": conteo_sesiones[(nombre_base, idioma, semestre, docente_nombre)],
+                "duration_slots": 4, # Valor por defecto
+                "possible_rooms": [aula_id] if aula_id else [],
+                "possible_days": "all"
+            }
+
+            nuevas_asignaturas.append(nueva_asignatura)
+            asignaturas_procesadas.add(id_proceso)
+            contador_id += 1
+        
+        # Sobreescribir datos de asignaturas
+        data['courses'] = nuevas_asignaturas
+
+        # Añadir grados importados si no existen ya
+        grades_existentes = {g['id'] for g in data.get('grades', [])}
+        nuevos_grados = 0
+        for codigo in sorted(grados_importados):
+            if codigo and codigo not in grades_existentes:
+                data.setdefault('grades', []).append({"id": codigo, "name": codigo})
+                grades_existentes.add(codigo)
+                nuevos_grados += 1
+
+        guardar_datos(data)
+
+        return jsonify({
+            "message": f"Importación completada. {len(nuevas_asignaturas)} asignaturas agregadas, {nuevos_grados} grados nuevos actualizados."
+        }), 200
+
+    return jsonify({"error": "Formato de archivo no válido"}), 400
 
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
@@ -526,6 +673,15 @@ def guardar_datos(data): # Modificación de datos en el JSON
     ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
     with open(ruta_json, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+def normalize_name(value): # Normaliza nombres tanto el csv como en dataset
+    if value is None:
+        return ""
+
+    text = str(value).strip()
+    # Eliminar texto sobrante, en el csv formato: "Apellido1 Apellido2, Nombre (url)". Eliminar url
+    text = re.sub(r"\s*\([^)]*\)", "", text).strip()
+    return re.sub(r"\s+", " ", text).lower()
 
 # ---------------------------------------------------------
 # EJECUCIÓN

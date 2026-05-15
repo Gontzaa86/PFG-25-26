@@ -7,8 +7,9 @@
         <div class="card-body p-3">
             <div class="mb-2">
                 <h6 class="fw-bold text-dark mb-0" style="font-size: 0.95rem;">{{ curso.name }}</h6>
-                <small class="text-muted">
-                    <i class="bi bi-person text-primary"></i> {{ dict_profes.get(curso.teacher, "No asignado") }}
+                <small class="{{ 'text-danger' if curso.teacher == 'No asignado' else 'text-muted' }}">
+                    <i class="bi bi-person {{ 'text-danger' if curso.teacher == 'No asignado' else 'text-primary' }}"></i>
+                    {{ dict_profes.get(curso.teacher, "No asignado") }}
                 </small>
             </div>
             
@@ -21,15 +22,20 @@
                 </div>
                 <div class="vr text-muted" style="height: 15px;"></div>
                 <div title="Cantidad de alumnos">
-                    <span class="text-muted">Alumnos:</span> <strong>{{ curso.students }}</strong>
+                    <span class="{{ 'text-danger' if curso.students == 0 else 'text-muted' }}">Alumnos:</span>
+                    <strong>{{ curso.students }}</strong>
                 </div>
             </div>
             
             <div class="d-flex flex-wrap gap-1 align-items-center">
-                <small class="text-muted me-1" style="font-size: 0.75rem;">Aulas:</small>
-                {% for aula in curso.possible_rooms %}
-                    <span class="badge bg-light text-dark border-0 fw-normal" style="font-size: 0.7rem;">{{ aula }}</span>
-                {% endfor %}
+                <small class="{{ 'text-danger' if not curso.possible_rooms else 'text-muted' }} me-1" style="font-size: 0.75rem;">Aulas:</small>
+                {% if curso.possible_rooms %}
+                    {% for aula in curso.possible_rooms %}
+                        <span class="badge bg-light text-dark border-0 fw-normal" style="font-size: 0.7rem;">{{ aula }}</span>
+                    {% endfor %}
+                {% else %}
+                    <span class="text-danger small">Sin aulas asignadas</span>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -37,8 +43,15 @@
 {% endmacro %}
 
 <div class="container">
-    <h2 class="fw-bold mb-5">Plan de Estudios por Grado</h2>
-
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h2 class="fw-bold">Plan de Estudios por Grado</h2>
+        <div class="d-flex gap-2">
+            <input type="file" id="importarCSV" accept=".csv" style="display: none;" onchange="procesarImportacion(this)">
+            <button class="btn btn-success shadow-sm" onclick="document.getElementById('importarCSV').click()">
+                <i class="bi bi-file-earmark-arrow-up"></i> Importar Asignaturas (.csv)
+            </button>
+        </div>
+    </div>
     <div class="row mb-4">
         <div class="col-md-6 mx-auto">
             <div class="input-group shadow-sm">
@@ -52,23 +65,38 @@
         </div>
     </div>
 
-    {% for grado in grados %}
-    <div class="card shadow-sm border-0 mb-5 seccion-grado animar-entrada" data-nombre="{{ grado.name | lower }}">
+    {% for grupo in grupos_grados %}
+    <div class="card shadow-sm border-0 mb-5 seccion-grado animar-entrada" data-nombre="{{ grupo.root | lower }}">
         <div class="card-header bg-dark text-white p-3">
-            <h4 class="mb-0">{{ grado.name }}</h4>
-        </div>
-        <div class="card-body p-4">
-            <div class="row">
-                <div class="col-lg-6 border-end">
-                    <h5 class="text-primary fw-bold mb-4 border-bottom pb-2">Primer Cuatrimestre (Q1)</h5>
-                    {{ render_asignaturas(grado.id, 'Q1', asignaturas, profesores) }}
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                    <h4 class="mb-1">{{ grupo.root }}</h4>
+                    <small class="text-muted">
+                        Curso actual: <span class="grupo-curso-actual" data-grupo="{{ grupo.root }}">{{ grupo.grados[0].id }}</span>
+                    </small>
                 </div>
-                
-                <div class="col-lg-6">
-                    <h5 class="text-success fw-bold mb-4 border-bottom pb-2">Segundo Cuatrimestre (Q2)</h5>
-                    {{ render_asignaturas(grado.id, 'Q2', asignaturas, profesores) }}
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-light btn-prev-grado" data-grupo="{{ grupo.root }}" disabled>&lt;</button>
+                    <button type="button" class="btn btn-sm btn-light btn-next-grado" data-grupo="{{ grupo.root }}" {% if grupo.grados|length <= 1 %}disabled{% endif %}>&gt;</button>
                 </div>
             </div>
+        </div>
+        <div class="card-body p-4" data-grupo="{{ grupo.root }}" data-grado-index="0">
+            {% for grado in grupo.grados %}
+            <div class="grado-por-codigo" data-grado-id="{{ grado.id }}" data-grado-year="{{ grado.year }}" {% if not loop.first %}style="display:none"{% endif %}>
+                <h5 class="text-secondary fw-semibold mb-4">Curso {{ grado.year }} - {{ grado.name }}</h5>
+                <div class="row">
+                    <div class="col-lg-6 border-end">
+                        <h5 class="text-primary fw-bold mb-4 border-bottom pb-2">Primer Cuatrimestre (Q1)</h5>
+                        {{ render_asignaturas(grado.id, 'Q1', asignaturas, profesores) }}
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="text-success fw-bold mb-4 border-bottom pb-2">Segundo Cuatrimestre (Q2)</h5>
+                        {{ render_asignaturas(grado.id, 'Q2', asignaturas, profesores) }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
     {% endfor %}
