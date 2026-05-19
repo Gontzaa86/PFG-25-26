@@ -569,7 +569,8 @@ def importar_asignaturas():
                 "sessions_per_week": conteo_sesiones[(nombre_base, idioma, semestre, docente_nombre)],
                 "duration_slots": 4, # Valor por defecto
                 "possible_rooms": [aula_id] if aula_id else [],
-                "possible_days": "all"
+                "possible_days": "all",
+                "optativa": False
             }
 
             nuevas_asignaturas.append(nueva_asignatura)
