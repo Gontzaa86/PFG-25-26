@@ -3606,7 +3606,8 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
+        "004",
+        "014"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5580,6 +5581,8 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
+        "009",
+        "113",
         "006"
       ],
       "possible_days": "all",

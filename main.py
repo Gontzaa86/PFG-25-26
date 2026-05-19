@@ -72,6 +72,8 @@ def lista_grados():
     grados = data.get('grades', [])
     asignaturas = data.get('courses', [])
     profesores = {p['id']: p['name'] for p in data.get('teachers', [])}
+    rooms = data.get('rooms', [])
+    buildings = data.get('buildings', [])
 
     # Cursos agrupados por grado (1II, 2II, 3II / 1ADE, 2ADE, 3ADE / 1CDIA, 2CDIA, 3CDIA...) 
     grupos = {}
@@ -99,7 +101,7 @@ def lista_grados():
             'grados': lista
         })
 
-    return render_template('grados.html', grupos_grados=grupos_grados, asignaturas=asignaturas, profesores=profesores)
+    return render_template('grados.html', grupos_grados=grupos_grados, asignaturas=asignaturas, profesores=profesores, rooms=rooms, buildings=buildings)
 
 # Esta ruta solo carga la página HTML con el contador y el botón
 @app.route('/solver/stream')
@@ -596,6 +598,28 @@ def importar_asignaturas():
         }), 200
 
     return jsonify({"error": "Formato de archivo no válido"}), 400
+
+@app.route('/api/asignaturas/<id>/rooms', methods=['PUT'])
+def actualizar_asignatura_rooms(id):
+    data = cargar_datos()
+    payload = request.json or {}
+    nuevas = payload.get('possible_rooms')
+
+    if nuevas is None or not isinstance(nuevas, list):
+        return jsonify({"error": "Campo 'possible_rooms' inválido (se requiere lista)."}), 400
+
+    updated = False
+    for i, curso in enumerate(data.get('courses', [])):
+        if str(curso.get('id')) == str(id):
+            data['courses'][i]['possible_rooms'] = nuevas
+            updated = True
+            break
+
+    if not updated:
+        return jsonify({"error": "Asignatura no encontrada."}), 404
+
+    guardar_datos(data)
+    return jsonify({"success": True, "id": id, "possible_rooms": nuevas})
 
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
