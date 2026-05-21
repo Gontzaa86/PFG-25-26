@@ -3270,7 +3270,7 @@
     },
     {
       "id": "2",
-      "name": "Derecho del trabajo y de la Seguridad\r\n  Social (ES)",
+      "name": "Derecho del trabajo y de la Seguridad\n  Social (ES)",
       "term": "Q1",
       "teacher": "T049",
       "grades": [
@@ -3477,7 +3477,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 52,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
@@ -3606,8 +3606,7 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004",
-        "014"
+        "004"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4500,7 +4499,7 @@
     },
     {
       "id": "72",
-      "name": "Recursos y ejecución civil. Proceso\r\n  penal (ES)",
+      "name": "Recursos y ejecución civil. Proceso\n  penal (ES)",
       "term": "Q1",
       "teacher": "T101",
       "grades": [
@@ -5581,8 +5580,6 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009",
-        "113",
         "006"
       ],
       "possible_days": "all",
@@ -6053,7 +6050,7 @@
     },
     {
       "id": "161",
-      "name": "Sistema de Fuentes y Derechos\r\n  Constitucionales (ES)",
+      "name": "Sistema de Fuentes y Derechos\n  Constitucionales (ES)",
       "term": "Q2",
       "teacher": "T023",
       "grades": [
@@ -7466,7 +7463,7 @@
     },
     {
       "id": "243",
-      "name": "Derecho social y contratos\r\ninternacionales (ES)",
+      "name": "Derecho social y contratos\ninternacionales (ES)",
       "term": "Q2",
       "teacher": "No asignado",
       "grades": [
@@ -8190,7 +8187,7 @@
     },
     {
       "id": "286",
-      "name": "Dirección\r\n  de personas CAS1 (ES)",
+      "name": "Dirección\n  de personas CAS1 (ES)",
       "term": "Q1",
       "teacher": "T045",
       "grades": [
@@ -8899,7 +8896,7 @@
     },
     {
       "id": "326",
-      "name": "Teoría del delito y sus\r\n  consecuencias jurídicas (ES)",
+      "name": "Teoría del delito y sus\n  consecuencias jurídicas (ES)",
       "term": "Q1",
       "teacher": "T178",
       "grades": [
@@ -10481,7 +10478,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": true
+      "optativa": false
     },
     {
       "id": "418",
@@ -10513,7 +10510,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": true
+      "optativa": false
     },
     {
       "id": "420",
@@ -10693,7 +10690,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": true
+      "optativa": false
     },
     {
       "id": "433",

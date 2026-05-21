@@ -43,7 +43,12 @@
                 {% else %}
                     <span class="text-danger small">Sin aulas asignadas</span>
                 {% endif %}
-                <button class="btn btn-sm btn-outline-primary ms-3 align-self-center py-0" onclick="abrirModalAulas('{{ curso.id }}')">Editar Aulas</button>
+                <div class="ms-auto d-flex gap-1">
+                    <button class="btn btn-sm btn-outline-primary py-0" onclick="abrirModalAulas('{{ curso.id }}')">Editar Aulas</button>
+                    <button class="btn btn-sm btn-outline-warning py-0" onclick="abrirModalEditarAsignatura('{{ curso.id }}')">
+                        <i class="bi bi-pencil-square"></i> Editar
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -108,6 +113,7 @@
         </div>
     </div>
     {% endfor %}
+
     <!-- Modal para seleccionar aulas por asignatura -->
     <div class="modal fade" id="modalAulasAsignatura" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -124,6 +130,81 @@
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-primary" id="btnGuardarAulas">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de edición de asignaturas -->
+     <div class="modal fade" id="modalEditarAsignatura" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title"><i class="bi bi-pencil-square"></i> Editar Asignatura</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarAsignatura">
+                        <input type="hidden" id="editCursoId">
+                        
+                        <div class="mb-3">
+                            <label for="editName" class="form-label fw-semibold">Nombre de la asignatura</label>
+                            <input type="text" class="form-control" id="editName" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="editTerm" class="form-label fw-semibold">Cuatrimestre</label>
+                                <select class="form-select" id="editTerm">
+                                    <option value="1">Primer Cuatrimestre (Q1)</option>
+                                    <option value="2">Segundo Cuatrimestre (Q2)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="editTeacher" class="form-label fw-semibold">Profesor</label>
+                                <select class="form-select" id="editTeacher">
+                                    <option value="No asignado">No asignado</option>
+                                    {% for prof_id, prof_nom in profesores.items() %}
+                                        <option value="{{ prof_id }}">{{ prof_nom }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="editGrades" class="form-label fw-semibold">Grados que asisten (Ctrl+Click para seleccionar varios)</label>
+                            <select class="form-select" id="editGrades" multiple style="height: 120px;">
+                                {% for grado in grados_lista %}
+                                    <option value="{{ grado.id }}">{{ grado.name }} ({{ grado.id }})</option>
+                                {% endfor %}
+                            </select>
+                            <small class="text-muted">Mantén presionado Ctrl (o Cmd en Mac) para elegir múltiples grados.</small>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="editStudents" class="form-label fw-semibold">Alumnos</label>
+                                <input type="number" class="form-control" id="editStudents" min="0" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="editSessions" class="form-label fw-semibold">Sesiones/Semana</label>
+                                <input type="number" class="form-control" id="editSessions" min="1" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="editDuration" class="form-label fw-semibold">Slots Duración</label>
+                                <input type="number" class="form-control" id="editDuration" min="1" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check form-switch mt-2">
+                            <input class="form-check-input" type="checkbox" id="editOptativa">
+                            <label class="form-check-label fw-semibold" for="editOptativa">¿Es asignatura optativa?</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarCambiosAsignatura()">Guardar cambios</button>
                 </div>
             </div>
         </div>

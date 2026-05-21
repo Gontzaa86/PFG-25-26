@@ -91,3 +91,94 @@ async function procesarImportacion(input) {
         alert('No se pudo conectar con el servidor durante la importación.');
     }
 }
+
+// Variable global para controlar la instancia del modal de Edición de Asignaturas
+let modalEditarAsignaturaInstance = null;
+
+function abrirModalEditarAsignatura(cursoId) {
+    // 1. Buscar los datos locales de la asignatura usando la variable inyectada en el HTML
+    const curso = window.__GRADOS_ASIGNATURAS.find(c => String(c.id) === String(cursoId));
+    if (!curso) {
+        alert('No se encontraron los datos de la asignatura.');
+        return;
+    }
+
+    // 2. Rellenar los campos del formulario en el modal
+    document.getElementById('editCursoId').value = curso.id;
+    document.getElementById('editName').value = curso.name;
+    
+    // Convertir 'Q1'/'Q2' a '1'/'2'
+    const termNum = curso.term ? curso.term.replace('Q', '') : '1';
+    document.getElementById('editTerm').value = termNum;
+    
+    document.getElementById('editTeacher').value = curso.teacher || 'No asignado';
+    document.getElementById('editStudents').value = curso.students || 0;
+    document.getElementById('editSessions').value = curso.sessions_per_week || 1;
+    document.getElementById('editDuration').value = curso.duration_slots || 4;
+    document.getElementById('editOptativa').checked = !!curso.optativa;
+
+    // 3. Mapear la selección múltiple de los grados
+    const selectGrados = document.getElementById('editGrades');
+    const cursoGrades = curso.grades || [];
+    
+    Array.from(selectGrados.options).forEach(option => {
+        option.selected = cursoGrades.includes(option.value);
+    });
+
+    // 4. Mostrar el modal de Bootstrap
+    if (!modalEditarAsignaturaInstance) {
+        modalEditarAsignaturaInstance = new bootstrap.Modal(document.getElementById('modalEditarAsignatura'));
+    }
+    modalEditarAsignaturaInstance.show();
+}
+
+async function guardarCambiosAsignatura() {
+    const cursoId = document.getElementById('editCursoId').value;
+    
+    // Obtener los grados seleccionados en el select múltiple
+    const selectGrados = document.getElementById('editGrades');
+    const gradosSeleccionados = Array.from(selectGrados.selectedOptions).map(opt => opt.value);
+
+    // Construir el payload JSON con los campos requeridos
+    const payload = {
+        name: document.getElementById('editName').value,
+        term: document.getElementById('editTerm').value,
+        teacher: document.getElementById('editTeacher').value,
+        grades: gradosSeleccionados,
+        students: parseInt(document.getElementById('editStudents').value) || 0,
+        sessions_per_week: parseInt(document.getElementById('editSessions').value) || 1,
+        duration_slots: parseInt(document.getElementById('editDuration').value) || 4,
+        optativa: document.getElementById('editOptativa').checked
+    };
+
+    // Validación básica del lado del cliente
+    if (!payload.name) {
+        alert('El nombre de la asignatura es obligatorio.');
+        return;
+    }
+
+    try {
+        const resp = await fetch(`/api/asignaturas/${cursoId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const resultado = await resp.json();
+
+        if (resp.ok) {
+            alert(resultado.message || 'Asignatura modificada con éxito.');
+            if (modalEditarAsignaturaInstance) {
+                modalEditarAsignaturaInstance.hide();
+            }
+            location.reload(); // Recargar la página para visualizar las mutaciones de datos
+        } else {
+            alert(resultado.error || 'Hubo un problema al guardar los cambios.');
+        }
+    } catch (error) {
+        console.error('Error al actualizar asignatura:', error);
+        alert('No se pudo establecer conexión con el backend.');
+    }
+}

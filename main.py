@@ -101,7 +101,7 @@ def lista_grados():
             'grados': lista
         })
 
-    return render_template('grados.html', grupos_grados=grupos_grados, asignaturas=asignaturas, profesores=profesores, rooms=rooms, buildings=buildings)
+    return render_template('grados.html', grupos_grados=grupos_grados, asignaturas=asignaturas, profesores=profesores, rooms=rooms, buildings=buildings, grados_lista=grados)
 
 # Esta ruta solo carga la página HTML con el contador y el botón
 @app.route('/solver/stream')
@@ -620,6 +620,39 @@ def actualizar_asignatura_rooms(id):
 
     guardar_datos(data)
     return jsonify({"success": True, "id": id, "possible_rooms": nuevas})
+
+@app.route('/api/asignaturas/<id>', methods=['PUT'])
+def actualizar_asignatra(id):
+    data = cargar_datos()
+    nuevo_data = request.json or {}
+
+    # Buscar Asignatura
+    curso_idx = next ((i for i, c in enumerate(data.get('courses', [])) if str(c.get('id')) == str(id)), None)
+
+    if curso_idx is None:
+        return jsonify({"error": "Asignatura no encontrada"}), 404
+    
+    # Validaciones y Conversiones Básicas
+    try:
+        students = int(nuevo_data.get('students', 0))
+        sessions = int(nuevo_data.get('sessions_per_week', 2))
+        duration = int(nuevo_data.get('duration_slots', 4))
+    except (ValueError, TypeError):
+        return jsonify({"error": "Los capos numéricos son inválidos"}), 400
+    
+    # Actualizar los campos
+    curso = data['courses'][curso_idx]
+    curso['name'] = str(nuevo_data.get('name', curso['name'])).strip()
+    curso['term'] = f"Q{nuevo_data.get('term', '1')}" # Convierte 1 o 2 a Q1 o Q2
+    curso['teacher'] = str(nuevo_data.get('teacher', 'No asignado'))
+    curso['grades'] = nuevo_data.get('grades', [])
+    curso['students'] = students
+    curso['sessions_per_week'] = sessions
+    curso['duration_slots'] = duration
+    curso['optativa'] = bool(nuevo_data.get('optativa', False))
+
+    guardar_datos(data)
+    return jsonify({"success": True, "message": "Asignatura actualizada correctamente."})
 
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
