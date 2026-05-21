@@ -305,11 +305,6 @@
       "capacity": 56
     },
     {
-      "id": "Plato TV",
-      "building": "Ed-Altuna",
-      "capacity": 0
-    },
-    {
       "id": "Aula digital / Gela digitala",
       "building": "Ed-Mateo Ricci",
       "capacity": 0
@@ -3134,41 +3129,6 @@
       "optativa": false
     },
     {
-      "id": "6",
-      "name": "FHV Participación Social y Valores (ES)",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [
-        "2ADE",
-        "2AII",
-        "2CDIA",
-        "2CDIA+",
-        "2CO",
-        "2D",
-        "2ESTS",
-        "2II",
-        "2IMS",
-        "2RID",
-        "2TS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "009",
-        "004",
-        "003",
-        "001",
-        "005",
-        "008",
-        "006",
-        "007",
-        "002"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "8",
       "name": "Familia y sucesiones (ES)",
       "term": "Q2",
@@ -3680,7 +3640,7 @@
     },
     {
       "id": "45",
-      "name": "Cálculo EUS (EU)",
+      "name": "Cálculo (EU)",
       "term": "Q2",
       "teacher": "T114",
       "grades": [
@@ -3689,7 +3649,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
@@ -3906,15 +3866,30 @@
       "term": "Q2",
       "teacher": "T063",
       "grades": [
+        "3AII",
         "2CDIA",
         "2CDIA+",
-        "2II",
-        "3AII"
+        "2II"
       ],
-      "students": 0,
+      "students": 60,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4011,10 +3986,19 @@
         "3II",
         "4AII"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4029,10 +4013,32 @@
         "4AII",
         "4CDIA+"
       ],
-      "students": 0,
+      "students": 60,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4109,10 +4115,32 @@
         "4AII",
         "4CDIA+"
       ],
-      "students": 0,
+      "students": 40,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4322,10 +4350,19 @@
         "2CDIA+",
         "2II"
       ],
-      "students": 0,
-      "sessions_per_week": 1,
+      "students": 30,
+      "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4512,10 +4549,25 @@
         "3II",
         "4AII"
       ],
-      "students": 0,
+      "students": 70,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5045,7 +5097,7 @@
     },
     {
       "id": "136",
-      "name": "Cálculo CAS (ES)",
+      "name": "Cálculo (ES)",
       "term": "Q2",
       "teacher": "T075",
       "grades": [
@@ -5054,7 +5106,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
@@ -5198,12 +5250,12 @@
       "term": "Q1",
       "teacher": "T063",
       "grades": [
+        "3AII",
         "2CDIA",
         "2CDIA+",
-        "2II",
-        "3AII"
+        "2II"
       ],
-      "students": 0,
+      "students": 60,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -5289,7 +5341,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
@@ -5449,10 +5501,32 @@
         "4AII",
         "5AII"
       ],
-      "students": 0,
+      "students": 35,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5522,21 +5596,6 @@
       "optativa": false
     },
     {
-      "id": "164",
-      "name": "Requisitos de Software (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "2II"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "165",
       "name": "Seguridad de la información, privacidad y protección de datos (ES)",
       "term": "Q1",
@@ -5562,7 +5621,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 38,
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
@@ -5663,21 +5722,36 @@
       "id": "174",
       "name": "Bases de Datos II (ES)",
       "term": "Q2",
-      "teacher": "No asignado",
+      "teacher": "T070",
       "grades": [
         "2AII",
         "2II"
       ],
-      "students": 0,
+      "students": 25,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33"
+      ],
       "possible_days": "all",
       "optativa": false
     },
     {
       "id": "175",
-      "name": "Programación III (Prog. de aplicaciones) (ES)",
+      "name": "Programación III (ES)",
       "term": "Q1",
       "teacher": "T068",
       "grades": [
@@ -5686,7 +5760,7 @@
         "2CDIA+",
         "2II"
       ],
-      "students": 0,
+      "students": 60,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -5777,11 +5851,11 @@
       "term": "Q2",
       "teacher": "T238",
       "grades": [
+        "2AII",
         "1CDIA+",
-        "1II",
-        "2AII"
+        "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -5862,21 +5936,6 @@
       "optativa": false
     },
     {
-      "id": "187",
-      "name": "Física (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "2II"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "188",
       "name": "Prácticas de Trabajo Social II /Gizarte Laneko Praktikak II (ES-EU)",
       "term": "Q2",
@@ -5949,10 +6008,25 @@
         "2CDIA+",
         "2II"
       ],
-      "students": 0,
+      "students": 45,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5962,11 +6036,11 @@
       "term": "Q2",
       "teacher": "T084",
       "grades": [
+        "3AII",
         "1CDIA+",
-        "1II",
-        "3AII"
+        "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -5984,7 +6058,7 @@
     },
     {
       "id": "194",
-      "name": "Formación Humana en Valores ()",
+      "name": "Formación Humana en Valores",
       "term": "Q2",
       "teacher": "No asignado",
       "grades": [
@@ -6003,7 +6077,33 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6115,10 +6215,32 @@
         "3II",
         "4CDIA+"
       ],
-      "students": 0,
+      "students": 25,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6265,10 +6387,19 @@
         "2CDIA+",
         "2II"
       ],
-      "students": 0,
+      "students": 45,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6991,10 +7122,19 @@
         "2CDIA+",
         "2II"
       ],
-      "students": 0,
+      "students": 45,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -7689,23 +7829,6 @@
       "optativa": false
     },
     {
-      "id": "319",
-      "name": "Metodología y lenguajes de la programación (ES)",
-      "term": "Q1",
-      "teacher": "T191",
-      "grades": [
-        "2AII",
-        "2CDIA+",
-        "2II"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "320",
       "name": "Macroeconomía EUS (EU)",
       "term": "Q1",
@@ -7926,10 +8049,32 @@
         "3CDIA+",
         "3II"
       ],
-      "students": 0,
+      "students": 30,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -7976,10 +8121,32 @@
         "3II",
         "4AII"
       ],
-      "students": 0,
+      "students": 40,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -8010,10 +8177,32 @@
         "3II",
         "4AII"
       ],
-      "students": 0,
+      "students": 37,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -8031,21 +8220,6 @@
       "possible_rooms": [
         "105"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "343",
-      "name": "Programación IV (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "2II"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -8483,7 +8657,7 @@
     },
     {
       "id": "373",
-      "name": "Programación I (Fund. de la Programación) CAS 2 (ES)",
+      "name": "Programación I (ES)",
       "term": "Q1",
       "teacher": "T175",
       "grades": [
@@ -8491,10 +8665,18 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 60,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -8540,7 +8722,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 35,
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
@@ -8783,16 +8965,38 @@
       "id": "397",
       "name": "Sistemas Operativos (ES)",
       "term": "Q1",
-      "teacher": "No asignado",
+      "teacher": "T021",
       "grades": [
-        "3II",
         "4AII",
-        "4CDIA+"
+        "4CDIA+",
+        "3II"
       ],
-      "students": 0,
+      "students": 40,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -8942,45 +9146,30 @@
       "optativa": false
     },
     {
-      "id": "411",
-      "name": "Matemática Discreta (EU)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "1AII",
-        "1CDIA",
-        "1CDIA+",
-        "1II"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "43",
-        "42",
-        "40",
-        "49",
-        "46",
-        "41",
-        "45",
-        "48"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "413",
       "name": "Ética civil y profesional (ES)",
       "term": "Q2",
-      "teacher": "No asignado",
+      "teacher": "T306",
       "grades": [
         "4CDIA",
         "4II"
       ],
-      "students": 0,
+      "students": 25,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -9008,27 +9197,55 @@
       "grades": [
         "4II"
       ],
-      "students": 0,
+      "students": 10,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "418",
       "name": "Seguridad de la Información (ES)",
       "term": "Q2",
-      "teacher": "No asignado",
+      "teacher": "T295",
       "grades": [
         "4CDIA",
         "4CDIA+",
         "4II"
       ],
-      "students": 0,
+      "students": 30,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -9040,57 +9257,53 @@
       "grades": [
         "4II"
       ],
-      "students": 0,
+      "students": 10,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "422",
       "name": "Interacción y Multimedia (ES)",
       "term": "Q2",
-      "teacher": "No asignado",
+      "teacher": "T137",
       "grades": [
-        "2II",
         "3AII",
-        "3CDIA+"
+        "3CDIA+",
+        "2II"
       ],
-      "students": 0,
-      "sessions_per_week": 1,
+      "students": 40,
+      "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "427",
-      "name": "Proyecto Fin de Grado INFORMÁTICA (EN)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "4II"
+      "possible_rooms": [
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "431",
-      "name": "Proyecto Fin de Grado CDIA (EN)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "4II"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -9103,12 +9316,26 @@
         "4CDIA",
         "4II"
       ],
-      "students": 0,
+      "students": 10,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "434",
@@ -9116,14 +9343,36 @@
       "term": "Q2",
       "teacher": "T249",
       "grades": [
+        "5AII",
         "4CDIA+",
-        "4II",
-        "5AII"
+        "4II"
       ],
-      "students": 0,
+      "students": 35,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -9341,23 +9590,6 @@
       "optativa": false
     },
     {
-      "id": "450",
-      "name": "Programación I (Fund. de la Programación) CAS 2 (1) (ES)",
-      "term": "Q1",
-      "teacher": "T175",
-      "grades": [
-        "1AII",
-        "1CDIA+",
-        "1II"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "452",
       "name": "Crecimiento y desarrollo corporativo (D.EST) (ES)",
       "term": "Q2",
@@ -9400,7 +9632,7 @@
         "1II"
       ],
       "students": 50,
-      "sessions_per_week": 1,
+      "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
         "43",
@@ -10148,23 +10380,6 @@
       "grades": [
         "4ADE",
         "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "512",
-      "name": "Interacción y Multimedia  (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "2II",
-        "3AII",
-        "3CDIA+"
       ],
       "students": 0,
       "sessions_per_week": 1,
