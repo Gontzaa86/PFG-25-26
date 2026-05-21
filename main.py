@@ -723,6 +723,52 @@ def crear_asignatura():
     guardar_datos(data)
     return jsonify({"success": True, "message": "Asignatura creada correctamente."})
 
+@app.route('/api/grados/<string:grado_id>', methods=['DELETE'])
+def eliminar_grado(grado_id):
+    data = cargar_datos()
+    grado_id = grado_id.strip()
+
+    # Eliminar de la lista global de 'grades'
+    grados_iniciales = len(data.get('grades', []))
+    data['grades'] = [g for g in data.get('grades', []) if g.get('id') != grado_id]
+    
+    if len(data['grades']) == grados_iniciales:
+        return jsonify({"error": f"El grado {grado_id} no existe en el sistema."}), 404
+
+    # Limpieza en cascada dentro de las asignaturas ('courses')
+    asignaturas_actualizadas = []
+    for curso in data.get('courses', []):
+        if 'grades' in curso:
+            # Quitamos el grado de la lista de esta asignatura
+            curso['grades'] = [g for g in curso['grades'] if g != grado_id]
+        
+        # Si la asignatura ya no pertenece a ningún grado tras la eliminación, se descarta para evitar registros huérfanos.
+        if len(curso.get('grades', [])) > 0:
+            asignaturas_actualizadas.append(curso)
+            
+    data['courses'] = asignaturas_actualizadas
+
+    guardar_datos(data)
+    return jsonify({
+        "success": True, 
+        "message": f"Grado {grado_id} eliminado correctamente y referencias limpiadas en cascada."
+    })
+
+
+@app.route('/api/asignaturas/<string:curso_id>', methods=['DELETE'])
+def eliminar_asignatura(curso_id):
+    data = cargar_datos()
+    curso_id = curso_id.strip()
+
+    cursos_iniciales = len(data.get('courses', []))
+    data['courses'] = [c for c in data.get('courses', []) if str(c.get('id')) != curso_id]
+
+    if len(data['courses']) == cursos_iniciales:
+        return jsonify({"error": f"La asignatura con ID {curso_id} no existe."}), 404
+
+    guardar_datos(data)
+    return jsonify({"success": True, "message": "Asignatura eliminada directamente del dataset."})
+
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
 def obtener_restricciones():

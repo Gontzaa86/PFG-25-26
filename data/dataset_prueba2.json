@@ -3561,21 +3561,6 @@
       "optativa": false
     },
     {
-      "id": "17",
-      "name": "Usos e impacto Social de la TICs (ES)",
-      "term": "Q2",
-      "teacher": "T089",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "113"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "18",
       "name": "Macroeconomía CAS (ES)",
       "term": "Q1",
@@ -3959,19 +3944,6 @@
       ],
       "students": 0,
       "sessions_per_week": 4,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "40",
-      "name": "Innovación y emprendimiento ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -6242,21 +6214,6 @@
       "optativa": false
     },
     {
-      "id": "166",
-      "name": "Retos y Dilemas de la Sociedad I (ES)",
-      "term": "Q1",
-      "teacher": "T042",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "109"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "167",
       "name": "Programación II Grupo 2 (ES)",
       "term": "Q2",
@@ -6578,19 +6535,6 @@
       "possible_rooms": [
         "111"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "184",
-      "name": "Fund. de la Programación (Prog.I) (ES)",
-      "term": "Q1",
-      "teacher": "T186",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -7213,19 +7157,6 @@
       "optativa": false
     },
     {
-      "id": "219",
-      "name": "Business Language III ALE G2 ()",
-      "term": "Q1",
-      "teacher": "T195",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "220",
       "name": "Practicum I (ES)",
       "term": "Q2",
@@ -7270,21 +7201,6 @@
       "duration_slots": 4,
       "possible_rooms": [
         "004"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "223",
-      "name": "Retos y Dilemas de la Sociedad II (ES)",
-      "term": "Q2",
-      "teacher": "T089",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "109"
       ],
       "possible_days": "all",
       "optativa": false
@@ -7638,19 +7554,6 @@
       "optativa": false
     },
     {
-      "id": "244",
-      "name": "Electrónica Digital (ES)",
-      "term": "Q",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "245",
       "name": "Comportamiento emprendedor (ES)",
       "term": "Q1",
@@ -7899,19 +7802,6 @@
       ],
       "students": 0,
       "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "260",
-      "name": "Gestión de marca ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -8490,19 +8380,6 @@
       "optativa": false
     },
     {
-      "id": "294",
-      "name": "RECURSOS ()",
-      "term": "Q",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "295",
       "name": "Diseño de Proyectos de Comunicación (ES)",
       "term": "Q1",
@@ -8555,19 +8432,6 @@
       "possible_rooms": [
         "103"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "298",
-      "name": "Microeconomía ING  (EN)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -9909,19 +9773,6 @@
       "optativa": false
     },
     {
-      "id": "374",
-      "name": " ()",
-      "term": "Q",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 4,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "375",
       "name": " Proyecto II: Prototipado y Lean Start-Up ()",
       "term": "Q2",
@@ -9931,32 +9782,6 @@
         "4D",
         "4IN"
       ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "376",
-      "name": " ()",
-      "term": "Q2",
-      "teacher": "T119",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "377",
-      "name": "Communication Skills (EN)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [],
       "students": 0,
       "sessions_per_week": 1,
       "duration_slots": 4,
@@ -10183,19 +10008,6 @@
       ],
       "students": 0,
       "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "390",
-      "name": " ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -10582,19 +10394,6 @@
       "optativa": false
     },
     {
-      "id": "412",
-      "name": "FHV3  ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "413",
       "name": "Ética civil y profesional (ES)",
       "term": "Q2",
@@ -10611,19 +10410,6 @@
       "optativa": false
     },
     {
-      "id": "414",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q1",
-      "teacher": "T134",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "415",
       "name": "Aprendizaje automático avanzado- Machine Learning Avanzado (EN)",
       "term": "Q2",
@@ -10632,19 +10418,6 @@
         "4CDIA",
         "4CDIA+"
       ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "416",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q1",
-      "teacher": "T088",
-      "grades": [],
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
@@ -10700,32 +10473,6 @@
       "optativa": false
     },
     {
-      "id": "420",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T060",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "421",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T055",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "422",
       "name": "Interacción y Multimedia (ES)",
       "term": "Q2",
@@ -10743,58 +10490,6 @@
       "optativa": false
     },
     {
-      "id": "423",
-      "name": "Laboratorio de Tecnologías Emergentes ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "424",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T105",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "425",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T026",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "426",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T126",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "427",
       "name": "Proyecto Fin de Grado INFORMÁTICA (EN)",
       "term": "Q2",
@@ -10802,45 +10497,6 @@
       "grades": [
         "4II"
       ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "428",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T147",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 3,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "429",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T252",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "430",
-      "name": "Laboratorio de Inteligencia Artificial ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [],
       "students": 0,
       "sessions_per_week": 1,
       "duration_slots": 4,
@@ -10874,19 +10530,6 @@
       ],
       "students": 0,
       "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "433",
-      "name": "PE (prácticas en Empresa) ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -11202,19 +10845,6 @@
       ],
       "students": 0,
       "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "451",
-      "name": "BILBAO CCSSHH ()",
-      "term": "Q2",
-      "teacher": "T192",
-      "grades": [],
-      "students": 0,
-      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -12478,19 +12108,6 @@
         "2AII",
         "2ARRII"
       ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "520",
-      "name": "Contabilidad Financiera Avanzada (FINANZAS)  (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [],
       "students": 0,
       "sessions_per_week": 1,
       "duration_slots": 4,

@@ -109,6 +109,9 @@
                     <button class="btn btn-sm btn-primary" onclick="abrirModalCrearAsignatura('{{ grado.id }}')">
                         <i class="bi bi-plus-lg"></i> Añadir Asignatura
                     </button>
+                    <button class="btn btn-sm btn-outline-danger" onclick="eliminarGradoCompleto('{{ grado.id }}')">
+                        <i class="bi bi-trash3"></i> Eliminar Grado
+                    </button>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 border-end">
@@ -160,7 +163,7 @@
                         
                         <div class="mb-3">
                             <label for="editName" class="form-label fw-semibold">Nombre de la asignatura</label>
-                            <input type="text" class="form-control" id="editName" required>
+                            <input type="text" class="form-control" id="editName" autocomplete="off" required>
                         </div>
 
                         <div class="row">
@@ -173,7 +176,7 @@
                             </div>
                             <div class="col-md-8 mb-3">
                                 <label for="buscarProfesor" class="form-label fw-semibold">Profesor</label>
-                                <input type="text" class="form-control mb-1 form-control-sm" id="buscarProfesor" placeholder="🔍 Escribe para buscar profesor...">
+                                <input type="text" class="form-control mb-1 form-control-sm" id="buscarProfesor" autocomplete="off" placeholder="🔍 Escribe para buscar profesor...">
                                 <select class="form-select" id="editTeacher">
                                     <option value="No asignado">No asignado</option>
                                     {% for prof_id, prof_nom in profesores.items() %}
@@ -213,8 +216,14 @@
                     </form>
                 </div>
                 <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" onclick="procesarFormularioAsignatura()">Guardar cambios</button>
+                    <button type="button" class="btn btn-danger" id="btnEliminarAsignaturaModal" onclick="eliminarAsignaturaActual()">
+                        <i class="bi bi-trash3"></i> Eliminar Asignatura
+                    </button>
+                    
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="procesarFormularioAsignatura()">Guardar cambios</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,7 +245,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="addGradoCode" class="form-label fw-semibold">Código / Tag de la carrera</label>
-                            <input type="text" class="form-control" id="addGradoCode" placeholder="Ej: ADE" required>
+                            <input type="text" class="form-control" id="addGradoCode" autocomplete="off" placeholder="Ej: ADE" required>
                         </div>
                     </form>
                 </div>

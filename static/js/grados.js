@@ -326,6 +326,11 @@ async function guardarNuevoGrado() {
 function abrirModalCrearAsignatura(gradoIdPredeterminado) {
     modoModalAsignatura = 'crear';
     
+
+    // Ocultar botón eliminar en modo creación
+    const btnEliminar = document.getElementById('btnEliminarAsignaturaModal');
+    if (btnEliminar) btnEliminar.style.display = 'none';
+
     // Cambiar el título del modal dinámicamente
     const modalTitle = document.querySelector('#modalEditarAsignatura .modal-title');
     if (modalTitle) modalTitle.innerHTML = '<i class="bi bi-plus-circle"></i> Añadir Nueva Asignatura';
@@ -358,8 +363,14 @@ function abrirModalCrearAsignatura(gradoIdPredeterminado) {
 const viejaFuncionAbrirEditar = abrirModalEditarAsignatura;
 abrirModalEditarAsignatura = function(cursoId) {
     modoModalAsignatura = 'editar';
+    
+    // Mostrar botón eliminar en modo edición
+    const btnEliminar = document.getElementById('btnEliminarAsignaturaModal');
+    if (btnEliminar) btnEliminar.style.display = 'block';
+
     const modalTitle = document.querySelector('#modalEditarAsignatura .modal-title');
     if (modalTitle) modalTitle.innerHTML = '<i class="bi bi-pencil-square"></i> Editar Asignatura';
+    
     viejaFuncionAbrirEditar(cursoId);
 };
 
@@ -410,5 +421,60 @@ async function guardarNuevaAsignatura() {
     } catch (error) {
         console.error('Error al crear asignatura:', error);
         alert('No se pudo establecer conexión con el backend.');
+    }
+}
+
+async function eliminarGradoCompleto(gradoId) {
+    const confirmacion = confirm(`¿Estás completamente seguro de que deseas eliminar el grado "${gradoId}"?\n\nEsta acción borrará el grado y lo eliminará de todas las asignaturas asociadas.`);
+    if (!confirmacion) return;
+
+    try {
+        const resp = await fetch(`/api/grados/${encodeURIComponent(gradoId)}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        const res = await resp.json();
+
+        if (resp.ok) {
+            alert(res.message || 'Grado eliminado con éxito.');
+            location.reload();
+        } else {
+            alert(res.error || 'No se pudo eliminar el grado.');
+        }
+    } catch (error) {
+        console.error('Error al eliminar grado:', error);
+        alert('Ocurrió un error de red al intentar eliminar el grado.');
+    }
+}
+
+async function eliminarAsignaturaActual() {
+    const cursoId = document.getElementById('editCursoId').value;
+    const nombreAsignatura = document.getElementById('editName').value;
+
+    if (!cursoId) {
+        alert('No se pudo determinar el ID de la asignatura a eliminar.');
+        return;
+    }
+
+    const confirmacion = confirm(`¿Seguro que deseas eliminar definitivamente la asignatura:\n"${nombreAsignatura}"?`);
+    if (!confirmacion) return;
+
+    try {
+        const resp = await fetch(`/api/asignaturas/${encodeURIComponent(cursoId)}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        const res = await resp.json();
+
+        if (resp.ok) {
+            alert(res.message || 'Asignatura eliminada con éxito.');
+            if (modalEditarAsignaturaInstance) modalEditarAsignaturaInstance.hide();
+            location.reload();
+        } else {
+            alert(res.error || 'No se pudo eliminar la asignatura.');
+        }
+    } catch (error) {
+        console.error('Error al eliminar asignatura:', error);
+        alert('Ocurrió un error de red al intentar eliminar la asignatura.');
     }
 }
