@@ -64,6 +64,9 @@
         <h2 class="fw-bold">Plan de Estudios por Grado</h2>
         <div class="d-flex gap-2">
             <input type="file" id="importarCSV" accept=".csv" style="display: none;" onchange="procesarImportacion(this)">
+            <button class="btn btn-outline-dark shadow-sm" data-bs-toggle="modal" data-bs-target="#modalAñadirGrado">
+                <i class="bi bi-plus-circle"></i> Añadir Grado
+            </button>
             <button class="btn btn-success shadow-sm" onclick="document.getElementById('importarCSV').click()">
                 <i class="bi bi-file-earmark-arrow-up"></i> Importar Asignaturas (.csv)
             </button>
@@ -101,7 +104,12 @@
         <div class="card-body p-4" data-grupo="{{ grupo.root }}" data-grado-index="0">
             {% for grado in grupo.grados %}
             <div class="grado-por-codigo" data-grado-id="{{ grado.id }}" data-grado-year="{{ grado.year }}" {% if not loop.first %}style="display:none"{% endif %}>
-                <h5 class="text-secondary fw-semibold mb-4">Curso {{ grado.year }} - {{ grado.name }}</h5>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="text-secondary fw-semibold mb-0">Curso {{ grado.year }} - {{ grado.name }}</h5>
+                    <button class="btn btn-sm btn-primary" onclick="abrirModalCrearAsignatura('{{ grado.id }}')">
+                        <i class="bi bi-plus-lg"></i> Añadir Asignatura
+                    </button>
+                </div>
                 <div class="row">
                     <div class="col-lg-6 border-end">
                         <h5 class="text-primary fw-bold mb-4 border-bottom pb-2">Primer Cuatrimestre (Q1)</h5>
@@ -206,12 +214,39 @@
                 </div>
                 <div class="modal-footer bg-light">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" onclick="guardarCambiosAsignatura()">Guardar cambios</button>
+                    <button type="button" class="btn btn-primary" onclick="procesarFormularioAsignatura()">Guardar cambios</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Modal para agregar Grado -->
+    <div class="modal fade" id="modalAñadirGrado" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title"><i class="bi bi-plus-circle"></i> Añadir Nuevo Grado</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAñadirGrado">
+                        <div class="mb-3">
+                            <label for="addGradoYear" class="form-label fw-semibold">Curso (Año)</label>
+                            <input type="number" class="form-control" id="addGradoYear" min="1" max="9" placeholder="Ej: 4" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="addGradoCode" class="form-label fw-semibold">Código / Tag de la carrera</label>
+                            <input type="text" class="form-control" id="addGradoCode" placeholder="Ej: ADE" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" onclick="guardarNuevoGrado()">Crear Grado</button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block scripts %}

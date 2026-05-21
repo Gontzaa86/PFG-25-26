@@ -654,6 +654,75 @@ def actualizar_asignatra(id):
     guardar_datos(data)
     return jsonify({"success": True, "message": "Asignatura actualizada correctamente."})
 
+@app.route('/api/grados', methods=['POST'])
+def crear_grado():
+    data = cargar_datos()
+    nuevo = request.json or {}
+    
+    curso = str(nuevo.get('year', '')).strip()
+    codigo = str(nuevo.get('code', '')).strip().upper()
+    
+    if not curso or not codigo:
+        return jsonify({"error": "El curso y el código del grado son obligatorios."}), 400
+        
+    grado_id = f"{curso}{codigo}"
+    
+    # Validar si ya existe
+    if any(g['id'] == grado_id for g in data.get('grades', [])):
+        return jsonify({"error": f"El grado {grado_id} ya existe."}), 400
+        
+    data.setdefault('grades', []).append({
+        "id": grado_id,
+        "name": grado_id
+    })
+    
+    guardar_datos(data)
+    return jsonify({"success": True, "message": f"Grado {grado_id} creado con éxito."})
+
+
+@app.route('/api/asignaturas', methods=['POST'])
+def crear_asignatura():
+    data = cargar_datos()
+    nuevo_data = request.json or {}
+    
+    if not nuevo_data.get('name'):
+        return jsonify({"error": "El nombre de la asignatura es obligatorio."}), 400
+        
+    # Generar un ID único incremental numérico stringificado
+    cursos_existentes = data.get('courses', [])
+    max_id = 0
+    for c in cursos_existentes:
+        try:
+            max_id = max(max_id, int(c.get('id', 0)))
+        except ValueError:
+            pass
+    nuevo_id = str(max_id + 1)
+    
+    try:
+        students = int(nuevo_data.get('students', 0))
+        sessions = int(nuevo_data.get('sessions_per_week', 2))
+        duration = int(nuevo_data.get('duration_slots', 4))
+    except (ValueError, TypeError):
+        return jsonify({"error": "Los campos numéricos son inválidos"}), 400
+
+    nueva_asignatura = {
+        "id": nuevo_id,
+        "name": str(nuevo_data.get('name')).strip(),
+        "term": f"Q{nuevo_data.get('term', '1')}",
+        "teacher": str(nuevo_data.get('teacher', 'No asignado')),
+        "grades": nuevo_data.get('grades', []),
+        "students": students,
+        "sessions_per_week": sessions,
+        "duration_slots": duration,
+        "possible_rooms": [], # Inicializa vacío para luego editarlo en su modal dedicado
+        "possible_days": "all",
+        "optativa": bool(nuevo_data.get('optativa', False))
+    }
+    
+    data.setdefault('courses', []).append(nueva_asignatura)
+    guardar_datos(data)
+    return jsonify({"success": True, "message": "Asignatura creada correctamente."})
+
 # ==== Rutas de restricciones ====
 @app.route('/api/config/restricciones')
 def obtener_restricciones():

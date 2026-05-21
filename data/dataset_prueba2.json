@@ -3247,6 +3247,10 @@
     {
       "id": "ERA",
       "name": "ERA"
+    },
+    {
+      "id": "4*CO",
+      "name": "4*CO"
     }
   ],
   "courses": [
@@ -4226,11 +4230,10 @@
       "grades": [
         "1CDIA",
         "1CDIA+",
-        "1II",
-        "3AII"
+        "1II"
       ],
-      "students": 0,
-      "sessions_per_week": 3,
+      "students": 50,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "40",
@@ -4956,10 +4959,22 @@
         "1*ESTS",
         "1*TS"
       ],
-      "students": 0,
+      "students": 30,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5627,6 +5642,11 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
         "006"
       ],
       "possible_days": "all",
@@ -7500,7 +7520,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
@@ -8778,7 +8798,7 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
@@ -11154,7 +11174,7 @@
       "grades": [
         "1CDIA"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -11241,14 +11261,14 @@
       "id": "454",
       "name": "Matemática Discreta  (EU)",
       "term": "Q2",
-      "teacher": "No asignado",
+      "teacher": "T075",
       "grades": [
         "1AII",
         "1CDIA",
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 50,
       "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [
@@ -13498,6 +13518,22 @@
       "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
+    },
+    {
+      "id": "580",
+      "name": "Asignatura de prueba 1",
+      "term": "Q2",
+      "teacher": "T053",
+      "grades": [
+        "3*CO",
+        "4*CO"
+      ],
+      "students": 12,
+      "sessions_per_week": 3,
+      "duration_slots": 4,
+      "possible_rooms": [],
+      "possible_days": "all",
+      "optativa": true
     }
   ],
   "constraints": [

@@ -286,3 +286,129 @@ async function guardarCambiosAsignatura() {
         alert('No se pudo establecer conexión con el backend.');
     }
 }
+
+// Variable de control para el estado del modal de asignaturas ('crear' o 'editar')
+let modoModalAsignatura = 'editar';
+
+async function guardarNuevoGrado() {
+    const year = document.getElementById('addGradoYear').value.trim();
+    const code = document.getElementById('addGradoCode').value.trim();
+
+    if (!year || !code) {
+        alert('Por favor, rellene todos los campos del grado.');
+        return;
+    }
+
+    const payload = { year, code };
+
+    try {
+        const resp = await fetch('/api/grados', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const res = await resp.json();
+
+        if (resp.ok) {
+            alert(res.message);
+            location.reload();
+        } else {
+            alert(res.error || 'Error al guardar el grado.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('No se pudo conectar con el servidor.');
+    }
+}
+
+
+// FUNCIONES PARA ASIGNATURAS
+function abrirModalCrearAsignatura(gradoIdPredeterminado) {
+    modoModalAsignatura = 'crear';
+    
+    // Cambiar el título del modal dinámicamente
+    const modalTitle = document.querySelector('#modalEditarAsignatura .modal-title');
+    if (modalTitle) modalTitle.innerHTML = '<i class="bi bi-plus-circle"></i> Añadir Nueva Asignatura';
+
+    // Limpiar campos del formulario
+    document.getElementById('editCursoId').value = "";
+    document.getElementById('editName').value = "";
+    document.getElementById('editTerm').value = "1";
+    document.getElementById('editTeacher').value = "No asignado";
+    document.getElementById('editStudents').value = 0;
+    document.getElementById('editSessions').value = 2;
+    document.getElementById('editDuration').value = 4;
+    document.getElementById('editOptativa').checked = false;
+    document.getElementById('buscarProfesor').value = "";
+
+    // Forzar el filtrado del profesor para que aparezcan todos
+    const opcionesProf = document.getElementById('editTeacher').options;
+    for(let i=0; i<opcionesProf.length; i++) opcionesProf[i].style.display = "";
+
+    // Renderizar la lista completa de checkboxes pre-marcando el grado desde el que se llamó
+    renderizarPanelGradosCheckbox([gradoIdPredeterminado]);
+
+    if (!modalEditarAsignaturaInstance) {
+        modalEditarAsignaturaInstance = new bootstrap.Modal(document.getElementById('modalEditarAsignatura'));
+    }
+    modalEditarAsignaturaInstance.show();
+}
+
+// Re-enrutamos la función original de apertura de edición para definir el modo
+const viejaFuncionAbrirEditar = abrirModalEditarAsignatura;
+abrirModalEditarAsignatura = function(cursoId) {
+    modoModalAsignatura = 'editar';
+    const modalTitle = document.querySelector('#modalEditarAsignatura .modal-title');
+    if (modalTitle) modalTitle.innerHTML = '<i class="bi bi-pencil-square"></i> Editar Asignatura';
+    viejaFuncionAbrirEditar(cursoId);
+};
+
+// Evaluadora central que sustituye el comportamiento del botón guardar
+async function procesarFormularioAsignatura() {
+    if (modoModalAsignatura === 'editar') {
+        await guardarCambiosAsignatura(); // Ejecuta tu función original nativa
+    } else {
+        await guardarNuevaAsignatura();   // Ejecuta el flujo de guardado POST
+    }
+}
+
+async function guardarNuevaAsignatura() {
+    const checkboxesMarcados = document.querySelectorAll('input[name="grados_seleccionados"]:checked');
+    const gradosSeleccionados = Array.from(checkboxesMarcados).map(cb => cb.value);
+
+    const payload = {
+        name: document.getElementById('editName').value.trim(),
+        term: document.getElementById('editTerm').value,
+        teacher: document.getElementById('editTeacher').value,
+        grades: gradosSeleccionados,
+        students: parseInt(document.getElementById('editStudents').value) || 0,
+        sessions_per_week: parseInt(document.getElementById('editSessions').value) || 1,
+        duration_slots: parseInt(document.getElementById('editDuration').value) || 4,
+        optativa: document.getElementById('editOptativa').checked
+    };
+
+    if (!payload.name) {
+        alert('El nombre de la asignatura es obligatorio.');
+        return;
+    }
+
+    try {
+        const resp = await fetch('/api/asignaturas', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const resultado = await resp.json();
+
+        if (resp.ok) {
+            alert(resultado.message || 'Asignatura creada con éxito.');
+            if (modalEditarAsignaturaInstance) modalEditarAsignaturaInstance.hide();
+            location.reload();
+        } else {
+            alert(resultado.error || 'Hubo un problema al crear la asignatura.');
+        }
+    } catch (error) {
+        console.error('Error al crear asignatura:', error);
+        alert('No se pudo establecer conexión con el backend.');
+    }
+}
