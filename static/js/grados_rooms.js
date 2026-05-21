@@ -78,9 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-}); // <-- CORRECCIÓN: Aquí se cierra correctamente el DOMContentLoaded y el bloque principal
+});
 
-// CORRECCIÓN: La función ahora es externa y accesible globalmente
 function abrirModalAulas(cursoId) {
     console.log('abrirModalAulas click ->', cursoId);
     
@@ -98,14 +97,25 @@ function abrirModalAulas(cursoId) {
     const modal = window._modalAulas;
     document.getElementById('cursoIdAulas').value = cursoId;
 
-    // Obtener datos globales
-    const rooms = window.__GRADOS_ROOMS || [];
+    // Obtener datos globales originales
+    let rooms = window.__GRADOS_ROOMS || [];
     const buildings = window.__GRADOS_BUILDINGS || [];
     const asignaturas = window.__GRADOS_ASIGNATURAS || [];
+
+    // ORDENAR LAS AULAS ALFABÉTICAMENTE/NUMÉRICAMENTE
+    rooms = [...rooms].sort((a, b) => {
+        return String(a.id).localeCompare(String(b.id), undefined, { numeric: true, sensitivity: 'base' });
+    });
 
     // Buscar asignatura actual y sus aulas pre-seleccionadas
     const curso = asignaturas.find(c => String(c.id) === String(cursoId));
     const actuales = Array.isArray(curso && curso.possible_rooms) ? curso.possible_rooms : [];
+
+    // ORDENAR LAS AULAS PRE-SELECCIONADAS DEL CURSO
+    // Esto asegura que si guardas "Aula 3" y "Aula 1", en memoria también se guarden ordenadas
+    if (actuales.length > 0) {
+        actuales.sort((a, b) => String(a).localeCompare(String(b), undefined, { numeric: true }));
+    }
 
     const cont = document.getElementById('contenedorAulasPorEdificio');
     if (!cont) {
@@ -114,14 +124,15 @@ function abrirModalAulas(cursoId) {
     }
     cont.innerHTML = '';
 
-    // Agrupar aulas por edificio
+    // Agrupar aulas por edificio (ahora que 'rooms' ya está ordenado, entrarán en orden correcto)
     const mapa = {};
     rooms.forEach(r => {
         mapa[r.building] = mapa[r.building] || [];
         mapa[r.building].push(r);
     });
 
-    const keys = buildings && buildings.length ? buildings : Object.keys(mapa);
+    // Ordenar también los nombres de los edificios alfabéticamente si no se definieron en __GRADOS_BUILDINGS
+    const keys = buildings && buildings.length ? buildings : Object.keys(mapa).sort();
 
     keys.forEach((edificio, idx) => {
         const aulasEd = mapa[edificio] || [];

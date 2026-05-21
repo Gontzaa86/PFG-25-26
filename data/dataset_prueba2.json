@@ -3491,14 +3491,14 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "43",
-        "42",
         "40",
-        "49",
-        "46",
         "41",
+        "42",
+        "43",
         "45",
-        "48"
+        "46",
+        "48",
+        "49"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3988,14 +3988,14 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "43",
-        "42",
         "40",
-        "49",
-        "46",
         "41",
+        "42",
+        "43",
         "45",
-        "48"
+        "46",
+        "48",
+        "49"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4233,14 +4233,14 @@
       "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
-        "43",
-        "42",
         "40",
-        "49",
-        "46",
         "41",
+        "42",
+        "43",
         "45",
+        "46",
         "48",
+        "49",
         "Sala ordenadores / ordenagailu gela"
       ],
       "possible_days": "all",
