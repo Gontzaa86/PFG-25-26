@@ -35,14 +35,18 @@
             </div>
             
             <div class="d-flex flex-wrap gap-1 align-items-center">
-                <small class="{{ 'text-danger' if not curso.possible_rooms else 'text-muted' }} me-1" style="font-size: 0.75rem;">Aulas:</small>
-                {% if curso.possible_rooms %}
-                    {% for aula in curso.possible_rooms %}
-                        <span class="badge bg-light text-dark border-0 fw-normal" style="font-size: 0.7 rpm;">{{ aula }}</span>
-                    {% endfor %}
-                {% else %}
-                    <span class="text-danger small">Sin aulas asignadas</span>
-                {% endif %}
+                <small class="{{ 'text-danger' if not curso.possible_rooms else 'text-muted' }} me-1 label-aulas" style="font-size: 0.75rem;">Aulas:</small>
+                
+                <span class="contenedor-badges-aulas d-inline-flex flex-wrap gap-1 align-items-center">
+                    {% if curso.possible_rooms %}
+                        {% for aula in curso.possible_rooms %}
+                            <span class="badge bg-light text-dark border-0 fw-normal" style="font-size: 0.7rem;">{{ aula }}</span>
+                        {% endfor %}
+                    {% else %}
+                        <span class="text-danger small">Sin aulas asignadas</span>
+                    {% endif %}
+                </span>
+
                 <div class="ms-auto d-flex gap-1">
                     <button class="btn btn-sm btn-outline-primary py-0" onclick="abrirModalAulas('{{ curso.id }}')">Editar Aulas</button>
                     <button class="btn btn-sm btn-outline-warning py-0" onclick="abrirModalEditarAsignatura('{{ curso.id }}')">

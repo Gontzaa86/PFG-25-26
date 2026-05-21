@@ -26,22 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                // Actualizar badges en la tarjeta del curso sin recargar
-                const card = document.querySelector(`[data-curso-id="${cursoId}"]`);
-                if (card) {
-                    const container = card.querySelector('.d-flex.flex-wrap.gap-1.align-items-center');
-                    if (container) {
-                        // Preserve the Edit button if present
-                        const editBtn = container.querySelector('button');
-                        const editBtnClone = editBtn ? editBtn.cloneNode(true) : null;
+                // Buscar TODAS las tarjetas que compartan esta asignatura en la página
+                const cards = document.querySelectorAll(`[data-curso-id="${cursoId}"]`);
 
-                        // Remover contenidos actuales y añadir nuevos badges
-                        container.innerHTML = '';
-                        const small = document.createElement('small');
-                        small.className = selected.length ? 'text-muted me-1' : 'text-danger me-1';
-                        small.style.fontSize = '0.75rem';
-                        small.textContent = 'Aulas:';
-                        container.appendChild(small);
+                cards.forEach(card => {
+                    const badgeContainer = card.querySelector('.contenedor-badges-aulas');
+                    const labelAulas = card.querySelector('.label-aulas');
+
+                    if (badgeContainer) {
+                        // Cambiar color del texto "Aulas:" según si tiene o no asignadas
+                        if (labelAulas) {
+                            labelAulas.className = selected.length ? 'text-muted me-1 label-aulas' : 'text-danger me-1 label-aulas';
+                        }
+
+                        // Limpiar SÓLO el contenedor de los badges en esta tarjeta
+                        badgeContainer.innerHTML = '';
 
                         if (selected.length) {
                             selected.forEach(a => {
@@ -49,57 +48,42 @@ document.addEventListener('DOMContentLoaded', () => {
                                 span.className = 'badge bg-light text-dark border-0 fw-normal';
                                 span.style.fontSize = '0.7rem';
                                 span.textContent = a;
-                                container.appendChild(span);
+                                badgeContainer.appendChild(span);
                             });
                         } else {
                             const span = document.createElement('span');
                             span.className = 'text-danger small';
                             span.textContent = 'Sin aulas asignadas';
-                            container.appendChild(span);
+                            badgeContainer.appendChild(span);
                         }
+                    }
+                });
 
-                        // Reappend preserved edit button
-                        if (editBtnClone) {
-                            // Reattach the original onclick handler by ensuring the clone has the same onclick
-                            container.appendChild(editBtnClone);
-                            // Re-bind to global function if needed
-                            try {
-                                const onclickAttr = editBtnClone.getAttribute('onclick');
-                                if (!onclickAttr) {
-                                    // set onclick using cursoId
-                                    editBtnClone.setAttribute('onclick', `abrirModalAulas('${cursoId}')`);
-                                }
-                            } catch (e) {
-                                // ignore
-                            }
-                        }
+                // Actualizar los datos locales en memoria para que persistan los cambios al reabrir el modal
+                if (window.__GRADOS_ASIGNATURAS) {
+                    const curso = window.__GRADOS_ASIGNATURAS.find(c => String(c.id) === String(cursoId));
+                    if (curso) {
+                        curso.possible_rooms = selected;
                     }
                 }
 
-                    // Update in-memory asignaturas so modal reflects changes without recarga
-                    try {
-                        if (window.__GRADOS_ASIGNATURAS && Array.isArray(window.__GRADOS_ASIGNATURAS)) {
-                            const idx = window.__GRADOS_ASIGNATURAS.findIndex(c => String(c.id) === String(cursoId));
-                            if (idx !== -1) {
-                                // Ensure we store a shallow copy of the array of strings
-                                window.__GRADOS_ASIGNATURAS[idx].possible_rooms = Array.isArray(selected) ? selected.slice() : [];
-                            }
-                        }
-                    } catch (e) {
-                        console.warn('No se pudo actualizar cache local de asignaturas:', e);
-                    }
+                // Cerrar el modal de manera limpia
+                if (window._modalAulas) {
+                    window._modalAulas.hide();
+                }
 
-                    if (window._modalAulas) window._modalAulas.hide();
             } catch (err) {
-                console.error(err);
-                alert('Error conectando con el servidor.');
+                console.error('Error:', err);
+                alert('Ocurrió un error al conectar con el servidor.');
             }
         });
     }
-});
+}); // <-- CORRECCIÓN: Aquí se cierra correctamente el DOMContentLoaded y el bloque principal
 
+// CORRECCIÓN: La función ahora es externa y accesible globalmente
 function abrirModalAulas(cursoId) {
     console.log('abrirModalAulas click ->', cursoId);
+    
     if (!window._modalAulas) {
         const me = document.getElementById('modalAulasAsignatura');
         if (me) {
@@ -110,15 +94,16 @@ function abrirModalAulas(cursoId) {
             }
         }
     }
+    
     const modal = window._modalAulas;
     document.getElementById('cursoIdAulas').value = cursoId;
 
-    // Obtener listado global de aulas y asignaturas (inyectadas en plantilla)
+    // Obtener datos globales
     const rooms = window.__GRADOS_ROOMS || [];
     const buildings = window.__GRADOS_BUILDINGS || [];
     const asignaturas = window.__GRADOS_ASIGNATURAS || [];
 
-    // Buscar la asignatura para obtener posibles aulas actuales
+    // Buscar asignatura actual y sus aulas pre-seleccionadas
     const curso = asignaturas.find(c => String(c.id) === String(cursoId));
     const actuales = Array.isArray(curso && curso.possible_rooms) ? curso.possible_rooms : [];
 
@@ -136,13 +121,12 @@ function abrirModalAulas(cursoId) {
         mapa[r.building].push(r);
     });
 
-    // Si no hay edificios, inferir desde rooms
     const keys = buildings && buildings.length ? buildings : Object.keys(mapa);
 
     keys.forEach((edificio, idx) => {
         const aulasEd = mapa[edificio] || [];
-
         const itemId = `accordionEd-${idx}`;
+        
         const card = document.createElement('div');
         card.className = 'accordion-item mb-2';
 
@@ -165,7 +149,6 @@ function abrirModalAulas(cursoId) {
         selectAllBtn.textContent = 'Seleccionar todo';
         selectAllBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            // Toggle: if all selected then unselect, else select all
             const inputs = card.querySelectorAll('input[type="checkbox"]');
             const allChecked = Array.from(inputs).every(i => i.checked);
             inputs.forEach(i => i.checked = !allChecked);
@@ -175,7 +158,6 @@ function abrirModalAulas(cursoId) {
         headerWrap.className = 'd-flex align-items-center w-100';
         headerWrap.appendChild(btn);
         headerWrap.appendChild(selectAllBtn);
-
         header.appendChild(headerWrap);
 
         const body = document.createElement('div');
@@ -212,10 +194,8 @@ function abrirModalAulas(cursoId) {
         }
 
         body.appendChild(bodyInner);
-
         card.appendChild(header);
         card.appendChild(body);
-
         cont.appendChild(card);
     });
 
@@ -227,5 +207,5 @@ function abrirModalAulas(cursoId) {
     }
 }
 
-// Exponer la función globalmente para que el onclick en la plantilla funcione
+// Exponer la función globalmente
 window.abrirModalAulas = abrirModalAulas;

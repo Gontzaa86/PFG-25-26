@@ -3365,7 +3365,17 @@
       "students": 0,
       "sessions_per_week": 1,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "009",
+        "004",
+        "003",
+        "001",
+        "005",
+        "008",
+        "006",
+        "007",
+        "002"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -3488,8 +3498,7 @@
         "46",
         "41",
         "45",
-        "48",
-        "Plato TV"
+        "48"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3975,10 +3984,19 @@
         "1CDIA+",
         "1II"
       ],
-      "students": 0,
+      "students": 52,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4046,7 +4064,16 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4205,7 +4232,17 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48",
+        "Sala ordenadores / ordenagailu gela"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5627,7 +5664,16 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5677,7 +5723,16 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5780,7 +5835,22 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48",
+        "33",
+        "27",
+        "30",
+        "31",
+        "28",
+        "29"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -5871,7 +5941,16 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6171,7 +6250,16 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6312,7 +6400,22 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48",
+        "33",
+        "27",
+        "30",
+        "31",
+        "28",
+        "29"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6412,7 +6515,16 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6605,7 +6717,16 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -7382,7 +7503,16 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -8641,7 +8771,7 @@
       "id": "311",
       "name": "Álgebra (EU)",
       "term": "Q1",
-      "teacher": "No asignado",
+      "teacher": "T075",
       "grades": [
         "1AII",
         "1CDIA",
@@ -8651,7 +8781,16 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -9838,7 +9977,16 @@
       "students": 0,
       "sessions_per_week": 3,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -10400,7 +10548,16 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -11000,7 +11157,16 @@
       "students": 0,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -11085,7 +11251,16 @@
       "students": 0,
       "sessions_per_week": 1,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
