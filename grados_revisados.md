@@ -3,9 +3,47 @@
 
 ## AII - Administración de Empresas + Ingeniería Informática ✖︎
 
-## CDIA - Ciencia de Datos e Inteligencia Artificial ✖︎
+## CDIA - Ciencia de Datos e Inteligencia Artificial ✔︎
+- 1º
+    - Q1
+        - Álgebra (EU-ES)
+    - Q2
+        - Cálculo (EU-ES)
+        - Programación II (Dos Grupos)
+        - Matemática Discreta (EU-ES)
+- 2º
+    - Q1
+        - Programación Técnica y Científica (EN-ES)
+    - Q2
+        - Formación Humana en Valores (Seis Opciones, una de ellas en dos idiomas, otra en tres. Es decir, nueve opciones finales)
+- 3º
+    - Q1
+    - Q2
+- 4º
+    - Q1
+        - Todas Optativas
+    - Q2
 
-## CDIA+ - Ciencia de Datos e Inteligencia Artificial + Ingeniería Informática ✖︎
+## CDIA+ - Ciencia de Datos e Inteligencia Artificial + Ingeniería Informática ✔︎
+- 1º
+    - Q1
+        - Álgebra (EU-ES)
+    - Q2
+        - Cálculo (EU-ES)
+        - Programación II (Dos Grupos)
+        - Matemática Discreta (EU-ES)
+- 2º
+    - Q1
+        - Programación Técnica y Científica (EN-ES)
+    - Q2
+        - Formación Humana en Valores (Seis Opciones, una de ellas en dos idiomas, otra en tres. Es decir, nueve opciones finales)
+- 3º
+    - Q1
+    - Q2
+- 4º
+    - Q1
+        - Muchas Optativas
+    - Q2
 
 ## CO - Comunicación ✖︎
 
@@ -20,17 +58,14 @@
     - Q2
         - Cálculo (EU-ES)
         - Programación II (Dos Grupos)
-        - Matemática Discreta (EU-ES)
-    
+        - Matemática Discreta (EU-ES) 
 - 2º
     - Q1
     - Q2
         - Formación Humana en Valores (Seis Opciones, una de ellas en dos idiomas, otra en tres. Es decir, nueve opciones finales)
-
 - 3º
     - Q1
     - Q2
-
 - 4º
     - Q1
         - Todas Optativas
