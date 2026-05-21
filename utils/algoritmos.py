@@ -92,8 +92,30 @@ def evaluar_horario(asignaciones, restricciones_activas=None, data=None):
                 
     return total, log_penalizaciones
 
-def generar_horario_iterativo(data, term="Q1", restricciones=None):
-    cursos = [c for c in data['courses'] if c['term'] == term]
+def generar_horario_iterativo(data, term="Q1", restricciones=None, selected_grades=None):
+    # Filtrar cursos por cuatrimestre, excluir optativas y (opcional) filtrar por grados seleccionados
+    selected_set = set(selected_grades) if selected_grades else None
+
+    def grade_matches_selection(grade):
+        # grade: e.g., '1ADE' -> root 'ADE'
+        if not selected_set:
+            return True
+        root = __import__('re').sub(r'^\\d+', '', grade)
+        # Direct match (e.g., '1ADE') or root match (we encode roots as e.g. 'root:ADE' from frontend)
+        if grade in selected_set:
+            return True
+        if root in selected_set:
+            return True
+        if ('root:' + root) in selected_set:
+            return True
+        return False
+
+    cursos = [
+        c for c in data.get('courses', [])
+        if c.get('term') == term
+        and not c.get('optativa', False)
+        and (selected_set is None or any(grade_matches_selection(g) for g in c.get('grades', [])))
+    ]
     aulas = data['rooms']
     slots_posibles = list(range(0, 12)) # 08:00 - 14:00
     profesores_map = {p['id']: p['name'] for p in data.get('teachers', [])}

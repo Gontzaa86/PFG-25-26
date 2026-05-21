@@ -18,6 +18,9 @@
                     <option value="Q2">Segundo Cuatrimestre (Q2)</option>
                 </select>
             </div>
+            <div class="col-auto">
+                <button id="btnSeleccionGrados" class="btn btn-outline-secondary">Selección de Grados <span id="badgeGrados" class="badge bg-secondary ms-2">Todos</span></button>
+            </div>
             <div class="mt-3">
                 <h5>Restricciones Opcionales:</h5>
                 <div id="contenedor-checks" class="d-flex flex-wrap gap-3">
@@ -45,6 +48,26 @@
     </div>
 
     <div id="calendarios-grados" class="mt-4"></div>
+</div>
+
+<!-- Modal Selección de Grados -->
+<div class="modal fade" id="modalSeleccionGrados" tabindex="-1" aria-labelledby="modalSeleccionGradosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalSeleccionGradosLabel">Selección de Grados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Selecciona los códigos de grado para los que quieras generar horarios. Si no seleccionas ninguno, se tomarán todos.</p>
+                <div id="modal-grados-list" class="row gy-2" style="max-height: 350px; overflow-y: auto;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" id="btnConfirmarGrados" class="btn btn-primary" data-bs-dismiss="modal">Aplicar Selección</button>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 

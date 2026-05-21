@@ -19,6 +19,12 @@ const contenedorCalendarios = document.getElementById('calendarios-grados');
 // Mapa de colores para asignaturas
 const asignaturaColores = {};
 let colorCounter = 1;
+// Grados seleccionados por el usuario
+let selectedGrades = new Set();
+
+// Modal bootstrap
+let modalSeleccionGradosEl = null;
+let modalSeleccionGrados = null;
 
 btn.onclick = function() {
     const termSeleccionado = selectorTerm.value; // Capturamos Q1 o Q2
@@ -32,9 +38,13 @@ btn.onclick = function() {
     const checks = document.querySelectorAll('.res-check:checked');
     let paramsRes = "";
     checks.forEach(c => paramsRes += `&res=${c.value}`);
-    
-    // Pasamos el cuatrimestre en la URL
-    const eventSource = new EventSource(`/solver/progress?term=${termSeleccionado}${paramsRes}`);
+
+    // Añadimos los grados seleccionados (si los hay). Roots están prefijados 'root:ADE'
+    let paramsGrados = "";
+    selectedGrades.forEach(g => paramsGrados += `&grados=${encodeURIComponent(g)}`);
+
+    // Pasamos el cuatrimestre, restricciones y grados en la URL
+    const eventSource = new EventSource(`/solver/progress?term=${termSeleccionado}${paramsRes}${paramsGrados}`);
 
     eventSource.onmessage = function(e) {
         const data = JSON.parse(e.data);
@@ -179,4 +189,96 @@ fetch('/api/config/restricciones')
                 </div>`;
         }
     });
+
+    // Preparar modal y botón de selección de grados
+    modalSeleccionGradosEl = document.getElementById('modalSeleccionGrados');
+    if (modalSeleccionGradosEl) {
+        modalSeleccionGrados = new bootstrap.Modal(modalSeleccionGradosEl, {});
+
+        document.getElementById('btnSeleccionGrados').addEventListener('click', () => {
+            cargarListaGrados();
+            modalSeleccionGrados.show();
+        });
+
+        document.getElementById('btnConfirmarGrados').addEventListener('click', () => {
+            // Recoger grades individuales seleccionados
+            const checks = modalSeleccionGradosEl.querySelectorAll('input.grade-check:checked');
+            const grades = Array.from(checks).map(c => c.value);
+
+            // Recoger roots seleccionados y prefixearlos para distinguirlos
+            const rootChecks = modalSeleccionGradosEl.querySelectorAll('input.root-check:checked');
+            const roots = Array.from(rootChecks).map(r => r.value);
+
+            // Guardar ambas cosas en selectedGrades (roots prefijados con 'root:')
+            selectedGrades = new Set();
+            grades.forEach(g => selectedGrades.add(g));
+            roots.forEach(r => selectedGrades.add('root:' + r));
+
+            const badge = document.getElementById('badgeGrados');
+            if (selectedGrades.size === 0) {
+                badge.innerText = 'Todos';
+            } else {
+                // Mostrar número de grados individuales + raíces seleccionadas
+                badge.innerText = `${grades.length + roots.length} seleccionados`;
+            }
+        });
+    }
 });
+
+function cargarListaGrados() {
+    fetch('/api/grados/list')
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById('modal-grados-list');
+            container.innerHTML = '';
+
+            // Calcular raíces únicas (quitar prefijo numérico)
+            const roots = {};
+            data.forEach(g => {
+                const root = g.id.replace(/^\d+/, '');
+                roots[root] = roots[root] || [];
+                roots[root].push(g);
+            });
+
+            // Render raíz checkboxes
+            const rootsRow = document.createElement('div');
+            rootsRow.className = 'mb-3';
+            Object.keys(roots).sort().forEach(root => {
+                const isCheckedRoot = Array.from(selectedGrades).some(s => s === root || s === 'root:' + root);
+                rootsRow.innerHTML += `
+                    <div class="form-check form-check-inline me-3">
+                        <input class="form-check-input root-check" type="checkbox" value="${root}" id="root-${root}" ${isCheckedRoot ? 'checked' : ''}>
+                        <label class="form-check-label" for="root-${root}">${root}</label>
+                    </div>`;
+            });
+            container.appendChild(rootsRow);
+
+            // Render grades grouped by root
+            const grid = document.createElement('div');
+            grid.className = 'row';
+            Object.keys(roots).sort().forEach(root => {
+                roots[root].forEach(g => {
+                    const checked = selectedGrades.has(g.id) ? 'checked' : '';
+                    const col = document.createElement('div');
+                    col.className = 'col-6 col-md-4';
+                    col.innerHTML = `
+                        <div class="form-check">
+                            <input class="form-check-input grade-check" data-root="${root}" type="checkbox" value="${g.id}" id="grade-${g.id}" ${checked}>
+                            <label class="form-check-label" for="grade-${g.id}">${g.id} ${g.name ? '- ' + g.name : ''}</label>
+                        </div>
+                    `;
+                    grid.appendChild(col);
+                });
+            });
+            container.appendChild(grid);
+
+            const rootChecks = container.querySelectorAll('input.root-check');
+            rootChecks.forEach(rc => {
+                rc.addEventListener('change', (e) => {
+                    const rootVal = e.target.value;
+                    const gradeChecks = container.querySelectorAll(`input.grade-check[data-root="${rootVal}"]`);
+                    gradeChecks.forEach(gc => gc.checked = e.target.checked);
+                });
+            });
+        });
+}

@@ -116,6 +116,8 @@ def solver_progress():
 
     # Obtener lista de restricciones (ej: ?res=minimizar_ventanas&res=evitar_clase_unica)
     restricciones_usuario = request.args.getlist('res')
+    # Obtener lista de grados seleccionados (ej: ?grados=1II&grados=2II)
+    grados_seleccionados = request.args.getlist('grados')
 
     ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
     
@@ -129,7 +131,7 @@ def solver_progress():
         pool_horarios = [] # Para almacenar los 20 intentos iniciales
 
         # Ejecutamos el generador del algoritmo
-        for progreso, resultado in generar_horario_iterativo(data, term=term_usuario, restricciones=restricciones_usuario):
+        for progreso, resultado in generar_horario_iterativo(data, term=term_usuario, restricciones=restricciones_usuario, selected_grades=grados_seleccionados):
             if resultado['horario']:
                 puntaje, logs = evaluar_horario(resultado['horario'], restricciones_usuario, data)
                 pool_horarios.append({
@@ -170,6 +172,12 @@ def solver_progress():
         yield f"data: {json.dumps(payload)}\n\n"
     
     return Response(generate(), mimetype='text/event-stream')
+
+
+@app.route('/api/grados/list')
+def api_grados_list():
+    data = cargar_datos()
+    return jsonify(data.get('grades', []))
 
 # ---------------------------------------------------------
 # RUTAS API
