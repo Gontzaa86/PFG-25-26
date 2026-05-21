@@ -95,19 +95,132 @@ async function procesarImportacion(input) {
 // Variable global para controlar la instancia del modal de Edición de Asignaturas
 let modalEditarAsignaturaInstance = null;
 
+// Ejecutar cuando el DOM esté listo para inicializar el buscador de profesores
+document.addEventListener('DOMContentLoaded', () => {
+    const inputBuscar = document.getElementById('buscarProfesor');
+    if (inputBuscar) {
+        inputBuscar.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            const selectTeacher = document.getElementById('editTeacher');
+            const opciones = selectTeacher.options;
+
+            for (let i = 0; i < opciones.length; i++) {
+                const opt = opciones[i];
+                // No filtrar la opción "No asignado"
+                if (opt.value === "No asignado") continue;
+                
+                const texto = opt.text.toLowerCase();
+                if (texto.includes(query)) {
+                    opt.style.display = "";
+                } else {
+                    opt.style.display = "none";
+                }
+            }
+        });
+    }
+});
+
+// Función interna para renderizar los grados en formato Matriz/Filas
+function renderizarPanelGradosCheckbox(gradosSeleccionadosActualmente) {
+    const contenedor = document.getElementById('contenedorGradosAgrupados');
+    contenedor.innerHTML = ""; // Limpiar
+
+    const todosLosGrados = window.__GRADOS_LISTA_COMPLETA || [];
+    const mapaAgrupado = {};
+
+    todosLosGrados.forEach(grado => {
+        const id = grado.id; // Ej: "1ADE", "4COTam", "2INFOR"
+        
+        // Expresión regular para separar el número del curso del nombre de la carrera
+        // Captura el primer número (curso) y el resto del string (carrera)
+        const match = id.match(/^(\d+)?(.*)$/);
+        let curso = match[1] ? parseInt(match[1]) : 99; // Si no tiene número, se manda al final (99)
+        let carrera = match[2] || "Otros";
+
+        // Caso especial si la carrera queda vacía por alguna anomalía
+        if (!carrera) carrera = "General";
+
+        if (!mapaAgrupado[carrera]) {
+            mapaAgrupado[carrera] = [];
+        }
+        mapaAgrupado[carrera].push({ id: id, name: grado.name, curso: curso });
+    });
+
+    // Crear las filas ordenadas por el nombre de la carrera
+    const carrerasOrdenadas = Object.keys(mapaAgrupado).sort();
+
+    carrerasOrdenadas.forEach(carrera => {
+        // Ordenar los grados de esta carrera internamente por número de curso (1, 2, 3, 4...)
+        const listaGrados = mapaAgrupado[carrera].sort((a, b) => a.curso - b.curso);
+
+        // Crear contenedor de fila estilizado
+        const rowDiv = document.createElement('div');
+        rowDiv.className = "d-flex flex-wrap align-items-center gap-2 mb-3 border-bottom pb-2";
+
+        // Etiqueta de la carrera al inicio de la fila
+        const labelCarrera = document.createElement('span');
+        labelCarrera.className = "badge bg-secondary me-2 p-2";
+        labelCarrera.style.minWidth = "80px";
+        labelCarrera.textContent = carrera;
+        rowDiv.appendChild(labelCarrera);
+
+        // Crear los botones tipo checkbox para cada uno de sus cursos
+        listaGrados.forEach(g => {
+            const estaSeleccionado = gradosSeleccionadosActualmente.includes(g.id);
+
+            const itemDiv = document.createElement('div');
+            itemDiv.className = "form-check-inline";
+
+            // Un checkbox real oculto pero funcional
+            const inputCheck = document.createElement('input');
+            inputCheck.type = "checkbox";
+            inputCheck.className = "btn-check";
+            inputCheck.id = `btncheck-${g.id}`;
+            inputCheck.value = g.id;
+            inputCheck.name = "grados_seleccionados";
+            inputCheck.checked = estaSeleccionado;
+
+            // El botón visual que cambia de estado al hacer clic sin desmarcar el resto
+            const labelBtn = document.createElement('label');
+            labelBtn.className = `btn btn-sm ${estaSeleccionado ? 'btn-primary' : 'btn-outline-primary'}`;
+            labelBtn.htmlFor = `btncheck-${g.id}`;
+            labelBtn.title = g.name; // Tooltip con el nombre largo
+            labelBtn.textContent = g.id;
+
+            // Evento dinámico para cambiar el color del botón instantáneamente al hacer click
+            inputCheck.addEventListener('change', function() {
+                if (this.checked) {
+                    labelBtn.className = "btn btn-sm btn-primary";
+                } else {
+                    labelBtn.className = "btn btn-sm btn-outline-primary";
+                }
+            });
+
+            itemDiv.appendChild(inputCheck);
+            itemDiv.appendChild(labelBtn);
+            rowDiv.appendChild(itemDiv);
+        });
+
+        contenedor.appendChild(rowDiv);
+    });
+}
+
 function abrirModalEditarAsignatura(cursoId) {
-    // 1. Buscar los datos locales de la asignatura usando la variable inyectada en el HTML
     const curso = window.__GRADOS_ASIGNATURAS.find(c => String(c.id) === String(cursoId));
     if (!curso) {
         alert('No se encontraron los datos de la asignatura.');
         return;
     }
 
-    // 2. Rellenar los campos del formulario en el modal
+    // Resetear el buscador de profesores
+    document.getElementById('buscarProfesor').value = "";
+    const opcionesProf = document.getElementById('editTeacher').options;
+    for(let i=0; i<opcionesProf.length; i++) opcionesProf[i].style.display = "";
+
+    // Cargar datos básicos
     document.getElementById('editCursoId').value = curso.id;
     document.getElementById('editName').value = curso.name;
     
-    // Convertir 'Q1'/'Q2' a '1'/'2'
     const termNum = curso.term ? curso.term.replace('Q', '') : '1';
     document.getElementById('editTerm').value = termNum;
     
@@ -117,15 +230,10 @@ function abrirModalEditarAsignatura(cursoId) {
     document.getElementById('editDuration').value = curso.duration_slots || 4;
     document.getElementById('editOptativa').checked = !!curso.optativa;
 
-    // 3. Mapear la selección múltiple de los grados
-    const selectGrados = document.getElementById('editGrades');
+    // Renderizar la matriz de grados seleccionados
     const cursoGrades = curso.grades || [];
-    
-    Array.from(selectGrados.options).forEach(option => {
-        option.selected = cursoGrades.includes(option.value);
-    });
+    renderizarPanelGradosCheckbox(cursoGrades);
 
-    // 4. Mostrar el modal de Bootstrap
     if (!modalEditarAsignaturaInstance) {
         modalEditarAsignaturaInstance = new bootstrap.Modal(document.getElementById('modalEditarAsignatura'));
     }
@@ -135,23 +243,21 @@ function abrirModalEditarAsignatura(cursoId) {
 async function guardarCambiosAsignatura() {
     const cursoId = document.getElementById('editCursoId').value;
     
-    // Obtener los grados seleccionados en el select múltiple
-    const selectGrados = document.getElementById('editGrades');
-    const gradosSeleccionados = Array.from(selectGrados.selectedOptions).map(opt => opt.value);
+    // Obtener todos los checkboxes de grados que estén marcados
+    const checkboxesMarcados = document.querySelectorAll('input[name="grados_seleccionados"]:checked');
+    const gradosSeleccionados = Array.from(checkboxesMarcados).map(cb => cb.value);
 
-    // Construir el payload JSON con los campos requeridos
     const payload = {
         name: document.getElementById('editName').value,
         term: document.getElementById('editTerm').value,
         teacher: document.getElementById('editTeacher').value,
-        grades: gradosSeleccionados,
+        grades: gradosSeleccionados, // Enviamos el array nativo acumulado
         students: parseInt(document.getElementById('editStudents').value) || 0,
         sessions_per_week: parseInt(document.getElementById('editSessions').value) || 1,
         duration_slots: parseInt(document.getElementById('editDuration').value) || 4,
         optativa: document.getElementById('editOptativa').checked
     };
 
-    // Validación básica del lado del cliente
     if (!payload.name) {
         alert('El nombre de la asignatura es obligatorio.');
         return;
@@ -160,9 +266,7 @@ async function guardarCambiosAsignatura() {
     try {
         const resp = await fetch(`/api/asignaturas/${cursoId}`, {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
 
@@ -173,7 +277,7 @@ async function guardarCambiosAsignatura() {
             if (modalEditarAsignaturaInstance) {
                 modalEditarAsignaturaInstance.hide();
             }
-            location.reload(); // Recargar la página para visualizar las mutaciones de datos
+            location.reload();
         } else {
             alert(resultado.error || 'Hubo un problema al guardar los cambios.');
         }

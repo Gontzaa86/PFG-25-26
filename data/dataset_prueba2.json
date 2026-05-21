@@ -3471,7 +3471,7 @@
       "id": "13",
       "name": "Administración de empresas (ES)",
       "term": "Q1",
-      "teacher": "No asignado",
+      "teacher": "T237",
       "grades": [
         "1CDIA",
         "1CDIA+",
@@ -3480,7 +3480,17 @@
       "students": 52,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48",
+        "Plato TV"
+      ],
       "possible_days": "all",
       "optativa": false
     },

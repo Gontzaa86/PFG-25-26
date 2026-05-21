@@ -136,9 +136,8 @@
     </div>
 
     <!-- Modal de edición de asignaturas -->
-     <div class="modal fade" id="modalEditarAsignatura" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content border-0 shadow">
+    <div class="modal fade" id="modalEditarAsignatura" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable"> <div class="modal-content border-0 shadow">
                 <div class="modal-header bg-dark text-white">
                     <h5 class="modal-title"><i class="bi bi-pencil-square"></i> Editar Asignatura</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
@@ -153,15 +152,16 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-4 mb-3">
                                 <label for="editTerm" class="form-label fw-semibold">Cuatrimestre</label>
                                 <select class="form-select" id="editTerm">
                                     <option value="1">Primer Cuatrimestre (Q1)</option>
                                     <option value="2">Segundo Cuatrimestre (Q2)</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="editTeacher" class="form-label fw-semibold">Profesor</label>
+                            <div class="col-md-8 mb-3">
+                                <label for="buscarProfesor" class="form-label fw-semibold">Profesor</label>
+                                <input type="text" class="form-control mb-1 form-control-sm" id="buscarProfesor" placeholder="🔍 Escribe para buscar profesor...">
                                 <select class="form-select" id="editTeacher">
                                     <option value="No asignado">No asignado</option>
                                     {% for prof_id, prof_nom in profesores.items() %}
@@ -172,13 +172,11 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="editGrades" class="form-label fw-semibold">Grados que asisten (Ctrl+Click para seleccionar varios)</label>
-                            <select class="form-select" id="editGrades" multiple style="height: 120px;">
-                                {% for grado in grados_lista %}
-                                    <option value="{{ grado.id }}">{{ grado.name }} ({{ grado.id }})</option>
-                                {% endfor %}
-                            </select>
-                            <small class="text-muted">Mantén presionado Ctrl (o Cmd en Mac) para elegir múltiples grados.</small>
+                            <label class="form-label fw-semibold d-block">Grados que asisten</label>
+                            <small class="text-muted d-block mb-2">Haz clic sobre los tags para activarlos o desactivarlos (se guardan múltiples selecciones sin borrarse).</small>
+                            
+                            <div id="contenedorGradosAgrupados" class="border rounded p-3 bg-light" style="max-height: 250px; overflow-y: auto;">
+                                </div>
                         </div>
 
                         <div class="row">
@@ -196,7 +194,7 @@
                             </div>
                         </div>
 
-                        <div class="mb-3 form-check form-switch mt-2">
+                        <div class="mb-1 form-check form-switch mt-2">
                             <input class="form-check-input" type="checkbox" id="editOptativa">
                             <label class="form-check-label fw-semibold" for="editOptativa">¿Es asignatura optativa?</label>
                         </div>
@@ -218,6 +216,7 @@
     window.__GRADOS_ROOMS = {{ rooms | tojson }};
     window.__GRADOS_BUILDINGS = {{ buildings | tojson }};
     window.__GRADOS_ASIGNATURAS = {{ asignaturas | tojson }};
+    window.__GRADOS_LISTA_COMPLETA = {{ grados_lista | tojson }};
 </script>
 <script src="{{ url_for('static', filename='js/grados.js') }}"></script>
 <script src="{{ url_for('static', filename='js/grados_rooms.js') }}"></script>
