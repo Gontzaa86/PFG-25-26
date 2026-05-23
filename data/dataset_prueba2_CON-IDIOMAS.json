@@ -3810,6 +3810,33 @@
       "optativa": false
     },
     {
+      "id": "45",
+      "name": "Cálculo (EU)",
+      "term": "Q2",
+      "teacher": "T114",
+      "grades": [
+        "1AII",
+        "1CDIA",
+        "1CDIA+",
+        "1II"
+      ],
+      "students": 50,
+      "sessions_per_week": 3,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
       "id": "46",
       "name": "Historia de la Comunicación (ES)",
       "term": "Q1",
@@ -5541,7 +5568,7 @@
         "1II"
       ],
       "students": 50,
-      "sessions_per_week": 2,
+      "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
         "43",
@@ -5776,7 +5803,7 @@
         "1II"
       ],
       "students": 50,
-      "sessions_per_week": 2,
+      "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
         "43",
@@ -6141,6 +6168,33 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
+      "id": "167",
+      "name": "Programación II Grupo 2 (ES)",
+      "term": "Q2",
+      "teacher": "T019",
+      "grades": [
+        "1AII",
+        "1CDIA",
+        "1CDIA+",
+        "1II"
+      ],
+      "students": 38,
+      "sessions_per_week": 3,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -8894,6 +8948,33 @@
       "optativa": false
     },
     {
+      "id": "311",
+      "name": "Álgebra (EU)",
+      "term": "Q1",
+      "teacher": "T075",
+      "grades": [
+        "1AII",
+        "1CDIA",
+        "1CDIA+",
+        "1II"
+      ],
+      "students": 50,
+      "sessions_per_week": 3,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
       "id": "313",
       "name": "The globalization dilemma (EN)",
       "term": "Q1",
@@ -9281,6 +9362,44 @@
       "duration_slots": 4,
       "possible_rooms": [
         "103"
+      ],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
+      "id": "336",
+      "name": "Programación Técnica y Científica (EN)",
+      "term": "Q1",
+      "teacher": "T070",
+      "grades": [
+        "2CDIA",
+        "2CDIA+"
+      ],
+      "students": 10,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "45",
+        "46",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -9926,7 +10045,7 @@
     },
     {
       "id": "379",
-      "name": "Programación II (ES)",
+      "name": "Programación II Grupo 1 (ES)",
       "term": "Q2",
       "teacher": "T068",
       "grades": [
@@ -9936,7 +10055,7 @@
         "1II"
       ],
       "students": 35,
-      "sessions_per_week": 2,
+      "sessions_per_week": 3,
       "duration_slots": 4,
       "possible_rooms": [
         "43",
@@ -10599,7 +10718,7 @@
         "2CDIA",
         "2CDIA+"
       ],
-      "students": 28,
+      "students": 10,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -11256,6 +11375,33 @@
       "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
+      "id": "454",
+      "name": "Matemática Discreta  (EU)",
+      "term": "Q2",
+      "teacher": "T075",
+      "grades": [
+        "1AII",
+        "1CDIA",
+        "1CDIA+",
+        "1II"
+      ],
+      "students": 50,
+      "sessions_per_week": 3,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "43",
+        "42",
+        "40",
+        "49",
+        "46",
+        "41",
+        "45",
+        "48"
+      ],
       "possible_days": "all",
       "optativa": false
     },
