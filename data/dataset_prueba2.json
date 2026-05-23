@@ -3090,7 +3090,7 @@
     },
     {
       "id": "2",
-      "name": "Derecho del trabajo y de la Seguridad\n  Social (ES)",
+      "name": "Derecho del trabajo y de la Seguridad Social (ES)",
       "term": "Q1",
       "teacher": "T049",
       "grades": [
@@ -3264,14 +3264,40 @@
       "id": "16",
       "name": "Contabilidad Financiera CAS2 (ES)",
       "term": "Q1",
-      "teacher": "No asignado",
+      "teacher": "T207",
       "grades": [
         "2AII"
       ],
-      "students": 0,
+      "students": 20,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -3392,22 +3418,6 @@
       ],
       "students": 0,
       "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "24",
-      "name": "Operaciones ING (EN)",
-      "term": "Q2",
-      "teacher": "T011",
-      "grades": [
-        "2IMS",
-        "3AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 4,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -3552,62 +3562,6 @@
       "duration_slots": 4,
       "possible_rooms": [
         "111"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "33",
-      "name": "Dirección de personas (EN)",
-      "term": "Q1",
-      "teacher": "T211",
-      "grades": [
-        "3ADE",
-        "3AII",
-        "3IMS"
-      ],
-      "students": 23,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3929,6 +3883,7 @@
       "term": "Q1",
       "teacher": "T084",
       "grades": [
+        "3AII",
         "1CDIA",
         "1CDIA+",
         "1II"
@@ -3966,61 +3921,6 @@
       "duration_slots": 4,
       "possible_rooms": [
         "005"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "56",
-      "name": "Fundamentos de Marketing (EN)",
-      "term": "Q1",
-      "teacher": "T257",
-      "grades": [
-        "2ADE",
-        "2IMS"
-      ],
-      "students": 15,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4122,22 +4022,6 @@
       "possible_rooms": [
         "105"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "62",
-      "name": "Operaciones CAS (ES)",
-      "term": "Q2",
-      "teacher": "T065",
-      "grades": [
-        "2IMS",
-        "3AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -4247,7 +4131,8 @@
       "teacher": "T131",
       "grades": [
         "3ADE",
-        "3IMS"
+        "3IMS",
+        "4AII"
       ],
       "students": 31,
       "sessions_per_week": 2,
@@ -4414,62 +4299,6 @@
       "optativa": false
     },
     {
-      "id": "76",
-      "name": "Contabilidad Financiera (EU)",
-      "term": "Q1",
-      "teacher": "T207",
-      "grades": [
-        "2ADE",
-        "2AII",
-        "2IMS"
-      ],
-      "students": 18,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "78",
       "name": "Técnicas diagnósticas en Trabajo Social (EU)",
       "term": "Q2",
@@ -4543,6 +4372,7 @@
       "teacher": "T222",
       "grades": [
         "2ADE",
+        "3AII",
         "2IMS"
       ],
       "students": 25,
@@ -4831,8 +4661,7 @@
         "3AII",
         "3CDIA",
         "3CDIA+",
-        "3II",
-        "4AII"
+        "3II"
       ],
       "students": 70,
       "sessions_per_week": 2,
@@ -4899,49 +4728,6 @@
       "duration_slots": 4,
       "possible_rooms": [
         "004"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "103",
-      "name": "Introduccion a la contabilidad (EN)",
-      "term": "Q1",
-      "teacher": "T054",
-      "grades": [
-        "1ADE",
-        "1AII",
-        "1IMS"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5103,21 +4889,6 @@
       "possible_rooms": [
         "013"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "114",
-      "name": "Gestión de proyectos sw ()",
-      "term": "Q1",
-      "teacher": "T053",
-      "grades": [
-        "5AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -5339,15 +5110,47 @@
     {
       "id": "125",
       "name": "Seguridad de la información (ES)",
-      "term": "Q1",
+      "term": "Q2",
       "teacher": "T186",
       "grades": [
         "5AII"
       ],
-      "students": 0,
+      "students": 20,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6005,9 +5808,8 @@
       "term": "Q2",
       "teacher": "T068",
       "grades": [
-        "3II",
         "4AII",
-        "5AII"
+        "3II"
       ],
       "students": 35,
       "sessions_per_week": 2,
@@ -6262,61 +6064,6 @@
       "optativa": false
     },
     {
-      "id": "173",
-      "name": "Fundamentos de Marketing (EU)",
-      "term": "Q1",
-      "teacher": "T223",
-      "grades": [
-        "2ADE",
-        "2IMS"
-      ],
-      "students": 12,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "174",
       "name": "Bases de Datos II (ES)",
       "term": "Q2",
@@ -6424,22 +6171,6 @@
       "possible_rooms": [
         "006"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "180",
-      "name": "Dirección de personas ING2 (EN)",
-      "term": "Q1",
-      "teacher": "T211",
-      "grades": [
-        "3AII",
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -6723,62 +6454,6 @@
       "optativa": false
     },
     {
-      "id": "196",
-      "name": "Dirección Estratégica I (EU)",
-      "term": "Q2",
-      "teacher": "T266",
-      "grades": [
-        "2ADE",
-        "2IMS",
-        "3AII"
-      ],
-      "students": 18,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "197",
       "name": "Empresa y Sostenibilidad (ES)",
       "term": "Q1",
@@ -6890,21 +6565,6 @@
       "possible_rooms": [
         "008"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "200",
-      "name": "Proceso de sw y calidad (ES)",
-      "term": "Q1",
-      "teacher": "T020",
-      "grades": [
-        "5AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -7452,62 +7112,6 @@
       "optativa": false
     },
     {
-      "id": "231",
-      "name": "Dirección Estratégica I (EN)",
-      "term": "Q2",
-      "teacher": "T269",
-      "grades": [
-        "2ADE",
-        "2IMS",
-        "3AII"
-      ],
-      "students": 23,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "232",
       "name": "Business Language III FR G2 ()",
       "term": "Q1",
@@ -7568,16 +7172,55 @@
     },
     {
       "id": "234",
-      "name": "Modelos de predicción CAS2 (ES)",
+      "name": "Modelos de predicción (ES)",
       "term": "Q1",
       "teacher": "T114",
       "grades": [
         "2AII"
       ],
-      "students": 0,
+      "students": 20,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -7643,16 +7286,55 @@
     },
     {
       "id": "241",
-      "name": "Macroeconomía CAS (EU)",
+      "name": "Macroeconomía (ES)",
       "term": "Q1",
       "teacher": "T230",
       "grades": [
         "3AII"
       ],
-      "students": 0,
+      "students": 20,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -7756,16 +7438,30 @@
       "optativa": false
     },
     {
-      "id": "252",
-      "name": "Herramientas análisis (EN)",
+      "id": "253",
+      "name": "Recursos y ejecución civil. Proceso penal (ES)",
       "term": "Q1",
-      "teacher": "T228",
+      "teacher": "T101",
       "grades": [
-        "2ADE",
-        "2AII",
-        "2IMS"
+        "3D",
+        "3RID"
       ],
-      "students": 18,
+      "students": 0,
+      "sessions_per_week": 1,
+      "duration_slots": 4,
+      "possible_rooms": [],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
+      "id": "254",
+      "name": "Introduccion a la contabilidad (ES)",
+      "term": "Q1",
+      "teacher": "T054",
+      "grades": [
+        "1AII"
+      ],
+      "students": 20,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -7808,37 +7504,6 @@
         "61",
         "62"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "253",
-      "name": "Recursos y ejecución civil. Proceso penal (ES)",
-      "term": "Q1",
-      "teacher": "T101",
-      "grades": [
-        "3D",
-        "3RID"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "254",
-      "name": "Introduccion a la contabilidad (ES)",
-      "term": "Q1",
-      "teacher": "T054",
-      "grades": [
-        "1AII"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -8238,62 +7903,6 @@
       "optativa": false
     },
     {
-      "id": "279",
-      "name": "Modelos de predicción (EU)",
-      "term": "Q1",
-      "teacher": "T114",
-      "grades": [
-        "2ADE",
-        "2AII",
-        "2IMS"
-      ],
-      "students": 15,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "280",
       "name": "Machine Learning (EN)",
       "term": "Q1",
@@ -8622,14 +8231,29 @@
       "optativa": false
     },
     {
-      "id": "296",
-      "name": "Entorno Empresarial (EU)",
-      "term": "Q1",
-      "teacher": "T049",
+      "id": "297",
+      "name": "Programas de Intervención en Personas Mayores (ES)",
+      "term": "Q2",
+      "teacher": "T057",
       "grades": [
-        "1ADE",
-        "1AII",
-        "1IMS"
+        "5ESTS"
+      ],
+      "students": 27,
+      "sessions_per_week": 1,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "103"
+      ],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
+      "id": "299",
+      "name": "Empresa y Sostenibilidad (ES)",
+      "term": "Q1",
+      "teacher": "T131",
+      "grades": [
+        "1AII"
       ],
       "students": 20,
       "sessions_per_week": 2,
@@ -8661,38 +8285,6 @@
         "113",
         "114"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "297",
-      "name": "Programas de Intervención en Personas Mayores (ES)",
-      "term": "Q2",
-      "teacher": "T057",
-      "grades": [
-        "5ESTS"
-      ],
-      "students": 27,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "103"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "299",
-      "name": "Empresa y Sostenibilidad CAS2 (ES)",
-      "term": "Q1",
-      "teacher": "T131",
-      "grades": [
-        "1AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -8980,62 +8572,6 @@
       "optativa": false
     },
     {
-      "id": "320",
-      "name": "Macroeconomía (EU)",
-      "term": "Q1",
-      "teacher": "T230",
-      "grades": [
-        "2ADE",
-        "2IMS",
-        "3AII"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "321",
       "name": "Procesos de exclusión e inclusión social (ES)",
       "term": "Q1",
@@ -9216,28 +8752,14 @@
       "optativa": false
     },
     {
-      "id": "333",
-      "name": "Empresa y Sostenibilidad ING1 (EN)",
-      "term": "Q1",
-      "teacher": "T256",
-      "grades": [
-        "1AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "334",
       "name": "Arquitectura de Computadores (ES)",
       "term": "Q1",
       "teacher": "T250",
       "grades": [
         "3CDIA+",
-        "3II"
+        "3II",
+        "4AII"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -10007,61 +9529,6 @@
       "optativa": false
     },
     {
-      "id": "381",
-      "name": "Finanzas corporativas (EN)",
-      "term": "Q1",
-      "teacher": "T258",
-      "grades": [
-        "3ADE",
-        "3IMS"
-      ],
-      "students": 21,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "382",
       "name": "Communication Skills1 (EN)",
       "term": "Q2",
@@ -10259,93 +9726,6 @@
       "optativa": false
     },
     {
-      "id": "391",
-      "name": "Introducción Análisis de Datos (EU)",
-      "term": "Q2",
-      "teacher": "T272",
-      "grades": [
-        "1ADE",
-        "1AII",
-        "1IMS"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "392",
-      "name": "Entorno Legal (EU)",
-      "term": "Q2",
-      "teacher": "T219",
-      "grades": [
-        "1ADE",
-        "1AII",
-        "1IMS",
-        "2AII"
-      ],
-      "students": 25,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "393",
       "name": "Fundamentos de la Visión por computador (ES)",
       "term": "Q1",
@@ -10501,16 +9881,42 @@
     },
     {
       "id": "398",
-      "name": "Contabilidad Financiera y Cálculo y gestión de costes CAS 2 (ES)",
+      "name": "Contabilidad Financiera y Cálculo y gestión de costes (ES)",
       "term": "Q2",
       "teacher": "T100",
       "grades": [
         "1AII"
       ],
-      "students": 0,
+      "students": 24,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -10537,9 +9943,8 @@
       "teacher": "T049",
       "grades": [
         "1ADE",
-        "1AII",
-        "1IMS",
-        "2AII"
+        "2AII",
+        "1IMS"
       ],
       "students": 40,
       "sessions_per_week": 2,
@@ -10629,49 +10034,6 @@
       "optativa": false
     },
     {
-      "id": "406",
-      "name": "Contabilidad Financiera y Cálculo y gestión de costes (EU)",
-      "term": "Q2",
-      "teacher": "T002",
-      "grades": [
-        "1ADE",
-        "1AII",
-        "1IMS"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "407",
       "name": "Fundamentos comportamiento organizacional (ES)",
       "term": "Q2",
@@ -10715,16 +10077,42 @@
     },
     {
       "id": "410",
-      "name": "Introducción Análisis de Datos CAS 2 (ES)",
+      "name": "Introducción Análisis de Datos (ES)",
       "term": "Q2",
       "teacher": "T273",
       "grades": [
         "1AII"
       ],
-      "students": 0,
+      "students": 24,
       "sessions_per_week": 2,
       "duration_slots": 4,
-      "possible_rooms": [],
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
+      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -10946,7 +10334,7 @@
       "term": "Q2",
       "teacher": "T249",
       "grades": [
-        "5AII",
+        "4AII",
         "4CDIA+",
         "4II"
       ],
@@ -11019,49 +10407,6 @@
         "1IMS"
       ],
       "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "440",
-      "name": "Microeconomía (EU)",
-      "term": "Q2",
-      "teacher": "T230",
-      "grades": [
-        "1ADE",
-        "1IMS",
-        "2AII"
-      ],
-      "students": 10,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -11742,62 +11087,6 @@
       "optativa": false
     },
     {
-      "id": "503",
-      "name": "Dirección Marketing (EU)",
-      "term": "Q2",
-      "teacher": "T287",
-      "grades": [
-        "2ADE",
-        "2IMS",
-        "3AII"
-      ],
-      "students": 17,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "504",
       "name": "Estrategia, operaciones y control (D.EST) (ES)",
       "term": "Q2",
@@ -11812,62 +11101,6 @@
       "possible_rooms": [],
       "possible_days": "all",
       "optativa": true
-    },
-    {
-      "id": "505",
-      "name": "Dirección Marketing (EN)",
-      "term": "Q2",
-      "teacher": "T257",
-      "grades": [
-        "2ADE",
-        "3AII",
-        "2IMS"
-      ],
-      "students": 23,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
     },
     {
       "id": "510",
@@ -11952,15 +11185,14 @@
       "optativa": false
     },
     {
-      "id": "516",
-      "name": "Sistemas información II (EU)",
+      "id": "519",
+      "name": "Microeconomía (ES)",
       "term": "Q2",
-      "teacher": "T034",
+      "teacher": "T230",
       "grades": [
-        "2ADE",
-        "2IMS"
+        "2AII"
       ],
-      "students": 13,
+      "students": 20,
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
@@ -11988,36 +11220,8 @@
         "111",
         "112",
         "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
+        "114"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "519",
-      "name": "Microeconomía CAS (ES)",
-      "term": "Q2",
-      "teacher": "T230",
-      "grades": [
-        "2AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -12054,28 +11258,14 @@
       "optativa": false
     },
     {
-      "id": "523",
-      "name": "Microeconomía CAS  (ES)",
-      "term": "Q2",
-      "teacher": "T230",
-      "grades": [
-        "2AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "524",
       "name": "Sistemas información II (ES)",
       "term": "Q2",
       "teacher": "T135",
       "grades": [
         "2ADE",
-        "2IMS"
+        "2IMS",
+        "4AII"
       ],
       "students": 24,
       "sessions_per_week": 2,
@@ -12240,21 +11430,6 @@
       "optativa": true
     },
     {
-      "id": "534",
-      "name": "Liderazgo y desarrollo directivo ING (ES)",
-      "term": "Q2",
-      "teacher": "T133",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "535",
       "name": "Estrategia y consultoría (DIR. EST)  (ES)",
       "term": "Q2",
@@ -12262,53 +11437,6 @@
       "grades": [
         "4ADE",
         "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "537",
-      "name": "Política de empresa II CAS  (EN)",
-      "term": "Q2",
-      "teacher": "T269",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "112"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "538",
-      "name": "Liderazgo y desarrollo directivo ING  (ES)",
-      "term": "Q2",
-      "teacher": "T133",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "539",
-      "name": "Dirección Financiera  ING (ES)",
-      "term": "Q2",
-      "teacher": "T258",
-      "grades": [
-        "4AII"
       ],
       "students": 0,
       "sessions_per_week": 1,
@@ -12382,63 +11510,55 @@
       "optativa": false
     },
     {
-      "id": "546",
-      "name": "Dirección Financiera  CAS (ES)",
-      "term": "Q2",
-      "teacher": "T227",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "547",
-      "name": "Dirección Financiera  ING (1) (ES)",
-      "term": "Q2",
-      "teacher": "T258",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "548",
-      "name": "Control de gestión CAS  (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
+      "name": "Control de gestión (ES)",
+      "term": "Q1",
+      "teacher": "T096",
       "grades": [
         "4AII"
       ],
-      "students": 0,
+      "students": 20,
       "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "549",
-      "name": "Política de empresa II ING  (EN)",
-      "term": "Q2",
-      "teacher": "T254",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [
-        "112"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -12476,38 +11596,6 @@
       "optativa": false
     },
     {
-      "id": "552",
-      "name": "Liderazgo y desarrollo directivo CAS (ES)",
-      "term": "Q2",
-      "teacher": "T133",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "553",
-      "name": "Política de empresa II ING (EN)",
-      "term": "Q2",
-      "teacher": "T254",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "112"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "555",
       "name": "European Union (GEST. INT) (EN)",
       "term": "Q2",
@@ -12520,23 +11608,6 @@
       "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "557",
-      "name": "Política de empresa II CAS (EN)",
-      "term": "Q2",
-      "teacher": "T269",
-      "grades": [
-        "4AII"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "112"
-      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -12582,21 +11653,6 @@
       "grades": [
         "4ADE",
         "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "564",
-      "name": "Liderazgo y desarrollo directivo CAS  (ES)",
-      "term": "Q2",
-      "teacher": "T133",
-      "grades": [
-        "4AII"
       ],
       "students": 0,
       "sessions_per_week": 1,
@@ -12836,7 +11892,8 @@
       "term": "Q2",
       "teacher": "T065",
       "grades": [
-        "2ADE"
+        "2ADE",
+        "3AII"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -12880,6 +11937,53 @@
         "60",
         "61",
         "62"
+      ],
+      "possible_days": "all",
+      "optativa": false
+    },
+    {
+      "id": "582",
+      "name": "Finanzas corporativas (ES)",
+      "term": "Q2",
+      "teacher": "T228",
+      "grades": [
+        "5AII"
+      ],
+      "students": 20,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33"
       ],
       "possible_days": "all",
       "optativa": false
