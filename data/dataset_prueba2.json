@@ -3838,11 +3838,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "51",
@@ -4281,7 +4281,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "75",
@@ -4435,7 +4435,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "86",
@@ -4746,7 +4746,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "106",
@@ -5719,48 +5719,6 @@
       "optativa": false
     },
     {
-      "id": "157",
-      "name": "Métodos matemáticos (EU)",
-      "term": "Q1",
-      "teacher": "T114",
-      "grades": [
-        "1ADE",
-        "1IMS"
-      ],
-      "students": 15,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "158",
       "name": "Introduccion a la contabilidad (ES)",
       "term": "Q1",
@@ -5943,48 +5901,6 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "168",
-      "name": "Sistemas de información I (EU)",
-      "term": "Q1",
-      "teacher": "T034",
-      "grades": [
-        "1ADE",
-        "1IMS"
-      ],
-      "students": 15,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
-      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -6746,61 +6662,6 @@
       "optativa": false
     },
     {
-      "id": "210",
-      "name": "Control de Gestión (EN)",
-      "term": "Q1",
-      "teacher": "T208",
-      "grades": [
-        "3ADE",
-        "3IMS"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "211",
       "name": "Planificación de Programas Socioeducativos (ES)",
       "term": "Q2",
@@ -7090,22 +6951,6 @@
       ],
       "students": 0,
       "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "230",
-      "name": "Análisis Interno : procesos y sistemas (ES)",
-      "term": "Q2",
-      "teacher": "T266",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -7420,7 +7265,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "251",
@@ -7826,11 +7671,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "276",
@@ -7974,11 +7819,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "283",
@@ -8157,11 +8002,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "291",
@@ -8211,7 +8056,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "295",
@@ -8470,22 +8315,6 @@
       "optativa": false
     },
     {
-      "id": "310",
-      "name": "Competitive Territories (EN)",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "313",
       "name": "The globalization dilemma (EN)",
       "term": "Q1",
@@ -8495,11 +8324,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "314",
@@ -8737,7 +8566,7 @@
     },
     {
       "id": "332",
-      "name": "*Entrepreneurship (ing) (EN)",
+      "name": "*Entrepreneurship (EN)",
       "term": "Q1",
       "teacher": "T080",
       "grades": [
@@ -8749,7 +8578,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "334",
@@ -9336,61 +9165,6 @@
       "optativa": false
     },
     {
-      "id": "372",
-      "name": "Dirección estratégica II (EN)",
-      "term": "Q1",
-      "teacher": "T254",
-      "grades": [
-        "3ADE",
-        "3IMS"
-      ],
-      "students": 17,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "373",
       "name": "Programación I (ES)",
       "term": "Q1",
@@ -9429,7 +9203,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "378",
@@ -9474,61 +9248,6 @@
       "optativa": false
     },
     {
-      "id": "380",
-      "name": "Transformación digital Grupo 1 (EN)",
-      "term": "Q1",
-      "teacher": "T125",
-      "grades": [
-        "3ADE",
-        "3IMS"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "382",
       "name": "Communication Skills1 (EN)",
       "term": "Q2",
@@ -9540,61 +9259,6 @@
       "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "383",
-      "name": "Transformación digital Grupo 2 (EN)",
-      "term": "Q1",
-      "teacher": "T125",
-      "grades": [
-        "3ADE",
-        "3IMS"
-      ],
-      "students": 20,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-        "61",
-        "62"
-      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -9740,47 +9404,6 @@
       "possible_rooms": [],
       "possible_days": "all",
       "optativa": true
-    },
-    {
-      "id": "394",
-      "name": "Contabilidad Financiera y Cálculo y gestión de costes (EN)",
-      "term": "Q2",
-      "teacher": "T209",
-      "grades": [
-        "1ADE"
-      ],
-      "students": 10,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "103",
-        "104",
-        "105",
-        "106",
-        "108",
-        "109",
-        "110",
-        "111",
-        "112",
-        "113",
-        "114"
-      ],
-      "possible_days": "all",
-      "optativa": false
     },
     {
       "id": "395",
@@ -11104,41 +10727,9 @@
     },
     {
       "id": "510",
-      "name": "Dirección Financiera II (FINANZAS)  (ES)",
+      "name": "Dirección Financiera II (FINANZAS) (ES)",
       "term": "Q2",
       "teacher": "No asignado",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "511",
-      "name": "Contabilidad Gestión avanzada  (ES)",
-      "term": "Q2",
-      "teacher": "T100",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "513",
-      "name": "Contabilidad Financiera Avanzada (FINANZAS)  (ES)",
-      "term": "Q2",
-      "teacher": "T207",
       "grades": [
         "4ADE",
         "4IMS"
@@ -11148,11 +10739,27 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
+    },
+    {
+      "id": "511",
+      "name": "Contabilidad Gestión avanzada (ES)",
+      "term": "Q2",
+      "teacher": "T100",
+      "grades": [
+        "4ADE",
+        "4IMS"
+      ],
+      "students": 0,
+      "sessions_per_week": 2,
+      "duration_slots": 4,
+      "possible_rooms": [],
+      "possible_days": "all",
+      "optativa": true
     },
     {
       "id": "514",
-      "name": "Decisiones estratégicas en comunicación (MKT)  (ES)",
+      "name": "Decisiones estratégicas en comunicación (MKT) (ES)",
       "term": "Q2",
       "teacher": "T222",
       "grades": [
@@ -11160,29 +10767,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "515",
-      "name": "Investigaciones de mercados (MKT) (ES)",
-      "term": "Q2",
-      "teacher": "T301",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 37,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "010"
-      ],
-      "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "519",
@@ -11227,7 +10816,7 @@
     },
     {
       "id": "521",
-      "name": "Gestión del Riesgo (FINANZAS)  (ES)",
+      "name": "Gestión del Riesgo (FINANZAS) (ES)",
       "term": "Q2",
       "teacher": "T227",
       "grades": [
@@ -11239,11 +10828,11 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "522",
-      "name": "Gestión fiscal de la empresa (FINANZAS)  (ES)",
+      "name": "Gestión fiscal de la empresa (FINANZAS) (ES)",
       "term": "Q2",
       "teacher": "T270",
       "grades": [
@@ -11255,7 +10844,7 @@
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "524",
@@ -11314,22 +10903,6 @@
       "optativa": false
     },
     {
-      "id": "525",
-      "name": "Dirección Financiera II (FINANZAS) (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "526",
       "name": "Gestión de la distribución (MKT) (ES)",
       "term": "Q2",
@@ -11339,47 +10912,15 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "527",
-      "name": "Gestión de la distribución (MKT)  (ES)",
-      "term": "Q2",
-      "teacher": "T287",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "528",
-      "name": "Decisiones estratégicas en comunicación (MKT) (ES)",
-      "term": "Q2",
-      "teacher": "T222",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "529",
-      "name": "Investigaciones de mercados (MKT)  (ES)",
+      "name": "Investigaciones de mercados (MKT) (ES)",
       "term": "Q2",
       "teacher": "T301",
       "grades": [
@@ -11387,29 +10928,13 @@
         "4IMS"
       ],
       "students": 37,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "010"
       ],
       "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "530",
-      "name": "Contabilidad Gestión avanzada (ES)",
-      "term": "Q2",
-      "teacher": "T100",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "531",
@@ -11431,7 +10956,7 @@
     },
     {
       "id": "535",
-      "name": "Estrategia y consultoría (DIR. EST)  (ES)",
+      "name": "Estrategia y consultoría (DIR. EST) (ES)",
       "term": "Q2",
       "teacher": "T283",
       "grades": [
@@ -11439,15 +10964,15 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "540",
-      "name": "European Union (GEST. INT)  (EN)",
+      "name": "European Union (GEST. INT) (EN)",
       "term": "Q2",
       "teacher": "T305",
       "grades": [
@@ -11455,11 +10980,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "542",
@@ -11471,15 +10996,15 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "543",
-      "name": "Digital marketing ING (MKT)  (ES)",
+      "name": "Digital marketing (MKT) (ES)",
       "term": "Q2",
       "teacher": "T223",
       "grades": [
@@ -11487,27 +11012,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "545",
-      "name": "Estrategia y consultoría (DIR. EST) (ES)",
-      "term": "Q2",
-      "teacher": "T283",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "548",
@@ -11565,7 +11074,7 @@
     },
     {
       "id": "550",
-      "name": "Control estratégico (DIR. ESTRAT.)  (ES)",
+      "name": "Control estratégico (DIR. ESTRAT.) (ES)",
       "term": "Q2",
       "teacher": "T011",
       "grades": [
@@ -11573,43 +11082,11 @@
         "4IMS"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "551",
-      "name": "Innovar, liderar (DIR. ESTRAT)  (ES)",
-      "term": "Q2",
-      "teacher": "T304",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "555",
-      "name": "European Union (GEST. INT) (EN)",
-      "term": "Q2",
-      "teacher": "T305",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "559",
@@ -11628,38 +11105,6 @@
       "possible_rooms": [],
       "possible_days": "all",
       "optativa": true
-    },
-    {
-      "id": "562",
-      "name": "Digital marketing ING (MKT) (ES)",
-      "term": "Q2",
-      "teacher": "T223",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "563",
-      "name": "Control estratégico (DIR. ESTRAT.) (ES)",
-      "term": "Q2",
-      "teacher": "T011",
-      "grades": [
-        "4ADE",
-        "4IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
     },
     {
       "id": "565",
