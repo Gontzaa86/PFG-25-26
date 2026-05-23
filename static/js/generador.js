@@ -21,6 +21,7 @@ const asignaturaColores = {};
 let colorCounter = 1;
 // Grados seleccionados por el usuario
 let selectedGrades = new Set();
+let rootCalendarState = new Map();
 
 // Modal bootstrap
 let modalSeleccionGradosEl = null;
@@ -90,25 +91,107 @@ btn.onclick = function() {
     };
 };
 
-function procesarYDibujarCalendarios(horario) {
-    const gradosSet = new Set();
-    horario.forEach(sesion => {
-        sesion.grades.forEach(grado => gradosSet.add(grado));
-    });
-    const listaGrados = Array.from(gradosSet).sort();
+function normalizarRoot(grado) {
+    return grado.replace(/^\d+/, '');
+}
 
-    listaGrados.forEach(grado => {
-        const sesionesGrado = horario.filter(sesion => sesion.grades.includes(grado));
-        if (sesionesGrado.length > 0) {
-            crearEstructuraCalendario(grado, sesionesGrado);
-        }
+function compararGrados(a, b) {
+    const matchA = String(a).match(/^\d+/) || [];
+    const matchB = String(b).match(/^\d+/) || [];
+    const numA = parseInt(matchA[0] || '0', 10);
+    const numB = parseInt(matchB[0] || '0', 10);
+    if (numA !== numB) return numA - numB;
+    return String(a).localeCompare(String(b));
+}
+
+function procesarYDibujarCalendarios(horario) {
+    const sesionesPorGrado = {};
+    const gruposPorRoot = new Map();
+
+    horario.forEach(sesion => {
+        sesion.grades.forEach(grado => {
+            if (!sesionesPorGrado[grado]) sesionesPorGrado[grado] = [];
+            sesionesPorGrado[grado].push(sesion);
+
+            const root = normalizarRoot(grado);
+            if (!gruposPorRoot.has(root)) gruposPorRoot.set(root, new Set());
+            gruposPorRoot.get(root).add(grado);
+        });
+    });
+
+    rootCalendarState.clear();
+    const roots = Array.from(gruposPorRoot.keys()).sort((a, b) => a.localeCompare(b));
+
+    contenedorCalendarios.innerHTML = roots.map(root => {
+        const grados = Array.from(gruposPorRoot.get(root)).sort(compararGrados);
+        const gradoActual = grados[0];
+        rootCalendarState.set(root, {
+            grades: grados,
+            currentIndex: 0,
+            sesionesPorGrado: sesionesPorGrado
+        });
+
+        return `
+            <section class="root-calendar-group card shadow-sm p-3 mb-4" data-root="${root}">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+                    <div>
+                        <p class="text-muted mb-1">Carrera / grado</p>
+                        <h3 class="mb-0">${root}</h3>
+                    </div>
+                    <div class="grade-nav d-flex align-items-center gap-2">
+                        <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="prev">←</button>
+                        <span class="fw-bold grade-label">${gradoActual}</span>
+                        <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="next">→</button>
+                    </div>
+                </div>
+                <div class="calendar-slot">
+                    ${crearEstructuraCalendario(gradoActual, sesionesPorGrado[gradoActual], false)}
+                </div>
+                <p class="small text-muted mt-3 mb-0">
+                    Mostrando <strong>${gradoActual}</strong> • ${grados.length} curso${grados.length === 1 ? '' : 's'} disponible${grados.length === 1 ? '' : 's'}
+                </p>
+            </section>
+        `;
+    }).join('');
+
+    activarNavegacionDeGrados();
+}
+
+function activarNavegacionDeGrados() {
+    document.querySelectorAll('.grade-nav-btn').forEach(boton => {
+        boton.onclick = (evento) => {
+            const seccion = evento.currentTarget.closest('.root-calendar-group');
+            const accion = evento.currentTarget.dataset.action;
+            const delta = accion === 'prev' ? -1 : 1;
+            actualizarGrado(seccion, delta);
+        };
     });
 }
 
-function crearEstructuraCalendario(grado, sesiones) {
+function actualizarGrado(seccion, delta) {
+    const root = seccion.dataset.root;
+    const estado = rootCalendarState.get(root);
+
+    if (!estado) return;
+
+    estado.currentIndex = (estado.currentIndex + delta + estado.grades.length) % estado.grades.length;
+    const gradoActual = estado.grades[estado.currentIndex];
+
+    seccion.querySelector('.grade-label').textContent = gradoActual;
+    seccion.querySelector('.calendar-slot').innerHTML = crearEstructuraCalendario(gradoActual, estado.sesionesPorGrado[gradoActual], false);
+    seccion.querySelector('.small.text-muted').innerHTML = `Mostrando <strong>${gradoActual}</strong> • ${estado.grades.length} curso${estado.grades.length === 1 ? '' : 's'} disponible${estado.grades.length === 1 ? '' : 's'}`;
+}
+
+function crearEstructuraCalendario(grado, sesiones, mostrarTitulo = true) {
     let html = `
         <div class="calendar-container card shadow-sm p-3">
-            <h3 class="grade-title text-center">Grado: ${grado}</h3>
+    `;
+
+    if (mostrarTitulo) {
+        html += `<h3 class="grade-title text-center">Grado: ${grado}</h3>`;
+    }
+
+    html += `
             <table class="calendar-table">
                 <thead>
                     <tr>
@@ -154,7 +237,7 @@ function crearEstructuraCalendario(grado, sesiones) {
         html += `</tr>`;
     }
     html += `</tbody></table></div>`;
-    contenedorCalendarios.innerHTML += html;
+    return html;
 }
 
 function calcularHoraHtml(slotIdx) {

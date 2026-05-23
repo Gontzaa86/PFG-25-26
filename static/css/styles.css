@@ -28,8 +28,22 @@ Estilos del calendario (resultados.html)
 #loading-area { display: none; text-align: center; margin: 20px 0; }
 
 /* Estilos del Calendario Tipo Google Calendar */
-.calendar-container { margin-top: 30px; margin-bottom: 50px; }
+.calendar-container { margin-top: 10px; margin-bottom: 10px; }
 .grade-title { background-color: #343a40; color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; }
+
+.root-calendar-group {
+    border-left: 4px solid #0d6efd;
+}
+
+.grade-nav {
+    min-width: 220px;
+    justify-content: flex-end;
+}
+
+.grade-nav .grade-label {
+    min-width: 80px;
+    text-align: center;
+}
 
 .calendar-table { table-layout: fixed; width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #ddd; }
 .calendar-table th, .calendar-table td { border: 1px solid #eee; text-align: center; vertical-align: middle; padding: 0; overflow: hidden;}
