@@ -2918,10 +2918,6 @@
       "name": "1II"
     },
     {
-      "id": "1IMS",
-      "name": "1IMS"
-    },
-    {
       "id": "1RID",
       "name": "1RID"
     },
@@ -2960,10 +2956,6 @@
     {
       "id": "2II",
       "name": "2II"
-    },
-    {
-      "id": "2IMS",
-      "name": "2IMS"
     },
     {
       "id": "2RID",
@@ -3006,10 +2998,6 @@
       "name": "3II"
     },
     {
-      "id": "3IMS",
-      "name": "3IMS"
-    },
-    {
       "id": "3RID",
       "name": "3RID"
     },
@@ -3048,10 +3036,6 @@
     {
       "id": "4II",
       "name": "4II"
-    },
-    {
-      "id": "4IMS",
-      "name": "4IMS"
     },
     {
       "id": "4RID",
@@ -3187,21 +3171,6 @@
       "optativa": false
     },
     {
-      "id": "10",
-      "name": "Negotiation Skills G1 (EN)",
-      "term": "Q1",
-      "teacher": "T107",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "12",
       "name": "Derecho Internacional Privado (ES)",
       "term": "Q1",
@@ -3307,8 +3276,7 @@
       "term": "Q1",
       "teacher": "T230",
       "grades": [
-        "2ADE",
-        "2IMS"
+        "2ADE"
       ],
       "students": 25,
       "sessions_per_week": 2,
@@ -3588,8 +3556,7 @@
       "teacher": "T227",
       "grades": [
         "2ADE",
-        "2AII",
-        "2IMS"
+        "2AII"
       ],
       "students": 35,
       "sessions_per_week": 2,
@@ -3715,21 +3682,6 @@
       "optativa": false
     },
     {
-      "id": "42",
-      "name": "Language I FR G2 ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "43",
       "name": "Observatorio de Políticas Sociales (EU)",
       "term": "Q2",
@@ -3834,8 +3786,7 @@
       "term": "Q2",
       "teacher": "T065",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -4131,7 +4082,6 @@
       "teacher": "T131",
       "grades": [
         "3ADE",
-        "3IMS",
         "4AII"
       ],
       "students": 31,
@@ -4273,8 +4223,7 @@
       "term": "Q1",
       "teacher": "T045",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -4282,21 +4231,6 @@
       "possible_rooms": [],
       "possible_days": "all",
       "optativa": true
-    },
-    {
-      "id": "75",
-      "name": "Language I ALE G1 ()",
-      "term": "Q1",
-      "teacher": "T197",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
     },
     {
       "id": "78",
@@ -4372,8 +4306,7 @@
       "teacher": "T222",
       "grades": [
         "2ADE",
-        "3AII",
-        "2IMS"
+        "3AII"
       ],
       "students": 25,
       "sessions_per_week": 2,
@@ -4427,8 +4360,7 @@
       "term": "Q2",
       "teacher": "T279",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -4738,8 +4670,7 @@
       "term": "Q1",
       "teacher": "T235",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -4893,21 +4824,6 @@
       "optativa": false
     },
     {
-      "id": "115",
-      "name": "Business Language I FR G2 ()",
-      "term": "Q1",
-      "teacher": "T198",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "116",
       "name": "Delitos y sus Penas (ES)",
       "term": "Q2",
@@ -4978,8 +4894,7 @@
       "teacher": "T266",
       "grades": [
         "2ADE",
-        "3AII",
-        "2IMS"
+        "3AII"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -5247,21 +5162,6 @@
       "optativa": false
     },
     {
-      "id": "130",
-      "name": "Business Language III ALE G1 ()",
-      "term": "Q1",
-      "teacher": "T197",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "131",
       "name": "Lenguaje y producción de audio /Elaboración y Producción de Mensajes Radiofónicos (ES)",
       "term": "Q2",
@@ -5463,21 +5363,6 @@
       "possible_rooms": [
         "009"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "144",
-      "name": "Business Language I ALE G1 ()",
-      "term": "Q1",
-      "teacher": "T197",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -5724,8 +5609,7 @@
       "term": "Q1",
       "teacher": "T054",
       "grades": [
-        "1ADE",
-        "1IMS"
+        "1ADE"
       ],
       "students": 20,
       "sessions_per_week": 2,
@@ -5804,8 +5688,7 @@
       "term": "Q1",
       "teacher": "T114",
       "grades": [
-        "1ADE",
-        "1IMS"
+        "1ADE"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -5910,8 +5793,7 @@
       "term": "Q1",
       "teacher": "T233",
       "grades": [
-        "1ADE",
-        "1IMS"
+        "1ADE"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -6315,7 +6197,6 @@
         "2D",
         "2ESTS",
         "2II",
-        "2IMS",
         "2RID",
         "2TS"
       ],
@@ -6375,8 +6256,7 @@
       "term": "Q1",
       "teacher": "T131",
       "grades": [
-        "1ADE",
-        "1IMS"
+        "1ADE"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -6417,8 +6297,7 @@
       "term": "Q1",
       "teacher": "T096",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -6562,8 +6441,7 @@
       "term": "Q1",
       "teacher": "T078",
       "grades": [
-        "2ADE",
-        "2IMS"
+        "2ADE"
       ],
       "students": 25,
       "sessions_per_week": 2,
@@ -6608,21 +6486,6 @@
         "61",
         "62"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "206",
-      "name": "Cross Cultural (EN)",
-      "term": "Q1",
-      "teacher": "T210",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -6710,8 +6573,7 @@
       "term": "Q1",
       "teacher": "T207",
       "grades": [
-        "2ADE",
-        "2IMS"
+        "2ADE"
       ],
       "students": 25,
       "sessions_per_week": 2,
@@ -6773,21 +6635,6 @@
       "possible_rooms": [
         "004"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "216",
-      "name": "Business Language I FR G1 ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -6948,21 +6795,6 @@
       "teacher": "T005",
       "grades": [
         "3RID"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "232",
-      "name": "Business Language III FR G2 ()",
-      "term": "Q1",
-      "teacher": "T201",
-      "grades": [
-        "3IMS"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -7257,8 +7089,7 @@
       "term": "Q2",
       "teacher": "No asignado",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -7473,8 +7304,7 @@
       "term": "Q1",
       "teacher": "T228",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -7532,21 +7362,6 @@
       ],
       "students": 0,
       "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "266",
-      "name": "Language I ALE G2 ()",
-      "term": "Q1",
-      "teacher": "T197",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -7630,21 +7445,6 @@
       "optativa": false
     },
     {
-      "id": "271",
-      "name": "Language I FR G1 ()",
-      "term": "Q1",
-      "teacher": "No asignado",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "272",
       "name": "Recursos Educativos y Tecnologías de la Información y la Comunicación (ES)",
       "term": "Q1",
@@ -7667,8 +7467,7 @@
       "term": "Q1",
       "teacher": "No asignado",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -7815,8 +7614,7 @@
       "term": "Q1",
       "teacher": "T196",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -7893,8 +7691,7 @@
       "teacher": "T045",
       "grades": [
         "3ADE",
-        "3AII",
-        "3IMS"
+        "3AII"
       ],
       "students": 35,
       "sessions_per_week": 2,
@@ -7998,8 +7795,7 @@
       "term": "Q1",
       "teacher": "No asignado",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -8048,8 +7844,7 @@
       "term": "Q1",
       "teacher": "T225",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -8172,21 +7967,6 @@
       "optativa": false
     },
     {
-      "id": "301",
-      "name": "Language I CHI ()",
-      "term": "Q1",
-      "teacher": "T128",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "302",
       "name": "Métodos y Técnicas de Investigación social (SOLO REP) / Métodos II: Diseño de la investigación  (SOLO REP) (EN)",
       "term": "Q2",
@@ -8197,21 +7977,6 @@
       ],
       "students": 0,
       "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "303",
-      "name": "Business Language III FR G1 ()",
-      "term": "Q1",
-      "teacher": "T199",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
@@ -8242,8 +8007,7 @@
       "teacher": "T049",
       "grades": [
         "1ADE",
-        "1AII",
-        "1IMS"
+        "1AII"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -8320,8 +8084,7 @@
       "term": "Q1",
       "teacher": "T231",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -8570,8 +8333,7 @@
       "term": "Q1",
       "teacher": "T080",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 1,
@@ -9150,21 +8912,6 @@
       "optativa": false
     },
     {
-      "id": "371",
-      "name": "Business Language I CHI ()",
-      "term": "Q1",
-      "teacher": "T200",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "373",
       "name": "Programación I (ES)",
       "term": "Q1",
@@ -9206,21 +8953,6 @@
       "optativa": true
     },
     {
-      "id": "378",
-      "name": "Communication Skills2 (EN)",
-      "term": "Q2",
-      "teacher": "T130",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "379",
       "name": "Programación II (ES)",
       "term": "Q2",
@@ -9248,43 +8980,12 @@
       "optativa": false
     },
     {
-      "id": "382",
-      "name": "Communication Skills1 (EN)",
-      "term": "Q2",
-      "teacher": "T266",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "384",
-      "name": "Negotiation Skills G2 (EN)",
-      "term": "Q1",
-      "teacher": "T107",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "385",
       "name": "Transformación digital (ES)",
       "term": "Q1",
       "teacher": "T156",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 30,
       "sessions_per_week": 2,
@@ -9338,8 +9039,7 @@
       "term": "Q2",
       "teacher": "T272",
       "grades": [
-        "1ADE",
-        "1IMS"
+        "1ADE"
       ],
       "students": 25,
       "sessions_per_week": 2,
@@ -9375,21 +9075,6 @@
       "optativa": false
     },
     {
-      "id": "389",
-      "name": "Fundamentos comportamiento organizacional CAS 1 (ES)",
-      "term": "Q2",
-      "teacher": "T156",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "393",
       "name": "Fundamentos de la Visión por computador (ES)",
       "term": "Q1",
@@ -9411,8 +9096,7 @@
       "term": "Q2",
       "teacher": "T209",
       "grades": [
-        "1ADE",
-        "1IMS"
+        "1ADE"
       ],
       "students": 25,
       "sessions_per_week": 2,
@@ -9566,8 +9250,7 @@
       "teacher": "T049",
       "grades": [
         "1ADE",
-        "2AII",
-        "1IMS"
+        "2AII"
       ],
       "students": 40,
       "sessions_per_week": 2,
@@ -9991,43 +9674,12 @@
       "optativa": false
     },
     {
-      "id": "436",
-      "name": "Language II ALE G1 (EN)",
-      "term": "Q2",
-      "teacher": "T197",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "438",
-      "name": "Business Language II CHI (EN)",
-      "term": "Q2",
-      "teacher": "T200",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "439",
       "name": "Microeconomía (ES)",
       "term": "Q2",
       "teacher": "T271",
       "grades": [
-        "1ADE",
-        "1IMS"
+        "1ADE"
       ],
       "students": 20,
       "sessions_per_week": 2,
@@ -10063,43 +9715,12 @@
       "optativa": false
     },
     {
-      "id": "441",
-      "name": "Language II FRA G1 (EN)",
-      "term": "Q2",
-      "teacher": "T275",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "442",
-      "name": "Language II FRA G2 (EN)",
-      "term": "Q2",
-      "teacher": "T276",
-      "grades": [
-        "1IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "443",
       "name": "Diseño de Sistemas de Costes y Control (FINANZAS) (ES)",
       "term": "Q2",
       "teacher": "T100",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10114,8 +9735,7 @@
       "term": "Q2",
       "teacher": "T270",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10130,8 +9750,7 @@
       "term": "Q2",
       "teacher": "T258",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10146,8 +9765,7 @@
       "term": "Q2",
       "teacher": "T227",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10162,8 +9780,7 @@
       "term": "Q2",
       "teacher": "No asignado",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10202,8 +9819,7 @@
       "term": "Q2",
       "teacher": "T254",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 20,
       "sessions_per_week": 2,
@@ -10211,21 +9827,6 @@
       "possible_rooms": [],
       "possible_days": "all",
       "optativa": true
-    },
-    {
-      "id": "453",
-      "name": "Bussiness Language II FR G2 212 (EN)",
-      "term": "Q2",
-      "teacher": "T281",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
     },
     {
       "id": "455",
@@ -10233,8 +9834,7 @@
       "term": "Q2",
       "teacher": "T135",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 20,
       "sessions_per_week": 1,
@@ -10244,88 +9844,12 @@
       "optativa": true
     },
     {
-      "id": "456",
-      "name": "Bussiness Language II FR G1 211 (EN)",
-      "term": "Q2",
-      "teacher": "T201",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "457",
-      "name": "Bussiness Language II FR G2 212  (EN)",
-      "term": "Q2",
-      "teacher": "T281",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "458",
-      "name": "Bussiness Language II ALE 214  (EN)",
-      "term": "Q2",
-      "teacher": "T197",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "460",
-      "name": "Bussiness Language II FR G1 211  (EN)",
-      "term": "Q2",
-      "teacher": "T201",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "461",
-      "name": "Bussiness Language II ALE 214 (EN)",
-      "term": "Q2",
-      "teacher": "T197",
-      "grades": [
-        "2IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "463",
       "name": "Experiencia de cliente y comportamiento del consumidor (MKT) (EN)",
       "term": "Q2",
       "teacher": "T224",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10333,36 +9857,6 @@
       "possible_rooms": [],
       "possible_days": "all",
       "optativa": true
-    },
-    {
-      "id": "466",
-      "name": "Global business context (ES)",
-      "term": "Q2",
-      "teacher": "T256",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "468",
-      "name": "Bussiness Language IV ALE G2 (EN)",
-      "term": "Q2",
-      "teacher": "T197",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
     },
     {
       "id": "469",
@@ -10371,9 +9865,7 @@
       "teacher": "T220",
       "grades": [
         "3ADE",
-        "4ADE",
-        "3IMS",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10389,9 +9881,7 @@
       "teacher": "T285",
       "grades": [
         "3ADE",
-        "4ADE",
-        "3IMS",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10406,8 +9896,7 @@
       "term": "Q2",
       "teacher": "No asignado",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 20,
       "sessions_per_week": 2,
@@ -10422,8 +9911,7 @@
       "term": "Q2",
       "teacher": "T011",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 20,
       "sessions_per_week": 2,
@@ -10433,28 +9921,12 @@
       "optativa": true
     },
     {
-      "id": "473",
-      "name": "Bussiness Language IV FR G1  (EN)",
-      "term": "Q2",
-      "teacher": "T201",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "474",
       "name": "Gestión de marcas y precios (MKT) (ES)",
       "term": "Q2",
       "teacher": "T287",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10469,8 +9941,7 @@
       "term": "Q2",
       "teacher": "T125",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10485,8 +9956,7 @@
       "term": "Q2",
       "teacher": "T235",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10502,9 +9972,7 @@
       "teacher": "T286",
       "grades": [
         "3ADE",
-        "4ADE",
-        "3IMS",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10514,28 +9982,12 @@
       "optativa": true
     },
     {
-      "id": "482",
-      "name": "International team working (EN)",
-      "term": "Q2",
-      "teacher": "T196",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "485",
       "name": "Dirección de la distribución (MKT)  (ES)",
       "term": "Q2",
       "teacher": "T092",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 1,
@@ -10545,30 +9997,13 @@
       "optativa": true
     },
     {
-      "id": "486",
-      "name": "Bussiness Language IV ALE G1 (EN)",
-      "term": "Q2",
-      "teacher": "T195",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "487",
       "name": "International human resource management (GEST. INT)  (EN)",
       "term": "Q2",
       "teacher": "T045",
       "grades": [
         "3ADE",
-        "4ADE",
-        "3IMS",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10583,8 +10018,7 @@
       "term": "Q2",
       "teacher": "T222",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10594,73 +10028,12 @@
       "optativa": true
     },
     {
-      "id": "493",
-      "name": "Bussiness Language IV FR G2 (EN)",
-      "term": "Q2",
-      "teacher": "T198",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "494",
-      "name": "Bussiness Language IV ALE G2  (EN)",
-      "term": "Q2",
-      "teacher": "T197",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "495",
-      "name": "Bussiness Language IV FR G1 (EN)",
-      "term": "Q2",
-      "teacher": "T201",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "498",
-      "name": "Bussiness Language IV FR G2  (EN)",
-      "term": "Q2",
-      "teacher": "T198",
-      "grades": [
-        "3IMS"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "502",
       "name": "Dirección Marketing (ES)",
       "term": "Q2",
       "teacher": "T092",
       "grades": [
         "2ADE",
-        "2IMS",
         "3AII"
       ],
       "students": 35,
@@ -10715,8 +10088,7 @@
       "term": "Q2",
       "teacher": "T065",
       "grades": [
-        "3ADE",
-        "3IMS"
+        "3ADE"
       ],
       "students": 20,
       "sessions_per_week": 2,
@@ -10731,8 +10103,7 @@
       "term": "Q2",
       "teacher": "No asignado",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10747,8 +10118,7 @@
       "term": "Q2",
       "teacher": "T100",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10763,8 +10133,7 @@
       "term": "Q2",
       "teacher": "T222",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10820,8 +10189,7 @@
       "term": "Q2",
       "teacher": "T227",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10836,8 +10204,7 @@
       "term": "Q2",
       "teacher": "T270",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10853,7 +10220,6 @@
       "teacher": "T135",
       "grades": [
         "2ADE",
-        "2IMS",
         "4AII"
       ],
       "students": 24,
@@ -10908,8 +10274,7 @@
       "term": "Q2",
       "teacher": "T287",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10924,8 +10289,7 @@
       "term": "Q2",
       "teacher": "T301",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 37,
       "sessions_per_week": 2,
@@ -10943,9 +10307,7 @@
       "teacher": "T220",
       "grades": [
         "3ADE",
-        "4ADE",
-        "3IMS",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10960,8 +10322,7 @@
       "term": "Q2",
       "teacher": "T283",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10976,8 +10337,7 @@
       "term": "Q2",
       "teacher": "T305",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -10992,8 +10352,7 @@
       "term": "Q2",
       "teacher": "T304",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -11008,8 +10367,7 @@
       "term": "Q2",
       "teacher": "T223",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -11078,8 +10436,7 @@
       "term": "Q2",
       "teacher": "T011",
       "grades": [
-        "4ADE",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
@@ -11095,9 +10452,7 @@
       "teacher": "T286",
       "grades": [
         "3ADE",
-        "4ADE",
-        "3IMS",
-        "4IMS"
+        "4ADE"
       ],
       "students": 0,
       "sessions_per_week": 2,
