@@ -313,6 +313,11 @@
       "id": "002",
       "building": "Ed-Arrupe",
       "capacity": 82
+    },
+    {
+      "id": "Plato TV",
+      "building": "Ed-Altuna",
+      "capacity": 70
     }
   ],
   "teachers": [
@@ -3067,7 +3072,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3165,7 +3213,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3344,7 +3435,7 @@
     },
     {
       "id": "20",
-      "name": "Métodos y Técnicas de Investigación social / Métodos II: Diseño de la investigación  (ES)",
+      "name": "Métodos y Técnicas de Investigación social / Métodos II: Diseño de la investigación (ES)",
       "term": "Q2",
       "teacher": "T094",
       "grades": [
@@ -3355,7 +3446,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3435,7 +3550,44 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "006"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3718,7 +3870,7 @@
     {
       "id": "46",
       "name": "Historia de la Comunicación (ES)",
-      "term": "Q1",
+      "term": "Q2",
       "teacher": "T089",
       "grades": [
         "1CO"
@@ -3727,7 +3879,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -3809,22 +3985,6 @@
       "possible_rooms": [
         "103"
       ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "53",
-      "name": "Métodos y Técnicas de Investigación social (SOLO REP)/ Métodos II: Diseño de la investigación (SOLO REP) (EN)",
-      "term": "Q2",
-      "teacher": "T051",
-      "grades": [
-        "1CO",
-        "1RID"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
       "possible_days": "all",
       "optativa": false
     },
@@ -3960,23 +4120,6 @@
       "optativa": false
     },
     {
-      "id": "61",
-      "name": "Comunicación escrita II (EU)",
-      "term": "Q2",
-      "teacher": "T162",
-      "grades": [
-        "2CO"
-      ],
-      "students": 14,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "105"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "63",
       "name": "Herramientas digitales (ES)",
       "term": "Q1",
@@ -3988,7 +4131,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4262,24 +4429,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "81",
-      "name": "Mundo Actual (EU)",
-      "term": "Q1",
-      "teacher": "T095",
-      "grades": [
-        "1CO"
-      ],
-      "students": 25,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "004"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4432,23 +4606,6 @@
       "optativa": false
     },
     {
-      "id": "89",
-      "name": "Lenguaje y producción de audio (EU)",
-      "term": "Q2",
-      "teacher": "T087",
-      "grades": [
-        "2CO"
-      ],
-      "students": 47,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "Plato TV"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "90",
       "name": "Educación del Ocio (ES)",
       "term": "Q1",
@@ -4509,7 +4666,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "012"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4547,7 +4728,7 @@
         "106"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "97",
@@ -4582,7 +4763,7 @@
         "Plato TV"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "99",
@@ -4650,7 +4831,7 @@
     {
       "id": "102",
       "name": "Teoría de la comunicación (ES)",
-      "term": "Q2",
+      "term": "Q1",
       "teacher": "T268",
       "grades": [
         "1CO"
@@ -4659,7 +4840,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4691,7 +4896,44 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "006"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -4724,23 +4966,6 @@
       "sessions_per_week": 1,
       "duration_slots": 4,
       "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "109",
-      "name": "Teoría de la comunicación (EU)",
-      "term": "Q2",
-      "teacher": "T109",
-      "grades": [
-        "1CO"
-      ],
-      "students": 35,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "011"
-      ],
       "possible_days": "all",
       "optativa": false
     },
@@ -4850,7 +5075,44 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "006"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5070,23 +5332,6 @@
       "optativa": false
     },
     {
-      "id": "126",
-      "name": "Historia de la Comunicación (EU)",
-      "term": "Q1",
-      "teacher": "T264",
-      "grades": [
-        "1CO"
-      ],
-      "students": 35,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "011"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "127",
       "name": "Introducción al Derecho I: Fundamentos del Derecho Privado (ES)",
       "term": "Q1",
@@ -5170,7 +5415,7 @@
         "2CO"
       ],
       "students": 47,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "Plato TV"
@@ -5227,7 +5472,39 @@
         "003",
         "004",
         "005",
-        "006"
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5286,7 +5563,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5361,7 +5662,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5413,7 +5757,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "005"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5427,13 +5795,13 @@
         "4CO"
       ],
       "students": 23,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "106"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "149",
@@ -5450,7 +5818,7 @@
         "106"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "150",
@@ -5498,23 +5866,6 @@
       "optativa": false
     },
     {
-      "id": "152",
-      "name": "Transformaciones ideológicas y culturales (EU)",
-      "term": "Q2",
-      "teacher": "T007",
-      "grades": [
-        "2CO"
-      ],
-      "students": 14,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "006"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "153",
       "name": "Introducción a las RR.II. (EN)",
       "term": "Q1",
@@ -5543,7 +5894,44 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "006"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5582,23 +5970,6 @@
         "60",
         "61",
         "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "156",
-      "name": "Fundamentos de ciencia política (EU)",
-      "term": "Q1",
-      "teacher": "T001",
-      "grades": [
-        "2CO"
-      ],
-      "students": 14,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "105"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5750,24 +6121,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "163",
-      "name": "Comunicación escrita I (EU)",
-      "term": "Q1",
-      "teacher": "T262",
-      "grades": [
-        "1CO"
-      ],
-      "students": 35,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "011"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -5958,7 +6336,7 @@
     {
       "id": "179",
       "name": "Comunicación periodística (ES)",
-      "term": "Q1",
+      "term": "Q2",
       "teacher": "T091",
       "grades": [
         "2CO"
@@ -5967,7 +6345,44 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "006"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -6402,23 +6817,6 @@
       "optativa": false
     },
     {
-      "id": "203",
-      "name": "Comunicación periodística (EN)",
-      "term": "Q1",
-      "teacher": "T158",
-      "grades": [
-        "2CO"
-      ],
-      "students": 10,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "105"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "204",
       "name": "Transformaciones ideológicas y culturales (ES)",
       "term": "Q2",
@@ -6430,7 +6828,44 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "006"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -6503,23 +6938,6 @@
       "duration_slots": 4,
       "possible_rooms": [
         "008"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "209",
-      "name": "Comunicación oral (EU)",
-      "term": "Q1",
-      "teacher": "T087",
-      "grades": [
-        "2CO"
-      ],
-      "students": 14,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "105"
       ],
       "possible_days": "all",
       "optativa": false
@@ -6622,23 +7040,6 @@
       "optativa": false
     },
     {
-      "id": "215",
-      "name": "Fundamentos y gestión de las organizaciones (EU)",
-      "term": "Q2",
-      "teacher": "T016",
-      "grades": [
-        "1CO"
-      ],
-      "students": 25,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "004"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "217",
       "name": "Producción Radiofónica (ES)",
       "term": "Q1",
@@ -6647,13 +7048,13 @@
         "4CO"
       ],
       "students": 14,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "Plato TV"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "218",
@@ -6715,7 +7116,31 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "004"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114"
       ],
       "possible_days": "all",
       "optativa": false
@@ -6929,23 +7354,6 @@
       "optativa": false
     },
     {
-      "id": "239",
-      "name": "Prácticas III: Casos de Estrategias de Comunicación (ES)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "4CO"
-      ],
-      "students": 40,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "014"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "240",
       "name": "Derecho Tributario (ES)",
       "term": "Q2",
@@ -7058,13 +7466,13 @@
         "4CO"
       ],
       "students": 14,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "105"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "247",
@@ -7078,7 +7486,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -7284,7 +7735,7 @@
     {
       "id": "263",
       "name": "Principios de Comunicación Gráfica (ES)",
-      "term": "Q2",
+      "term": "Q1",
       "teacher": "T046",
       "grades": [
         "2CO"
@@ -7293,7 +7744,44 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "006"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -7530,23 +8018,6 @@
       "optativa": false
     },
     {
-      "id": "278",
-      "name": "Comunicación Interpersonal (EN)",
-      "term": "Q1",
-      "teacher": "T130",
-      "grades": [
-        "3CO"
-      ],
-      "students": 14,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "009"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "280",
       "name": "Machine Learning (EN)",
       "term": "Q1",
@@ -7668,23 +8139,6 @@
       "optativa": false
     },
     {
-      "id": "285",
-      "name": "Lenguaje y producción de audio / Elaboración y Producción de Mensajes Radiofónicos (ES)",
-      "term": "Q2",
-      "teacher": "T087",
-      "grades": [
-        "2CO"
-      ],
-      "students": 47,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "Plato TV"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "286",
       "name": "Dirección de personas (ES)",
       "term": "Q1",
@@ -7772,7 +8226,7 @@
         "106"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "289",
@@ -7868,7 +8322,7 @@
         "106"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "297",
@@ -7962,40 +8416,6 @@
         "60",
         "61",
         "62"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "302",
-      "name": "Métodos y Técnicas de Investigación social (SOLO REP) / Métodos II: Diseño de la investigación  (SOLO REP) (EN)",
-      "term": "Q2",
-      "teacher": "T051",
-      "grades": [
-        "1CO",
-        "1RID"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "304",
-      "name": "Métodos y Técnicas de Investigación social / Métodos II: Diseño de la investigación  (EU)",
-      "term": "Q2",
-      "teacher": "T120",
-      "grades": [
-        "1CO",
-        "1RID"
-      ],
-      "students": 40,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "103"
       ],
       "possible_days": "all",
       "optativa": false
@@ -8127,25 +8547,6 @@
       "optativa": false
     },
     {
-      "id": "317",
-      "name": "Sociología / Sociología General (EU)",
-      "term": "Q1",
-      "teacher": "T001",
-      "grades": [
-        "1CO",
-        "1ESTS",
-        "1TS"
-      ],
-      "students": 66,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "004"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "318",
       "name": "Entrevista en Trabajo Social (ES)",
       "term": "Q1",
@@ -8189,13 +8590,13 @@
         "4CO"
       ],
       "students": 14,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "010"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "323",
@@ -8502,13 +8903,13 @@
         "4CO"
       ],
       "students": 14,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
         "105"
       ],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "344",
@@ -8556,7 +8957,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -8573,7 +9017,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -8609,14 +9096,57 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
     },
     {
       "id": "351",
-      "name": "Diseño gráfico y edición (ES)",
+      "name": "Marketing (ES)",
       "term": "Q1",
       "teacher": "T027",
       "grades": [
@@ -8626,7 +9156,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -8651,27 +9224,10 @@
       "optativa": false
     },
     {
-      "id": "353",
-      "name": "Opinión pública (EU)",
-      "term": "Q1",
-      "teacher": "T007",
-      "grades": [
-        "3CO"
-      ],
-      "students": 14,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "009"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
       "id": "355",
       "name": "Lenguaje y producción audiovisual (ES)",
       "term": "Q1",
-      "teacher": "No asignado",
+      "teacher": "T087",
       "grades": [
         "3CO"
       ],
@@ -8679,7 +9235,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
-        "009"
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62"
       ],
       "possible_days": "all",
       "optativa": false
@@ -8696,6 +9295,50 @@
       "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "103",
+        "104",
+        "105",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "33",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
         "Sala ordenadores / ordenagailu gela"
       ],
       "possible_days": "all",
@@ -8786,24 +9429,6 @@
       "duration_slots": 4,
       "possible_rooms": [
         "014"
-      ],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "362",
-      "name": "Métodos y técnicas de investigación social (EU)",
-      "term": "Q1",
-      "teacher": "T051",
-      "grades": [
-        "1ESTS",
-        "1TS"
-      ],
-      "students": 51,
-      "sessions_per_week": 2,
-      "duration_slots": 4,
-      "possible_rooms": [
-        "005"
       ],
       "possible_days": "all",
       "optativa": false
@@ -10530,11 +11155,11 @@
         "4CO"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "572",
@@ -10545,11 +11170,11 @@
         "4CO"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "573",
@@ -10560,26 +11185,26 @@
         "4CO"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "574",
-      "name": "Marketing (ES)",
+      "name": "Diseño gráfico y edición (ES)",
       "term": "Q1",
       "teacher": "No asignado",
       "grades": [
         "4CO"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "575",
@@ -10590,11 +11215,11 @@
         "4CO"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "576",
@@ -10605,56 +11230,11 @@
         "4CO"
       ],
       "students": 0,
-      "sessions_per_week": 1,
+      "sessions_per_week": 2,
       "duration_slots": 4,
       "possible_rooms": [],
       "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "577",
-      "name": "Prácticas / Praktikak (ES-EU)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "4CO"
-      ],
-      "students": 0,
-      "sessions_per_week": 5,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "578",
-      "name": "Prácticas I y II / Praktikak I eta II (ES-EU)",
-      "term": "Q2",
-      "teacher": "No asignado",
-      "grades": [
-        "4CO"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
-    },
-    {
-      "id": "579",
-      "name": "Trabajo fin de grado / Gradu amaierako lana / Undergraduate Final Year Project (ES-EU-EN)",
-      "term": "Q2",
-      "teacher": "T091",
-      "grades": [
-        "4CO"
-      ],
-      "students": 0,
-      "sessions_per_week": 1,
-      "duration_slots": 4,
-      "possible_rooms": [],
-      "possible_days": "all",
-      "optativa": false
+      "optativa": true
     },
     {
       "id": "580",
