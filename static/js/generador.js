@@ -323,37 +323,43 @@ function cargarListaGrados() {
                 roots[root].push(g);
             });
 
-            // Render raíz checkboxes
-            const rootsRow = document.createElement('div');
-            rootsRow.className = 'mb-3';
+            // Render grades grouped by root in compact cards
+            const groupsContainer = document.createElement('div');
+            groupsContainer.className = 'row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3';
             Object.keys(roots).sort().forEach(root => {
                 const isCheckedRoot = Array.from(selectedGrades).some(s => s === root || s === 'root:' + root);
-                rootsRow.innerHTML += `
-                    <div class="form-check form-check-inline me-3">
-                        <input class="form-check-input root-check" type="checkbox" value="${root}" id="root-${root}" ${isCheckedRoot ? 'checked' : ''}>
-                        <label class="form-check-label" for="root-${root}">${root}</label>
-                    </div>`;
-            });
-            container.appendChild(rootsRow);
-
-            // Render grades grouped by root
-            const grid = document.createElement('div');
-            grid.className = 'row';
-            Object.keys(roots).sort().forEach(root => {
-                roots[root].forEach(g => {
-                    const checked = selectedGrades.has(g.id) ? 'checked' : '';
-                    const col = document.createElement('div');
-                    col.className = 'col-6 col-md-4';
-                    col.innerHTML = `
-                        <div class="form-check">
-                            <input class="form-check-input grade-check" data-root="${root}" type="checkbox" value="${g.id}" id="grade-${g.id}" ${checked}>
-                            <label class="form-check-label" for="grade-${g.id}">${g.id} ${g.name ? '- ' + g.name : ''}</label>
+                const cardCol = document.createElement('div');
+                cardCol.className = 'col';
+                cardCol.innerHTML = `
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body py-3 px-3">
+                            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+                                <div>
+                                    <h6 class="card-title mb-1">${root}</h6>
+                                    <p class="card-text small text-muted mb-0">${roots[root].length} grado${roots[root].length === 1 ? '' : 's'}</p>
+                                </div>
+                                <div class="form-check form-switch mb-0">
+                                    <input class="form-check-input root-check" type="checkbox" value="${root}" id="root-${root}" ${isCheckedRoot ? 'checked' : ''}>
+                                    <label class="form-check-label small" for="root-${root}">Todos</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                ${roots[root].map(g => {
+                                    const checked = selectedGrades.has(g.id) ? 'checked' : '';
+                                    return `
+                                        <div class="form-check form-check-sm">
+                                            <input class="form-check-input grade-check" data-root="${root}" type="checkbox" value="${g.id}" id="grade-${g.id}" ${checked}>
+                                            <label class="form-check-label small" for="grade-${g.id}">${g.id}${g.name ? ' - ' + g.name : ''}</label>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
                         </div>
-                    `;
-                    grid.appendChild(col);
-                });
+                    </div>
+                `;
+                groupsContainer.appendChild(cardCol);
             });
-            container.appendChild(grid);
+            container.appendChild(groupsContainer);
 
             const rootChecks = container.querySelectorAll('input.root-check');
             rootChecks.forEach(rc => {
