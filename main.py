@@ -3,7 +3,7 @@ import os
 import csv
 import io
 import re
-from flask import Flask, render_template, Response, request, jsonify
+from flask import Flask, render_template, Response, request, jsonify 
 from utils.algoritmos import generar_horario_iterativo, evaluar_horario, optimizar_horario
 from utils.restricciones import RESTRICCIONES_DISPONIBLES
 
@@ -111,6 +111,7 @@ def lista_grados():
         lista.sort(key=lambda g: (g['year'], g['id']))
         grupos_grados.append({
             'root': grupo_codigo,
+            'root_name': lista[0]['name'] if lista else grupo_codigo,
             'grados': lista
         })
 
