@@ -2902,171 +2902,171 @@
   "grades": [
     {
       "id": "1ADE",
-      "name": "1ADE"
+      "name": "Administración de Empresas"
     },
     {
       "id": "1AII",
-      "name": "1AII"
+      "name": "Administración de Empresas + Ingeniería Informática"
     },
     {
       "id": "1CDIA",
-      "name": "1CDIA"
+      "name": "Ciencia de Datos e Inteligencia Artificial"
     },
     {
       "id": "1CDIA+",
-      "name": "1CDIA+"
+      "name": "Ciencia de Datos e Inteligencia Artificial + Ingeniería Informática"
     },
     {
       "id": "1CO",
-      "name": "1CO"
+      "name": "Comunicación"
     },
     {
       "id": "1D",
-      "name": "1D"
+      "name": "Derecho"
     },
     {
       "id": "1ESTS",
-      "name": "1ESTS"
+      "name": "Educación Social + Trabajo Social"
     },
     {
       "id": "1II",
-      "name": "1II"
+      "name": "Ingeniería Informática"
     },
     {
       "id": "1RID",
-      "name": "1RID"
+      "name": "Relaciones Internacionales + Derecho"
     },
     {
       "id": "1TS",
-      "name": "1TS"
+      "name": "Trabajo Social"
     },
     {
       "id": "2ADE",
-      "name": "2ADE"
+      "name": "Administración de Empresas"
     },
     {
       "id": "2AII",
-      "name": "2AII"
+      "name": "Administración de Empresas + Ingeniería Informática"
     },
     {
       "id": "2CDIA",
-      "name": "2CDIA"
+      "name": "Ciencia de Datos e Inteligencia Artificial"
     },
     {
       "id": "2CDIA+",
-      "name": "2CDIA+"
+      "name": "Ciencia de Datos e Inteligencia Artificial + Ingeniería Informática"
     },
     {
       "id": "2CO",
-      "name": "2CO"
+      "name": "Comunicación"
     },
     {
       "id": "2D",
-      "name": "2D"
+      "name": "Derecho"
     },
     {
       "id": "2ESTS",
-      "name": "2ESTS"
+      "name": "Educación Social + Trabajo Social"
     },
     {
       "id": "2II",
-      "name": "2II"
+      "name": "Ingeniería Informática"
     },
     {
       "id": "2RID",
-      "name": "2RID"
+      "name": "Relaciones Internacionales + Derecho"
     },
     {
       "id": "2TS",
-      "name": "2TS"
+      "name": "Trabajo Social"
     },
     {
       "id": "3ADE",
-      "name": "3ADE"
+      "name": "Administración de Empresas"
     },
     {
       "id": "3AII",
-      "name": "3AII"
+      "name": "Administración de Empresas + Ingeniería Informática"
     },
     {
       "id": "3CDIA",
-      "name": "3CDIA"
+      "name": "Ciencia de Datos e Inteligencia Artificial"
     },
     {
       "id": "3CDIA+",
-      "name": "3CDIA+"
+      "name": "Ciencia de Datos e Inteligencia Artificial + Ingeniería Informática"
     },
     {
       "id": "3CO",
-      "name": "3CO"
+      "name": "Comunicación"
     },
     {
       "id": "3D",
-      "name": "3D"
+      "name": "Derecho"
     },
     {
       "id": "3ESTS",
-      "name": "3ESTS"
+      "name": "Educación Social + Trabajo Social"
     },
     {
       "id": "3II",
-      "name": "3II"
+      "name": "Ingeniería Informática"
     },
     {
       "id": "3RID",
-      "name": "3RID"
+      "name": "Relaciones Internacionales + Derecho"
     },
     {
       "id": "3TS",
-      "name": "3TS"
+      "name": "Trabajo Social"
     },
     {
       "id": "4ADE",
-      "name": "4ADE"
+      "name": "Administración de Empresas"
     },
     {
       "id": "4AII",
-      "name": "4AII"
+      "name": "Administración de Empresas + Ingeniería Informática"
     },
     {
       "id": "4CDIA",
-      "name": "4CDIA"
+      "name": "Ciencia de Datos e Inteligencia Artificial"
     },
     {
       "id": "4CDIA+",
-      "name": "4CDIA+"
+      "name": "Ciencia de Datos e Inteligencia Artificial + Ingeniería Informática"
     },
     {
       "id": "4CO",
-      "name": "4CO"
+      "name": "Comunicación"
     },
     {
       "id": "4D",
-      "name": "4D"
+      "name": "Derecho"
     },
     {
       "id": "4ESTS",
-      "name": "4ESTS"
+      "name": "Educación Social + Trabajo Social"
     },
     {
       "id": "4II",
-      "name": "4II"
+      "name": "Ingeniería Informática"
     },
     {
       "id": "4RID",
-      "name": "4RID"
+      "name": "Relaciones Internacionales + Derecho"
     },
     {
       "id": "4TS",
-      "name": "4TS"
+      "name": "Trabajo Social"
     },
     {
       "id": "5AII",
-      "name": "5AII"
+      "name": "Administración de Empresas + Ingeniería Informática"
     },
     {
       "id": "5ESTS",
-      "name": "5ESTS"
+      "name": "Educación Social + Trabajo Social"
     }
   ],
   "courses": [

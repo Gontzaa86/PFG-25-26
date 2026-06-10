@@ -7,6 +7,19 @@ from flask import Flask, render_template, Response, request, jsonify
 from utils.algoritmos import generar_horario_iterativo, evaluar_horario, optimizar_horario
 from utils.restricciones import RESTRICCIONES_DISPONIBLES
 
+GRADO_NOMBRES_COMPLETOS = {
+    'ADE': 'Administración de Empresas',
+    'AII': 'Administración de Empresas + Ingeniería Informática',
+    'CDIA': 'Ciencia de Datos e Inteligencia Artificial',
+    'CDIA+': 'Ciencia de Datos e Inteligencia Artificial + Ingeniería Informática',
+    'CO': 'Comunicación',
+    'D': 'Derecho',
+    'ESTS': 'Educación Social + Trabajo Social',
+    'II': 'Ingeniería Informática',
+    'RID': 'Relaciones Internacionales + Derecho',
+    'TS': 'Trabajo Social'
+}
+
 app = Flask(__name__)
 
 # ---------------------------------------------------------
@@ -595,7 +608,10 @@ def importar_asignaturas():
         nuevos_grados = 0
         for codigo in sorted(grados_importados):
             if codigo and codigo not in grades_existentes:
-                data.setdefault('grades', []).append({"id": codigo, "name": codigo})
+                data.setdefault('grades', []).append({
+                    "id": codigo,
+                    "name": get_grade_display_name(codigo)
+                })
                 grades_existentes.add(codigo)
                 nuevos_grados += 1
 
@@ -681,7 +697,7 @@ def crear_grado():
         
     data.setdefault('grades', []).append({
         "id": grado_id,
-        "name": grado_id
+        "name": get_grade_display_name(grado_id)
     })
     
     guardar_datos(data)
@@ -824,6 +840,19 @@ def revision_carreras():
 # FUNCIONES
 # ---------------------------------------------------------
 
+def get_grade_display_name(grade_id):
+    if grade_id is None:
+        return ''
+
+    grade_id = str(grade_id).strip()
+    match = re.match(r'^(?:\d+)(.+)$', grade_id)
+    if not match:
+        return grade_id
+
+    suffix = match.group(1)
+    return GRADO_NOMBRES_COMPLETOS.get(suffix, grade_id)
+
+
 def normalizar_nombre_edificio(raw):
     if raw is None:
         return ''
@@ -848,7 +877,15 @@ def normalizar_nombre_edificio(raw):
 def cargar_datos(): # Función general de carga de datos para evitar repetición en cada caso individual
     ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')
     with open(ruta_json, 'r', encoding='utf-8') as f:
-        return json.load(f)
+        data = json.load(f)
+
+    # Asegurar nombres completos de grados cuando el nombre sea igual al ID o esté vacío
+    for grado in data.get('grades', []):
+        grado_id = str(grado.get('id', '')).strip()
+        if not grado.get('name') or str(grado.get('name', '')).strip() == grado_id:
+            grado['name'] = get_grade_display_name(grado_id)
+
+    return data
 
 def guardar_datos(data): # Modificación de datos en el JSON
     ruta_json = os.path.join(app.root_path, 'data', 'dataset_prueba2.json')

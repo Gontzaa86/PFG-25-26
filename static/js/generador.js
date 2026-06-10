@@ -327,6 +327,7 @@ function cargarListaGrados() {
             const groupsContainer = document.createElement('div');
             groupsContainer.className = 'row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3';
             Object.keys(roots).sort().forEach(root => {
+                const rootName = roots[root][0]?.name || '';
                 const isCheckedRoot = Array.from(selectedGrades).some(s => s === root || s === 'root:' + root);
                 const cardCol = document.createElement('div');
                 cardCol.className = 'col';
@@ -336,6 +337,7 @@ function cargarListaGrados() {
                             <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
                                 <div>
                                     <h6 class="card-title mb-1">${root}</h6>
+                                    ${rootName ? `<p class="card-text small text-muted mb-1">${rootName}</p>` : ''}
                                     <p class="card-text small text-muted mb-0">${roots[root].length} grado${roots[root].length === 1 ? '' : 's'}</p>
                                 </div>
                                 <div class="form-check form-switch mb-0">
@@ -349,7 +351,7 @@ function cargarListaGrados() {
                                     return `
                                         <div class="form-check form-check-sm">
                                             <input class="form-check-input grade-check" data-root="${root}" type="checkbox" value="${g.id}" id="grade-${g.id}" ${checked}>
-                                            <label class="form-check-label small" for="grade-${g.id}">${g.id}${g.name ? ' - ' + g.name : ''}</label>
+                                            <label class="form-check-label small" for="grade-${g.id}">${g.id}</label>
                                         </div>
                                     `;
                                 }).join('')}
