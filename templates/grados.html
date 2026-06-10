@@ -90,10 +90,7 @@
         <div class="card-header bg-dark text-white p-3">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                 <div>
-                    <h4 class="mb-1">{{ grupo.root }}</h4>
-                    <small class="text-muted">
-                        Curso actual: <span class="grupo-curso-actual" data-grupo="{{ grupo.root }}">{{ grupo.grados[0].id }}</span>
-                    </small>
+                    <h4 class="mb-1">{{ grupo.root }} || {{ grupo.root_name }}</h4>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-light btn-prev-grado" data-grupo="{{ grupo.root }}" disabled>&lt;</button>
@@ -105,7 +102,7 @@
             {% for grado in grupo.grados %}
             <div class="grado-por-codigo" data-grado-id="{{ grado.id }}" data-grado-year="{{ grado.year }}" {% if not loop.first %}style="display:none"{% endif %}>
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h5 class="text-secondary fw-semibold mb-0">Curso {{ grado.year }} - {{ grado.name }}</h5>
+                    <h5 class="fw-semibold mb-0">{{ grado.id }} - {{ grado.name }}</h5>
                     <button class="btn btn-sm btn-primary" onclick="abrirModalCrearAsignatura('{{ grado.id }}')">
                         <i class="bi bi-plus-lg"></i> Añadir Asignatura
                     </button>
