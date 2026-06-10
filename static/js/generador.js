@@ -22,6 +22,7 @@ let colorCounter = 1;
 // Grados seleccionados por el usuario
 let selectedGrades = new Set();
 let rootCalendarState = new Map();
+let gradeNamesMap = new Map();
 
 // Modal bootstrap
 let modalSeleccionGradosEl = null;
@@ -125,6 +126,9 @@ function procesarYDibujarCalendarios(horario) {
     contenedorCalendarios.innerHTML = roots.map(root => {
         const grados = Array.from(gruposPorRoot.get(root)).sort(compararGrados);
         const gradoActual = grados[0];
+        const rootName = gradeNamesMap.get(gradoActual) || root;
+        const gradoActualName = gradeNamesMap.get(gradoActual) || gradoActual;
+
         rootCalendarState.set(root, {
             grades: grados,
             currentIndex: 0,
@@ -136,11 +140,12 @@ function procesarYDibujarCalendarios(horario) {
                 <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
                     <div>
                         <p class="text-muted mb-1">Carrera / grado</p>
-                        <h3 class="mb-0">${root}</h3>
+                        <h3 class="mb-0">${rootName}</h3>
+                        ${rootName !== root ? `<p class="text-muted small mb-0">${root}</p>` : ''}
                     </div>
                     <div class="grade-nav d-flex align-items-center gap-2">
                         <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="prev">←</button>
-                        <span class="fw-bold grade-label">${gradoActual}</span>
+                        <span class="fw-bold grade-label">${gradoActualName}</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="next">→</button>
                     </div>
                 </div>
@@ -148,7 +153,7 @@ function procesarYDibujarCalendarios(horario) {
                     ${crearEstructuraCalendario(gradoActual, sesionesPorGrado[gradoActual], false)}
                 </div>
                 <p class="small text-muted mt-3 mb-0">
-                    Mostrando <strong>${gradoActual}</strong> • ${grados.length} curso${grados.length === 1 ? '' : 's'} disponible${grados.length === 1 ? '' : 's'}
+                    Mostrando <strong>${gradoActualName}</strong> • ${grados.length} curso${grados.length === 1 ? '' : 's'} disponible${grados.length === 1 ? '' : 's'}
                 </p>
             </section>
         `;
@@ -176,10 +181,11 @@ function actualizarGrado(seccion, delta) {
 
     estado.currentIndex = (estado.currentIndex + delta + estado.grades.length) % estado.grades.length;
     const gradoActual = estado.grades[estado.currentIndex];
+    const gradoActualName = gradeNamesMap.get(gradoActual) || gradoActual;
 
-    seccion.querySelector('.grade-label').textContent = gradoActual;
+    seccion.querySelector('.grade-label').textContent = gradoActualName;
     seccion.querySelector('.calendar-slot').innerHTML = crearEstructuraCalendario(gradoActual, estado.sesionesPorGrado[gradoActual], false);
-    seccion.querySelector('.small.text-muted').innerHTML = `Mostrando <strong>${gradoActual}</strong> • ${estado.grades.length} curso${estado.grades.length === 1 ? '' : 's'} disponible${estado.grades.length === 1 ? '' : 's'}`;
+    seccion.querySelector('.small.text-muted').innerHTML = `Mostrando <strong>${gradoActualName}</strong> • ${estado.grades.length} curso${estado.grades.length === 1 ? '' : 's'} disponible${estado.grades.length === 1 ? '' : 's'}`;
 }
 
 function crearEstructuraCalendario(grado, sesiones, mostrarTitulo = true) {
@@ -271,6 +277,17 @@ fetch('/api/config/restricciones')
                     <span class="text-muted" title="${description}" style="cursor: help; font-size: 1.2rem;">🛈</span>
                 </div>`;
         }
+    });
+
+fetch('/api/grados/list')
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(g => {
+            gradeNamesMap.set(g.id, g.name || g.id);
+        });
+    })
+    .catch(err => {
+        console.warn('No se pudo cargar nombres de grados:', err);
     });
 
     // Preparar modal y botón de selección de grados
