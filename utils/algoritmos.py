@@ -41,7 +41,7 @@ def evaluar_horario(asignaciones, restricciones_activas=None, data=None):
     total = 0
 
     if not restricciones_activas:
-        return 0
+        return 0, log_penalizaciones
     
     penalizacion = 0
     por_grado_dia = {}
