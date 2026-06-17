@@ -292,14 +292,27 @@ let modoModalAsignatura = 'editar';
 
 async function guardarNuevoGrado() {
     const year = document.getElementById('addGradoYear').value.trim();
-    const code = document.getElementById('addGradoCode').value.trim();
+    const existing = document.getElementById('addGradoExisting').value;
 
-    if (!year || !code) {
-        alert('Por favor, rellene todos los campos del grado.');
+    if (!year || !existing) {
+        alert('Por favor, seleccione el año y la titulación (o elija "Nueva titulación").');
         return;
     }
 
-    const payload = { year, code };
+    let payload = { year };
+
+    if (existing === 'new') {
+        const code = document.getElementById('addGradoCode').value.trim();
+        const name = document.getElementById('addGradoName').value.trim();
+        if (!code || !name) {
+            alert('Para crear una nueva titulación, indique el tag y el nombre completo.');
+            return;
+        }
+        payload.code = code;
+        payload.name = name;
+    } else {
+        payload.existing_tag = existing;
+    }
 
     try {
         const resp = await fetch('/api/grados', {
@@ -320,6 +333,20 @@ async function guardarNuevoGrado() {
         alert('No se pudo conectar con el servidor.');
     }
 }
+
+// Mostrar/ocultar campos de nueva titulación según selección
+document.addEventListener('DOMContentLoaded', () => {
+    const sel = document.getElementById('addGradoExisting');
+    const campos = document.getElementById('nuevoTitulacionFields');
+    if (!sel) return;
+    sel.addEventListener('change', () => {
+        if (sel.value === 'new') {
+            campos.style.display = '';
+        } else {
+            campos.style.display = 'none';
+        }
+    });
+});
 
 
 // FUNCIONES PARA ASIGNATURAS

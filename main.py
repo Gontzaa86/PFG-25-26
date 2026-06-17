@@ -683,26 +683,68 @@ def actualizar_asignatra(id):
 def crear_grado():
     data = cargar_datos()
     nuevo = request.json or {}
-    
     curso = str(nuevo.get('year', '')).strip()
+
+    # Dos modos de creación:
+    # 1) Selección de titulación existente: enviar 'existing_tag' con el tag (ej: ADE)
+    # 2) Nueva titulación: enviar 'code' (tag) y 'name' (nombre completo)
+    existing_tag = nuevo.get('existing_tag')
+
+    if not curso:
+        return jsonify({"error": "El curso (año) es obligatorio."}), 400
+
+    if existing_tag:
+        codigo = str(existing_tag).strip().upper()
+        if not codigo:
+            return jsonify({"error": "El tag de la titulación seleccionado es inválido."}), 400
+
+        grado_id = f"{curso}{codigo}"
+
+        if any(g['id'] == grado_id for g in data.get('grades', [])):
+            return jsonify({"error": f"El grado {grado_id} ya existe."}), 400
+
+        # Intentar recuperar el nombre de la titulación a partir de grados existentes
+        nombre = None
+        for g in data.get('grades', []):
+            m = re.match(r'^(?:\d+)(.+)$', str(g.get('id', '')))
+            if m and m.group(1).strip().upper() == codigo:
+                nombre = g.get('name')
+                break
+
+        if not nombre:
+            # Si no hay una entrada previa, intentar con el mapeo estático
+            nombre = GRADO_NOMBRES_COMPLETOS.get(codigo, codigo)
+
+        data.setdefault('grades', []).append({
+            "id": grado_id,
+            "name": nombre
+        })
+
+        guardar_datos(data)
+        return jsonify({"success": True, "message": f"Grado {grado_id} creado con éxito (titulación existente)."})
+
+    # Modo: nueva titulación completa
     codigo = str(nuevo.get('code', '')).strip().upper()
-    
-    if not curso or not codigo:
-        return jsonify({"error": "El curso y el código del grado son obligatorios."}), 400
-        
+    nombre_proporcionado = str(nuevo.get('name', '')).strip()
+
+    if not codigo or not nombre_proporcionado:
+        return jsonify({"error": "Para crear una nueva titulación se requiere el tag y el nombre completo."}), 400
+
     grado_id = f"{curso}{codigo}"
-    
-    # Validar si ya existe
+
     if any(g['id'] == grado_id for g in data.get('grades', [])):
         return jsonify({"error": f"El grado {grado_id} ya existe."}), 400
-        
+
     data.setdefault('grades', []).append({
         "id": grado_id,
-        "name": get_grade_display_name(grado_id)
+        "name": nombre_proporcionado
     })
-    
+
+    # También actualizar el mapeo estático en memoria para futuras inferencias (no persistente fuera de runtime)
+    GRADO_NOMBRES_COMPLETOS[codigo] = nombre_proporcionado
+
     guardar_datos(data)
-    return jsonify({"success": True, "message": f"Grado {grado_id} creado con éxito."})
+    return jsonify({"success": True, "message": f"Grado {grado_id} creado con éxito (nueva titulación)."})
 
 
 @app.route('/api/asignaturas', methods=['POST'])

@@ -64,11 +64,11 @@
         <h2 class="fw-bold">Plan de Estudios por Grado</h2>
         <div class="d-flex gap-2">
             <input type="file" id="importarCSV" accept=".csv" style="display: none;" onchange="procesarImportacion(this)">
-            <button class="btn btn-outline-dark shadow-sm" data-bs-toggle="modal" data-bs-target="#modalAñadirGrado">
-                <i class="bi bi-plus-circle"></i> Añadir Grado
-            </button>
             <button class="btn btn-success shadow-sm" onclick="document.getElementById('importarCSV').click()">
                 <i class="bi bi-file-earmark-arrow-up"></i> Importar Asignaturas (.csv)
+            </button>
+            <button class="btn btn-primary shadow-sm" data-bs-toggle="modal" data-bs-target="#modalAñadirGrado">
+                Nuevo Grado
             </button>
         </div>
     </div>
@@ -101,14 +101,16 @@
         <div class="card-body p-4" data-grupo="{{ grupo.root }}" data-grado-index="0">
             {% for grado in grupo.grados %}
             <div class="grado-por-codigo" data-grado-id="{{ grado.id }}" data-grado-year="{{ grado.year }}" {% if not loop.first %}style="display:none"{% endif %}>
-                <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex align-items-center mb-4">
                     <h5 class="fw-semibold mb-0">{{ grado.id }} - {{ grado.name }}</h5>
-                    <button class="btn btn-sm btn-primary" onclick="abrirModalCrearAsignatura('{{ grado.id }}')">
-                        <i class="bi bi-plus-lg"></i> Añadir Asignatura
-                    </button>
-                    <button class="btn btn-sm btn-outline-danger" onclick="eliminarGradoCompleto('{{ grado.id }}')">
-                        <i class="bi bi-trash3"></i> Eliminar Grado
-                    </button>
+                    <div class="ms-auto d-flex gap-2">
+                        <button class="btn btn-sm btn-primary" onclick="abrirModalCrearAsignatura('{{ grado.id }}')">
+                            <i class="bi bi-plus-lg"></i> Añadir Asignatura
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="eliminarGradoCompleto('{{ grado.id }}')">
+                            <i class="bi bi-trash3"></i> Eliminar Grado
+                        </button>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 border-end">
@@ -208,7 +210,7 @@
 
                         <div class="mb-1 form-check form-switch mt-2">
                             <input class="form-check-input" type="checkbox" id="editOptativa">
-                            <label class="form-check-label fw-semibold" for="editOptativa">¿Es asignatura optativa?</label>
+                            <label class="form-check-label fw-semibold" for="editOptativa">¿Es una asignatura optativa?</label>
                         </div>
                     </form>
                 </div>
@@ -240,9 +242,27 @@
                             <label for="addGradoYear" class="form-label fw-semibold">Curso (Año)</label>
                             <input type="number" class="form-control" id="addGradoYear" min="1" max="9" placeholder="Ej: 4" required>
                         </div>
+
                         <div class="mb-3">
-                            <label for="addGradoCode" class="form-label fw-semibold">Código / Tag de la carrera</label>
-                            <input type="text" class="form-control" id="addGradoCode" autocomplete="off" placeholder="Ej: ADE" required>
+                            <label class="form-label fw-semibold">Titulación</label>
+                            <select id="addGradoExisting" class="form-select">
+                                <option value="" selected disabled>Seleccione una titulación existente o elija "Nueva titulación"</option>
+                                {% for grupo in grupos_grados %}
+                                    <option value="{{ grupo.root }}">{{ grupo.root }} - {{ grupo.root_name }}</option>
+                                {% endfor %}
+                                <option value="new" style="background-color: #e9ecef; font-weight: bold; color: #0d6efd;">Añadir Nueva Titulación...</option>
+                            </select>
+                        </div>
+
+                        <div id="nuevoTitulacionFields" style="display:none">
+                            <div class="mb-3">
+                                <label for="addGradoCode" class="form-label fw-semibold">Código / Tag de la nueva titulación</label>
+                                <input type="text" class="form-control" id="addGradoCode" autocomplete="off" placeholder="Ej: ADE">
+                            </div>
+                            <div class="mb-3">
+                                <label for="addGradoName" class="form-label fw-semibold">Nombre completo de la titulación</label>
+                                <input type="text" class="form-control" id="addGradoName" autocomplete="off" placeholder="Ej: Administración de Empresas">
+                            </div>
                         </div>
                     </form>
                 </div>
