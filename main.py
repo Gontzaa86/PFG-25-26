@@ -162,6 +162,17 @@ def solver_progress():
         pool_horarios.sort(key=lambda x: x['puntuacion'])
         top_5 = pool_horarios[:5]
 
+        if not top_5:
+            payload = {
+                'progreso': 20,
+                'fase': 'finalizado',
+                'horario': [],
+                'logs': {},
+                'error': 'El algoritmo no encontró ninguna solución, por favor, inténtelo de nuevo.'
+            }
+            yield f"data: {json.dumps(payload)}\n\n"
+            return
+
         ganador_absoluto = None
         mejor_puntaje_global = float('inf')
 
@@ -171,18 +182,29 @@ def solver_progress():
 
             h_opt, p_opt = optimizar_horario(candidato['horario'], restricciones_usuario, data)
 
+            if h_opt is None or p_opt is None:
+                continue
+
             if p_opt < mejor_puntaje_global:
                 mejor_puntaje_global = p_opt
                 _, logs_finales = evaluar_horario(h_opt, restricciones_usuario, data)
                 ganador_absoluto = {"horario": h_opt, "logs": logs_finales}
-        
-        # Resultado final
-        payload = {
-            'progreso': 20,
-            'fase': 'finalizado',
-            'horario': ganador_absoluto['horario'],
-            'logs': ganador_absoluto['logs']
-        }
+
+        if ganador_absoluto is None:
+            payload = {
+                'progreso': 20,
+                'fase': 'finalizado',
+                'horario': [],
+                'logs': {},
+                'error': 'El algoritmo no encontró ninguna solución, por favor, inténtelo de nuevo.'
+            }
+        else:
+            payload = {
+                'progreso': 20,
+                'fase': 'finalizado',
+                'horario': ganador_absoluto['horario'],
+                'logs': ganador_absoluto['logs']
+            }
         yield f"data: {json.dumps(payload)}\n\n"
     
     return Response(generate(), mimetype='text/event-stream')
@@ -290,42 +312,25 @@ def importar_profesores():
         nuevos_profesores = []
         data = cargar_datos()
         
-        # Obtener el número más alto de ID de profesor existente
-        existing_ids = [p.get('id', '') for p in data.get('teachers', [])]
-        max_num = 0
-        for id_str in existing_ids:
-            if id_str.startswith('T') and id_str[1:].isdigit():
-                try:
-                    num = int(id_str[1:])
-                    max_num = max(max_num, num)
-                except ValueError:
-                    pass
-        
-        next_id_num = max_num + 1
-        row_index = 0
-        
         for index, row in enumerate(reader):
             # Limpiamos las claves por si tienen espacios o caracteres raros
             # Esto ayuda si la columna se llama " NOMBRE" o "NOMBRE "
             clean_row = {k.strip().upper(): v.strip() for k, v in row.items() if k}
             
             nombre = clean_row.get('NOMBRE')
-            facultad = clean_row.get('FACULTAD')
+            facultades = parsear_facultades(clean_row.get('FACULTAD'))
 
             if not nombre:
                 continue
 
-            grupo_facultad = facultad if facultad else "SIN FACULTAD"
-            nuevo_id = f"T{next_id_num:03d}"
+            nuevo_id = generar_id_profesor(index)
 
             nuevos_profesores.append({
                 "id": nuevo_id,
                 "name": nombre,
-                "branch": [grupo_facultad],
+                "branch": facultades,
                 "unavailability": {}
             })
-            
-            next_id_num += 1
 
         if not nuevos_profesores:
             # Si llegamos aquí, es que leyó el archivo pero no encontró la columna 'NOMBRE'
@@ -943,6 +948,19 @@ def normalize_name(value): # Normaliza nombres tanto el csv como en dataset
     # Eliminar texto sobrante, en el csv formato: "Apellido1 Apellido2, Nombre (url)". Eliminar url
     text = re.sub(r"\s*\([^)]*\)", "", text).strip()
     return re.sub(r"\s+", " ", text).lower()
+
+# Parseo de facultades para importación
+def parsear_facultades(facultad_raw):
+    if facultad_raw is None:
+        return ["SIN FACULTAD"]
+
+    valores = [valor.strip() for valor in str(facultad_raw).split(",")]
+    valores = [valor for valor in valores if valor]
+    return valores if valores else ["SIN FACULTAD"]
+
+# Ajuste de ID para mantener lógica (Si el orden es el mismo) al importar docentes.
+def generar_id_profesor(index, prefijo="T"):
+    return f"{prefijo}{index + 1:03d}"
 
 # ---------------------------------------------------------
 # EJECUCIÓN

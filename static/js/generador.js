@@ -32,6 +32,7 @@ btn.onclick = function() {
     const termSeleccionado = selectorTerm.value; // Capturamos Q1 o Q2
     
     btn.disabled = true;
+    btn.style.display = 'none';
     selectorTerm.disabled = true; // Bloqueamos el selector durante la generación
     loadingArea.style.display = 'block';
     contenedorCalendarios.innerHTML = "";
@@ -65,9 +66,17 @@ btn.onclick = function() {
         if (data.fase === 'finalizado') {
             eventSource.close();
             btn.disabled = false;
+            btn.style.display = 'inline-block';
             selectorTerm.disabled = false;
             loadingArea.style.display = 'none';
-            
+
+            clearMessage();
+
+            if (data.error) {
+                showMessage(data.error);
+                return;
+            }
+
             if (data.horario && data.horario.length > 0) {
                 procesarYDibujarCalendarios(data.horario);
                 
@@ -79,6 +88,8 @@ btn.onclick = function() {
                 for (const [res, puntos] of Object.entries(data.logs)) {
                     lista.innerHTML += `<li>${res}: <strong>${puntos} pts</strong></li>`;
                 }
+            } else {
+                showMessage('No se generó ningún horario. Por favor, inténtelo de nuevo.');
             }
         }
     };
@@ -88,9 +99,24 @@ btn.onclick = function() {
         btn.disabled = false;
         selectorTerm.disabled = false;
         loadingArea.style.display = 'none';
+        showMessage('Se produjo un error en la conexión con el servidor, por favor inténtelo de nuevo.');
         console.error("Error de conexión SSE.");
     };
 };
+
+function showMessage(text) {
+    const messageArea = document.getElementById('message-area');
+    if (!messageArea) return;
+    messageArea.textContent = text;
+    messageArea.style.display = 'block';
+}
+
+function clearMessage() {
+    const messageArea = document.getElementById('message-area');
+    if (!messageArea) return;
+    messageArea.textContent = '';
+    messageArea.style.display = 'none';
+}
 
 function normalizarRoot(grado) {
     return grado.replace(/^\d+/, '');
