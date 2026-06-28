@@ -173,38 +173,45 @@ def solver_progress():
             yield f"data: {json.dumps(payload)}\n\n"
             return
 
-        ganador_absoluto = None
-        mejor_puntaje_global = float('inf')
-
-        for i, candidato in enumerate(top_5):
-            # Notificamos al usuario que estamos optimizando
-            yield f"data: {json.dumps({'progreso': 20, 'fase': f'optimizando {i+1}/5'})}\n\n"
-
-            h_opt, p_opt = optimizar_horario(candidato['horario'], restricciones_usuario, data)
-
-            if h_opt is None or p_opt is None:
-                continue
-
-            if p_opt < mejor_puntaje_global:
-                mejor_puntaje_global = p_opt
-                _, logs_finales = evaluar_horario(h_opt, restricciones_usuario, data)
-                ganador_absoluto = {"horario": h_opt, "logs": logs_finales}
-
-        if ganador_absoluto is None:
-            payload = {
-                'progreso': 20,
-                'fase': 'finalizado',
-                'horario': [],
-                'logs': {},
-                'error': 'El algoritmo no encontró ninguna solución, por favor, inténtelo de nuevo.'
-            }
+        # Si no hay restricciones blandas, omitir fase de optimización
+        if not restricciones_usuario:
+            ganador_absoluto = {"horario": top_5[0]['horario'], "logs": top_5[0]['logs']}
+            print("Optimización omitida")
         else:
-            payload = {
-                'progreso': 20,
-                'fase': 'finalizado',
-                'horario': ganador_absoluto['horario'],
-                'logs': ganador_absoluto['logs']
-            }
+            ganador_absoluto = None
+            mejor_puntaje_global = float('inf')
+
+            for i, candidato in enumerate(top_5):
+                # Notificamos al usuario que estamos optimizando
+                yield f"data: {json.dumps({'progreso': 20, 'fase': f'optimizando {i+1}/5'})}\n\n"
+
+                h_opt, p_opt = optimizar_horario(candidato['horario'], restricciones_usuario, data)
+
+                if h_opt is None or p_opt is None:
+                    continue
+
+                if p_opt < mejor_puntaje_global:
+                    mejor_puntaje_global = p_opt
+                    _, logs_finales = evaluar_horario(h_opt, restricciones_usuario, data)
+                    ganador_absoluto = {"horario": h_opt, "logs": logs_finales}
+
+            if ganador_absoluto is None:
+                payload = {
+                    'progreso': 20,
+                    'fase': 'finalizado',
+                    'horario': [],
+                    'logs': {},
+                    'error': 'El algoritmo no encontró ninguna solución, por favor, inténtelo de nuevo.'
+                }
+                yield f"data: {json.dumps(payload)}\n\n"
+                return
+
+        payload = {
+            'progreso': 20,
+            'fase': 'finalizado',
+            'horario': ganador_absoluto['horario'],
+            'logs': ganador_absoluto['logs']
+        }
         yield f"data: {json.dumps(payload)}\n\n"
     
     return Response(generate(), mimetype='text/event-stream')
