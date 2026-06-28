@@ -171,7 +171,7 @@ function procesarYDibujarCalendarios(horario) {
                     </div>
                     <div class="grade-nav d-flex align-items-center gap-2">
                         <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="prev">←</button>
-                        <span class="fw-bold grade-label">${gradoActualName}</span>
+                        <span class="fw-bold grade-label">${root}</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="next">→</button>
                     </div>
                 </div>
