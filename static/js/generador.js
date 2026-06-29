@@ -167,20 +167,19 @@ function procesarYDibujarCalendarios(horario) {
                     <div>
                         <p class="text-muted mb-1">Carrera / grado</p>
                         <h3 class="mb-0">${rootName}</h3>
-                        ${rootName !== root ? `<p class="text-muted small mb-0">${root}</p>` : ''}
+                        <p class="small text-muted mt-2 mb-0 grade-status">
+                            Mostrando <strong>${gradoActualName}</strong> • ${grados.length} curso${grados.length === 1 ? '' : 's'} disponible${grados.length === 1 ? '' : 's'}
+                        </p>
                     </div>
                     <div class="grade-nav d-flex align-items-center gap-2">
                         <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="prev">←</button>
-                        <span class="fw-bold grade-label">${root}</span>
+                        <span class="fw-bold grade-label">${gradoActual}</span>
                         <button type="button" class="btn btn-outline-secondary btn-sm grade-nav-btn" data-action="next">→</button>
                     </div>
                 </div>
                 <div class="calendar-slot">
                     ${crearEstructuraCalendario(gradoActual, sesionesPorGrado[gradoActual], false)}
                 </div>
-                <p class="small text-muted mt-3 mb-0">
-                    Mostrando <strong>${gradoActualName}</strong> • ${grados.length} curso${grados.length === 1 ? '' : 's'} disponible${grados.length === 1 ? '' : 's'}
-                </p>
             </section>
         `;
     }).join('');
@@ -209,9 +208,9 @@ function actualizarGrado(seccion, delta) {
     const gradoActual = estado.grades[estado.currentIndex];
     const gradoActualName = gradeNamesMap.get(gradoActual) || gradoActual;
 
-    seccion.querySelector('.grade-label').textContent = gradoActualName;
+    seccion.querySelector('.grade-label').textContent = gradoActual;
+    seccion.querySelector('.grade-status').innerHTML = `Mostrando <strong>${gradoActualName}</strong> • ${estado.grades.length} curso${estado.grades.length === 1 ? '' : 's'} disponible${estado.grades.length === 1 ? '' : 's'}`;
     seccion.querySelector('.calendar-slot').innerHTML = crearEstructuraCalendario(gradoActual, estado.sesionesPorGrado[gradoActual], false);
-    seccion.querySelector('.small.text-muted').innerHTML = `Mostrando <strong>${gradoActualName}</strong> • ${estado.grades.length} curso${estado.grades.length === 1 ? '' : 's'} disponible${estado.grades.length === 1 ? '' : 's'}`;
 }
 
 function crearEstructuraCalendario(grado, sesiones, mostrarTitulo = true) {
